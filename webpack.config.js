@@ -1,6 +1,5 @@
 var path    = require('path');
 var webpack = require('webpack');
-// var glob = require('glob'); //added  by yoni
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
