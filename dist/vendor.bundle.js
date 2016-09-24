@@ -1,20 +1,7079 @@
-!function(t){function e(n){if(r[n])return r[n].exports;var o=r[n]={exports:{},id:n,loaded:!1};return t[n].call(o.exports,o,o.exports,e),o.loaded=!0,o.exports}var n=window.webpackJsonp;window.webpackJsonp=function(i,a){for(var l,s,c=0,u=[];c<i.length;c++)s=i[c],o[s]&&u.push.apply(u,o[s]),o[s]=0;for(l in a)t[l]=a[l];for(n&&n(i,a);u.length;)u.shift().call(null,e);if(a[0])return r[0]=0,e(0)};var r={},o={1:0};e.e=function(t,n){if(0===o[t])return n.call(null,e);if(void 0!==o[t])o[t].push(n);else{o[t]=[n];var r=document.getElementsByTagName("head")[0],i=document.createElement("script");i.type="text/javascript",i.charset="utf-8",i.async=!0,i.src=e.p+""+t+"."+({0:"app"}[t]||t)+".bundle.js",r.appendChild(i)}},e.m=t,e.c=r,e.p=""}([,function(t,exports,e){e(2),t.exports=angular},function(t,exports){/**
-	 * @license AngularJS v1.5.8
-	 * (c) 2010-2016 Google, Inc. http://angularjs.org
-	 * License: MIT
-	 */
-!function(t){"use strict";function e(t,e){return e=e||Error,function(){var n,r,o=2,i=arguments,a=i[0],l="["+(t?t+":":"")+a+"] ",s=i[1];for(l+=s.replace(/\{\d+\}/g,function(t){var e=+t.slice(1,-1),n=e+o;return n<i.length?$t(i[n]):t}),l+="\nhttp://errors.angularjs.org/1.5.8/"+(t?t+"/":"")+a,r=o,n="?";r<i.length;r++,n="&")l+=n+"p"+(r-o)+"="+encodeURIComponent($t(i[r]));return new e(l)}}function n(t){if(null==t||A(t))return!1;if(Jr(t)||w(t)||Rr&&t instanceof Rr)return!0;var e="length"in Object(t)&&t.length;return k(e)&&(e>=0&&(e-1 in t||t instanceof Array)||"function"==typeof t.item)}function r(t,e,o){var i,a;if(t)if(S(t))for(i in t)"prototype"==i||"length"==i||"name"==i||t.hasOwnProperty&&!t.hasOwnProperty(i)||e.call(o,t[i],i,t);else if(Jr(t)||n(t)){var l="object"!=typeof t;for(i=0,a=t.length;i<a;i++)(l||i in t)&&e.call(o,t[i],i,t)}else if(t.forEach&&t.forEach!==r)t.forEach(e,o,t);else if(x(t))for(i in t)e.call(o,t[i],i,t);else if("function"==typeof t.hasOwnProperty)for(i in t)t.hasOwnProperty(i)&&e.call(o,t[i],i,t);else for(i in t)Vr.call(t,i)&&e.call(o,t[i],i,t);return t}function o(t,e,n){for(var r=Object.keys(t).sort(),o=0;o<r.length;o++)e.call(n,t[r[o]],r[o]);return r}function i(t){return function(e,n){t(n,e)}}function a(){return++Zr}function l(t,e){e?t.$$hashKey=e:delete t.$$hashKey}function s(t,e,n){for(var r=t.$$hashKey,o=0,i=e.length;o<i;++o){var a=e[o];if(y(a)||S(a))for(var c=Object.keys(a),u=0,d=c.length;u<d;u++){var p=c[u],f=a[p];n&&y(f)?E(f)?t[p]=new Date(f.valueOf()):C(f)?t[p]=new RegExp(f):f.nodeName?t[p]=f.cloneNode(!0):P(f)?t[p]=f.clone():(y(t[p])||(t[p]=Jr(f)?[]:{}),s(t[p],[f],!0)):t[p]=f}}return l(t,r),t}function c(t){return s(t,Fr.call(arguments,1),!1)}function u(t){return s(t,Fr.call(arguments,1),!0)}function d(t){return parseInt(t,10)}function p(t,e){return c(Object.create(t),e)}function f(){}function h($){return $}function b(t){return function(){return t}}function g(t){return S(t.toString)&&t.toString!==Hr}function m(t){return"undefined"==typeof t}function v(t){return"undefined"!=typeof t}function y(t){return null!==t&&"object"==typeof t}function x(t){return null!==t&&"object"==typeof t&&!Wr(t)}function w(t){return"string"==typeof t}function k(t){return"number"==typeof t}function E(t){return"[object Date]"===Hr.call(t)}function S(t){return"function"==typeof t}function C(t){return"[object RegExp]"===Hr.call(t)}function A(t){return t&&t.window===t}function j(t){return t&&t.$evalAsync&&t.$watch}function O(t){return"[object File]"===Hr.call(t)}function M(t){return"[object FormData]"===Hr.call(t)}function T(t){return"[object Blob]"===Hr.call(t)}function N(t){return"boolean"==typeof t}function V(t){return t&&S(t.then)}function z(t){return t&&k(t.length)&&Yr.test(Hr.call(t))}function I(t){return"[object ArrayBuffer]"===Hr.call(t)}function P(t){return!(!t||!(t.nodeName||t.prop&&t.attr&&t.find))}function q(t){var e,n={},r=t.split(",");for(e=0;e<r.length;e++)n[r[e]]=!0;return n}function D(t){return zr(t.nodeName||t[0]&&t[0].nodeName)}function R(t,e){var n=t.indexOf(e);return n>=0&&t.splice(n,1),n}function _(t,e){function n(t,e){var n,r=e.$$hashKey;if(Jr(t))for(var i=0,a=t.length;i<a;i++)e.push(o(t[i]));else if(x(t))for(n in t)e[n]=o(t[n]);else if(t&&"function"==typeof t.hasOwnProperty)for(n in t)t.hasOwnProperty(n)&&(e[n]=o(t[n]));else for(n in t)Vr.call(t,n)&&(e[n]=o(t[n]));return l(e,r),e}function o(t){if(!y(t))return t;var e=a.indexOf(t);if(e!==-1)return s[e];if(A(t)||j(t))throw Gr("cpws","Can't copy! Making copies of Window or Scope instances is not supported.");var r=!1,o=i(t);return void 0===o&&(o=Jr(t)?[]:Object.create(Wr(t)),r=!0),a.push(t),s.push(o),r?n(t,o):o}function i(t){switch(Hr.call(t)){case"[object Int8Array]":case"[object Int16Array]":case"[object Int32Array]":case"[object Float32Array]":case"[object Float64Array]":case"[object Uint8Array]":case"[object Uint8ClampedArray]":case"[object Uint16Array]":case"[object Uint32Array]":return new t.constructor(o(t.buffer),t.byteOffset,t.length);case"[object ArrayBuffer]":if(!t.slice){var e=new ArrayBuffer(t.byteLength);return new Uint8Array(e).set(new Uint8Array(t)),e}return t.slice(0);case"[object Boolean]":case"[object Number]":case"[object String]":case"[object Date]":return new t.constructor(t.valueOf());case"[object RegExp]":var n=new RegExp(t.source,t.toString().match(/[^\/]*$/)[0]);return n.lastIndex=t.lastIndex,n;case"[object Blob]":return new t.constructor([t],{type:t.type})}if(S(t.cloneNode))return t.cloneNode(!0)}var a=[],s=[];if(e){if(z(e)||I(e))throw Gr("cpta","Can't copy! TypedArray destination cannot be mutated.");if(t===e)throw Gr("cpi","Can't copy! Source and destination are identical.");return Jr(e)?e.length=0:r(e,function(t,n){"$$hashKey"!==n&&delete e[n]}),a.push(t),s.push(e),n(t,e)}return o(t)}function U(t,e){if(t===e)return!0;if(null===t||null===e)return!1;if(t!==t&&e!==e)return!0;var n,r,o,i=typeof t,a=typeof e;if(i==a&&"object"==i){if(!Jr(t)){if(E(t))return!!E(e)&&U(t.getTime(),e.getTime());if(C(t))return!!C(e)&&t.toString()==e.toString();if(j(t)||j(e)||A(t)||A(e)||Jr(e)||E(e)||C(e))return!1;o=bt();for(r in t)if("$"!==r.charAt(0)&&!S(t[r])){if(!U(t[r],e[r]))return!1;o[r]=!0}for(r in e)if(!(r in o)&&"$"!==r.charAt(0)&&v(e[r])&&!S(e[r]))return!1;return!0}if(!Jr(e))return!1;if((n=t.length)==e.length){for(r=0;r<n;r++)if(!U(t[r],e[r]))return!1;return!0}}return!1}function F(t,e,n){return t.concat(Fr.call(e,n))}function L(t,e){return Fr.call(t,e||0)}function B(t,e){var n=arguments.length>2?L(arguments,2):[];return!S(e)||e instanceof RegExp?e:n.length?function(){return arguments.length?e.apply(t,F(n,arguments,0)):e.apply(t,n)}:function(){return arguments.length?e.apply(t,arguments):e.call(t)}}function H(e,n){var r=n;return"string"==typeof e&&"$"===e.charAt(0)&&"$"===e.charAt(1)?r=void 0:A(n)?r="$WINDOW":n&&t.document===n?r="$DOCUMENT":j(n)&&(r="$SCOPE"),r}function W(t,e){if(!m(t))return k(e)||(e=e?2:null),JSON.stringify(t,H,e)}function G(t){return w(t)?JSON.parse(t):t}function Z(t,e){t=t.replace(eo,"");var n=Date.parse("Jan 01, 1970 00:00:00 "+t)/6e4;return isNaN(n)?e:n}function J(t,e){return t=new Date(t.getTime()),t.setMinutes(t.getMinutes()+e),t}function Y(t,e,n){n=n?-1:1;var r=t.getTimezoneOffset(),o=Z(e,r);return J(t,n*(o-r))}function K(t){t=Rr(t).clone();try{t.empty()}catch(e){}var n=Rr("<div>").append(t).html();try{return t[0].nodeType===lo?zr(n):n.match(/^(<[^>]+>)/)[1].replace(/^<([\w\-]+)/,function(t,e){return"<"+zr(e)})}catch(e){return zr(n)}}function X(t){try{return decodeURIComponent(t)}catch(e){}}function Q(t){var e={};return r((t||"").split("&"),function(t){var n,r,o;t&&(r=t=t.replace(/\+/g,"%20"),n=t.indexOf("="),n!==-1&&(r=t.substring(0,n),o=t.substring(n+1)),r=X(r),v(r)&&(o=!v(o)||X(o),Vr.call(e,r)?Jr(e[r])?e[r].push(o):e[r]=[e[r],o]:e[r]=o))}),e}function tt(t){var e=[];return r(t,function(t,n){Jr(t)?r(t,function(t){e.push(nt(n,!0)+(t===!0?"":"="+nt(t,!0)))}):e.push(nt(n,!0)+(t===!0?"":"="+nt(t,!0)))}),e.length?e.join("&"):""}function et(t){return nt(t,!0).replace(/%26/gi,"&").replace(/%3D/gi,"=").replace(/%2B/gi,"+")}function nt(t,e){return encodeURIComponent(t).replace(/%40/gi,"@").replace(/%3A/gi,":").replace(/%24/g,"$").replace(/%2C/gi,",").replace(/%3B/gi,";").replace(/%20/g,e?"%20":"+")}function rt(t,e){var n,r,o=no.length;for(r=0;r<o;++r)if(n=no[r]+e,w(n=t.getAttribute(n)))return n;return null}function ot(t,e){var n,o,i={};r(no,function(e){var r=e+"app";!n&&t.hasAttribute&&t.hasAttribute(r)&&(n=t,o=t.getAttribute(r))}),r(no,function(e){var r,i=e+"app";!n&&(r=t.querySelector("["+i.replace(":","\\:")+"]"))&&(n=r,o=r.getAttribute(i))}),n&&(i.strictDi=null!==rt(n,"strict-di"),e(n,o?[o]:[],i))}function it(e,n,o){y(o)||(o={});var i={strictDi:!1};o=c(i,o);var a=function(){if(e=Rr(e),e.injector()){var r=e[0]===t.document?"document":K(e);throw Gr("btstrpd","App already bootstrapped with this element '{0}'",r.replace(/</,"&lt;").replace(/>/,"&gt;"))}n=n||[],n.unshift(["$provide",function(t){t.value("$rootElement",e)}]),o.debugInfoEnabled&&n.push(["$compileProvider",function(t){t.debugInfoEnabled(!0)}]),n.unshift("ng");var i=oe(n,o.strictDi);return i.invoke(["$rootScope","$rootElement","$compile","$injector",function(t,e,n,r){t.$apply(function(){e.data("$injector",r),n(e)(t)})}]),i},l=/^NG_ENABLE_DEBUG_INFO!/,s=/^NG_DEFER_BOOTSTRAP!/;return t&&l.test(t.name)&&(o.debugInfoEnabled=!0,t.name=t.name.replace(l,"")),t&&!s.test(t.name)?a():(t.name=t.name.replace(s,""),angular.resumeBootstrap=function(t){return r(t,function(t){n.push(t)}),a()},void(S(angular.resumeDeferredBootstrap)&&angular.resumeDeferredBootstrap()))}function at(){t.name="NG_ENABLE_DEBUG_INFO!"+t.name,t.location.reload()}function lt(t){var e=angular.element(t).injector();if(!e)throw Gr("test","no injector found for element argument to getTestability");return e.get("$$testability")}function st(t,e){return e=e||"_",t.replace(ro,function(t,n){return(n?e:"")+t.toLowerCase()})}function ct(){var e;if(!oo){var n=to();_r=m(n)?t.jQuery:n?t[n]:void 0,_r&&_r.fn.on?(Rr=_r,c(_r.fn,{scope:Ao.scope,isolateScope:Ao.isolateScope,controller:Ao.controller,injector:Ao.injector,inheritedData:Ao.inheritedData}),e=_r.cleanData,_r.cleanData=function(t){for(var n,r,o=0;null!=(r=t[o]);o++)n=_r._data(r,"events"),n&&n.$destroy&&_r(r).triggerHandler("$destroy");e(t)}):Rr=Mt,angular.element=Rr,oo=!0}}function ut(t,e,n){if(!t)throw Gr("areq","Argument '{0}' is {1}",e||"?",n||"required");return t}function dt(t,e,n){return n&&Jr(t)&&(t=t[t.length-1]),ut(S(t),e,"not a function, got "+(t&&"object"==typeof t?t.constructor.name||"Object":typeof t)),t}function pt(t,e){if("hasOwnProperty"===t)throw Gr("badname","hasOwnProperty is not a valid {0} name",e)}function ft(t,e,n){if(!e)return t;for(var r,o=e.split("."),i=t,a=o.length,l=0;l<a;l++)r=o[l],t&&(t=(i=t)[r]);return!n&&S(t)?B(i,t):t}function ht(t){for(var e,n=t[0],r=t[t.length-1],o=1;n!==r&&(n=n.nextSibling);o++)(e||t[o]!==n)&&(e||(e=Rr(Fr.call(t,0,o))),e.push(n));return e||t}function bt(){return Object.create(null)}function gt(t){function n(t,e,n){return t[e]||(t[e]=n())}var r=e("$injector"),o=e("ng"),angular=n(t,"angular",Object);return angular.$$minErr=angular.$$minErr||e,n(angular,"module",function(){var t={};return function(e,i,a){var l=function(t,e){if("hasOwnProperty"===t)throw o("badname","hasOwnProperty is not a valid {0} name",e)};return l(e,"module"),i&&t.hasOwnProperty(e)&&(t[e]=null),n(t,e,function(){function t(t,e,n,r){return r||(r=o),function(){return r[n||"push"]([t,e,arguments]),u}}function n(t,n){return function(r,i){return i&&S(i)&&(i.$$moduleName=e),o.push([t,n,arguments]),u}}if(!i)throw r("nomod","Module '{0}' is not available! You either misspelled the module name or forgot to load it. If registering a module ensure that you specify the dependencies as the second argument.",e);var o=[],l=[],s=[],c=t("$injector","invoke","push",l),u={_invokeQueue:o,_configBlocks:l,_runBlocks:s,requires:i,name:e,provider:n("$provide","provider"),factory:n("$provide","factory"),service:n("$provide","service"),value:t("$provide","value"),constant:t("$provide","constant","unshift"),decorator:n("$provide","decorator"),animation:n("$animateProvider","register"),filter:n("$filterProvider","register"),controller:n("$controllerProvider","register"),directive:n("$compileProvider","directive"),component:n("$compileProvider","component"),config:c,run:function(t){return s.push(t),this}};return a&&c(a),u})}})}function mt(t,e){if(Jr(t)){e=e||[];for(var n=0,r=t.length;n<r;n++)e[n]=t[n]}else if(y(t)){e=e||{};for(var o in t)"$"===o.charAt(0)&&"$"===o.charAt(1)||(e[o]=t[o])}return e||t}function vt(t){var e=[];return JSON.stringify(t,function(t,n){if(n=H(t,n),y(n)){if(e.indexOf(n)>=0)return"...";e.push(n)}return n})}function $t(t){return"function"==typeof t?t.toString().replace(/ \{[\s\S]*$/,""):m(t)?"undefined":"string"!=typeof t?vt(t):t}function yt(angular){c(angular,{bootstrap:it,copy:_,extend:c,merge:u,equals:U,element:Rr,forEach:r,injector:oe,noop:f,bind:B,toJson:W,fromJson:G,identity:h,isUndefined:m,isDefined:v,isString:w,isFunction:S,isObject:y,isNumber:k,isElement:P,isArray:Jr,version:po,isDate:E,lowercase:zr,uppercase:Ir,callbacks:{$$counter:0},getTestability:lt,$$minErr:e,$$csp:Qr,reloadWithDebugInfo:at}),(Ur=gt(t))("ng",["ngLocale"],["$provide",function(t){t.provider({$$sanitizeUri:Cn}),t.provider("$compile",be).directive({a:Ii,input:ta,textarea:ta,form:_i,script:Ja,select:Xa,style:tl,option:Qa,ngBind:ra,ngBindHtml:ia,ngBindTemplate:oa,ngClass:la,ngClassEven:ca,ngClassOdd:sa,ngCloak:ua,ngController:da,ngForm:Ui,ngHide:Fa,ngIf:ha,ngInclude:ba,ngInit:ma,ngNonBindable:Va,ngPluralize:qa,ngRepeat:Da,ngShow:Ua,ngStyle:La,ngSwitch:Ba,ngSwitchWhen:Ha,ngSwitchDefault:Wa,ngOptions:Pa,ngTransclude:Za,ngModel:Ma,ngList:va,ngChange:aa,pattern:nl,ngPattern:nl,required:el,ngRequired:el,minlength:ol,ngMinlength:ol,maxlength:rl,ngMaxlength:rl,ngValue:na,ngModelOptions:Na}).directive({ngInclude:ga}).directive(Pi).directive(pa),t.provider({$anchorScroll:ie,$animate:Lo,$animateCss:Wo,$$animateJs:Uo,$$animateQueue:Fo,$$AnimateRunner:Ho,$$animateAsyncRun:Bo,$browser:de,$cacheFactory:pe,$controller:xe,$document:we,$exceptionHandler:ke,$filter:_n,$$forceReflow:Xo,$interpolate:qe,$interval:De,$http:Ve,$httpParamSerializer:Se,$httpParamSerializerJQLike:Ce,$httpBackend:Ie,$xhrFactory:ze,$jsonpCallbacks:li,$location:Qe,$log:tn,$parse:yn,$rootScope:Sn,$q:xn,$$q:wn,$sce:Mn,$sceDelegate:On,$sniffer:Tn,$templateCache:fe,$templateRequest:Nn,$$testability:Vn,$timeout:zn,$window:qn,$$rAF:En,$$jqLite:Kt,$$HashMap:To,$$cookieReader:Rn})}])}function xt(){return++ho}function wt(t){return t.replace(mo,function(t,e,n,r){return r?n.toUpperCase():n}).replace(vo,"Moz$1")}function kt(t){return!wo.test(t)}function Et(t){var e=t.nodeType;return e===io||!e||e===co}function St(t){for(var e in fo[t.ng339])return!0;return!1}function Ct(t){for(var e=0,n=t.length;e<n;e++)zt(t[e])}function At(t,e){var n,o,i,a,l=e.createDocumentFragment(),s=[];if(kt(t))s.push(e.createTextNode(t));else{for(n=l.appendChild(e.createElement("div")),o=(ko.exec(t)||["",""])[1].toLowerCase(),i=So[o]||So._default,n.innerHTML=i[1]+t.replace(Eo,"<$1></$2>")+i[2],a=i[0];a--;)n=n.lastChild;s=F(s,n.childNodes),n=l.firstChild,n.textContent=""}return l.textContent="",l.innerHTML="",r(s,function(t){l.appendChild(t)}),l}function jt(e,n){n=n||t.document;var r;return(r=xo.exec(e))?[n.createElement(r[1])]:(r=At(e,n))?r.childNodes:[]}function Ot(t,e){var n=t.parentNode;n&&n.replaceChild(e,t),e.appendChild(t)}function Mt(t){if(t instanceof Mt)return t;var e;if(w(t)&&(t=Kr(t),e=!0),!(this instanceof Mt)){if(e&&"<"!=t.charAt(0))throw yo("nosel","Looking up elements via selectors is not supported by jqLite! See: http://docs.angularjs.org/api/angular.element");return new Mt(t)}e?_t(this,jt(t)):_t(this,t)}function Tt(t){return t.cloneNode(!0)}function Nt(t,e){if(e||zt(t),t.querySelectorAll)for(var n=t.querySelectorAll("*"),r=0,o=n.length;r<o;r++)zt(n[r])}function Vt(t,e,n,o){if(v(o))throw yo("offargs","jqLite#off() does not support the `selector` argument");var i=It(t),a=i&&i.events,l=i&&i.handle;if(l)if(e){var s=function(e){var r=a[e];v(n)&&R(r||[],n),v(n)&&r&&r.length>0||(go(t,e,l),delete a[e])};r(e.split(" "),function(t){s(t),$o[t]&&s($o[t])})}else for(e in a)"$destroy"!==e&&go(t,e,l),delete a[e]}function zt(t,e){var n=t.ng339,r=n&&fo[n];if(r){if(e)return void delete r.data[e];r.handle&&(r.events.$destroy&&r.handle({},"$destroy"),Vt(t)),delete fo[n],t.ng339=void 0}}function It(t,e){var n=t.ng339,r=n&&fo[n];return e&&!r&&(t.ng339=n=xt(),r=fo[n]={events:{},data:{},handle:void 0}),r}function Pt(t,e,n){if(Et(t)){var r=v(n),o=!r&&e&&!y(e),i=!e,a=It(t,!o),l=a&&a.data;if(r)l[e]=n;else{if(i)return l;if(o)return l&&l[e];c(l,e)}}}function qt(t,e){return!!t.getAttribute&&(" "+(t.getAttribute("class")||"")+" ").replace(/[\n\t]/g," ").indexOf(" "+e+" ")>-1}function Dt(t,e){e&&t.setAttribute&&r(e.split(" "),function(e){t.setAttribute("class",Kr((" "+(t.getAttribute("class")||"")+" ").replace(/[\n\t]/g," ").replace(" "+Kr(e)+" "," ")))})}function Rt(t,e){if(e&&t.setAttribute){var n=(" "+(t.getAttribute("class")||"")+" ").replace(/[\n\t]/g," ");r(e.split(" "),function(t){t=Kr(t),n.indexOf(" "+t+" ")===-1&&(n+=t+" ")}),t.setAttribute("class",Kr(n))}}function _t(t,e){if(e)if(e.nodeType)t[t.length++]=e;else{var n=e.length;if("number"==typeof n&&e.window!==e){if(n)for(var r=0;r<n;r++)t[t.length++]=e[r]}else t[t.length++]=e}}function Ut(t,e){return Ft(t,"$"+(e||"ngController")+"Controller")}function Ft(t,e,n){t.nodeType==co&&(t=t.documentElement);for(var r=Jr(e)?e:[e];t;){for(var o=0,i=r.length;o<i;o++)if(v(n=Rr.data(t,r[o])))return n;t=t.parentNode||t.nodeType===uo&&t.host}}function Lt(t){for(Nt(t,!0);t.firstChild;)t.removeChild(t.firstChild)}function Bt(t,e){e||Nt(t);var n=t.parentNode;n&&n.removeChild(t)}function Ht(e,n){n=n||t,"complete"===n.document.readyState?n.setTimeout(e):Rr(n).on("load",e)}function Wt(t,e){var n=jo[e.toLowerCase()];return n&&Oo[D(t)]&&n}function Gt(t){return Mo[t]}function Zt(t,e){var n=function(n,r){n.isDefaultPrevented=function(){return n.defaultPrevented};var o=e[r||n.type],i=o?o.length:0;if(i){if(m(n.immediatePropagationStopped)){var a=n.stopImmediatePropagation;n.stopImmediatePropagation=function(){n.immediatePropagationStopped=!0,n.stopPropagation&&n.stopPropagation(),a&&a.call(n)}}n.isImmediatePropagationStopped=function(){return n.immediatePropagationStopped===!0};var l=o.specialHandlerWrapper||Jt;i>1&&(o=mt(o));for(var s=0;s<i;s++)n.isImmediatePropagationStopped()||l(t,n,o[s])}};return n.elem=t,n}function Jt(t,e,n){n.call(t,e)}function Yt(t,e,n){var r=e.relatedTarget;r&&(r===t||Co.call(t,r))||n.call(t,e)}function Kt(){this.$get=function(){return c(Mt,{hasClass:function(t,e){return t.attr&&(t=t[0]),qt(t,e)},addClass:function(t,e){return t.attr&&(t=t[0]),Rt(t,e)},removeClass:function(t,e){return t.attr&&(t=t[0]),Dt(t,e)}})}}function Xt(t,e){var n=t&&t.$$hashKey;if(n)return"function"==typeof n&&(n=t.$$hashKey()),n;var r=typeof t;return n="function"==r||"object"==r&&null!==t?t.$$hashKey=r+":"+(e||a)():r+":"+t}function Qt(t,e){if(e){var n=0;this.nextUid=function(){return++n}}r(t,this.put,this)}function te(t){return Function.prototype.toString.call(t)+" "}function ee(t){var e=te(t).replace(Po,""),n=e.match(No)||e.match(Vo);return n}function ne(t){var e=ee(t);return e?"function("+(e[1]||"").replace(/[\s\r\n]+/," ")+")":"fn"}function re(t,e,n){var o,i,a;if("function"==typeof t){if(!(o=t.$inject)){if(o=[],t.length){if(e)throw w(n)&&n||(n=t.name||ne(t)),qo("strictdi","{0} is not using explicit annotation and cannot be invoked in strict mode",n);i=ee(t),r(i[1].split(zo),function(t){t.replace(Io,function(t,e,n){o.push(n)})})}t.$inject=o}}else Jr(t)?(a=t.length-1,dt(t[a],"fn"),o=t.slice(0,a)):dt(t,"fn",!0);return o}function oe(t,e){function n(t){return function(e,n){return y(e)?void r(e,i(t)):t(e,n)}}function o(t,e){if(pt(t,"service"),(S(e)||Jr(e))&&(e=E.instantiate(e)),!e.$get)throw qo("pget","Provider '{0}' must define $get factory method.",t);return k[t+g]=e}function a(t,e){return function(){var n=j.invoke(e,this);if(m(n))throw qo("undef","Provider '{0}' must return a value from $get factory method.",t);return n}}function l(t,e,n){return o(t,{$get:n!==!1?a(t,e):e})}function s(t,e){return l(t,["$injector",function(t){return t.instantiate(e)}])}function c(t,e){return l(t,b(e),!1)}function u(t,e){pt(t,"constant"),k[t]=e,C[t]=e}function d(t,e){var n=E.get(t+g),r=n.$get;n.$get=function(){var t=j.invoke(r,n);return j.invoke(e,null,{$delegate:t})}}function p(t){ut(m(t)||Jr(t),"modulesToLoad","not an array");var e,n=[];return r(t,function(t){function r(t){var e,n;for(e=0,n=t.length;e<n;e++){var r=t[e],o=E.get(r[0]);o[r[1]].apply(o,r[2])}}if(!x.get(t)){x.put(t,!0);try{w(t)?(e=Ur(t),n=n.concat(p(e.requires)).concat(e._runBlocks),r(e._invokeQueue),r(e._configBlocks)):S(t)?n.push(E.invoke(t)):Jr(t)?n.push(E.invoke(t)):dt(t,"module")}catch(o){throw Jr(t)&&(t=t[t.length-1]),o.message&&o.stack&&o.stack.indexOf(o.message)==-1&&(o=o.message+"\n"+o.stack),qo("modulerr","Failed to instantiate module {0} due to:\n{1}",t,o.stack||o.message||o)}}}),n}function f(t,n){function r(e,r){if(t.hasOwnProperty(e)){if(t[e]===h)throw qo("cdep","Circular dependency found: {0}",e+" <- "+v.join(" <- "));return t[e]}try{return v.unshift(e),t[e]=h,t[e]=n(e,r)}catch(o){throw t[e]===h&&delete t[e],o}finally{v.shift()}}function o(t,n,o){for(var i=[],a=oe.$$annotate(t,e,o),l=0,s=a.length;l<s;l++){var c=a[l];if("string"!=typeof c)throw qo("itkn","Incorrect injection token! Expected service name as string, got {0}",c);i.push(n&&n.hasOwnProperty(c)?n[c]:r(c,o))}return i}function i(t){return!(Dr<=11)&&("function"==typeof t&&/^(?:class\b|constructor\()/.test(te(t)))}function a(t,e,n,r){"string"==typeof n&&(r=n,n=null);var a=o(t,n,r);return Jr(t)&&(t=t[t.length-1]),i(t)?(a.unshift(null),new(Function.prototype.bind.apply(t,a))):t.apply(e,a)}function l(t,e,n){var r=Jr(t)?t[t.length-1]:t,i=o(t,e,n);return i.unshift(null),new(Function.prototype.bind.apply(r,i))}return{invoke:a,instantiate:l,get:r,annotate:oe.$$annotate,has:function(e){return k.hasOwnProperty(e+g)||t.hasOwnProperty(e)}}}e=e===!0;var h={},g="Provider",v=[],x=new Qt([],(!0)),k={$provide:{provider:n(o),factory:n(l),service:n(s),value:n(c),constant:n(u),decorator:d}},E=k.$injector=f(k,function(t,e){throw angular.isString(e)&&v.push(e),qo("unpr","Unknown provider: {0}",v.join(" <- "))}),C={},A=f(C,function(t,e){var n=E.get(t+g,e);return j.invoke(n.$get,n,void 0,t)}),j=A;k["$injector"+g]={$get:b(A)};var O=p(t);return j=A.get("$injector"),j.strictDi=e,r(O,function(t){t&&j.invoke(t)}),j}function ie(){var t=!0;this.disableAutoScrolling=function(){t=!1},this.$get=["$window","$location","$rootScope",function(e,n,r){function o(t){var e=null;return Array.prototype.some.call(t,function(t){if("a"===D(t))return e=t,!0}),e}function i(){var t=l.yOffset;if(S(t))t=t();else if(P(t)){var n=t[0],r=e.getComputedStyle(n);t="fixed"!==r.position?0:n.getBoundingClientRect().bottom}else k(t)||(t=0);return t}function a(t){if(t){t.scrollIntoView();var n=i();if(n){var r=t.getBoundingClientRect().top;e.scrollBy(0,r-n)}}else e.scrollTo(0,0)}function l(t){t=w(t)?t:n.hash();var e;t?(e=s.getElementById(t))?a(e):(e=o(s.getElementsByName(t)))?a(e):"top"===t&&a(null):a(null)}var s=e.document;return t&&r.$watch(function(){return n.hash()},function(t,e){t===e&&""===t||Ht(function(){r.$evalAsync(l)})}),l}]}function ae(t,e){return t||e?t?e?(Jr(t)&&(t=t.join(" ")),Jr(e)&&(e=e.join(" ")),t+" "+e):t:e:""}function le(t){for(var e=0;e<t.length;e++){var n=t[e];if(n.nodeType===Ro)return n}}function se(t){w(t)&&(t=t.split(" "));var e=bt();return r(t,function(t){t.length&&(e[t]=!0)}),e}function ce(t){return y(t)?t:{}}function ue(t,e,n,o){function i(t){try{t.apply(null,L(arguments,1))}finally{if(v--,0===v)for(;y.length;)try{y.pop()()}catch(e){n.error(e)}}}function a(t){var e=t.indexOf("#");return e===-1?"":t.substr(e)}function l(){S=null,s(),c()}function s(){x=C(),x=m(x)?null:x,U(x,O)&&(x=O),O=x}function c(){k===u.url()&&w===x||(k=u.url(),w=x,r(A,function(t){t(u.url(),x)}))}var u=this,d=t.location,p=t.history,h=t.setTimeout,b=t.clearTimeout,g={};u.isMock=!1;var v=0,y=[];u.$$completeOutstandingRequest=i,u.$$incOutstandingRequestCount=function(){v++},u.notifyWhenNoOutstandingRequests=function(t){0===v?t():y.push(t)};var x,w,k=d.href,E=e.find("base"),S=null,C=o.history?function(){try{return p.state}catch(t){}}:f;s(),w=x,u.url=function(e,n,r){if(m(r)&&(r=null),d!==t.location&&(d=t.location),p!==t.history&&(p=t.history),e){var i=w===r;if(k===e&&(!o.history||i))return u;var l=k&&Be(k)===Be(e);return k=e,w=r,!o.history||l&&i?(l||(S=e),n?d.replace(e):l?d.hash=a(e):d.href=e,d.href!==e&&(S=e)):(p[n?"replaceState":"pushState"](r,"",e),s(),w=x),S&&(S=e),u}return S||d.href.replace(/%27/g,"'")},u.state=function(){return x};var A=[],j=!1,O=null;u.onUrlChange=function(e){return j||(o.history&&Rr(t).on("popstate",l),Rr(t).on("hashchange",l),j=!0),A.push(e),e},u.$$applicationDestroyed=function(){Rr(t).off("hashchange popstate",l)},u.$$checkUrlChange=c,u.baseHref=function(){var t=E.attr("href");return t?t.replace(/^(https?\:)?\/\/[^\/]*/,""):""},u.defer=function(t,e){var n;return v++,n=h(function(){delete g[n],i(t)},e||0),g[n]=!0,n},u.defer.cancel=function(t){return!!g[t]&&(delete g[t],b(t),i(f),!0)}}function de(){this.$get=["$window","$log","$sniffer","$document",function(t,e,n,r){return new ue(t,r,e,n)}]}function pe(){this.$get=function(){function t(t,r){function o(t){t!=p&&(f?f==t&&(f=t.n):f=t,i(t.n,t.p),i(t,p),p=t,p.n=null)}function i(t,e){t!=e&&(t&&(t.p=e),e&&(e.n=t))}if(t in n)throw e("$cacheFactory")("iid","CacheId '{0}' is already taken!",t);var a=0,l=c({},r,{id:t}),s=bt(),u=r&&r.capacity||Number.MAX_VALUE,d=bt(),p=null,f=null;return n[t]={put:function(t,e){if(!m(e)){if(u<Number.MAX_VALUE){var n=d[t]||(d[t]={key:t});o(n)}return t in s||a++,s[t]=e,a>u&&this.remove(f.key),e}},get:function(t){if(u<Number.MAX_VALUE){var e=d[t];if(!e)return;o(e)}return s[t]},remove:function(t){if(u<Number.MAX_VALUE){var e=d[t];if(!e)return;e==p&&(p=e.p),e==f&&(f=e.n),i(e.n,e.p),delete d[t]}t in s&&(delete s[t],a--)},removeAll:function(){s=bt(),a=0,d=bt(),p=f=null},destroy:function(){s=null,l=null,d=null,delete n[t]},info:function(){return c({},l,{size:a})}}}var n={};return t.info=function(){var t={};return r(n,function(e,n){t[n]=e.info()}),t},t.get=function(t){return n[t]},t}}function fe(){this.$get=["$cacheFactory",function(t){return t("templates")}]}function he(){}function be(e,n){function o(t,e,n){var o=/^\s*([@&<]|=(\*?))(\??)\s*(\w*)\s*$/,i=bt();return r(t,function(t,r){if(t in A)return void(i[r]=A[t]);var a=t.match(o);if(!a)throw Go("iscp","Invalid {3} for directive '{0}'. Definition: {... {1}: '{2}' ...}",e,r,t,n?"controller bindings definition":"isolate scope definition");i[r]={mode:a[1][0],collection:"*"===a[2],optional:"?"===a[3],attrName:a[4]||r},a[4]&&(A[t]=i[r])}),i}function a(t,e){var n={isolateScope:null,bindToController:null};if(y(t.scope)&&(t.bindToController===!0?(n.bindToController=o(t.scope,e,!0),n.isolateScope={}):n.isolateScope=o(t.scope,e,!1)),y(t.bindToController)&&(n.bindToController=o(t.bindToController,e,!0)),y(n.bindToController)){var r=t.controller,i=t.controllerAs;if(!r)throw Go("noctrl","Cannot bind to controller without directive '{0}'s controller.",e);if(!ye(r,i))throw Go("noident","Cannot bind to controller without identifier for directive '{0}'.",e)}return n}function l(t){var e=t.charAt(0);if(!e||e!==zr(e))throw Go("baddir","Directive/Component name '{0}' is invalid. The first character must be a lowercase letter",t);if(t!==t.trim())throw Go("baddir","Directive/Component name '{0}' is invalid. The name should not contain leading or trailing whitespaces",t)}function s(t){var require=t.require||t.controller&&t.name;return!Jr(require)&&y(require)&&r(require,function(t,e){var n=t.match(E),r=t.substring(n[0].length);r||(require[e]=n[0]+e)}),require}var u={},d="Directive",g=/^\s*directive\:\s*([\w\-]+)\s+(.*)$/,x=/(([\w\-]+)(?:\:([^;]+))?;?)/,k=q("ngSrc,ngSrcset,src,srcset"),E=/^(?:(\^\^?)?(\?)?(\^\^?)?)?/,C=/^(on[a-z]+|formaction)$/,A=bt();this.directive=function T(t,n){return pt(t,"directive"),w(t)?(l(t),ut(n,"directiveFactory"),u.hasOwnProperty(t)||(u[t]=[],e.factory(t+d,["$injector","$exceptionHandler",function(e,n){var o=[];return r(u[t],function(r,i){try{var a=e.invoke(r);S(a)?a={compile:b(a)}:!a.compile&&a.link&&(a.compile=b(a.link)),a.priority=a.priority||0,a.index=i,a.name=a.name||t,a.require=s(a),a.restrict=a.restrict||"EA",a.$$moduleName=r.$$moduleName,o.push(a)}catch(l){n(l)}}),o}])),u[t].push(n)):r(t,i(T)),this},this.component=function(t,e){function n(t){function n(e){return S(e)||Jr(e)?function(n,r){return t.invoke(e,this,{$element:n,$attrs:r})}:e}var i=e.template||e.templateUrl?e.template:"",a={controller:o,controllerAs:ye(e.controller)||e.controllerAs||"$ctrl",template:n(i),templateUrl:n(e.templateUrl),transclude:e.transclude,scope:{},bindToController:e.bindings||{},restrict:"E",require:e.require};return r(e,function(t,e){"$"===e.charAt(0)&&(a[e]=t)}),a}var o=e.controller||function(){};return r(e,function(t,e){"$"===e.charAt(0)&&(n[e]=t,S(o)&&(o[e]=t))}),n.$inject=["$injector"],this.directive(t,n)},this.aHrefSanitizationWhitelist=function(t){return v(t)?(n.aHrefSanitizationWhitelist(t),this):n.aHrefSanitizationWhitelist()},this.imgSrcSanitizationWhitelist=function(t){return v(t)?(n.imgSrcSanitizationWhitelist(t),this):n.imgSrcSanitizationWhitelist()};var O=!0;this.debugInfoEnabled=function(t){return v(t)?(O=t,this):O};var M=10;this.onChangesTtl=function(t){return arguments.length?(M=t,this):M},this.$get=["$injector","$interpolate","$exceptionHandler","$templateRequest","$parse","$controller","$rootScope","$sce","$animate","$$sanitizeUri",function(e,n,o,i,l,s,b,A,T,V){function z(){try{if(!--Et)throw yt=void 0,Go("infchng","{0} $onChanges() iterations reached. Aborting!\n",M);b.$apply(function(){for(var t=[],e=0,n=yt.length;e<n;++e)try{yt[e]()}catch(r){t.push(r)}if(yt=void 0,t.length)throw t})}finally{Et++}}function I(t,e){if(e){var n,r,o,i=Object.keys(e);for(n=0,r=i.length;n<r;n++)o=i[n],this[o]=e[o]}else this.$attr={};this.$$element=t}function P(t,e,n){wt.innerHTML="<span "+e+">";var r=wt.firstChild.attributes,o=r[0];r.removeNamedItem(o.name),o.value=n,t.attributes.setNamedItem(o)}function q(t,e){try{t.addClass(e)}catch(n){}}function _(e,n,r,o,i){e instanceof Rr||(e=Rr(e));for(var a=/\S+/,l=0,s=e.length;l<s;l++){var c=e[l];c.nodeType===lo&&c.nodeValue.match(a)&&Ot(c,e[l]=t.document.createElement("span"))}var u=H(e,n,e,r,o,i);_.$$addScopeClass(e);var d=null;return function(t,n,r){ut(t,"scope"),i&&i.needsNewScope&&(t=t.$parent.$new()),r=r||{};var o=r.parentBoundTranscludeFn,a=r.transcludeControllers,l=r.futureParentElement;o&&o.$$boundTransclude&&(o=o.$$boundTransclude),d||(d=F(l));var s;if(s="html"!==d?Rr(pt(d,Rr("<div>").append(e).html())):n?Ao.clone.call(e):e,a)for(var c in a)s.data("$"+c+"Controller",a[c].instance);return _.$$addScopeInfo(s,t),n&&n(s,t),u&&u(t,s,s,o),s}}function F(t){var e=t&&t[0];return e&&"foreignobject"!==D(e)&&Hr.call(e).match(/SVG/)?"svg":"html"}function H(t,e,n,r,o,i){function a(t,n,r,o){var i,a,l,s,c,u,d,p,b;if(f){var g=n.length;for(b=new Array(g),c=0;c<h.length;c+=3)d=h[c],b[d]=n[d]}else b=n;for(c=0,u=h.length;c<u;)l=b[h[c++]],i=h[c++],a=h[c++],i?(i.scope?(s=t.$new(),_.$$addScopeInfo(Rr(l),s)):s=t,p=i.transcludeOnThisElement?W(t,i.transclude,o):!i.templateOnThisElement&&o?o:!o&&e?W(t,e):null,i(a,s,l,r,p)):a&&a(t,l.childNodes,void 0,o)}for(var l,s,c,u,d,p,f,h=[],b=0;b<t.length;b++)l=new I,s=G(t[b],[],l,0===b?r:void 0,o),c=s.length?Q(s,t[b],l,e,n,null,[],[],i):null,c&&c.scope&&_.$$addScopeClass(l.$$element),d=c&&c.terminal||!(u=t[b].childNodes)||!u.length?null:H(u,c?(c.transcludeOnThisElement||!c.templateOnThisElement)&&c.transclude:e),(c||d)&&(h.push(b,c,d),p=!0,f=f||c),i=null;return p?a:null}function W(t,e,n){function r(r,o,i,a,l){return r||(r=t.$new(!1,l),r.$$transcluded=!0),e(r,o,{parentBoundTranscludeFn:n,transcludeControllers:i,futureParentElement:a})}var o=r.$$slots=bt();for(var i in e.$$slots)e.$$slots[i]?o[i]=W(t,e.$$slots[i],n):o[i]=null;return r}function G(t,e,n,r,o){var i,a,l=t.nodeType,s=n.$attr;switch(l){case io:rt(e,me(D(t)),"E",r,o);for(var c,u,d,p,f,h,b=t.attributes,g=0,m=b&&b.length;g<m;g++){var v=!1,k=!1;c=b[g],u=c.name,f=Kr(c.value),p=me(u),(h=jt.test(p))&&(u=u.replace(Jo,"").substr(8).replace(/_(.)/g,function(t,e){return e.toUpperCase()}));var E=p.match(Mt);E&&ot(E[1])&&(v=u,k=u.substr(0,u.length-5)+"end",u=u.substr(0,u.length-6)),d=me(u.toLowerCase()),s[d]=u,!h&&n.hasOwnProperty(d)||(n[d]=f,Wt(t,d)&&(n[d]=!0)),ht(t,e,f,d,h),rt(e,d,"A",r,o,v,k)}if(a=t.className,y(a)&&(a=a.animVal),w(a)&&""!==a)for(;i=x.exec(a);)d=me(i[2]),rt(e,d,"C",r,o)&&(n[d]=Kr(i[3])),a=a.substr(i.index+i[0].length);break;case lo:if(11===Dr)for(;t.parentNode&&t.nextSibling&&t.nextSibling.nodeType===lo;)t.nodeValue=t.nodeValue+t.nextSibling.nodeValue,t.parentNode.removeChild(t.nextSibling);dt(e,t.nodeValue);break;case so:
-Z(t,e,n,r,o)}return e.sort(lt),e}function Z(t,e,n,r,o){try{var i=g.exec(t.nodeValue);if(i){var a=me(i[1]);rt(e,a,"M",r,o)&&(n[a]=Kr(i[2]))}}catch(l){}}function J(t,e,n){var r=[],o=0;if(e&&t.hasAttribute&&t.hasAttribute(e)){do{if(!t)throw Go("uterdir","Unterminated attribute, found '{0}' but no matching '{1}' found.",e,n);t.nodeType==io&&(t.hasAttribute(e)&&o++,t.hasAttribute(n)&&o--),r.push(t),t=t.nextSibling}while(o>0)}else r.push(t);return Rr(r)}function Y(t,e,n){return function(r,o,i,a,l){return o=J(o[0],e,n),t(r,o,i,a,l)}}function X(t,e,n,r,o,i){var a;return t?_(e,n,r,o,i):function(){return a||(a=_(e,n,r,o,i),e=n=i=null),a.apply(this,arguments)}}function Q(t,e,n,i,a,l,s,u,d){function p(t,e,n,r){t&&(n&&(t=Y(t,n,r)),t.require=h.require,t.directiveName=b,(C===h||h.$$isolateScope)&&(t=mt(t,{isolateScope:!0})),s.push(t)),e&&(n&&(e=Y(e,n,r)),e.require=h.require,e.directiveName=b,(C===h||h.$$isolateScope)&&(e=mt(e,{isolateScope:!0})),u.push(e))}function f(t,i,a,l,d){function p(t,e,n,r){var o;if(j(t)||(r=n,n=e,e=t,t=void 0),N&&(o=x),n||(n=N?O.parent():O),!r)return d(t,e,o,n,R);var i=d.$$slots[r];if(i)return i(t,e,o,n,R);if(m(i))throw Go("noslot",'No parent directive that requires a transclusion with slot name "{0}". Element: {1}',r,K(O))}var f,h,b,g,v,x,w,O,M,T;e===a?(M=n,O=n.$$element):(O=Rr(a),M=new I(O,n)),v=i,C?g=i.$new(!0):k&&(v=i.$parent),d&&(w=p,w.$$boundTransclude=d,w.isSlotFilled=function(t){return!!d.$$slots[t]}),E&&(x=et(O,M,w,E,g,i,C)),C&&(_.$$addScopeInfo(O,g,!0,!(A&&(A===C||A===C.$$originalDirective))),_.$$addScopeClass(O,!0),g.$$isolateBindings=C.$$isolateBindings,T=$t(i,M,g,g.$$isolateBindings,C),T.removeWatches&&g.$on("$destroy",T.removeWatches));for(var V in x){var z=E[V],P=x[V],q=z.$$bindings.bindToController;P.identifier&&q?P.bindingInfo=$t(v,M,P.instance,q,z):P.bindingInfo={};var D=P();D!==P.instance&&(P.instance=D,O.data("$"+z.name+"Controller",D),P.bindingInfo.removeWatches&&P.bindingInfo.removeWatches(),P.bindingInfo=$t(v,M,P.instance,q,z))}for(r(E,function(t,e){var require=t.require;t.bindToController&&!Jr(require)&&y(require)&&c(x[e].instance,tt(e,require,O,x))}),r(x,function(t){var e=t.instance;if(S(e.$onChanges))try{e.$onChanges(t.bindingInfo.initialChanges)}catch(n){o(n)}if(S(e.$onInit))try{e.$onInit()}catch(n){o(n)}S(e.$doCheck)&&(v.$watch(function(){e.$doCheck()}),e.$doCheck()),S(e.$onDestroy)&&v.$on("$destroy",function(){e.$onDestroy()})}),f=0,h=s.length;f<h;f++)b=s[f],vt(b,b.isolateScope?g:i,O,M,b.require&&tt(b.directiveName,b.require,O,x),w);var R=i;for(C&&(C.template||null===C.templateUrl)&&(R=g),t&&t(R,a.childNodes,void 0,d),f=u.length-1;f>=0;f--)b=u[f],vt(b,b.isolateScope?g:i,O,M,b.require&&tt(b.directiveName,b.require,O,x),w);r(x,function(t){var e=t.instance;S(e.$postLink)&&e.$postLink()})}d=d||{};for(var h,b,g,v,x,w=-Number.MAX_VALUE,k=d.newScopeDirective,E=d.controllerDirectives,C=d.newIsolateScopeDirective,A=d.templateDirective,O=d.nonTlbTranscludeDirective,M=!1,T=!1,N=d.hasElementTranscludeDirective,V=n.$$element=Rr(e),z=l,P=i,q=!1,R=!1,U=0,F=t.length;U<F;U++){h=t[U];var H=h.$$start,W=h.$$end;if(H&&(V=J(e,H,W)),g=void 0,w>h.priority)break;if((x=h.scope)&&(h.templateUrl||(y(x)?(ct("new/isolated scope",C||k,h,V),C=h):ct("new/isolated scope",C,h,V)),k=k||h),b=h.name,!q&&(h.replace&&(h.templateUrl||h.template)||h.transclude&&!h.$$tlb)){for(var Z,Q=U+1;Z=t[Q++];)if(Z.transclude&&!Z.$$tlb||Z.replace&&(Z.templateUrl||Z.template)){R=!0;break}q=!0}if(!h.templateUrl&&h.controller&&(x=h.controller,E=E||bt(),ct("'"+b+"' controller",E[b],h,V),E[b]=h),x=h.transclude)if(M=!0,h.$$tlb||(ct("transclusion",O,h,V),O=h),"element"==x)N=!0,w=h.priority,g=V,V=n.$$element=Rr(_.$$createComment(b,n[b])),e=V[0],gt(a,L(g),e),g[0].$$parentNode=g[0].parentNode,P=X(R,g,i,w,z&&z.name,{nonTlbTranscludeDirective:O});else{var rt=bt();if(g=Rr(Tt(e)).contents(),y(x)){g=[];var ot=bt(),lt=bt();r(x,function(t,e){var n="?"===t.charAt(0);t=n?t.substring(1):t,ot[t]=e,rt[e]=null,lt[e]=n}),r(V.contents(),function(t){var e=ot[me(D(t))];e?(lt[e]=!0,rt[e]=rt[e]||[],rt[e].push(t)):g.push(t)}),r(lt,function(t,e){if(!t)throw Go("reqslot","Required transclusion slot `{0}` was not filled.",e)});for(var st in rt)rt[st]&&(rt[st]=X(R,rt[st],i))}V.empty(),P=X(R,g,i,void 0,void 0,{needsNewScope:h.$$isolateScope||h.$$newScope}),P.$$slots=rt}if(h.template)if(T=!0,ct("template",A,h,V),A=h,x=S(h.template)?h.template(V,n):h.template,x=At(x),h.replace){if(z=h,g=kt(x)?[]:$e(pt(h.templateNamespace,Kr(x))),e=g[0],1!=g.length||e.nodeType!==io)throw Go("tplrt","Template for directive '{0}' must have exactly one root element. {1}",b,"");gt(a,V,e);var ut={$attr:{}},dt=G(e,[],ut),ft=t.splice(U+1,t.length-(U+1));(C||k)&&nt(dt,C,k),t=t.concat(dt).concat(ft),it(n,ut),F=t.length}else V.html(x);if(h.templateUrl)T=!0,ct("template",A,h,V),A=h,h.replace&&(z=h),f=at(t.splice(U,t.length-U),V,n,a,M&&P,s,u,{controllerDirectives:E,newScopeDirective:k!==h&&k,newIsolateScopeDirective:C,templateDirective:A,nonTlbTranscludeDirective:O}),F=t.length;else if(h.compile)try{v=h.compile(V,n,P);var ht=h.$$originalDirective||h;S(v)?p(null,B(ht,v),H,W):v&&p(B(ht,v.pre),B(ht,v.post),H,W)}catch(yt){o(yt,K(V))}h.terminal&&(f.terminal=!0,w=Math.max(w,h.priority))}return f.scope=k&&k.scope===!0,f.transcludeOnThisElement=M,f.templateOnThisElement=T,f.transclude=P,d.hasElementTranscludeDirective=N,f}function tt(t,require,e,n){var o;if(w(require)){var i=require.match(E),a=require.substring(i[0].length),l=i[1]||i[3],s="?"===i[2];if("^^"===l?e=e.parent():(o=n&&n[a],o=o&&o.instance),!o){var c="$"+a+"Controller";o=l?e.inheritedData(c):e.data(c)}if(!o&&!s)throw Go("ctreq","Controller '{0}', required by directive '{1}', can't be found!",a,t)}else if(Jr(require)){o=[];for(var u=0,d=require.length;u<d;u++)o[u]=tt(t,require[u],e,n)}else y(require)&&(o={},r(require,function(r,i){o[i]=tt(t,r,e,n)}));return o||null}function et(t,e,n,r,o,i,a){var l=bt();for(var c in r){var u=r[c],d={$scope:u===a||u.$$isolateScope?o:i,$element:t,$attrs:e,$transclude:n},p=u.controller;"@"==p&&(p=e[u.name]);var f=s(p,d,!0,u.controllerAs);l[u.name]=f,t.data("$"+u.name+"Controller",f.instance)}return l}function nt(t,e,n){for(var r=0,o=t.length;r<o;r++)t[r]=p(t[r],{$$isolateScope:e,$$newScope:n})}function rt(t,n,r,i,l,s,c){if(n===l)return null;var f=null;if(u.hasOwnProperty(n))for(var h,b=e.get(n+d),g=0,v=b.length;g<v;g++)try{if(h=b[g],(m(i)||i>h.priority)&&h.restrict.indexOf(r)!=-1){if(s&&(h=p(h,{$$start:s,$$end:c})),!h.$$bindings){var x=h.$$bindings=a(h,h.name);y(x.isolateScope)&&(h.$$isolateBindings=x.isolateScope)}t.push(h),f=h}}catch(w){o(w)}return f}function ot(t){if(u.hasOwnProperty(t))for(var n,r=e.get(t+d),o=0,i=r.length;o<i;o++)if(n=r[o],n.multiElement)return!0;return!1}function it(t,e){var n=e.$attr,o=t.$attr;t.$$element;r(t,function(r,o){"$"!=o.charAt(0)&&(e[o]&&e[o]!==r&&(r+=("style"===o?";":" ")+e[o]),t.$set(o,r,!0,n[o]))}),r(e,function(e,r){t.hasOwnProperty(r)||"$"===r.charAt(0)||(t[r]=e,"class"!==r&&"style"!==r&&(o[r]=n[r]))})}function at(t,e,n,o,a,l,s,c){var u,d,f=[],h=e[0],b=t.shift(),g=p(b,{templateUrl:null,transclude:null,replace:null,$$originalDirective:b}),m=S(b.templateUrl)?b.templateUrl(e,n):b.templateUrl,v=b.templateNamespace;return e.empty(),i(m).then(function(i){var p,x,w,k;if(i=At(i),b.replace){if(w=kt(i)?[]:$e(pt(v,Kr(i))),p=w[0],1!=w.length||p.nodeType!==io)throw Go("tplrt","Template for directive '{0}' must have exactly one root element. {1}",b.name,m);x={$attr:{}},gt(o,e,p);var E=G(p,[],x);y(b.scope)&&nt(E,!0),t=E.concat(t),it(n,x)}else p=h,e.html(i);for(t.unshift(g),u=Q(t,p,n,a,e,b,l,s,c),r(o,function(t,n){t==p&&(o[n]=e[0])}),d=H(e[0].childNodes,a);f.length;){var S=f.shift(),C=f.shift(),A=f.shift(),j=f.shift(),O=e[0];if(!S.$$destroyed){if(C!==h){var M=C.className;c.hasElementTranscludeDirective&&b.replace||(O=Tt(p)),gt(A,Rr(C),O),q(Rr(O),M)}k=u.transcludeOnThisElement?W(S,u.transclude,j):j,u(d,S,O,o,k)}}f=null}),function(t,e,n,r,o){var i=o;e.$$destroyed||(f?f.push(e,n,r,i):(u.transcludeOnThisElement&&(i=W(e,u.transclude,o)),u(d,e,n,r,i)))}}function lt(t,e){var n=e.priority-t.priority;return 0!==n?n:t.name!==e.name?t.name<e.name?-1:1:t.index-e.index}function ct(t,e,n,r){function o(t){return t?" (module: "+t+")":""}if(e)throw Go("multidir","Multiple directives [{0}{1}, {2}{3}] asking for {4} on: {5}",e.name,o(e.$$moduleName),n.name,o(n.$$moduleName),t,K(r))}function dt(t,e){var r=n(e,!0);r&&t.push({priority:0,compile:function(t){var e=t.parent(),n=!!e.length;return n&&_.$$addBindingClass(e),function(t,e){var o=e.parent();n||_.$$addBindingClass(o),_.$$addBindingInfo(o,r.expressions),t.$watch(r,function(t){e[0].nodeValue=t})}}})}function pt(e,n){switch(e=zr(e||"html")){case"svg":case"math":var r=t.document.createElement("div");return r.innerHTML="<"+e+">"+n+"</"+e+">",r.childNodes[0].childNodes;default:return n}}function ft(t,e){if("srcdoc"==e)return A.HTML;var n=D(t);return"xlinkHref"==e||"form"==n&&"action"==e||"img"!=n&&("src"==e||"ngSrc"==e)?A.RESOURCE_URL:void 0}function ht(t,e,r,o,i){var a=ft(t,o);i=k[o]||i;var l=n(r,!0,a,i);if(l){if("multiple"===o&&"select"===D(t))throw Go("selmulti","Binding to the 'multiple' attribute is not supported. Element: {0}",K(t));e.push({priority:100,compile:function(){return{pre:function(t,e,s){var c=s.$$observers||(s.$$observers=bt());if(C.test(o))throw Go("nodomevents","Interpolations for HTML DOM event attributes are disallowed.  Please use the ng- versions (such as ng-click instead of onclick) instead.");var u=s[o];u!==r&&(l=u&&n(u,!0,a,i),r=u),l&&(s[o]=l(t),(c[o]||(c[o]=[])).$$inter=!0,(s.$$observers&&s.$$observers[o].$$scope||t).$watch(l,function(t,e){"class"===o&&t!=e?s.$updateClass(t,e):s.$set(o,t)}))}}}})}}function gt(e,n,r){var o,i,a=n[0],l=n.length,s=a.parentNode;if(e)for(o=0,i=e.length;o<i;o++)if(e[o]==a){e[o++]=r;for(var c=o,u=c+l-1,d=e.length;c<d;c++,u++)u<d?e[c]=e[u]:delete e[c];e.length-=l-1,e.context===a&&(e.context=r);break}s&&s.replaceChild(r,a);var p=t.document.createDocumentFragment();for(o=0;o<l;o++)p.appendChild(n[o]);for(Rr.hasData(a)&&(Rr.data(r,Rr.data(a)),Rr(a).off("$destroy")),Rr.cleanData(p.querySelectorAll("*")),o=1;o<l;o++)delete n[o];n[0]=r,n.length=1}function mt(t,e){return c(function(){return t.apply(null,arguments)},t,e)}function vt(t,e,n,r,i,a){try{t(e,n,r,i,a)}catch(l){o(l,K(n))}}function $t(t,e,o,i,a){function s(e,n,r){S(o.$onChanges)&&n!==r&&(yt||(t.$$postDigest(z),yt=[]),u||(u={},yt.push(c)),u[e]&&(r=u[e].previousValue),u[e]=new ge(r,n))}function c(){o.$onChanges(u),u=void 0}var u,d=[],p={};return r(i,function(r,i){var c,u,h,b,g,m=r.attrName,v=r.optional,y=r.mode;switch(y){case"@":v||Vr.call(e,m)||(o[i]=e[m]=void 0),e.$observe(m,function(t){if(w(t)||N(t)){var e=o[i];s(i,t,e),o[i]=t}}),e.$$observers[m].$$scope=t,c=e[m],w(c)?o[i]=n(c)(t):N(c)&&(o[i]=c),p[i]=new ge(Zo,o[i]);break;case"=":if(!Vr.call(e,m)){if(v)break;e[m]=void 0}if(v&&!e[m])break;u=l(e[m]),b=u.literal?U:function(t,e){return t===e||t!==t&&e!==e},h=u.assign||function(){throw c=o[i]=u(t),Go("nonassign","Expression '{0}' in attribute '{1}' used with directive '{2}' is non-assignable!",e[m],m,a.name)},c=o[i]=u(t);var x=function(e){return b(e,o[i])||(b(e,c)?h(t,e=o[i]):o[i]=e),c=e};x.$stateful=!0,g=r.collection?t.$watchCollection(e[m],x):t.$watch(l(e[m],x),null,u.literal),d.push(g);break;case"<":if(!Vr.call(e,m)){if(v)break;e[m]=void 0}if(v&&!e[m])break;u=l(e[m]);var k=o[i]=u(t);p[i]=new ge(Zo,o[i]),g=t.$watch(u,function(t,e){if(e===t){if(e===k)return;e=k}s(i,t,e),o[i]=t},u.literal),d.push(g);break;case"&":if(u=e.hasOwnProperty(m)?l(e[m]):f,u===f&&v)break;o[i]=function(e){return u(t,e)}}}),{initialChanges:p,removeWatches:d.length&&function(){for(var t=0,e=d.length;t<e;++t)d[t]()}}}var yt,xt=/^\w/,wt=t.document.createElement("div"),Et=M;I.prototype={$normalize:me,$addClass:function(t){t&&t.length>0&&T.addClass(this.$$element,t)},$removeClass:function(t){t&&t.length>0&&T.removeClass(this.$$element,t)},$updateClass:function(t,e){var n=ve(t,e);n&&n.length&&T.addClass(this.$$element,n);var r=ve(e,t);r&&r.length&&T.removeClass(this.$$element,r)},$set:function(t,e,n,i){var a,l=this.$$element[0],s=Wt(l,t),c=Gt(t),u=t;if(s?(this.$$element.prop(t,e),i=s):c&&(this[c]=e,u=c),this[t]=e,i?this.$attr[t]=i:(i=this.$attr[t],i||(this.$attr[t]=i=st(t,"-"))),a=D(this.$$element),"a"===a&&("href"===t||"xlinkHref"===t)||"img"===a&&"src"===t)this[t]=e=V(e,"src"===t);else if("img"===a&&"srcset"===t&&v(e)){for(var d="",p=Kr(e),f=/(\s+\d+x\s*,|\s+\d+w\s*,|\s+,|,\s+)/,h=/\s/.test(p)?f:/(,)/,b=p.split(h),g=Math.floor(b.length/2),y=0;y<g;y++){var x=2*y;d+=V(Kr(b[x]),!0),d+=" "+Kr(b[x+1])}var w=Kr(b[2*y]).split(/\s/);d+=V(Kr(w[0]),!0),2===w.length&&(d+=" "+Kr(w[1])),this[t]=e=d}n!==!1&&(null===e||m(e)?this.$$element.removeAttr(i):xt.test(i)?this.$$element.attr(i,e):P(this.$$element[0],i,e));var k=this.$$observers;k&&r(k[u],function(t){try{t(e)}catch(n){o(n)}})},$observe:function(t,e){var n=this,r=n.$$observers||(n.$$observers=bt()),o=r[t]||(r[t]=[]);return o.push(e),b.$evalAsync(function(){o.$$inter||!n.hasOwnProperty(t)||m(n[t])||e(n[t])}),function(){R(o,e)}}};var St=n.startSymbol(),Ct=n.endSymbol(),At="{{"==St&&"}}"==Ct?h:function(t){return t.replace(/\{\{/g,St).replace(/}}/g,Ct)},jt=/^ngAttr[A-Z]/,Mt=/^(.+)Start$/;return _.$$addBindingInfo=O?function(t,e){var n=t.data("$binding")||[];Jr(e)?n=n.concat(e):n.push(e),t.data("$binding",n)}:f,_.$$addBindingClass=O?function(t){q(t,"ng-binding")}:f,_.$$addScopeInfo=O?function(t,e,n,r){var o=n?r?"$isolateScopeNoTemplate":"$isolateScope":"$scope";t.data(o,e)}:f,_.$$addScopeClass=O?function(t,e){q(t,e?"ng-isolate-scope":"ng-scope")}:f,_.$$createComment=function(e,n){var r="";return O&&(r=" "+(e||"")+": ",n&&(r+=n+" ")),t.document.createComment(r)},_}]}function ge(t,e){this.previousValue=t,this.currentValue=e}function me(t){return wt(t.replace(Jo,""))}function ve(t,e){var n="",r=t.split(/\s+/),o=e.split(/\s+/);t:for(var i=0;i<r.length;i++){for(var a=r[i],l=0;l<o.length;l++)if(a==o[l])continue t;n+=(n.length>0?" ":"")+a}return n}function $e(t){t=Rr(t);var e=t.length;if(e<=1)return t;for(;e--;){var n=t[e];n.nodeType===so&&Lr.call(t,e,1)}return t}function ye(t,e){if(e&&w(e))return e;if(w(t)){var n=Ko.exec(t);if(n)return n[3]}}function xe(){var t={},n=!1;this.has=function(e){return t.hasOwnProperty(e)},this.register=function(e,n){pt(e,"controller"),y(e)?c(t,e):t[e]=n},this.allowGlobals=function(){n=!0},this.$get=["$injector","$window",function(r,o){function i(t,n,r,o){if(!t||!y(t.$scope))throw e("$controller")("noscp","Cannot export controller '{0}' as '{1}'! No $scope object provided via `locals`.",o,n);t.$scope[n]=r}return function(e,a,l,s){var u,d,p,f;if(l=l===!0,s&&w(s)&&(f=s),w(e)){if(d=e.match(Ko),!d)throw Yo("ctrlfmt","Badly formed controller string '{0}'. Must match `__name__ as __id__` or `__name__`.",e);p=d[1],f=f||d[3],e=t.hasOwnProperty(p)?t[p]:ft(a.$scope,p,!0)||(n?ft(o,p,!0):void 0),dt(e,p,!0)}if(l){var h=(Jr(e)?e[e.length-1]:e).prototype;u=Object.create(h||null),f&&i(a,f,u,p||e.name);var b;return b=c(function(){var t=r.invoke(e,u,a,p);return t!==u&&(y(t)||S(t))&&(u=t,f&&i(a,f,u,p||e.name)),u},{instance:u,identifier:f})}return u=r.instantiate(e,a,p),f&&i(a,f,u,p||e.name),u}}]}function we(){this.$get=["$window",function(t){return Rr(t.document)}]}function ke(){this.$get=["$log",function(t){return function(e,n){t.error.apply(t,arguments)}}]}function Ee(t){return y(t)?E(t)?t.toISOString():W(t):t}function Se(){this.$get=function(){return function(t){if(!t)return"";var e=[];return o(t,function(t,n){null===t||m(t)||(Jr(t)?r(t,function(t){e.push(nt(n)+"="+nt(Ee(t)))}):e.push(nt(n)+"="+nt(Ee(t))))}),e.join("&")}}}function Ce(){this.$get=function(){return function(t){function e(t,i,a){null===t||m(t)||(Jr(t)?r(t,function(t,n){e(t,i+"["+(y(t)?n:"")+"]")}):y(t)&&!E(t)?o(t,function(t,n){e(t,i+(a?"":"[")+n+(a?"":"]"))}):n.push(nt(i)+"="+nt(Ee(t))))}if(!t)return"";var n=[];return e(t,"",!0),n.join("&")}}}function Ae(t,e){if(w(t)){var n=t.replace(ri,"").trim();if(n){var r=e("Content-Type");(r&&0===r.indexOf(Qo)||je(n))&&(t=G(n))}}return t}function je(t){var e=t.match(ei);return e&&ni[e[0]].test(t)}function Oe(t){function e(t,e){t&&(o[t]=o[t]?o[t]+", "+e:e)}var n,o=bt();return w(t)?r(t.split("\n"),function(t){n=t.indexOf(":"),e(zr(Kr(t.substr(0,n))),Kr(t.substr(n+1)))}):y(t)&&r(t,function(t,n){e(zr(n),Kr(t))}),o}function Me(t){var e;return function(n){if(e||(e=Oe(t)),n){var r=e[zr(n)];return void 0===r&&(r=null),r}return e}}function Te(t,e,n,o){return S(o)?o(t,e,n):(r(o,function(r){t=r(t,e,n)}),t)}function Ne(t){return 200<=t&&t<300}function Ve(){var t=this.defaults={transformResponse:[Ae],transformRequest:[function(t){return!y(t)||O(t)||T(t)||M(t)?t:W(t)}],headers:{common:{Accept:"application/json, text/plain, */*"},post:mt(ti),put:mt(ti),patch:mt(ti)},xsrfCookieName:"XSRF-TOKEN",xsrfHeaderName:"X-XSRF-TOKEN",paramSerializer:"$httpParamSerializer"},n=!1;this.useApplyAsync=function(t){return v(t)?(n=!!t,this):n};var o=!0;this.useLegacyPromiseExtensions=function(t){return v(t)?(o=!!t,this):o};var i=this.interceptors=[];this.$get=["$httpBackend","$$cookieReader","$cacheFactory","$rootScope","$q","$injector",function(a,l,s,u,d,p){function f(n){function i(t,e){for(var n=0,r=e.length;n<r;){var o=e[n++],i=e[n++];t=t.then(o,i)}return e.length=0,t}function a(t,e){var n,o={};return r(t,function(t,r){S(t)?(n=t(e),null!=n&&(o[r]=n)):o[r]=t}),o}function l(e){var n,r,o,i=t.headers,l=c({},e.headers);i=c({},i.common,i[zr(e.method)]);t:for(n in i){r=zr(n);for(o in l)if(zr(o)===r)continue t;l[n]=i[n]}return a(l,mt(e))}function s(e){var n=e.headers,o=Te(e.data,Me(n),void 0,e.transformRequest);return m(o)&&r(n,function(t,e){"content-type"===zr(e)&&delete n[e]}),m(e.withCredentials)&&!m(t.withCredentials)&&(e.withCredentials=t.withCredentials),g(e,o).then(u,u)}function u(t){var e=c({},t);return e.data=Te(t.data,t.headers,t.status,f.transformResponse),Ne(t.status)?e:d.reject(e)}if(!y(n))throw e("$http")("badreq","Http request configuration must be an object.  Received: {0}",n);if(!w(n.url))throw e("$http")("badreq","Http request configuration url must be a string.  Received: {0}",n.url);var f=c({method:"get",transformRequest:t.transformRequest,transformResponse:t.transformResponse,paramSerializer:t.paramSerializer},n);f.headers=l(n),f.method=Ir(f.method),f.paramSerializer=w(f.paramSerializer)?p.get(f.paramSerializer):f.paramSerializer;var h=[],b=[],v=d.when(f);return r(E,function(t){(t.request||t.requestError)&&h.unshift(t.request,t.requestError),(t.response||t.responseError)&&b.push(t.response,t.responseError)}),v=i(v,h),v=v.then(s),v=i(v,b),o?(v.success=function(t){return dt(t,"fn"),v.then(function(e){t(e.data,e.status,e.headers,f)}),v},v.error=function(t){return dt(t,"fn"),v.then(null,function(e){t(e.data,e.status,e.headers,f)}),v}):(v.success=ii("success"),v.error=ii("error")),v}function h(t){r(arguments,function(t){f[t]=function(e,n){return f(c({},n||{},{method:t,url:e}))}})}function b(t){r(arguments,function(t){f[t]=function(e,n,r){return f(c({},r||{},{method:t,url:e,data:n}))}})}function g(e,o){function i(t){if(t){var e={};return r(t,function(t,r){e[r]=function(e){function r(){t(e)}n?u.$applyAsync(r):u.$$phase?r():u.$apply(r)}}),e}}function s(t,e,r,o){function i(){c(e,t,r,o)}b&&(Ne(t)?b.put(C,[t,e,Oe(r),o]):b.remove(C)),n?u.$applyAsync(i):(i(),u.$$phase||u.$apply())}function c(t,n,r,o){n=n>=-1?n:0,(Ne(n)?w.resolve:w.reject)({data:t,status:n,headers:Me(r),config:e,statusText:o})}function p(t){c(t.data,t.status,mt(t.headers()),t.statusText)}function h(){var t=f.pendingRequests.indexOf(e);t!==-1&&f.pendingRequests.splice(t,1)}var b,g,w=d.defer(),E=w.promise,S=e.headers,C=x(e.url,e.paramSerializer(e.params));if(f.pendingRequests.push(e),E.then(h,h),!e.cache&&!t.cache||e.cache===!1||"GET"!==e.method&&"JSONP"!==e.method||(b=y(e.cache)?e.cache:y(t.cache)?t.cache:k),b&&(g=b.get(C),v(g)?V(g)?g.then(p,p):Jr(g)?c(g[1],g[0],mt(g[2]),g[3]):c(g,200,{},"OK"):b.put(C,E)),m(g)){var A=Pn(e.url)?l()[e.xsrfCookieName||t.xsrfCookieName]:void 0;A&&(S[e.xsrfHeaderName||t.xsrfHeaderName]=A),a(e.method,C,o,s,S,e.timeout,e.withCredentials,e.responseType,i(e.eventHandlers),i(e.uploadEventHandlers))}return E}function x(t,e){return e.length>0&&(t+=(t.indexOf("?")==-1?"?":"&")+e),t}var k=s("$http");t.paramSerializer=w(t.paramSerializer)?p.get(t.paramSerializer):t.paramSerializer;var E=[];return r(i,function(t){E.unshift(w(t)?p.get(t):p.invoke(t))}),f.pendingRequests=[],h("get","delete","head","jsonp"),b("post","put","patch"),f.defaults=t,f}]}function ze(){this.$get=function(){return function(){return new t.XMLHttpRequest}}}function Ie(){this.$get=["$browser","$jsonpCallbacks","$document","$xhrFactory",function(t,e,n,r){return Pe(t,r,t.defer,e,n[0])}]}function Pe(t,e,n,o,i){function a(t,e,n){t=t.replace("JSON_CALLBACK",e);var r=i.createElement("script"),a=null;return r.type="text/javascript",r.src=t,r.async=!0,a=function(t){go(r,"load",a),go(r,"error",a),i.body.removeChild(r),r=null;var l=-1,s="unknown";t&&("load"!==t.type||o.wasCalled(e)||(t={type:"error"}),s=t.type,l="error"===t.type?404:200),n&&n(l,s)},bo(r,"load",a),bo(r,"error",a),i.body.appendChild(r),a}return function(i,l,s,c,u,d,p,h,b,g){function y(){k&&k(),E&&E.abort()}function x(e,r,o,i,a){v(A)&&n.cancel(A),k=E=null,e(r,o,i,a),t.$$completeOutstandingRequest(f)}if(t.$$incOutstandingRequestCount(),l=l||t.url(),"jsonp"===zr(i))var w=o.createCallback(l),k=a(l,w,function(t,e){var n=200===t&&o.getResponse(w);x(c,t,n,"",e),o.removeCallback(w)});else{var E=e(i,l);E.open(i,l,!0),r(u,function(t,e){v(t)&&E.setRequestHeader(e,t)}),E.onload=function(){var t=E.statusText||"",e="response"in E?E.response:E.responseText,n=1223===E.status?204:E.status;0===n&&(n=e?200:"file"==In(l).protocol?404:0),x(c,n,e,E.getAllResponseHeaders(),t)};var S=function(){x(c,-1,null,null,"")};if(E.onerror=S,E.onabort=S,r(b,function(t,e){E.addEventListener(e,t)}),r(g,function(t,e){E.upload.addEventListener(e,t)}),p&&(E.withCredentials=!0),h)try{E.responseType=h}catch(C){if("json"!==h)throw C}E.send(m(s)?null:s)}if(d>0)var A=n(y,d);else V(d)&&d.then(y)}}function qe(){var t="{{",e="}}";this.startSymbol=function(e){return e?(t=e,this):t},this.endSymbol=function(t){return t?(e=t,this):e},this.$get=["$parse","$exceptionHandler","$sce",function(n,r,o){function i(t){return"\\\\\\"+t}function a(n){return n.replace(f,t).replace(h,e)}function l(t){if(null==t)return"";switch(typeof t){case"string":break;case"number":t=""+t;break;default:t=W(t)}return t}function s(t,e,n,r){var o;return o=t.$watch(function(t){return o(),r(t)},e,n)}function u(i,u,f,h){function g(t){try{return t=V(t),h&&!v(t)?t:l(t)}catch(e){r(ai.interr(i,e))}}if(!i.length||i.indexOf(t)===-1){var y;if(!u){var x=a(i);y=b(x),y.exp=i,y.expressions=[],y.$$watchDelegate=s}return y}h=!!h;for(var w,k,E,C=0,A=[],j=[],O=i.length,M=[],T=[];C<O;){if((w=i.indexOf(t,C))==-1||(k=i.indexOf(e,w+d))==-1){C!==O&&M.push(a(i.substring(C)));break}C!==w&&M.push(a(i.substring(C,w))),E=i.substring(w+d,k),A.push(E),j.push(n(E,g)),C=k+p,T.push(M.length),M.push("")}if(f&&M.length>1&&ai.throwNoconcat(i),!u||A.length){var N=function(t){for(var e=0,n=A.length;e<n;e++){if(h&&m(t[e]))return;M[T[e]]=t[e]}return M.join("")},V=function(t){return f?o.getTrusted(f,t):o.valueOf(t)};return c(function(t){var e=0,n=A.length,o=new Array(n);try{for(;e<n;e++)o[e]=j[e](t);return N(o)}catch(a){r(ai.interr(i,a))}},{exp:i,expressions:A,$$watchDelegate:function(t,e){var n;return t.$watchGroup(j,function(r,o){var i=N(r);S(e)&&e.call(this,i,r!==o?n:i,t),n=i})}})}}var d=t.length,p=e.length,f=new RegExp(t.replace(/./g,i),"g"),h=new RegExp(e.replace(/./g,i),"g");return u.startSymbol=function(){return t},u.endSymbol=function(){return e},u}]}function De(){this.$get=["$rootScope","$window","$q","$$q","$browser",function(t,e,n,r,o){function i(i,l,s,c){function u(){d?i.apply(null,p):i(b)}var d=arguments.length>4,p=d?L(arguments,4):[],f=e.setInterval,h=e.clearInterval,b=0,g=v(c)&&!c,m=(g?r:n).defer(),y=m.promise;return s=v(s)?s:0,y.$$intervalId=f(function(){g?o.defer(u):t.$evalAsync(u),m.notify(b++),s>0&&b>=s&&(m.resolve(b),h(y.$$intervalId),delete a[y.$$intervalId]),g||t.$apply()},l),a[y.$$intervalId]=m,y}var a={};return i.cancel=function(t){return!!(t&&t.$$intervalId in a)&&(a[t.$$intervalId].reject("canceled"),e.clearInterval(t.$$intervalId),delete a[t.$$intervalId],!0)},i}]}function Re(t){for(var e=t.split("/"),n=e.length;n--;)e[n]=et(e[n]);return e.join("/")}function _e(t,e){var n=In(t);e.$$protocol=n.protocol,e.$$host=n.hostname,e.$$port=d(n.port)||ci[n.protocol]||null}function Ue(t,e){var n="/"!==t.charAt(0);n&&(t="/"+t);var r=In(t);e.$$path=decodeURIComponent(n&&"/"===r.pathname.charAt(0)?r.pathname.substring(1):r.pathname),e.$$search=Q(r.search),e.$$hash=decodeURIComponent(r.hash),e.$$path&&"/"!=e.$$path.charAt(0)&&(e.$$path="/"+e.$$path)}function Fe(t,e){return 0===t.lastIndexOf(e,0)}function Le(t,e){if(Fe(e,t))return e.substr(t.length)}function Be(t){var e=t.indexOf("#");return e==-1?t:t.substr(0,e)}function He(t){return t.replace(/(#.+)|#$/,"$1")}function We(t){return t.substr(0,Be(t).lastIndexOf("/")+1)}function Ge(t){return t.substring(0,t.indexOf("/",t.indexOf("//")+2))}function Ze(t,e,n){this.$$html5=!0,n=n||"",_e(t,this),this.$$parse=function(t){var n=Le(e,t);if(!w(n))throw ui("ipthprfx",'Invalid url "{0}", missing path prefix "{1}".',t,e);Ue(n,this),this.$$path||(this.$$path="/"),this.$$compose()},this.$$compose=function(){var t=tt(this.$$search),n=this.$$hash?"#"+et(this.$$hash):"";this.$$url=Re(this.$$path)+(t?"?"+t:"")+n,this.$$absUrl=e+this.$$url.substr(1)},this.$$parseLinkUrl=function(r,o){if(o&&"#"===o[0])return this.hash(o.slice(1)),!0;var i,a,l;return v(i=Le(t,r))?(a=i,l=v(i=Le(n,i))?e+(Le("/",i)||i):t+a):v(i=Le(e,r))?l=e+i:e==r+"/"&&(l=e),l&&this.$$parse(l),!!l}}function Je(t,e,n){_e(t,this),this.$$parse=function(r){function o(t,e,n){var r,o=/^\/[A-Z]:(\/.*)/;return Fe(e,n)&&(e=e.replace(n,"")),o.exec(e)?t:(r=o.exec(t),r?r[1]:t)}var i,a=Le(t,r)||Le(e,r);m(a)||"#"!==a.charAt(0)?this.$$html5?i=a:(i="",m(a)&&(t=r,this.replace())):(i=Le(n,a),m(i)&&(i=a)),Ue(i,this),this.$$path=o(this.$$path,i,t),this.$$compose()},this.$$compose=function(){var e=tt(this.$$search),r=this.$$hash?"#"+et(this.$$hash):"";this.$$url=Re(this.$$path)+(e?"?"+e:"")+r,this.$$absUrl=t+(this.$$url?n+this.$$url:"")},this.$$parseLinkUrl=function(e,n){return Be(t)==Be(e)&&(this.$$parse(e),!0)}}function Ye(t,e,n){this.$$html5=!0,Je.apply(this,arguments),this.$$parseLinkUrl=function(r,o){if(o&&"#"===o[0])return this.hash(o.slice(1)),!0;var i,a;return t==Be(r)?i=r:(a=Le(e,r))?i=t+n+a:e===r+"/"&&(i=e),i&&this.$$parse(i),!!i},this.$$compose=function(){var e=tt(this.$$search),r=this.$$hash?"#"+et(this.$$hash):"";this.$$url=Re(this.$$path)+(e?"?"+e:"")+r,this.$$absUrl=t+n+this.$$url}}function Ke(t){return function(){return this[t]}}function Xe(t,e){return function(n){return m(n)?this[t]:(this[t]=e(n),this.$$compose(),this)}}function Qe(){var t="",e={enabled:!1,requireBase:!0,rewriteLinks:!0};this.hashPrefix=function(e){return v(e)?(t=e,this):t},this.html5Mode=function(t){return N(t)?(e.enabled=t,this):y(t)?(N(t.enabled)&&(e.enabled=t.enabled),N(t.requireBase)&&(e.requireBase=t.requireBase),N(t.rewriteLinks)&&(e.rewriteLinks=t.rewriteLinks),this):e},this.$get=["$rootScope","$browser","$sniffer","$rootElement","$window",function(n,r,o,i,a){function l(t,e,n){var o=c.url(),i=c.$$state;try{r.url(t,e,n),c.$$state=r.state()}catch(a){throw c.url(o),c.$$state=i,a}}function s(t,e){n.$broadcast("$locationChangeSuccess",c.absUrl(),t,c.$$state,e)}var c,u,d,p=r.baseHref(),f=r.url();if(e.enabled){if(!p&&e.requireBase)throw ui("nobase","$location in HTML5 mode requires a <base> tag to be present!");d=Ge(f)+(p||"/"),u=o.history?Ze:Ye}else d=Be(f),u=Je;var h=We(d);c=new u(d,h,"#"+t),c.$$parseLinkUrl(f,f),c.$$state=r.state();var b=/^\s*(javascript|mailto):/i;i.on("click",function(t){if(e.rewriteLinks&&!t.ctrlKey&&!t.metaKey&&!t.shiftKey&&2!=t.which&&2!=t.button){for(var o=Rr(t.target);"a"!==D(o[0]);)if(o[0]===i[0]||!(o=o.parent())[0])return;var l=o.prop("href"),s=o.attr("href")||o.attr("xlink:href");y(l)&&"[object SVGAnimatedString]"===l.toString()&&(l=In(l.animVal).href),b.test(l)||!l||o.attr("target")||t.isDefaultPrevented()||c.$$parseLinkUrl(l,s)&&(t.preventDefault(),c.absUrl()!=r.url()&&(n.$apply(),a.angular["ff-684208-preventDefault"]=!0))}}),He(c.absUrl())!=He(f)&&r.url(c.absUrl(),!0);var g=!0;return r.onUrlChange(function(t,e){return m(Le(h,t))?void(a.location.href=t):(n.$evalAsync(function(){var r,o=c.absUrl(),i=c.$$state;t=He(t),c.$$parse(t),c.$$state=e,r=n.$broadcast("$locationChangeStart",t,o,e,i).defaultPrevented,c.absUrl()===t&&(r?(c.$$parse(o),c.$$state=i,l(o,!1,i)):(g=!1,s(o,i)))}),void(n.$$phase||n.$digest()))}),n.$watch(function(){var t=He(r.url()),e=He(c.absUrl()),i=r.state(),a=c.$$replace,u=t!==e||c.$$html5&&o.history&&i!==c.$$state;(g||u)&&(g=!1,n.$evalAsync(function(){var e=c.absUrl(),r=n.$broadcast("$locationChangeStart",e,t,c.$$state,i).defaultPrevented;c.absUrl()===e&&(r?(c.$$parse(t),c.$$state=i):(u&&l(e,a,i===c.$$state?null:c.$$state),s(t,i)))})),c.$$replace=!1}),c}]}function tn(){var t=!0,e=this;this.debugEnabled=function(e){return v(e)?(t=e,this):t},this.$get=["$window",function(n){function o(t){return t instanceof Error&&(t.stack?t=t.message&&t.stack.indexOf(t.message)===-1?"Error: "+t.message+"\n"+t.stack:t.stack:t.sourceURL&&(t=t.message+"\n"+t.sourceURL+":"+t.line)),t}function i(t){var e=n.console||{},i=e[t]||e.log||f,a=!1;try{a=!!i.apply}catch(l){}return a?function(){var t=[];return r(arguments,function(e){t.push(o(e))}),i.apply(e,t)}:function(t,e){i(t,null==e?"":e)}}return{log:i("log"),info:i("info"),warn:i("warn"),error:i("error"),debug:function(){var n=i("debug");return function(){t&&n.apply(e,arguments)}}()}}]}function en(t,e){if("__defineGetter__"===t||"__defineSetter__"===t||"__lookupGetter__"===t||"__lookupSetter__"===t||"__proto__"===t)throw pi("isecfld","Attempting to access a disallowed field in Angular expressions! Expression: {0}",e);return t}function nn(t){return t+""}function rn(t,e){if(t){if(t.constructor===t)throw pi("isecfn","Referencing Function in Angular expressions is disallowed! Expression: {0}",e);if(t.window===t)throw pi("isecwindow","Referencing the Window in Angular expressions is disallowed! Expression: {0}",e);if(t.children&&(t.nodeName||t.prop&&t.attr&&t.find))throw pi("isecdom","Referencing DOM nodes in Angular expressions is disallowed! Expression: {0}",e);if(t===Object)throw pi("isecobj","Referencing Object in Angular expressions is disallowed! Expression: {0}",e)}return t}function on(t,e){if(t){if(t.constructor===t)throw pi("isecfn","Referencing Function in Angular expressions is disallowed! Expression: {0}",e);if(t===fi||t===hi||t===bi)throw pi("isecff","Referencing call, apply or bind in Angular expressions is disallowed! Expression: {0}",e)}}function an(t,e){if(t&&(t===(0).constructor||t===(!1).constructor||t==="".constructor||t==={}.constructor||t===[].constructor||t===Function.constructor))throw pi("isecaf","Assigning to a constructor is disallowed! Expression: {0}",e)}function ln(t,e){return"undefined"!=typeof t?t:e}function sn(t,e){return"undefined"==typeof t?e:"undefined"==typeof e?t:t+e}function cn(t,e){var n=t(e);return!n.$stateful}function un(t,e){var n,o;switch(t.type){case $i.Program:n=!0,r(t.body,function(t){un(t.expression,e),n=n&&t.expression.constant}),t.constant=n;break;case $i.Literal:t.constant=!0,t.toWatch=[];break;case $i.UnaryExpression:un(t.argument,e),t.constant=t.argument.constant,t.toWatch=t.argument.toWatch;break;case $i.BinaryExpression:un(t.left,e),un(t.right,e),t.constant=t.left.constant&&t.right.constant,t.toWatch=t.left.toWatch.concat(t.right.toWatch);break;case $i.LogicalExpression:un(t.left,e),un(t.right,e),t.constant=t.left.constant&&t.right.constant,t.toWatch=t.constant?[]:[t];break;case $i.ConditionalExpression:un(t.test,e),un(t.alternate,e),un(t.consequent,e),t.constant=t.test.constant&&t.alternate.constant&&t.consequent.constant,t.toWatch=t.constant?[]:[t];break;case $i.Identifier:
-t.constant=!1,t.toWatch=[t];break;case $i.MemberExpression:un(t.object,e),t.computed&&un(t.property,e),t.constant=t.object.constant&&(!t.computed||t.property.constant),t.toWatch=[t];break;case $i.CallExpression:n=!!t.filter&&cn(e,t.callee.name),o=[],r(t.arguments,function(t){un(t,e),n=n&&t.constant,t.constant||o.push.apply(o,t.toWatch)}),t.constant=n,t.toWatch=t.filter&&cn(e,t.callee.name)?o:[t];break;case $i.AssignmentExpression:un(t.left,e),un(t.right,e),t.constant=t.left.constant&&t.right.constant,t.toWatch=[t];break;case $i.ArrayExpression:n=!0,o=[],r(t.elements,function(t){un(t,e),n=n&&t.constant,t.constant||o.push.apply(o,t.toWatch)}),t.constant=n,t.toWatch=o;break;case $i.ObjectExpression:n=!0,o=[],r(t.properties,function(t){un(t.value,e),n=n&&t.value.constant&&!t.computed,t.value.constant||o.push.apply(o,t.value.toWatch)}),t.constant=n,t.toWatch=o;break;case $i.ThisExpression:t.constant=!1,t.toWatch=[];break;case $i.LocalsExpression:t.constant=!1,t.toWatch=[]}}function dn(t){if(1==t.length){var e=t[0].expression,n=e.toWatch;return 1!==n.length?n:n[0]!==e?n:void 0}}function pn(t){return t.type===$i.Identifier||t.type===$i.MemberExpression}function fn(t){if(1===t.body.length&&pn(t.body[0].expression))return{type:$i.AssignmentExpression,left:t.body[0].expression,right:{type:$i.NGValueParameter},operator:"="}}function hn(t){return 0===t.body.length||1===t.body.length&&(t.body[0].expression.type===$i.Literal||t.body[0].expression.type===$i.ArrayExpression||t.body[0].expression.type===$i.ObjectExpression)}function bn(t){return t.constant}function gn(t,e){this.astBuilder=t,this.$filter=e}function mn(t,e){this.astBuilder=t,this.$filter=e}function vn(t){return"constructor"==t}function $n(t){return S(t.valueOf)?t.valueOf():xi.call(t)}function yn(){var t,e,n=bt(),o=bt(),i={"true":!0,"false":!1,"null":null,undefined:void 0};this.addLiteral=function(t,e){i[t]=e},this.setIdentifierFns=function(n,r){return t=n,e=r,this},this.$get=["$filter",function(a){function l(t,e,r){var i,l,c;switch(r=r||x,typeof t){case"string":t=t.trim(),c=t;var g=r?o:n;if(i=g[c],!i){":"===t.charAt(0)&&":"===t.charAt(1)&&(l=!0,t=t.substring(2));var v=r?y:m,w=new vi(v),k=new yi(w,a,v);i=k.parse(t),i.constant?i.$$watchDelegate=h:l?i.$$watchDelegate=i.literal?p:d:i.inputs&&(i.$$watchDelegate=u),r&&(i=s(i)),g[c]=i}return b(i,e);case"function":return b(t,e);default:return b(f,e)}}function s(t){function e(e,n,r,o){var i=x;x=!0;try{return t(e,n,r,o)}finally{x=i}}if(!t)return t;e.$$watchDelegate=t.$$watchDelegate,e.assign=s(t.assign),e.constant=t.constant,e.literal=t.literal;for(var n=0;t.inputs&&n<t.inputs.length;++n)t.inputs[n]=s(t.inputs[n]);return e.inputs=t.inputs,e}function c(t,e){return null==t||null==e?t===e:("object"!=typeof t||(t=$n(t),"object"!=typeof t))&&(t===e||t!==t&&e!==e)}function u(t,e,n,r,o){var i,a=r.inputs;if(1===a.length){var l=c;return a=a[0],t.$watch(function(t){var e=a(t);return c(e,l)||(i=r(t,void 0,void 0,[e]),l=e&&$n(e)),i},e,n,o)}for(var s=[],u=[],d=0,p=a.length;d<p;d++)s[d]=c,u[d]=null;return t.$watch(function(t){for(var e=!1,n=0,o=a.length;n<o;n++){var l=a[n](t);(e||(e=!c(l,s[n])))&&(u[n]=l,s[n]=l&&$n(l))}return e&&(i=r(t,void 0,void 0,u)),i},e,n,o)}function d(t,e,n,r){var o,i;return o=t.$watch(function(t){return r(t)},function(t,n,r){i=t,S(e)&&e.apply(this,arguments),v(t)&&r.$$postDigest(function(){v(i)&&o()})},n)}function p(t,e,n,o){function i(t){var e=!0;return r(t,function(t){v(t)||(e=!1)}),e}var a,l;return a=t.$watch(function(t){return o(t)},function(t,n,r){l=t,S(e)&&e.call(this,t,n,r),i(t)&&r.$$postDigest(function(){i(l)&&a()})},n)}function h(t,e,n,r){var o;return o=t.$watch(function(t){return o(),r(t)},e,n)}function b(t,e){if(!e)return t;var n=t.$$watchDelegate,r=!1,o=n!==p&&n!==d,i=o?function(n,o,i,a){var l=r&&a?a[0]:t(n,o,i,a);return e(l,n,o)}:function(n,r,o,i){var a=t(n,r,o,i),l=e(a,n,r);return v(a)?l:a};return t.$$watchDelegate&&t.$$watchDelegate!==u?i.$$watchDelegate=t.$$watchDelegate:e.$stateful||(i.$$watchDelegate=u,r=!t.inputs,i.inputs=t.inputs?t.inputs:[t]),i}var g=Qr().noUnsafeEval,m={csp:g,expensiveChecks:!1,literals:_(i),isIdentifierStart:S(t)&&t,isIdentifierContinue:S(e)&&e},y={csp:g,expensiveChecks:!0,literals:_(i),isIdentifierStart:S(t)&&t,isIdentifierContinue:S(e)&&e},x=!1;return l.$$runningExpensiveChecks=function(){return x},l}]}function xn(){this.$get=["$rootScope","$exceptionHandler",function(t,e){return kn(function(e){t.$evalAsync(e)},e)}]}function wn(){this.$get=["$browser","$exceptionHandler",function(t,e){return kn(function(e){t.defer(e)},e)}]}function kn(t,n){function o(){this.$$state={status:0}}function i(t,e){return function(n){e.call(t,n)}}function a(t){var e,r,o;o=t.pending,t.processScheduled=!1,t.pending=void 0;for(var i=0,a=o.length;i<a;++i){r=o[i][0],e=o[i][t.status];try{S(e)?r.resolve(e(t.value)):1===t.status?r.resolve(t.value):r.reject(t.value)}catch(l){r.reject(l),n(l)}}}function l(e){!e.processScheduled&&e.pending&&(e.processScheduled=!0,t(function(){a(e)}))}function s(){this.promise=new o}function u(t){var e=new s,n=0,o=Jr(t)?[]:{};return r(t,function(t,r){n++,v(t).then(function(t){o.hasOwnProperty(r)||(o[r]=t,--n||e.resolve(o))},function(t){o.hasOwnProperty(r)||e.reject(t)})}),0===n&&e.resolve(o),e.promise}function d(t){var e=f();return r(t,function(t){v(t).then(e.resolve,e.reject)}),e.promise}var p=e("$q",TypeError),f=function(){var t=new s;return t.resolve=i(t,t.resolve),t.reject=i(t,t.reject),t.notify=i(t,t.notify),t};c(o.prototype,{then:function(t,e,n){if(m(t)&&m(e)&&m(n))return this;var r=new s;return this.$$state.pending=this.$$state.pending||[],this.$$state.pending.push([r,t,e,n]),this.$$state.status>0&&l(this.$$state),r.promise},"catch":function(t){return this.then(null,t)},"finally":function(t,e){return this.then(function(e){return g(e,!0,t)},function(e){return g(e,!1,t)},e)}}),c(s.prototype,{resolve:function(t){this.promise.$$state.status||(t===this.promise?this.$$reject(p("qcycle","Expected promise to be resolved with value other than itself '{0}'",t)):this.$$resolve(t))},$$resolve:function(t){function e(t){s||(s=!0,a.$$resolve(t))}function r(t){s||(s=!0,a.$$reject(t))}var o,a=this,s=!1;try{(y(t)||S(t))&&(o=t&&t.then),S(o)?(this.promise.$$state.status=-1,o.call(t,e,r,i(this,this.notify))):(this.promise.$$state.value=t,this.promise.$$state.status=1,l(this.promise.$$state))}catch(c){r(c),n(c)}},reject:function(t){this.promise.$$state.status||this.$$reject(t)},$$reject:function(t){this.promise.$$state.value=t,this.promise.$$state.status=2,l(this.promise.$$state)},notify:function(e){var r=this.promise.$$state.pending;this.promise.$$state.status<=0&&r&&r.length&&t(function(){for(var t,o,i=0,a=r.length;i<a;i++){o=r[i][0],t=r[i][3];try{o.notify(S(t)?t(e):e)}catch(l){n(l)}}})}});var h=function(t){var e=new s;return e.reject(t),e.promise},b=function(t,e){var n=new s;return e?n.resolve(t):n.reject(t),n.promise},g=function(t,e,n){var r=null;try{S(n)&&(r=n())}catch(o){return b(o,!1)}return V(r)?r.then(function(){return b(t,e)},function(t){return b(t,!1)}):b(t,e)},v=function(t,e,n,r){var o=new s;return o.resolve(t),o.promise.then(e,n,r)},x=v,w=function(t){function e(t){r.resolve(t)}function n(t){r.reject(t)}if(!S(t))throw p("norslvr","Expected resolverFn, got '{0}'",t);var r=new s;return t(e,n),r.promise};return w.prototype=o.prototype,w.defer=f,w.reject=h,w.when=v,w.resolve=x,w.all=u,w.race=d,w}function En(){this.$get=["$window","$timeout",function(t,e){var n=t.requestAnimationFrame||t.webkitRequestAnimationFrame,r=t.cancelAnimationFrame||t.webkitCancelAnimationFrame||t.webkitCancelRequestAnimationFrame,o=!!n,i=o?function(t){var e=n(t);return function(){r(e)}}:function(t){var n=e(t,16.66,!1);return function(){e.cancel(n)}};return i.supported=o,i}]}function Sn(){function t(t){function e(){this.$$watchers=this.$$nextSibling=this.$$childHead=this.$$childTail=null,this.$$listeners={},this.$$listenerCount={},this.$$watchersCount=0,this.$id=a(),this.$$ChildScope=null}return e.prototype=t,e}var o=10,i=e("$rootScope"),l=null,s=null;this.digestTtl=function(t){return arguments.length&&(o=t),o},this.$get=["$exceptionHandler","$parse","$browser",function(e,c,u){function d(t){t.currentScope.$$destroyed=!0}function p(t){9===Dr&&(t.$$childHead&&p(t.$$childHead),t.$$nextSibling&&p(t.$$nextSibling)),t.$parent=t.$$nextSibling=t.$$prevSibling=t.$$childHead=t.$$childTail=t.$root=t.$$watchers=null}function h(){this.$id=a(),this.$$phase=this.$parent=this.$$watchers=this.$$nextSibling=this.$$prevSibling=this.$$childHead=this.$$childTail=null,this.$root=this,this.$$destroyed=!1,this.$$listeners={},this.$$listenerCount={},this.$$watchersCount=0,this.$$isolateBindings=null}function b(t){if(C.$$phase)throw i("inprog","{0} already in progress",C.$$phase);C.$$phase=t}function g(){C.$$phase=null}function v(t,e){do t.$$watchersCount+=e;while(t=t.$parent)}function x(t,e,n){do t.$$listenerCount[n]-=e,0===t.$$listenerCount[n]&&delete t.$$listenerCount[n];while(t=t.$parent)}function w(){}function k(){for(;O.length;)try{O.shift()()}catch(t){e(t)}s=null}function E(){null===s&&(s=u.defer(function(){C.$apply(k)}))}h.prototype={constructor:h,$new:function(e,n){var r;return n=n||this,e?(r=new h,r.$root=this.$root):(this.$$ChildScope||(this.$$ChildScope=t(this)),r=new this.$$ChildScope),r.$parent=n,r.$$prevSibling=n.$$childTail,n.$$childHead?(n.$$childTail.$$nextSibling=r,n.$$childTail=r):n.$$childHead=n.$$childTail=r,(e||n!=this)&&r.$on("$destroy",d),r},$watch:function(t,e,n,r){var o=c(t);if(o.$$watchDelegate)return o.$$watchDelegate(this,e,n,o,t);var i=this,a=i.$$watchers,s={fn:e,last:w,get:o,exp:r||t,eq:!!n};return l=null,S(e)||(s.fn=f),a||(a=i.$$watchers=[]),a.unshift(s),v(this,1),function(){R(a,s)>=0&&v(i,-1),l=null}},$watchGroup:function(t,e){function n(){s=!1,c?(c=!1,e(i,i,l)):e(i,o,l)}var o=new Array(t.length),i=new Array(t.length),a=[],l=this,s=!1,c=!0;if(!t.length){var u=!0;return l.$evalAsync(function(){u&&e(i,i,l)}),function(){u=!1}}return 1===t.length?this.$watch(t[0],function(t,n,r){i[0]=t,o[0]=n,e(i,t===n?i:o,r)}):(r(t,function(t,e){var r=l.$watch(t,function(t,r){i[e]=t,o[e]=r,s||(s=!0,l.$evalAsync(n))});a.push(r)}),function(){for(;a.length;)a.shift()()})},$watchCollection:function(t,e){function r(t){i=t;var e,r,o,l,s;if(!m(i)){if(y(i))if(n(i)){a!==f&&(a=f,g=a.length=0,d++),e=i.length,g!==e&&(d++,a.length=g=e);for(var c=0;c<e;c++)s=a[c],l=i[c],o=s!==s&&l!==l,o||s===l||(d++,a[c]=l)}else{a!==h&&(a=h={},g=0,d++),e=0;for(r in i)Vr.call(i,r)&&(e++,l=i[r],s=a[r],r in a?(o=s!==s&&l!==l,o||s===l||(d++,a[r]=l)):(g++,a[r]=l,d++));if(g>e){d++;for(r in a)Vr.call(i,r)||(g--,delete a[r])}}else a!==i&&(a=i,d++);return d}}function o(){if(b?(b=!1,e(i,i,s)):e(i,l,s),u)if(y(i))if(n(i)){l=new Array(i.length);for(var t=0;t<i.length;t++)l[t]=i[t]}else{l={};for(var r in i)Vr.call(i,r)&&(l[r]=i[r])}else l=i}r.$stateful=!0;var i,a,l,s=this,u=e.length>1,d=0,p=c(t,r),f=[],h={},b=!0,g=0;return this.$watch(p,o)},$digest:function(){var t,n,r,a,c,d,p,f,h,m,v,y,x=o,E=this,O=[];b("$digest"),u.$$checkUrlChange(),this===C&&null!==s&&(u.defer.cancel(s),k()),l=null;do{f=!1,m=E;for(var T=0;T<A.length;T++){try{y=A[T],y.scope.$eval(y.expression,y.locals)}catch(N){e(N)}l=null}A.length=0;t:do{if(d=m.$$watchers)for(p=d.length;p--;)try{if(t=d[p])if(c=t.get,(n=c(m))===(r=t.last)||(t.eq?U(n,r):"number"==typeof n&&"number"==typeof r&&isNaN(n)&&isNaN(r))){if(t===l){f=!1;break t}}else f=!0,l=t,t.last=t.eq?_(n,null):n,a=t.fn,a(n,r===w?n:r,m),x<5&&(v=4-x,O[v]||(O[v]=[]),O[v].push({msg:S(t.exp)?"fn: "+(t.exp.name||t.exp.toString()):t.exp,newVal:n,oldVal:r}))}catch(N){e(N)}if(!(h=m.$$watchersCount&&m.$$childHead||m!==E&&m.$$nextSibling))for(;m!==E&&!(h=m.$$nextSibling);)m=m.$parent}while(m=h);if((f||A.length)&&!x--)throw g(),i("infdig","{0} $digest() iterations reached. Aborting!\nWatchers fired in the last 5 iterations: {1}",o,O)}while(f||A.length);for(g();M<j.length;)try{j[M++]()}catch(N){e(N)}j.length=M=0},$destroy:function(){if(!this.$$destroyed){var t=this.$parent;this.$broadcast("$destroy"),this.$$destroyed=!0,this===C&&u.$$applicationDestroyed(),v(this,-this.$$watchersCount);for(var e in this.$$listenerCount)x(this,this.$$listenerCount[e],e);t&&t.$$childHead==this&&(t.$$childHead=this.$$nextSibling),t&&t.$$childTail==this&&(t.$$childTail=this.$$prevSibling),this.$$prevSibling&&(this.$$prevSibling.$$nextSibling=this.$$nextSibling),this.$$nextSibling&&(this.$$nextSibling.$$prevSibling=this.$$prevSibling),this.$destroy=this.$digest=this.$apply=this.$evalAsync=this.$applyAsync=f,this.$on=this.$watch=this.$watchGroup=function(){return f},this.$$listeners={},this.$$nextSibling=null,p(this)}},$eval:function(t,e){return c(t)(this,e)},$evalAsync:function(t,e){C.$$phase||A.length||u.defer(function(){A.length&&C.$digest()}),A.push({scope:this,expression:c(t),locals:e})},$$postDigest:function(t){j.push(t)},$apply:function(t){try{b("$apply");try{return this.$eval(t)}finally{g()}}catch(n){e(n)}finally{try{C.$digest()}catch(n){throw e(n),n}}},$applyAsync:function(t){function e(){n.$eval(t)}var n=this;t&&O.push(e),t=c(t),E()},$on:function(t,e){var n=this.$$listeners[t];n||(this.$$listeners[t]=n=[]),n.push(e);var r=this;do r.$$listenerCount[t]||(r.$$listenerCount[t]=0),r.$$listenerCount[t]++;while(r=r.$parent);var o=this;return function(){var r=n.indexOf(e);r!==-1&&(n[r]=null,x(o,1,t))}},$emit:function(t,n){var r,o,i,a=[],l=this,s=!1,c={name:t,targetScope:l,stopPropagation:function(){s=!0},preventDefault:function(){c.defaultPrevented=!0},defaultPrevented:!1},u=F([c],arguments,1);do{for(r=l.$$listeners[t]||a,c.currentScope=l,o=0,i=r.length;o<i;o++)if(r[o])try{r[o].apply(null,u)}catch(d){e(d)}else r.splice(o,1),o--,i--;if(s)return c.currentScope=null,c;l=l.$parent}while(l);return c.currentScope=null,c},$broadcast:function(t,n){var r=this,o=r,i=r,a={name:t,targetScope:r,preventDefault:function(){a.defaultPrevented=!0},defaultPrevented:!1};if(!r.$$listenerCount[t])return a;for(var l,s,c,u=F([a],arguments,1);o=i;){for(a.currentScope=o,l=o.$$listeners[t]||[],s=0,c=l.length;s<c;s++)if(l[s])try{l[s].apply(null,u)}catch(d){e(d)}else l.splice(s,1),s--,c--;if(!(i=o.$$listenerCount[t]&&o.$$childHead||o!==r&&o.$$nextSibling))for(;o!==r&&!(i=o.$$nextSibling);)o=o.$parent}return a.currentScope=null,a}};var C=new h,A=C.$$asyncQueue=[],j=C.$$postDigestQueue=[],O=C.$$applyAsyncQueue=[],M=0;return C}]}function Cn(){var t=/^\s*(https?|ftp|mailto|tel|file):/,e=/^\s*((https?|ftp|file|blob):|data:image\/)/;this.aHrefSanitizationWhitelist=function(e){return v(e)?(t=e,this):t},this.imgSrcSanitizationWhitelist=function(t){return v(t)?(e=t,this):e},this.$get=function(){return function(n,r){var o,i=r?e:t;return o=In(n).href,""===o||o.match(i)?n:"unsafe:"+o}}}function An(t){if("self"===t)return t;if(w(t)){if(t.indexOf("***")>-1)throw wi("iwcard","Illegal sequence *** in string matcher.  String: {0}",t);return t=Xr(t).replace("\\*\\*",".*").replace("\\*","[^:/.?&;]*"),new RegExp("^"+t+"$")}if(C(t))return new RegExp("^"+t.source+"$");throw wi("imatcher",'Matchers may only be "self", string patterns or RegExp objects')}function jn(t){var e=[];return v(t)&&r(t,function(t){e.push(An(t))}),e}function On(){this.SCE_CONTEXTS=ki;var t=["self"],e=[];this.resourceUrlWhitelist=function(e){return arguments.length&&(t=jn(e)),t},this.resourceUrlBlacklist=function(t){return arguments.length&&(e=jn(t)),e},this.$get=["$injector",function(n){function r(t,e){return"self"===t?Pn(e):!!t.exec(e.href)}function o(n){var o,i,a=In(n.toString()),l=!1;for(o=0,i=t.length;o<i;o++)if(r(t[o],a)){l=!0;break}if(l)for(o=0,i=e.length;o<i;o++)if(r(e[o],a)){l=!1;break}return l}function i(t){var e=function(t){this.$$unwrapTrustedValue=function(){return t}};return t&&(e.prototype=new t),e.prototype.valueOf=function(){return this.$$unwrapTrustedValue()},e.prototype.toString=function(){return this.$$unwrapTrustedValue().toString()},e}function a(t,e){var n=d.hasOwnProperty(t)?d[t]:null;if(!n)throw wi("icontext","Attempted to trust a value in invalid context. Context: {0}; Value: {1}",t,e);if(null===e||m(e)||""===e)return e;if("string"!=typeof e)throw wi("itype","Attempted to trust a non-string value in a content requiring a string: Context: {0}",t);return new n(e)}function l(t){return t instanceof u?t.$$unwrapTrustedValue():t}function s(t,e){if(null===e||m(e)||""===e)return e;var n=d.hasOwnProperty(t)?d[t]:null;if(n&&e instanceof n)return e.$$unwrapTrustedValue();if(t===ki.RESOURCE_URL){if(o(e))return e;throw wi("insecurl","Blocked loading resource from url not allowed by $sceDelegate policy.  URL: {0}",e.toString())}if(t===ki.HTML)return c(e);throw wi("unsafe","Attempting to use an unsafe value in a safe context.")}var c=function(t){throw wi("unsafe","Attempting to use an unsafe value in a safe context.")};n.has("$sanitize")&&(c=n.get("$sanitize"));var u=i(),d={};return d[ki.HTML]=i(u),d[ki.CSS]=i(u),d[ki.URL]=i(u),d[ki.JS]=i(u),d[ki.RESOURCE_URL]=i(d[ki.URL]),{trustAs:a,getTrusted:s,valueOf:l}}]}function Mn(){var t=!0;this.enabled=function(e){return arguments.length&&(t=!!e),t},this.$get=["$parse","$sceDelegate",function(e,n){if(t&&Dr<8)throw wi("iequirks","Strict Contextual Escaping does not support Internet Explorer version < 11 in quirks mode.  You can fix this by adding the text <!doctype html> to the top of your HTML document.  See http://docs.angularjs.org/api/ng.$sce for more information.");var o=mt(ki);o.isEnabled=function(){return t},o.trustAs=n.trustAs,o.getTrusted=n.getTrusted,o.valueOf=n.valueOf,t||(o.trustAs=o.getTrusted=function(t,e){return e},o.valueOf=h),o.parseAs=function(t,n){var r=e(n);return r.literal&&r.constant?r:e(n,function(e){return o.getTrusted(t,e)})};var i=o.parseAs,a=o.getTrusted,l=o.trustAs;return r(ki,function(t,e){var n=zr(e);o[wt("parse_as_"+n)]=function(e){return i(t,e)},o[wt("get_trusted_"+n)]=function(e){return a(t,e)},o[wt("trust_as_"+n)]=function(e){return l(t,e)}}),o}]}function Tn(){this.$get=["$window","$document",function(t,e){var n,r,o={},i=t.chrome&&t.chrome.app&&t.chrome.app.runtime,a=!i&&t.history&&t.history.pushState,l=d((/android (\d+)/.exec(zr((t.navigator||{}).userAgent))||[])[1]),s=/Boxee/i.test((t.navigator||{}).userAgent),c=e[0]||{},u=/^(Moz|webkit|ms)(?=[A-Z])/,p=c.body&&c.body.style,f=!1,h=!1;if(p){for(var b in p)if(r=u.exec(b)){n=r[0],n=n[0].toUpperCase()+n.substr(1);break}n||(n="WebkitOpacity"in p&&"webkit"),f=!!("transition"in p||n+"Transition"in p),h=!!("animation"in p||n+"Animation"in p),!l||f&&h||(f=w(p.webkitTransition),h=w(p.webkitAnimation))}return{history:!(!a||l<4||s),hasEvent:function(t){if("input"===t&&Dr<=11)return!1;if(m(o[t])){var e=c.createElement("div");o[t]="on"+t in e}return o[t]},csp:Qr(),vendorPrefix:n,transitions:f,animations:h,android:l}}]}function Nn(){var t;this.httpOptions=function(e){return e?(t=e,this):t},this.$get=["$templateCache","$http","$q","$sce",function(e,n,r,o){function i(a,l){function s(t){if(!l)throw Ei("tpload","Failed to load template: {0} (HTTP status: {1} {2})",a,t.status,t.statusText);return r.reject(t)}i.totalPendingRequests++,w(a)&&!m(e.get(a))||(a=o.getTrustedResourceUrl(a));var u=n.defaults&&n.defaults.transformResponse;return Jr(u)?u=u.filter(function(t){return t!==Ae}):u===Ae&&(u=null),n.get(a,c({cache:e,transformResponse:u},t))["finally"](function(){i.totalPendingRequests--}).then(function(t){return e.put(a,t.data),t.data},s)}return i.totalPendingRequests=0,i}]}function Vn(){this.$get=["$rootScope","$browser","$location",function(t,e,n){var o={};return o.findBindings=function(t,e,n){var o=t.getElementsByClassName("ng-binding"),i=[];return r(o,function(t){var o=angular.element(t).data("$binding");o&&r(o,function(r){if(n){var o=new RegExp("(^|\\s)"+Xr(e)+"(\\s|\\||$)");o.test(r)&&i.push(t)}else r.indexOf(e)!=-1&&i.push(t)})}),i},o.findModels=function(t,e,n){for(var r=["ng-","data-ng-","ng\\:"],o=0;o<r.length;++o){var i=n?"=":"*=",a="["+r[o]+"model"+i+'"'+e+'"]',l=t.querySelectorAll(a);if(l.length)return l}},o.getLocation=function(){return n.url()},o.setLocation=function(e){e!==n.url()&&(n.url(e),t.$digest())},o.whenStable=function(t){e.notifyWhenNoOutstandingRequests(t)},o}]}function zn(){this.$get=["$rootScope","$browser","$q","$$q","$exceptionHandler",function(t,e,n,r,o){function i(i,l,s){S(i)||(s=l,l=i,i=f);var c,u=L(arguments,3),d=v(s)&&!s,p=(d?r:n).defer(),h=p.promise;return c=e.defer(function(){try{p.resolve(i.apply(null,u))}catch(e){p.reject(e),o(e)}finally{delete a[h.$$timeoutId]}d||t.$apply()},l),h.$$timeoutId=c,a[c]=p,h}var a={};return i.cancel=function(t){return!!(t&&t.$$timeoutId in a)&&(a[t.$$timeoutId].reject("canceled"),delete a[t.$$timeoutId],e.defer.cancel(t.$$timeoutId))},i}]}function In(t){var e=t;return Dr&&(Si.setAttribute("href",e),e=Si.href),Si.setAttribute("href",e),{href:Si.href,protocol:Si.protocol?Si.protocol.replace(/:$/,""):"",host:Si.host,search:Si.search?Si.search.replace(/^\?/,""):"",hash:Si.hash?Si.hash.replace(/^#/,""):"",hostname:Si.hostname,port:Si.port,pathname:"/"===Si.pathname.charAt(0)?Si.pathname:"/"+Si.pathname}}function Pn(t){var e=w(t)?In(t):t;return e.protocol===Ci.protocol&&e.host===Ci.host}function qn(){this.$get=b(t)}function Dn(t){function e(t){try{return decodeURIComponent(t)}catch(e){return t}}var n=t[0]||{},r={},o="";return function(){var t,i,a,l,s,c=n.cookie||"";if(c!==o)for(o=c,t=o.split("; "),r={},a=0;a<t.length;a++)i=t[a],l=i.indexOf("="),l>0&&(s=e(i.substring(0,l)),m(r[s])&&(r[s]=e(i.substring(l+1))));return r}}function Rn(){this.$get=Dn}function _n(t){function e(o,i){if(y(o)){var a={};return r(o,function(t,n){a[n]=e(n,t)}),a}return t.factory(o+n,i)}var n="Filter";this.register=e,this.$get=["$injector",function(t){return function(e){return t.get(e+n)}}],e("currency",Hn),e("date",ar),e("filter",Un),e("json",lr),e("limitTo",sr),e("lowercase",Vi),e("number",Wn),e("orderBy",ur),e("uppercase",zi)}function Un(){return function(t,r,o,i){if(!n(t)){if(null==t)return t;throw e("filter")("notarray","Expected array but received: {0}",t)}i=i||"$";var a,l,s=Bn(r);switch(s){case"function":a=r;break;case"boolean":case"null":case"number":case"string":l=!0;case"object":a=Fn(r,o,i,l);break;default:return t}return Array.prototype.filter.call(t,a)}}function Fn(t,e,n,r){var o,i=y(t)&&n in t;return e===!0?e=U:S(e)||(e=function(t,e){return!m(t)&&(null===t||null===e?t===e:!(y(e)||y(t)&&!g(t))&&(t=zr(""+t),e=zr(""+e),t.indexOf(e)!==-1))}),o=function(o){return i&&!y(o)?Ln(o,t[n],e,n,!1):Ln(o,t,e,n,r)}}function Ln(t,e,n,r,o,i){var a=Bn(t),l=Bn(e);if("string"===l&&"!"===e.charAt(0))return!Ln(t,e.substring(1),n,r,o);if(Jr(t))return t.some(function(t){return Ln(t,e,n,r,o)});switch(a){case"object":var s;if(o){for(s in t)if("$"!==s.charAt(0)&&Ln(t[s],e,n,r,!0))return!0;return!i&&Ln(t,e,n,r,!1)}if("object"===l){for(s in e){var c=e[s];if(!S(c)&&!m(c)){var u=s===r,d=u?t:t[s];if(!Ln(d,c,n,r,u,u))return!1}}return!0}return n(t,e);case"function":return!1;default:return n(t,e)}}function Bn(t){return null===t?"null":typeof t}function Hn(t){var e=t.NUMBER_FORMATS;return function(t,n,r){return m(n)&&(n=e.CURRENCY_SYM),m(r)&&(r=e.PATTERNS[1].maxFrac),null==t?t:Jn(t,e.PATTERNS[1],e.GROUP_SEP,e.DECIMAL_SEP,r).replace(/\u00A4/g,n)}}function Wn(t){var e=t.NUMBER_FORMATS;return function(t,n){return null==t?t:Jn(t,e.PATTERNS[0],e.GROUP_SEP,e.DECIMAL_SEP,n)}}function Gn(t){var e,n,r,o,i,a=0;for((n=t.indexOf(ji))>-1&&(t=t.replace(ji,"")),(r=t.search(/e/i))>0?(n<0&&(n=r),n+=+t.slice(r+1),t=t.substring(0,r)):n<0&&(n=t.length),r=0;t.charAt(r)==Oi;r++);if(r==(i=t.length))e=[0],n=1;else{for(i--;t.charAt(i)==Oi;)i--;for(n-=r,e=[],o=0;r<=i;r++,o++)e[o]=+t.charAt(r)}return n>Ai&&(e=e.splice(0,Ai-1),a=n-1,n=1),{d:e,e:a,i:n}}function Zn(t,e,n,r){var o=t.d,i=o.length-t.i;e=m(e)?Math.min(Math.max(n,i),r):+e;var a=e+t.i,l=o[a];if(a>0){o.splice(Math.max(t.i,a));for(var s=a;s<o.length;s++)o[s]=0}else{i=Math.max(0,i),t.i=1,o.length=Math.max(1,a=e+1),o[0]=0;for(var c=1;c<a;c++)o[c]=0}if(l>=5)if(a-1<0){for(var u=0;u>a;u--)o.unshift(0),t.i++;o.unshift(1),t.i++}else o[a-1]++;for(;i<Math.max(0,e);i++)o.push(0);var d=o.reduceRight(function(t,e,n,r){return e+=t,r[n]=e%10,Math.floor(e/10)},0);d&&(o.unshift(d),t.i++)}function Jn(t,e,n,r,o){if(!w(t)&&!k(t)||isNaN(t))return"";var i,a=!isFinite(t),l=!1,s=Math.abs(t)+"",c="";if(a)c="∞";else{i=Gn(s),Zn(i,o,e.minFrac,e.maxFrac);var u=i.d,d=i.i,p=i.e,f=[];for(l=u.reduce(function(t,e){return t&&!e},!0);d<0;)u.unshift(0),d++;d>0?f=u.splice(d,u.length):(f=u,u=[0]);var h=[];for(u.length>=e.lgSize&&h.unshift(u.splice(-e.lgSize,u.length).join(""));u.length>e.gSize;)h.unshift(u.splice(-e.gSize,u.length).join(""));u.length&&h.unshift(u.join("")),c=h.join(n),f.length&&(c+=r+f.join("")),p&&(c+="e+"+p)}return t<0&&!l?e.negPre+c+e.negSuf:e.posPre+c+e.posSuf}function Yn(t,e,n,r){var o="";for((t<0||r&&t<=0)&&(r?t=-t+1:(t=-t,o="-")),t=""+t;t.length<e;)t=Oi+t;return n&&(t=t.substr(t.length-e)),o+t}function Kn(t,e,n,r,o){return n=n||0,function(i){var a=i["get"+t]();return(n>0||a>-n)&&(a+=n),0===a&&n==-12&&(a=12),Yn(a,e,r,o)}}function Xn(t,e,n){return function(r,o){var i=r["get"+t](),a=(n?"STANDALONE":"")+(e?"SHORT":""),l=Ir(a+t);return o[l][i]}}function Qn(t,e,n){var r=-1*n,o=r>=0?"+":"";return o+=Yn(Math[r>0?"floor":"ceil"](r/60),2)+Yn(Math.abs(r%60),2)}function tr(t){var e=new Date(t,0,1).getDay();return new Date(t,0,(e<=4?5:12)-e)}function er(t){return new Date(t.getFullYear(),t.getMonth(),t.getDate()+(4-t.getDay()))}function nr(t){return function(e){var n=tr(e.getFullYear()),r=er(e),o=+r-+n,i=1+Math.round(o/6048e5);return Yn(i,t)}}function rr(t,e){return t.getHours()<12?e.AMPMS[0]:e.AMPMS[1]}function or(t,e){return t.getFullYear()<=0?e.ERAS[0]:e.ERAS[1]}function ir(t,e){return t.getFullYear()<=0?e.ERANAMES[0]:e.ERANAMES[1]}function ar(t){function e(t){var e;if(e=t.match(n)){var r=new Date(0),o=0,i=0,a=e[8]?r.setUTCFullYear:r.setFullYear,l=e[8]?r.setUTCHours:r.setHours;e[9]&&(o=d(e[9]+e[10]),i=d(e[9]+e[11])),a.call(r,d(e[1]),d(e[2])-1,d(e[3]));var s=d(e[4]||0)-o,c=d(e[5]||0)-i,u=d(e[6]||0),p=Math.round(1e3*parseFloat("0."+(e[7]||0)));return l.call(r,s,c,u,p),r}return t}var n=/^(\d{4})-?(\d\d)-?(\d\d)(?:T(\d\d)(?::?(\d\d)(?::?(\d\d)(?:\.(\d+))?)?)?(Z|([+-])(\d\d):?(\d\d))?)?$/;return function(n,o,i){var a,l,s="",c=[];if(o=o||"mediumDate",o=t.DATETIME_FORMATS[o]||o,w(n)&&(n=Ni.test(n)?d(n):e(n)),k(n)&&(n=new Date(n)),!E(n)||!isFinite(n.getTime()))return n;for(;o;)l=Ti.exec(o),l?(c=F(c,l,1),o=c.pop()):(c.push(o),o=null);var u=n.getTimezoneOffset();return i&&(u=Z(i,u),n=Y(n,i,!0)),r(c,function(e){a=Mi[e],s+=a?a(n,t.DATETIME_FORMATS,u):"''"===e?"'":e.replace(/(^'|'$)/g,"").replace(/''/g,"'")}),s}}function lr(){return function(t,e){return m(e)&&(e=2),W(t,e)}}function sr(){return function(t,e,r){return e=Math.abs(Number(e))===1/0?Number(e):d(e),isNaN(e)?t:(k(t)&&(t=t.toString()),n(t)?(r=!r||isNaN(r)?0:d(r),r=r<0?Math.max(0,t.length+r):r,e>=0?cr(t,r,r+e):0===r?cr(t,e,t.length):cr(t,Math.max(0,r+e),r)):t)}}function cr(t,e,n){return w(t)?t.slice(e,n):Fr.call(t,e,n)}function ur(t){function r(e){return e.map(function(e){var n=1,r=h;if(S(e))r=e;else if(w(e)&&("+"!=e.charAt(0)&&"-"!=e.charAt(0)||(n="-"==e.charAt(0)?-1:1,e=e.substring(1)),""!==e&&(r=t(e),r.constant))){var o=r();r=function(t){return t[o]}}return{get:r,descending:n}})}function o(t){switch(typeof t){case"number":case"boolean":case"string":return!0;default:return!1}}function i(t){return S(t.valueOf)&&(t=t.valueOf(),o(t))?t:g(t)&&(t=t.toString(),o(t))?t:t}function a(t,e){var n=typeof t;return null===t?(n="string",t="null"):"object"===n&&(t=i(t)),{value:t,type:n,index:e}}function l(t,e){var n=0,r=t.type,o=e.type;if(r===o){var i=t.value,a=e.value;"string"===r?(i=i.toLowerCase(),a=a.toLowerCase()):"object"===r&&(y(i)&&(i=t.index),y(a)&&(a=e.index)),i!==a&&(n=i<a?-1:1)}else n=r<o?-1:1;return n}return function(t,o,i,s){function c(t,e){return{value:t,tieBreaker:{value:e,type:"number",index:e},predicateValues:d.map(function(n){return a(n.get(t),e)})}}function u(t,e){for(var n=0,r=d.length;n<r;n++){var o=f(t.predicateValues[n],e.predicateValues[n]);if(o)return o*d[n].descending*p}return f(t.tieBreaker,e.tieBreaker)*p}if(null==t)return t;if(!n(t))throw e("orderBy")("notarray","Expected array but received: {0}",t);Jr(o)||(o=[o]),0===o.length&&(o=["+"]);var d=r(o),p=i?-1:1,f=S(s)?s:l,h=Array.prototype.map.call(t,c);return h.sort(u),t=h.map(function(t){return t.value})}}function dr(t){return S(t)&&(t={link:t}),t.restrict=t.restrict||"AC",b(t)}function pr(t,e){t.$name=e}function fr(t,e,n,o,i){var a=this,l=[];a.$error={},a.$$success={},a.$pending=void 0,a.$name=i(e.name||e.ngForm||"")(n),a.$dirty=!1,a.$pristine=!0,a.$valid=!0,a.$invalid=!1,a.$submitted=!1,a.$$parentForm=qi,a.$rollbackViewValue=function(){r(l,function(t){t.$rollbackViewValue()})},a.$commitViewValue=function(){r(l,function(t){t.$commitViewValue()})},a.$addControl=function(t){pt(t.$name,"input"),l.push(t),t.$name&&(a[t.$name]=t),t.$$parentForm=a},a.$$renameControl=function(t,e){var n=t.$name;a[n]===t&&delete a[n],a[e]=t,t.$name=e},a.$removeControl=function(t){t.$name&&a[t.$name]===t&&delete a[t.$name],r(a.$pending,function(e,n){a.$setValidity(n,null,t)}),r(a.$error,function(e,n){a.$setValidity(n,null,t)}),r(a.$$success,function(e,n){a.$setValidity(n,null,t)}),R(l,t),t.$$parentForm=qi},jr({ctrl:this,$element:t,set:function(t,e,n){var r=t[e];if(r){var o=r.indexOf(n);o===-1&&r.push(n)}else t[e]=[n]},unset:function(t,e,n){var r=t[e];r&&(R(r,n),0===r.length&&delete t[e])},$animate:o}),a.$setDirty=function(){o.removeClass(t,xa),o.addClass(t,wa),a.$dirty=!0,a.$pristine=!1,a.$$parentForm.$setDirty()},a.$setPristine=function(){o.setClass(t,xa,wa+" "+Di),a.$dirty=!1,a.$pristine=!0,a.$submitted=!1,r(l,function(t){t.$setPristine()})},a.$setUntouched=function(){r(l,function(t){t.$setUntouched()})},a.$setSubmitted=function(){o.addClass(t,Di),a.$submitted=!0,a.$$parentForm.$setSubmitted()}}function hr(t){t.$formatters.push(function(e){return t.$isEmpty(e)?e:e.toString()})}function br(t,e,n,r,o,i){gr(t,e,n,r,o,i),hr(r)}function gr(t,e,n,r,o,i){var a=zr(e[0].type);if(!o.android){var l=!1;e.on("compositionstart",function(){l=!0}),e.on("compositionend",function(){l=!1,c()})}var s,c=function(t){if(s&&(i.defer.cancel(s),s=null),!l){var o=e.val(),c=t&&t.type;"password"===a||n.ngTrim&&"false"===n.ngTrim||(o=Kr(o)),(r.$viewValue!==o||""===o&&r.$$hasNativeValidators)&&r.$setViewValue(o,c)}};if(o.hasEvent("input"))e.on("input",c);else{var u=function(t,e,n){s||(s=i.defer(function(){s=null,e&&e.value===n||c(t)}))};e.on("keydown",function(t){var e=t.keyCode;91===e||15<e&&e<19||37<=e&&e<=40||u(t,this,this.value)}),o.hasEvent("paste")&&e.on("paste cut",u)}e.on("change",c),Xi[a]&&r.$$hasNativeValidators&&a===n.type&&e.on(Ki,function(t){if(!s){var e=this[Nr],n=e.badInput,r=e.typeMismatch;s=i.defer(function(){s=null,e.badInput===n&&e.typeMismatch===r||c(t)})}}),r.$render=function(){var t=r.$isEmpty(r.$viewValue)?"":r.$viewValue;e.val()!==t&&e.val(t)}}function mr(t,e){if(E(t))return t;if(w(t)){Zi.lastIndex=0;var n=Zi.exec(t);if(n){var r=+n[1],o=+n[2],i=0,a=0,l=0,s=0,c=tr(r),u=7*(o-1);return e&&(i=e.getHours(),a=e.getMinutes(),l=e.getSeconds(),s=e.getMilliseconds()),new Date(r,0,c.getDate()+u,i,a,l,s)}}return NaN}function vr(t,e){return function(n,o){var i,a;if(E(n))return n;if(w(n)){if('"'==n.charAt(0)&&'"'==n.charAt(n.length-1)&&(n=n.substring(1,n.length-1)),Fi.test(n))return new Date(n);if(t.lastIndex=0,i=t.exec(n))return i.shift(),a=o?{yyyy:o.getFullYear(),MM:o.getMonth()+1,dd:o.getDate(),HH:o.getHours(),mm:o.getMinutes(),ss:o.getSeconds(),sss:o.getMilliseconds()/1e3}:{yyyy:1970,MM:1,dd:1,HH:0,mm:0,ss:0,sss:0},r(i,function(t,n){n<e.length&&(a[e[n]]=+t)}),new Date(a.yyyy,a.MM-1,a.dd,a.HH,a.mm,a.ss||0,1e3*a.sss||0)}return NaN}}function $r(t,e,n,r){return function(o,i,a,l,s,c,u){function d(t){return t&&!(t.getTime&&t.getTime()!==t.getTime())}function p(t){return v(t)&&!E(t)?n(t)||void 0:t}yr(o,i,a,l),gr(o,i,a,l,s,c);var f,h=l&&l.$options&&l.$options.timezone;if(l.$$parserName=t,l.$parsers.push(function(t){if(l.$isEmpty(t))return null;if(e.test(t)){var r=n(t,f);return h&&(r=Y(r,h)),r}}),l.$formatters.push(function(t){if(t&&!E(t))throw ja("datefmt","Expected `{0}` to be a date",t);
-return d(t)?(f=t,f&&h&&(f=Y(f,h,!0)),u("date")(t,r,h)):(f=null,"")}),v(a.min)||a.ngMin){var b;l.$validators.min=function(t){return!d(t)||m(b)||n(t)>=b},a.$observe("min",function(t){b=p(t),l.$validate()})}if(v(a.max)||a.ngMax){var g;l.$validators.max=function(t){return!d(t)||m(g)||n(t)<=g},a.$observe("max",function(t){g=p(t),l.$validate()})}}}function yr(t,e,n,r){var o=e[0],i=r.$$hasNativeValidators=y(o.validity);i&&r.$parsers.push(function(t){var n=e.prop(Nr)||{};return n.badInput||n.typeMismatch?void 0:t})}function xr(t,e,n,r,o,i){if(yr(t,e,n,r),gr(t,e,n,r,o,i),r.$$parserName="number",r.$parsers.push(function(t){return r.$isEmpty(t)?null:Hi.test(t)?parseFloat(t):void 0}),r.$formatters.push(function(t){if(!r.$isEmpty(t)){if(!k(t))throw ja("numfmt","Expected `{0}` to be a number",t);t=t.toString()}return t}),v(n.min)||n.ngMin){var a;r.$validators.min=function(t){return r.$isEmpty(t)||m(a)||t>=a},n.$observe("min",function(t){v(t)&&!k(t)&&(t=parseFloat(t)),a=k(t)&&!isNaN(t)?t:void 0,r.$validate()})}if(v(n.max)||n.ngMax){var l;r.$validators.max=function(t){return r.$isEmpty(t)||m(l)||t<=l},n.$observe("max",function(t){v(t)&&!k(t)&&(t=parseFloat(t)),l=k(t)&&!isNaN(t)?t:void 0,r.$validate()})}}function wr(t,e,n,r,o,i){gr(t,e,n,r,o,i),hr(r),r.$$parserName="url",r.$validators.url=function(t,e){var n=t||e;return r.$isEmpty(n)||Li.test(n)}}function kr(t,e,n,r,o,i){gr(t,e,n,r,o,i),hr(r),r.$$parserName="email",r.$validators.email=function(t,e){var n=t||e;return r.$isEmpty(n)||Bi.test(n)}}function Er(t,e,n,r){m(n.name)&&e.attr("name",a());var o=function(t){e[0].checked&&r.$setViewValue(n.value,t&&t.type)};e.on("click",o),r.$render=function(){var t=n.value;e[0].checked=t==r.$viewValue},n.$observe("value",r.$render)}function Sr(t,e,n,r,o){var i;if(v(r)){if(i=t(r),!i.constant)throw ja("constexpr","Expected constant expression for `{0}`, but saw `{1}`.",n,r);return i(e)}return o}function Cr(t,e,n,r,o,i,a,l){var s=Sr(l,t,"ngTrueValue",n.ngTrueValue,!0),c=Sr(l,t,"ngFalseValue",n.ngFalseValue,!1),u=function(t){r.$setViewValue(e[0].checked,t&&t.type)};e.on("click",u),r.$render=function(){e[0].checked=r.$viewValue},r.$isEmpty=function(t){return t===!1},r.$formatters.push(function(t){return U(t,s)}),r.$parsers.push(function(t){return t?s:c})}function Ar(t,e){return t="ngClass"+t,["$animate",function(n){function o(t,e){var n=[];t:for(var r=0;r<t.length;r++){for(var o=t[r],i=0;i<e.length;i++)if(o==e[i])continue t;n.push(o)}return n}function i(t){var e=[];return Jr(t)?(r(t,function(t){e=e.concat(i(t))}),e):w(t)?t.split(" "):y(t)?(r(t,function(t,n){t&&(e=e.concat(n.split(" ")))}),e):t}return{restrict:"AC",link:function(a,l,s){function c(t){var e=d(t,1);s.$addClass(e)}function u(t){var e=d(t,-1);s.$removeClass(e)}function d(t,e){var n=l.data("$classCounts")||bt(),o=[];return r(t,function(t){(e>0||n[t])&&(n[t]=(n[t]||0)+e,n[t]===+(e>0)&&o.push(t))}),l.data("$classCounts",n),o.join(" ")}function p(t,e){var r=o(e,t),i=o(t,e);r=d(r,1),i=d(i,-1),r&&r.length&&n.addClass(l,r),i&&i.length&&n.removeClass(l,i)}function f(t){if(e===!0||(1&a.$index)===e){var n=i(t||[]);if(h){if(!U(t,h)){var r=i(h);p(r,n)}}else c(n)}h=Jr(t)?t.map(function(t){return mt(t)}):mt(t)}var h;a.$watch(s[t],f,!0),s.$observe("class",function(e){f(a.$eval(s[t]))}),"ngClass"!==t&&a.$watch("$index",function(n,r){var o=1&n;if(o!==(1&r)){var l=i(a.$eval(s[t]));o===e?c(l):u(l)}})}}}]}function jr(t){function e(t,e,l){m(e)?n("$pending",t,l):r("$pending",t,l),N(e)?e?(u(a.$error,t,l),c(a.$$success,t,l)):(c(a.$error,t,l),u(a.$$success,t,l)):(u(a.$error,t,l),u(a.$$success,t,l)),a.$pending?(o(Sa,!0),a.$valid=a.$invalid=void 0,i("",null)):(o(Sa,!1),a.$valid=Or(a.$error),a.$invalid=!a.$valid,i("",a.$valid));var s;s=a.$pending&&a.$pending[t]?void 0:!a.$error[t]&&(!!a.$$success[t]||null),i(t,s),a.$$parentForm.$setValidity(t,s,a)}function n(t,e,n){a[t]||(a[t]={}),c(a[t],e,n)}function r(t,e,n){a[t]&&u(a[t],e,n),Or(a[t])&&(a[t]=void 0)}function o(t,e){e&&!s[t]?(d.addClass(l,t),s[t]=!0):!e&&s[t]&&(d.removeClass(l,t),s[t]=!1)}function i(t,e){t=t?"-"+st(t,"-"):"",o($a+t,e===!0),o(ya+t,e===!1)}var a=t.ctrl,l=t.$element,s={},c=t.set,u=t.unset,d=t.$animate;s[ya]=!(s[$a]=l.hasClass($a)),a.$setValidity=e}function Or(t){if(t)for(var e in t)if(t.hasOwnProperty(e))return!1;return!0}function Mr(t){t[0].hasAttribute("selected")&&(t[0].selected=!0)}var Tr=/^\/(.+)\/([a-z]*)$/,Nr="validity",Vr=Object.prototype.hasOwnProperty,zr=function(t){return w(t)?t.toLowerCase():t},Ir=function(t){return w(t)?t.toUpperCase():t},Pr=function(t){return w(t)?t.replace(/[A-Z]/g,function(t){return String.fromCharCode(32|t.charCodeAt(0))}):t},qr=function(t){return w(t)?t.replace(/[a-z]/g,function(t){return String.fromCharCode(t.charCodeAt(0)&-33)}):t};"i"!=="I".toLowerCase()&&(zr=Pr,Ir=qr);var Dr,Rr,_r,Ur,Fr=[].slice,Lr=[].splice,Br=[].push,Hr=Object.prototype.toString,Wr=Object.getPrototypeOf,Gr=e("ng"),angular=t.angular||(t.angular={}),Zr=0;Dr=t.document.documentMode,f.$inject=[],h.$inject=[];var Jr=Array.isArray,Yr=/^\[object (?:Uint8|Uint8Clamped|Uint16|Uint32|Int8|Int16|Int32|Float32|Float64)Array\]$/,Kr=function(t){return w(t)?t.trim():t},Xr=function(t){return t.replace(/([-()\[\]{}+?*.$\^|,:#<!\\])/g,"\\$1").replace(/\x08/g,"\\x08")},Qr=function(){function e(){try{return new Function(""),!1}catch(t){return!0}}if(!v(Qr.rules)){var n=t.document.querySelector("[ng-csp]")||t.document.querySelector("[data-ng-csp]");if(n){var r=n.getAttribute("ng-csp")||n.getAttribute("data-ng-csp");Qr.rules={noUnsafeEval:!r||r.indexOf("no-unsafe-eval")!==-1,noInlineStyle:!r||r.indexOf("no-inline-style")!==-1}}else Qr.rules={noUnsafeEval:e(),noInlineStyle:!1}}return Qr.rules},to=function(){if(v(to.name_))return to.name_;var e,n,r,o,i=no.length;for(n=0;n<i;++n)if(r=no[n],e=t.document.querySelector("["+r.replace(":","\\:")+"jq]")){o=e.getAttribute(r+"jq");break}return to.name_=o},eo=/:/g,no=["ng-","data-ng-","ng:","x-ng-"],ro=/[A-Z]/g,oo=!1,io=1,ao=2,lo=3,so=8,co=9,uo=11,po={full:"1.5.8",major:1,minor:5,dot:8,codeName:"arbitrary-fallbacks"};Mt.expando="ng339";var fo=Mt.cache={},ho=1,bo=function(t,e,n){t.addEventListener(e,n,!1)},go=function(t,e,n){t.removeEventListener(e,n,!1)};Mt._data=function(t){return this.cache[t[this.expando]]||{}};var mo=/([\:\-\_]+(.))/g,vo=/^moz([A-Z])/,$o={mouseleave:"mouseout",mouseenter:"mouseover"},yo=e("jqLite"),xo=/^<([\w-]+)\s*\/?>(?:<\/\1>|)$/,wo=/<|&#?\w+;/,ko=/<([\w:-]+)/,Eo=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:-]+)[^>]*)\/>/gi,So={option:[1,'<select multiple="multiple">',"</select>"],thead:[1,"<table>","</table>"],col:[2,"<table><colgroup>","</colgroup></table>"],tr:[2,"<table><tbody>","</tbody></table>"],td:[3,"<table><tbody><tr>","</tr></tbody></table>"],_default:[0,"",""]};So.optgroup=So.option,So.tbody=So.tfoot=So.colgroup=So.caption=So.thead,So.th=So.td;var Co=t.Node.prototype.contains||function(t){return!!(16&this.compareDocumentPosition(t))},Ao=Mt.prototype={ready:function(e){function n(){r||(r=!0,e())}var r=!1;"complete"===t.document.readyState?t.setTimeout(n):(this.on("DOMContentLoaded",n),Mt(t).on("load",n))},toString:function(){var t=[];return r(this,function(e){t.push(""+e)}),"["+t.join(", ")+"]"},eq:function(t){return Rr(t>=0?this[t]:this[this.length+t])},length:0,push:Br,sort:[].sort,splice:[].splice},jo={};r("multiple,selected,checked,disabled,readOnly,required,open".split(","),function(t){jo[zr(t)]=t});var Oo={};r("input,select,option,textarea,button,form,details".split(","),function(t){Oo[t]=!0});var Mo={ngMinlength:"minlength",ngMaxlength:"maxlength",ngMin:"min",ngMax:"max",ngPattern:"pattern"};r({data:Pt,removeData:zt,hasData:St,cleanData:Ct},function(t,e){Mt[e]=t}),r({data:Pt,inheritedData:Ft,scope:function(t){return Rr.data(t,"$scope")||Ft(t.parentNode||t,["$isolateScope","$scope"])},isolateScope:function(t){return Rr.data(t,"$isolateScope")||Rr.data(t,"$isolateScopeNoTemplate")},controller:Ut,injector:function(t){return Ft(t,"$injector")},removeAttr:function(t,e){t.removeAttribute(e)},hasClass:qt,css:function(t,e,n){return e=wt(e),v(n)?void(t.style[e]=n):t.style[e]},attr:function(t,e,n){var r=t.nodeType;if(r!==lo&&r!==ao&&r!==so){var o=zr(e);if(jo[o]){if(!v(n))return t[e]||(t.attributes.getNamedItem(e)||f).specified?o:void 0;n?(t[e]=!0,t.setAttribute(e,o)):(t[e]=!1,t.removeAttribute(o))}else if(v(n))t.setAttribute(e,n);else if(t.getAttribute){var i=t.getAttribute(e,2);return null===i?void 0:i}}},prop:function(t,e,n){return v(n)?void(t[e]=n):t[e]},text:function(){function t(t,e){if(m(e)){var n=t.nodeType;return n===io||n===lo?t.textContent:""}t.textContent=e}return t.$dv="",t}(),val:function(t,e){if(m(e)){if(t.multiple&&"select"===D(t)){var n=[];return r(t.options,function(t){t.selected&&n.push(t.value||t.text)}),0===n.length?null:n}return t.value}t.value=e},html:function(t,e){return m(e)?t.innerHTML:(Nt(t,!0),void(t.innerHTML=e))},empty:Lt},function(t,e){Mt.prototype[e]=function(e,n){var r,o,i=this.length;if(t!==Lt&&m(2==t.length&&t!==qt&&t!==Ut?e:n)){if(y(e)){for(r=0;r<i;r++)if(t===Pt)t(this[r],e);else for(o in e)t(this[r],o,e[o]);return this}for(var a=t.$dv,l=m(a)?Math.min(i,1):i,s=0;s<l;s++){var c=t(this[s],e,n);a=a?a+c:c}return a}for(r=0;r<i;r++)t(this[r],e,n);return this}}),r({removeData:zt,on:function(t,e,n,r){if(v(r))throw yo("onargs","jqLite#on() does not support the `selector` or `eventData` parameters");if(Et(t)){var o=It(t,!0),i=o.events,a=o.handle;a||(a=o.handle=Zt(t,i));for(var l=e.indexOf(" ")>=0?e.split(" "):[e],s=l.length,c=function(e,r,o){var l=i[e];l||(l=i[e]=[],l.specialHandlerWrapper=r,"$destroy"===e||o||bo(t,e,a)),l.push(n)};s--;)e=l[s],$o[e]?(c($o[e],Yt),c(e,void 0,!0)):c(e)}},off:Vt,one:function(t,e,n){t=Rr(t),t.on(e,function r(){t.off(e,n),t.off(e,r)}),t.on(e,n)},replaceWith:function(t,e){var n,o=t.parentNode;Nt(t),r(new Mt(e),function(e){n?o.insertBefore(e,n.nextSibling):o.replaceChild(e,t),n=e})},children:function(t){var e=[];return r(t.childNodes,function(t){t.nodeType===io&&e.push(t)}),e},contents:function(t){return t.contentDocument||t.childNodes||[]},append:function(t,e){var n=t.nodeType;if(n===io||n===uo){e=new Mt(e);for(var r=0,o=e.length;r<o;r++){var i=e[r];t.appendChild(i)}}},prepend:function(t,e){if(t.nodeType===io){var n=t.firstChild;r(new Mt(e),function(e){t.insertBefore(e,n)})}},wrap:function(t,e){Ot(t,Rr(e).eq(0).clone()[0])},remove:Bt,detach:function(t){Bt(t,!0)},after:function(t,e){var n=t,r=t.parentNode;e=new Mt(e);for(var o=0,i=e.length;o<i;o++){var a=e[o];r.insertBefore(a,n.nextSibling),n=a}},addClass:Rt,removeClass:Dt,toggleClass:function(t,e,n){e&&r(e.split(" "),function(e){var r=n;m(r)&&(r=!qt(t,e)),(r?Rt:Dt)(t,e)})},parent:function(t){var e=t.parentNode;return e&&e.nodeType!==uo?e:null},next:function(t){return t.nextElementSibling},find:function(t,e){return t.getElementsByTagName?t.getElementsByTagName(e):[]},clone:Tt,triggerHandler:function(t,e,n){var o,i,a,l=e.type||e,s=It(t),u=s&&s.events,d=u&&u[l];d&&(o={preventDefault:function(){this.defaultPrevented=!0},isDefaultPrevented:function(){return this.defaultPrevented===!0},stopImmediatePropagation:function(){this.immediatePropagationStopped=!0},isImmediatePropagationStopped:function(){return this.immediatePropagationStopped===!0},stopPropagation:f,type:l,target:t},e.type&&(o=c(o,e)),i=mt(d),a=n?[o].concat(n):[o],r(i,function(e){o.isImmediatePropagationStopped()||e.apply(t,a)}))}},function(t,e){Mt.prototype[e]=function(e,n,r){for(var o,i=0,a=this.length;i<a;i++)m(o)?(o=t(this[i],e,n,r),v(o)&&(o=Rr(o))):_t(o,t(this[i],e,n,r));return v(o)?o:this},Mt.prototype.bind=Mt.prototype.on,Mt.prototype.unbind=Mt.prototype.off}),Qt.prototype={put:function(t,e){this[Xt(t,this.nextUid)]=e},get:function(t){return this[Xt(t,this.nextUid)]},remove:function(t){var e=this[t=Xt(t,this.nextUid)];return delete this[t],e}};var To=[function(){this.$get=[function(){return Qt}]}],No=/^([^\(]+?)=>/,Vo=/^[^\(]*\(\s*([^\)]*)\)/m,zo=/,/,Io=/^\s*(_?)(\S+?)\1\s*$/,Po=/((\/\/.*$)|(\/\*[\s\S]*?\*\/))/gm,qo=e("$injector");oe.$$annotate=re;var Do=e("$animate"),Ro=1,_o="ng-animate",Uo=function(){this.$get=f},Fo=function(){var t=new Qt,e=[];this.$get=["$$AnimateRunner","$rootScope",function(n,o){function i(t,e,n){var o=!1;return e&&(e=w(e)?e.split(" "):Jr(e)?e:[],r(e,function(e){e&&(o=!0,t[e]=n)})),o}function a(){r(e,function(e){var n=t.get(e);if(n){var o=se(e.attr("class")),i="",a="";r(n,function(t,e){var n=!!o[e];t!==n&&(t?i+=(i.length?" ":"")+e:a+=(a.length?" ":"")+e)}),r(e,function(t){i&&Rt(t,i),a&&Dt(t,a)}),t.remove(e)}}),e.length=0}function l(n,r,l){var s=t.get(n)||{},c=i(s,r,!0),u=i(s,l,!1);(c||u)&&(t.put(n,s),e.push(n),1===e.length&&o.$$postDigest(a))}return{enabled:f,on:f,off:f,pin:f,push:function(t,e,r,o){o&&o(),r=r||{},r.from&&t.css(r.from),r.to&&t.css(r.to),(r.addClass||r.removeClass)&&l(t,r.addClass,r.removeClass);var i=new n;return i.complete(),i}}}]},Lo=["$provide",function(t){var e=this;this.$$registeredAnimations=Object.create(null),this.register=function(n,r){if(n&&"."!==n.charAt(0))throw Do("notcsel","Expecting class selector starting with '.' got '{0}'.",n);var o=n+"-animation";e.$$registeredAnimations[n.substr(1)]=o,t.factory(o,r)},this.classNameFilter=function(t){if(1===arguments.length&&(this.$$classNameFilter=t instanceof RegExp?t:null,this.$$classNameFilter)){var e=new RegExp("(\\s+|\\/)"+_o+"(\\s+|\\/)");if(e.test(this.$$classNameFilter.toString()))throw Do("nongcls",'$animateProvider.classNameFilter(regex) prohibits accepting a regex value which matches/contains the "{0}" CSS class.',_o)}return this.$$classNameFilter},this.$get=["$$animateQueue",function(t){function e(t,e,n){if(n){var r=le(n);!r||r.parentNode||r.previousElementSibling||(n=null)}n?n.after(t):e.prepend(t)}return{on:t.on,off:t.off,pin:t.pin,enabled:t.enabled,cancel:function(t){t.end&&t.end()},enter:function(n,r,o,i){return r=r&&Rr(r),o=o&&Rr(o),r=r||o.parent(),e(n,r,o),t.push(n,"enter",ce(i))},move:function(n,r,o,i){return r=r&&Rr(r),o=o&&Rr(o),r=r||o.parent(),e(n,r,o),t.push(n,"move",ce(i))},leave:function(e,n){return t.push(e,"leave",ce(n),function(){e.remove()})},addClass:function(e,n,r){return r=ce(r),r.addClass=ae(r.addclass,n),t.push(e,"addClass",r)},removeClass:function(e,n,r){return r=ce(r),r.removeClass=ae(r.removeClass,n),t.push(e,"removeClass",r)},setClass:function(e,n,r,o){return o=ce(o),o.addClass=ae(o.addClass,n),o.removeClass=ae(o.removeClass,r),t.push(e,"setClass",o)},animate:function(e,n,r,o,i){return i=ce(i),i.from=i.from?c(i.from,n):n,i.to=i.to?c(i.to,r):r,o=o||"ng-inline-animate",i.tempClasses=ae(i.tempClasses,o),t.push(e,"animate",i)}}}]}],Bo=function(){this.$get=["$$rAF",function(t){function e(e){n.push(e),n.length>1||t(function(){for(var t=0;t<n.length;t++)n[t]();n=[]})}var n=[];return function(){var t=!1;return e(function(){t=!0}),function(n){t?n():e(n)}}}]},Ho=function(){this.$get=["$q","$sniffer","$$animateAsyncRun","$document","$timeout",function(t,e,n,o,i){function a(t){this.setHost(t);var e=n(),r=function(t){i(t,0,!1)};this._doneCallbacks=[],this._tick=function(t){var n=o[0];n&&n.hidden?r(t):e(t)},this._state=0}var l=0,s=1,c=2;return a.chain=function(t,e){function n(){return r===t.length?void e(!0):void t[r](function(t){return t===!1?void e(!1):(r++,void n())})}var r=0;n()},a.all=function(t,e){function n(n){i=i&&n,++o===t.length&&e(i)}var o=0,i=!0;r(t,function(t){t.done(n)})},a.prototype={setHost:function(t){this.host=t||{}},done:function(t){this._state===c?t():this._doneCallbacks.push(t)},progress:f,getPromise:function(){if(!this.promise){var e=this;this.promise=t(function(t,n){e.done(function(e){e===!1?n():t()})})}return this.promise},then:function(t,e){return this.getPromise().then(t,e)},"catch":function(t){return this.getPromise()["catch"](t)},"finally":function(t){return this.getPromise()["finally"](t)},pause:function(){this.host.pause&&this.host.pause()},resume:function(){this.host.resume&&this.host.resume()},end:function(){this.host.end&&this.host.end(),this._resolve(!0)},cancel:function(){this.host.cancel&&this.host.cancel(),this._resolve(!1)},complete:function(t){var e=this;e._state===l&&(e._state=s,e._tick(function(){e._resolve(t)}))},_resolve:function(t){this._state!==c&&(r(this._doneCallbacks,function(e){e(t)}),this._doneCallbacks.length=0,this._state=c)}},a}]},Wo=function(){this.$get=["$$rAF","$q","$$AnimateRunner",function(t,e,n){return function(e,r){function o(){return t(function(){i(),l||s.complete(),l=!0}),s}function i(){a.addClass&&(e.addClass(a.addClass),a.addClass=null),a.removeClass&&(e.removeClass(a.removeClass),a.removeClass=null),a.to&&(e.css(a.to),a.to=null)}var a=r||{};a.$$prepared||(a=_(a)),a.cleanupStyles&&(a.from=a.to=null),a.from&&(e.css(a.from),a.from=null);var l,s=new n;return{start:o,end:o}}}]},Go=e("$compile"),Zo=new he;be.$inject=["$provide","$$sanitizeUriProvider"],ge.prototype.isFirstChange=function(){return this.previousValue===Zo};var Jo=/^((?:x|data)[\:\-_])/i,Yo=e("$controller"),Ko=/^(\S+)(\s+as\s+([\w$]+))?$/,Xo=function(){this.$get=["$document",function(t){return function(e){return e?!e.nodeType&&e instanceof Rr&&(e=e[0]):e=t[0].body,e.offsetWidth+1}}]},Qo="application/json",ti={"Content-Type":Qo+";charset=utf-8"},ei=/^\[|^\{(?!\{)/,ni={"[":/]$/,"{":/}$/},ri=/^\)\]\}',?\n/,oi=e("$http"),ii=function(t){return function(){throw oi("legacy","The method `{0}` on the promise returned from `$http` has been disabled.",t)}},ai=angular.$interpolateMinErr=e("$interpolate");ai.throwNoconcat=function(t){throw ai("noconcat","Error while interpolating: {0}\nStrict Contextual Escaping disallows interpolations that concatenate multiple expressions when a trusted value is required.  See http://docs.angularjs.org/api/ng.$sce",t)},ai.interr=function(t,e){return ai("interr","Can't interpolate: {0}\n{1}",t,e.toString())};var li=function(){this.$get=["$window",function(t){function e(t){var e=function(t){e.data=t,e.called=!0};return e.id=t,e}var n=t.angular.callbacks,r={};return{createCallback:function(t){var o="_"+(n.$$counter++).toString(36),i="angular.callbacks."+o,a=e(o);return r[i]=n[o]=a,i},wasCalled:function(t){return r[t].called},getResponse:function(t){return r[t].data},removeCallback:function(t){var e=r[t];delete n[e.id],delete r[t]}}}]},si=/^([^\?#]*)(\?([^#]*))?(#(.*))?$/,ci={http:80,https:443,ftp:21},ui=e("$location"),di={$$absUrl:"",$$html5:!1,$$replace:!1,absUrl:Ke("$$absUrl"),url:function(t){if(m(t))return this.$$url;var e=si.exec(t);return(e[1]||""===t)&&this.path(decodeURIComponent(e[1])),(e[2]||e[1]||""===t)&&this.search(e[3]||""),this.hash(e[5]||""),this},protocol:Ke("$$protocol"),host:Ke("$$host"),port:Ke("$$port"),path:Xe("$$path",function(t){return t=null!==t?t.toString():"","/"==t.charAt(0)?t:"/"+t}),search:function(t,e){switch(arguments.length){case 0:return this.$$search;case 1:if(w(t)||k(t))t=t.toString(),this.$$search=Q(t);else{if(!y(t))throw ui("isrcharg","The first argument of the `$location#search()` call must be a string or an object.");t=_(t,{}),r(t,function(e,n){null==e&&delete t[n]}),this.$$search=t}break;default:m(e)||null===e?delete this.$$search[t]:this.$$search[t]=e}return this.$$compose(),this},hash:Xe("$$hash",function(t){return null!==t?t.toString():""}),replace:function(){return this.$$replace=!0,this}};r([Ye,Je,Ze],function(t){t.prototype=Object.create(di),t.prototype.state=function(e){if(!arguments.length)return this.$$state;if(t!==Ze||!this.$$html5)throw ui("nostate","History API state support is available only in HTML5 mode and only in browsers supporting HTML5 History API");return this.$$state=m(e)?null:e,this}});var pi=e("$parse"),fi=Function.prototype.call,hi=Function.prototype.apply,bi=Function.prototype.bind,gi=bt();r("+ - * / % === !== == != < > <= >= && || ! = |".split(" "),function(t){gi[t]=!0});var mi={n:"\n",f:"\f",r:"\r",t:"\t",v:"\x0B","'":"'",'"':'"'},vi=function(t){this.options=t};vi.prototype={constructor:vi,lex:function(t){for(this.text=t,this.index=0,this.tokens=[];this.index<this.text.length;){var e=this.text.charAt(this.index);if('"'===e||"'"===e)this.readString(e);else if(this.isNumber(e)||"."===e&&this.isNumber(this.peek()))this.readNumber();else if(this.isIdentifierStart(this.peekMultichar()))this.readIdent();else if(this.is(e,"(){}[].,;:?"))this.tokens.push({index:this.index,text:e}),this.index++;else if(this.isWhitespace(e))this.index++;else{var n=e+this.peek(),r=n+this.peek(2),o=gi[e],i=gi[n],a=gi[r];if(o||i||a){var l=a?r:i?n:e;this.tokens.push({index:this.index,text:l,operator:!0}),this.index+=l.length}else this.throwError("Unexpected next character ",this.index,this.index+1)}}return this.tokens},is:function(t,e){return e.indexOf(t)!==-1},peek:function(t){var e=t||1;return this.index+e<this.text.length&&this.text.charAt(this.index+e)},isNumber:function(t){return"0"<=t&&t<="9"&&"string"==typeof t},isWhitespace:function(t){return" "===t||"\r"===t||"\t"===t||"\n"===t||"\x0B"===t||" "===t},isIdentifierStart:function(t){return this.options.isIdentifierStart?this.options.isIdentifierStart(t,this.codePointAt(t)):this.isValidIdentifierStart(t)},isValidIdentifierStart:function(t){return"a"<=t&&t<="z"||"A"<=t&&t<="Z"||"_"===t||"$"===t},isIdentifierContinue:function(t){return this.options.isIdentifierContinue?this.options.isIdentifierContinue(t,this.codePointAt(t)):this.isValidIdentifierContinue(t)},isValidIdentifierContinue:function(t,e){return this.isValidIdentifierStart(t,e)||this.isNumber(t)},codePointAt:function(t){return 1===t.length?t.charCodeAt(0):(t.charCodeAt(0)<<10)+t.charCodeAt(1)-56613888},peekMultichar:function(){var t=this.text.charAt(this.index),e=this.peek();if(!e)return t;var n=t.charCodeAt(0),r=e.charCodeAt(0);return n>=55296&&n<=56319&&r>=56320&&r<=57343?t+e:t},isExpOperator:function(t){return"-"===t||"+"===t||this.isNumber(t)},throwError:function(t,e,n){n=n||this.index;var r=v(e)?"s "+e+"-"+this.index+" ["+this.text.substring(e,n)+"]":" "+n;throw pi("lexerr","Lexer Error: {0} at column{1} in expression [{2}].",t,r,this.text)},readNumber:function(){for(var t="",e=this.index;this.index<this.text.length;){var n=zr(this.text.charAt(this.index));if("."==n||this.isNumber(n))t+=n;else{var r=this.peek();if("e"==n&&this.isExpOperator(r))t+=n;else if(this.isExpOperator(n)&&r&&this.isNumber(r)&&"e"==t.charAt(t.length-1))t+=n;else{if(!this.isExpOperator(n)||r&&this.isNumber(r)||"e"!=t.charAt(t.length-1))break;this.throwError("Invalid exponent")}}this.index++}this.tokens.push({index:e,text:t,constant:!0,value:Number(t)})},readIdent:function(){var t=this.index;for(this.index+=this.peekMultichar().length;this.index<this.text.length;){var e=this.peekMultichar();if(!this.isIdentifierContinue(e))break;this.index+=e.length}this.tokens.push({index:t,text:this.text.slice(t,this.index),identifier:!0})},readString:function(t){var e=this.index;this.index++;for(var n="",r=t,o=!1;this.index<this.text.length;){var i=this.text.charAt(this.index);if(r+=i,o){if("u"===i){var a=this.text.substring(this.index+1,this.index+5);a.match(/[\da-f]{4}/i)||this.throwError("Invalid unicode escape [\\u"+a+"]"),this.index+=4,n+=String.fromCharCode(parseInt(a,16))}else{var l=mi[i];n+=l||i}o=!1}else if("\\"===i)o=!0;else{if(i===t)return this.index++,void this.tokens.push({index:e,text:r,constant:!0,value:n});n+=i}this.index++}this.throwError("Unterminated quote",e)}};var $i=function(t,e){this.lexer=t,this.options=e};$i.Program="Program",$i.ExpressionStatement="ExpressionStatement",$i.AssignmentExpression="AssignmentExpression",$i.ConditionalExpression="ConditionalExpression",$i.LogicalExpression="LogicalExpression",$i.BinaryExpression="BinaryExpression",$i.UnaryExpression="UnaryExpression",$i.CallExpression="CallExpression",$i.MemberExpression="MemberExpression",$i.Identifier="Identifier",$i.Literal="Literal",$i.ArrayExpression="ArrayExpression",$i.Property="Property",$i.ObjectExpression="ObjectExpression",$i.ThisExpression="ThisExpression",$i.LocalsExpression="LocalsExpression",$i.NGValueParameter="NGValueParameter",$i.prototype={ast:function(t){this.text=t,this.tokens=this.lexer.lex(t);var e=this.program();return 0!==this.tokens.length&&this.throwError("is an unexpected token",this.tokens[0]),e},program:function(){for(var t=[];;)if(this.tokens.length>0&&!this.peek("}",")",";","]")&&t.push(this.expressionStatement()),!this.expect(";"))return{type:$i.Program,body:t}},expressionStatement:function(){return{type:$i.ExpressionStatement,expression:this.filterChain()}},filterChain:function(){for(var t,e=this.expression();t=this.expect("|");)e=this.filter(e);return e},expression:function(){return this.assignment()},assignment:function(){var t=this.ternary();return this.expect("=")&&(t={type:$i.AssignmentExpression,left:t,right:this.assignment(),operator:"="}),t},ternary:function(){var t,e,n=this.logicalOR();return this.expect("?")&&(t=this.expression(),this.consume(":"))?(e=this.expression(),{type:$i.ConditionalExpression,test:n,alternate:t,consequent:e}):n},logicalOR:function(){for(var t=this.logicalAND();this.expect("||");)t={type:$i.LogicalExpression,operator:"||",left:t,right:this.logicalAND()};return t},logicalAND:function(){for(var t=this.equality();this.expect("&&");)t={type:$i.LogicalExpression,operator:"&&",left:t,right:this.equality()};return t},equality:function(){for(var t,e=this.relational();t=this.expect("==","!=","===","!==");)e={type:$i.BinaryExpression,operator:t.text,left:e,right:this.relational()};return e},relational:function(){for(var t,e=this.additive();t=this.expect("<",">","<=",">=");)e={type:$i.BinaryExpression,operator:t.text,left:e,right:this.additive()};return e},additive:function(){for(var t,e=this.multiplicative();t=this.expect("+","-");)e={type:$i.BinaryExpression,operator:t.text,left:e,right:this.multiplicative()};return e},multiplicative:function(){for(var t,e=this.unary();t=this.expect("*","/","%");)e={type:$i.BinaryExpression,operator:t.text,left:e,right:this.unary()};return e},unary:function(){var t;return(t=this.expect("+","-","!"))?{type:$i.UnaryExpression,operator:t.text,prefix:!0,argument:this.unary()}:this.primary()},primary:function(){var t;this.expect("(")?(t=this.filterChain(),this.consume(")")):this.expect("[")?t=this.arrayDeclaration():this.expect("{")?t=this.object():this.selfReferential.hasOwnProperty(this.peek().text)?t=_(this.selfReferential[this.consume().text]):this.options.literals.hasOwnProperty(this.peek().text)?t={type:$i.Literal,value:this.options.literals[this.consume().text]}:this.peek().identifier?t=this.identifier():this.peek().constant?t=this.constant():this.throwError("not a primary expression",this.peek());for(var e;e=this.expect("(","[",".");)"("===e.text?(t={type:$i.CallExpression,callee:t,arguments:this.parseArguments()},this.consume(")")):"["===e.text?(t={type:$i.MemberExpression,object:t,property:this.expression(),computed:!0},this.consume("]")):"."===e.text?t={type:$i.MemberExpression,object:t,property:this.identifier(),computed:!1}:this.throwError("IMPOSSIBLE");return t},filter:function(t){for(var e=[t],n={type:$i.CallExpression,callee:this.identifier(),arguments:e,filter:!0};this.expect(":");)e.push(this.expression());return n},parseArguments:function(){var t=[];if(")"!==this.peekToken().text)do t.push(this.filterChain());while(this.expect(","));return t},identifier:function(){var t=this.consume();return t.identifier||this.throwError("is not a valid identifier",t),{type:$i.Identifier,name:t.text}},constant:function(){return{type:$i.Literal,value:this.consume().value}},arrayDeclaration:function(){var t=[];if("]"!==this.peekToken().text)do{if(this.peek("]"))break;t.push(this.expression())}while(this.expect(","));return this.consume("]"),{type:$i.ArrayExpression,elements:t}},object:function(){var t,e=[];if("}"!==this.peekToken().text)do{if(this.peek("}"))break;t={type:$i.Property,kind:"init"},this.peek().constant?(t.key=this.constant(),t.computed=!1,this.consume(":"),t.value=this.expression()):this.peek().identifier?(t.key=this.identifier(),t.computed=!1,this.peek(":")?(this.consume(":"),t.value=this.expression()):t.value=t.key):this.peek("[")?(this.consume("["),t.key=this.expression(),this.consume("]"),t.computed=!0,this.consume(":"),t.value=this.expression()):this.throwError("invalid key",this.peek()),e.push(t)}while(this.expect(","));return this.consume("}"),{type:$i.ObjectExpression,properties:e}},throwError:function(t,e){throw pi("syntax","Syntax Error: Token '{0}' {1} at column {2} of the expression [{3}] starting at [{4}].",e.text,t,e.index+1,this.text,this.text.substring(e.index))},consume:function(t){if(0===this.tokens.length)throw pi("ueoe","Unexpected end of expression: {0}",this.text);var e=this.expect(t);return e||this.throwError("is unexpected, expecting ["+t+"]",this.peek()),e},peekToken:function(){if(0===this.tokens.length)throw pi("ueoe","Unexpected end of expression: {0}",this.text);return this.tokens[0]},peek:function(t,e,n,r){return this.peekAhead(0,t,e,n,r)},peekAhead:function(t,e,n,r,o){if(this.tokens.length>t){var i=this.tokens[t],a=i.text;if(a===e||a===n||a===r||a===o||!e&&!n&&!r&&!o)return i}return!1},expect:function(t,e,n,r){var o=this.peek(t,e,n,r);return!!o&&(this.tokens.shift(),o)},selfReferential:{"this":{type:$i.ThisExpression},$locals:{type:$i.LocalsExpression}}},gn.prototype={compile:function(t,e){var n=this,o=this.astBuilder.ast(t);this.state={nextId:0,filters:{},expensiveChecks:e,fn:{vars:[],body:[],own:{}},assign:{vars:[],body:[],own:{}},inputs:[]},un(o,n.$filter);var i,a="";if(this.stage="assign",i=fn(o)){this.state.computing="assign";var l=this.nextId();this.recurse(i,l),this.return_(l),a="fn.assign="+this.generateFunction("assign","s,v,l")}var s=dn(o.body);n.stage="inputs",r(s,function(t,e){var r="fn"+e;n.state[r]={vars:[],body:[],own:{}},n.state.computing=r;var o=n.nextId();n.recurse(t,o),n.return_(o),n.state.inputs.push(r),t.watchId=e}),this.state.computing="fn",this.stage="main",this.recurse(o);var c='"'+this.USE+" "+this.STRICT+'";\n'+this.filterPrefix()+"var fn="+this.generateFunction("fn","s,l,a,i")+a+this.watchFns()+"return fn;",u=new Function("$filter","ensureSafeMemberName","ensureSafeObject","ensureSafeFunction","getStringValue","ensureSafeAssignContext","ifDefined","plus","text",c)(this.$filter,en,rn,on,nn,an,ln,sn,t);return this.state=this.stage=void 0,u.literal=hn(o),u.constant=bn(o),u},USE:"use",STRICT:"strict",watchFns:function(){var t=[],e=this.state.inputs,n=this;return r(e,function(e){t.push("var "+e+"="+n.generateFunction(e,"s"))}),e.length&&t.push("fn.inputs=["+e.join(",")+"];"),t.join("")},generateFunction:function(t,e){return"function("+e+"){"+this.varsPrefix(t)+this.body(t)+"};"},filterPrefix:function(){var t=[],e=this;return r(this.state.filters,function(n,r){t.push(n+"=$filter("+e.escape(r)+")")}),t.length?"var "+t.join(",")+";":""},varsPrefix:function(t){return this.state[t].vars.length?"var "+this.state[t].vars.join(",")+";":""},body:function(t){return this.state[t].body.join("")},recurse:function(t,e,n,o,i,a){var l,s,c,u,d,p=this;if(o=o||f,!a&&v(t.watchId))return e=e||this.nextId(),void this.if_("i",this.lazyAssign(e,this.computedMember("i",t.watchId)),this.lazyRecurse(t,e,n,o,i,!0));switch(t.type){case $i.Program:r(t.body,function(e,n){p.recurse(e.expression,void 0,void 0,function(t){s=t}),n!==t.body.length-1?p.current().body.push(s,";"):p.return_(s)});break;case $i.Literal:u=this.escape(t.value),this.assign(e,u),o(u);break;case $i.UnaryExpression:this.recurse(t.argument,void 0,void 0,function(t){s=t}),u=t.operator+"("+this.ifDefined(s,0)+")",this.assign(e,u),o(u);break;case $i.BinaryExpression:this.recurse(t.left,void 0,void 0,function(t){l=t}),this.recurse(t.right,void 0,void 0,function(t){s=t}),u="+"===t.operator?this.plus(l,s):"-"===t.operator?this.ifDefined(l,0)+t.operator+this.ifDefined(s,0):"("+l+")"+t.operator+"("+s+")",this.assign(e,u),o(u);break;case $i.LogicalExpression:e=e||this.nextId(),p.recurse(t.left,e),p.if_("&&"===t.operator?e:p.not(e),p.lazyRecurse(t.right,e)),o(e);break;case $i.ConditionalExpression:e=e||this.nextId(),p.recurse(t.test,e),p.if_(e,p.lazyRecurse(t.alternate,e),p.lazyRecurse(t.consequent,e)),o(e);break;case $i.Identifier:e=e||this.nextId(),n&&(n.context="inputs"===p.stage?"s":this.assign(this.nextId(),this.getHasOwnProperty("l",t.name)+"?l:s"),
-n.computed=!1,n.name=t.name),en(t.name),p.if_("inputs"===p.stage||p.not(p.getHasOwnProperty("l",t.name)),function(){p.if_("inputs"===p.stage||"s",function(){i&&1!==i&&p.if_(p.not(p.nonComputedMember("s",t.name)),p.lazyAssign(p.nonComputedMember("s",t.name),"{}")),p.assign(e,p.nonComputedMember("s",t.name))})},e&&p.lazyAssign(e,p.nonComputedMember("l",t.name))),(p.state.expensiveChecks||vn(t.name))&&p.addEnsureSafeObject(e),o(e);break;case $i.MemberExpression:l=n&&(n.context=this.nextId())||this.nextId(),e=e||this.nextId(),p.recurse(t.object,l,void 0,function(){p.if_(p.notNull(l),function(){i&&1!==i&&p.addEnsureSafeAssignContext(l),t.computed?(s=p.nextId(),p.recurse(t.property,s),p.getStringValue(s),p.addEnsureSafeMemberName(s),i&&1!==i&&p.if_(p.not(p.computedMember(l,s)),p.lazyAssign(p.computedMember(l,s),"{}")),u=p.ensureSafeObject(p.computedMember(l,s)),p.assign(e,u),n&&(n.computed=!0,n.name=s)):(en(t.property.name),i&&1!==i&&p.if_(p.not(p.nonComputedMember(l,t.property.name)),p.lazyAssign(p.nonComputedMember(l,t.property.name),"{}")),u=p.nonComputedMember(l,t.property.name),(p.state.expensiveChecks||vn(t.property.name))&&(u=p.ensureSafeObject(u)),p.assign(e,u),n&&(n.computed=!1,n.name=t.property.name))},function(){p.assign(e,"undefined")}),o(e)},!!i);break;case $i.CallExpression:e=e||this.nextId(),t.filter?(s=p.filter(t.callee.name),c=[],r(t.arguments,function(t){var e=p.nextId();p.recurse(t,e),c.push(e)}),u=s+"("+c.join(",")+")",p.assign(e,u),o(e)):(s=p.nextId(),l={},c=[],p.recurse(t.callee,s,l,function(){p.if_(p.notNull(s),function(){p.addEnsureSafeFunction(s),r(t.arguments,function(t){p.recurse(t,p.nextId(),void 0,function(t){c.push(p.ensureSafeObject(t))})}),l.name?(p.state.expensiveChecks||p.addEnsureSafeObject(l.context),u=p.member(l.context,l.name,l.computed)+"("+c.join(",")+")"):u=s+"("+c.join(",")+")",u=p.ensureSafeObject(u),p.assign(e,u)},function(){p.assign(e,"undefined")}),o(e)}));break;case $i.AssignmentExpression:if(s=this.nextId(),l={},!pn(t.left))throw pi("lval","Trying to assign a value to a non l-value");this.recurse(t.left,void 0,l,function(){p.if_(p.notNull(l.context),function(){p.recurse(t.right,s),p.addEnsureSafeObject(p.member(l.context,l.name,l.computed)),p.addEnsureSafeAssignContext(l.context),u=p.member(l.context,l.name,l.computed)+t.operator+s,p.assign(e,u),o(e||u)})},1);break;case $i.ArrayExpression:c=[],r(t.elements,function(t){p.recurse(t,p.nextId(),void 0,function(t){c.push(t)})}),u="["+c.join(",")+"]",this.assign(e,u),o(u);break;case $i.ObjectExpression:c=[],d=!1,r(t.properties,function(t){t.computed&&(d=!0)}),d?(e=e||this.nextId(),this.assign(e,"{}"),r(t.properties,function(t){t.computed?(l=p.nextId(),p.recurse(t.key,l)):l=t.key.type===$i.Identifier?t.key.name:""+t.key.value,s=p.nextId(),p.recurse(t.value,s),p.assign(p.member(e,l,t.computed),s)})):(r(t.properties,function(e){p.recurse(e.value,t.constant?void 0:p.nextId(),void 0,function(t){c.push(p.escape(e.key.type===$i.Identifier?e.key.name:""+e.key.value)+":"+t)})}),u="{"+c.join(",")+"}",this.assign(e,u)),o(e||u);break;case $i.ThisExpression:this.assign(e,"s"),o("s");break;case $i.LocalsExpression:this.assign(e,"l"),o("l");break;case $i.NGValueParameter:this.assign(e,"v"),o("v")}},getHasOwnProperty:function(t,e){var n=t+"."+e,r=this.current().own;return r.hasOwnProperty(n)||(r[n]=this.nextId(!1,t+"&&("+this.escape(e)+" in "+t+")")),r[n]},assign:function(t,e){if(t)return this.current().body.push(t,"=",e,";"),t},filter:function(t){return this.state.filters.hasOwnProperty(t)||(this.state.filters[t]=this.nextId(!0)),this.state.filters[t]},ifDefined:function(t,e){return"ifDefined("+t+","+this.escape(e)+")"},plus:function(t,e){return"plus("+t+","+e+")"},return_:function(t){this.current().body.push("return ",t,";")},if_:function(t,e,n){if(t===!0)e();else{var r=this.current().body;r.push("if(",t,"){"),e(),r.push("}"),n&&(r.push("else{"),n(),r.push("}"))}},not:function(t){return"!("+t+")"},notNull:function(t){return t+"!=null"},nonComputedMember:function(t,e){var n=/[$_a-zA-Z][$_a-zA-Z0-9]*/,r=/[^$_a-zA-Z0-9]/g;return n.test(e)?t+"."+e:t+'["'+e.replace(r,this.stringEscapeFn)+'"]'},computedMember:function(t,e){return t+"["+e+"]"},member:function(t,e,n){return n?this.computedMember(t,e):this.nonComputedMember(t,e)},addEnsureSafeObject:function(t){this.current().body.push(this.ensureSafeObject(t),";")},addEnsureSafeMemberName:function(t){this.current().body.push(this.ensureSafeMemberName(t),";")},addEnsureSafeFunction:function(t){this.current().body.push(this.ensureSafeFunction(t),";")},addEnsureSafeAssignContext:function(t){this.current().body.push(this.ensureSafeAssignContext(t),";")},ensureSafeObject:function(t){return"ensureSafeObject("+t+",text)"},ensureSafeMemberName:function(t){return"ensureSafeMemberName("+t+",text)"},ensureSafeFunction:function(t){return"ensureSafeFunction("+t+",text)"},getStringValue:function(t){this.assign(t,"getStringValue("+t+")")},ensureSafeAssignContext:function(t){return"ensureSafeAssignContext("+t+",text)"},lazyRecurse:function(t,e,n,r,o,i){var a=this;return function(){a.recurse(t,e,n,r,o,i)}},lazyAssign:function(t,e){var n=this;return function(){n.assign(t,e)}},stringEscapeRegex:/[^ a-zA-Z0-9]/g,stringEscapeFn:function(t){return"\\u"+("0000"+t.charCodeAt(0).toString(16)).slice(-4)},escape:function(t){if(w(t))return"'"+t.replace(this.stringEscapeRegex,this.stringEscapeFn)+"'";if(k(t))return t.toString();if(t===!0)return"true";if(t===!1)return"false";if(null===t)return"null";if("undefined"==typeof t)return"undefined";throw pi("esc","IMPOSSIBLE")},nextId:function(t,e){var n="v"+this.state.nextId++;return t||this.current().vars.push(n+(e?"="+e:"")),n},current:function(){return this.state[this.state.computing]}},mn.prototype={compile:function(t,e){var n=this,o=this.astBuilder.ast(t);this.expression=t,this.expensiveChecks=e,un(o,n.$filter);var i,a;(i=fn(o))&&(a=this.recurse(i));var l,s=dn(o.body);s&&(l=[],r(s,function(t,e){var r=n.recurse(t);t.input=r,l.push(r),t.watchId=e}));var c=[];r(o.body,function(t){c.push(n.recurse(t.expression))});var u=0===o.body.length?f:1===o.body.length?c[0]:function(t,e){var n;return r(c,function(r){n=r(t,e)}),n};return a&&(u.assign=function(t,e,n){return a(t,n,e)}),l&&(u.inputs=l),u.literal=hn(o),u.constant=bn(o),u},recurse:function(t,e,n){var o,i,a,l=this;if(t.input)return this.inputs(t.input,t.watchId);switch(t.type){case $i.Literal:return this.value(t.value,e);case $i.UnaryExpression:return i=this.recurse(t.argument),this["unary"+t.operator](i,e);case $i.BinaryExpression:return o=this.recurse(t.left),i=this.recurse(t.right),this["binary"+t.operator](o,i,e);case $i.LogicalExpression:return o=this.recurse(t.left),i=this.recurse(t.right),this["binary"+t.operator](o,i,e);case $i.ConditionalExpression:return this["ternary?:"](this.recurse(t.test),this.recurse(t.alternate),this.recurse(t.consequent),e);case $i.Identifier:return en(t.name,l.expression),l.identifier(t.name,l.expensiveChecks||vn(t.name),e,n,l.expression);case $i.MemberExpression:return o=this.recurse(t.object,!1,!!n),t.computed||(en(t.property.name,l.expression),i=t.property.name),t.computed&&(i=this.recurse(t.property)),t.computed?this.computedMember(o,i,e,n,l.expression):this.nonComputedMember(o,i,l.expensiveChecks,e,n,l.expression);case $i.CallExpression:return a=[],r(t.arguments,function(t){a.push(l.recurse(t))}),t.filter&&(i=this.$filter(t.callee.name)),t.filter||(i=this.recurse(t.callee,!0)),t.filter?function(t,n,r,o){for(var l=[],s=0;s<a.length;++s)l.push(a[s](t,n,r,o));var c=i.apply(void 0,l,o);return e?{context:void 0,name:void 0,value:c}:c}:function(t,n,r,o){var s,c=i(t,n,r,o);if(null!=c.value){rn(c.context,l.expression),on(c.value,l.expression);for(var u=[],d=0;d<a.length;++d)u.push(rn(a[d](t,n,r,o),l.expression));s=rn(c.value.apply(c.context,u),l.expression)}return e?{value:s}:s};case $i.AssignmentExpression:return o=this.recurse(t.left,!0,1),i=this.recurse(t.right),function(t,n,r,a){var s=o(t,n,r,a),c=i(t,n,r,a);return rn(s.value,l.expression),an(s.context),s.context[s.name]=c,e?{value:c}:c};case $i.ArrayExpression:return a=[],r(t.elements,function(t){a.push(l.recurse(t))}),function(t,n,r,o){for(var i=[],l=0;l<a.length;++l)i.push(a[l](t,n,r,o));return e?{value:i}:i};case $i.ObjectExpression:return a=[],r(t.properties,function(t){t.computed?a.push({key:l.recurse(t.key),computed:!0,value:l.recurse(t.value)}):a.push({key:t.key.type===$i.Identifier?t.key.name:""+t.key.value,computed:!1,value:l.recurse(t.value)})}),function(t,n,r,o){for(var i={},l=0;l<a.length;++l)a[l].computed?i[a[l].key(t,n,r,o)]=a[l].value(t,n,r,o):i[a[l].key]=a[l].value(t,n,r,o);return e?{value:i}:i};case $i.ThisExpression:return function(t){return e?{value:t}:t};case $i.LocalsExpression:return function(t,n){return e?{value:n}:n};case $i.NGValueParameter:return function(t,n,r){return e?{value:r}:r}}},"unary+":function(t,e){return function(n,r,o,i){var a=t(n,r,o,i);return a=v(a)?+a:0,e?{value:a}:a}},"unary-":function(t,e){return function(n,r,o,i){var a=t(n,r,o,i);return a=v(a)?-a:0,e?{value:a}:a}},"unary!":function(t,e){return function(n,r,o,i){var a=!t(n,r,o,i);return e?{value:a}:a}},"binary+":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a),s=e(r,o,i,a),c=sn(l,s);return n?{value:c}:c}},"binary-":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a),s=e(r,o,i,a),c=(v(l)?l:0)-(v(s)?s:0);return n?{value:c}:c}},"binary*":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)*e(r,o,i,a);return n?{value:l}:l}},"binary/":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)/e(r,o,i,a);return n?{value:l}:l}},"binary%":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)%e(r,o,i,a);return n?{value:l}:l}},"binary===":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)===e(r,o,i,a);return n?{value:l}:l}},"binary!==":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)!==e(r,o,i,a);return n?{value:l}:l}},"binary==":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)==e(r,o,i,a);return n?{value:l}:l}},"binary!=":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)!=e(r,o,i,a);return n?{value:l}:l}},"binary<":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)<e(r,o,i,a);return n?{value:l}:l}},"binary>":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)>e(r,o,i,a);return n?{value:l}:l}},"binary<=":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)<=e(r,o,i,a);return n?{value:l}:l}},"binary>=":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)>=e(r,o,i,a);return n?{value:l}:l}},"binary&&":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)&&e(r,o,i,a);return n?{value:l}:l}},"binary||":function(t,e,n){return function(r,o,i,a){var l=t(r,o,i,a)||e(r,o,i,a);return n?{value:l}:l}},"ternary?:":function(t,e,n,r){return function(o,i,a,l){var s=t(o,i,a,l)?e(o,i,a,l):n(o,i,a,l);return r?{value:s}:s}},value:function(t,e){return function(){return e?{context:void 0,name:void 0,value:t}:t}},identifier:function(t,e,n,r,o){return function(i,a,l,s){var c=a&&t in a?a:i;r&&1!==r&&c&&!c[t]&&(c[t]={});var u=c?c[t]:void 0;return e&&rn(u,o),n?{context:c,name:t,value:u}:u}},computedMember:function(t,e,n,r,o){return function(i,a,l,s){var c,u,d=t(i,a,l,s);return null!=d&&(c=e(i,a,l,s),c=nn(c),en(c,o),r&&1!==r&&(an(d),d&&!d[c]&&(d[c]={})),u=d[c],rn(u,o)),n?{context:d,name:c,value:u}:u}},nonComputedMember:function(t,e,n,r,o,i){return function(a,l,s,c){var u=t(a,l,s,c);o&&1!==o&&(an(u),u&&!u[e]&&(u[e]={}));var d=null!=u?u[e]:void 0;return(n||vn(e))&&rn(d,i),r?{context:u,name:e,value:d}:d}},inputs:function(t,e){return function(n,r,o,i){return i?i[e]:t(n,r,o)}}};var yi=function(t,e,n){this.lexer=t,this.$filter=e,this.options=n,this.ast=new $i(t,n),this.astCompiler=n.csp?new mn(this.ast,e):new gn(this.ast,e)};yi.prototype={constructor:yi,parse:function(t){return this.astCompiler.compile(t,this.options.expensiveChecks)}};var xi=Object.prototype.valueOf,wi=e("$sce"),ki={HTML:"html",CSS:"css",URL:"url",RESOURCE_URL:"resourceUrl",JS:"js"},Ei=e("$compile"),Si=t.document.createElement("a"),Ci=In(t.location.href);Dn.$inject=["$document"],_n.$inject=["$provide"];var Ai=22,ji=".",Oi="0";Hn.$inject=["$locale"],Wn.$inject=["$locale"];var Mi={yyyy:Kn("FullYear",4,0,!1,!0),yy:Kn("FullYear",2,0,!0,!0),y:Kn("FullYear",1,0,!1,!0),MMMM:Xn("Month"),MMM:Xn("Month",!0),MM:Kn("Month",2,1),M:Kn("Month",1,1),LLLL:Xn("Month",!1,!0),dd:Kn("Date",2),d:Kn("Date",1),HH:Kn("Hours",2),H:Kn("Hours",1),hh:Kn("Hours",2,-12),h:Kn("Hours",1,-12),mm:Kn("Minutes",2),m:Kn("Minutes",1),ss:Kn("Seconds",2),s:Kn("Seconds",1),sss:Kn("Milliseconds",3),EEEE:Xn("Day"),EEE:Xn("Day",!0),a:rr,Z:Qn,ww:nr(2),w:nr(1),G:or,GG:or,GGG:or,GGGG:ir},Ti=/((?:[^yMLdHhmsaZEwG']+)|(?:'(?:[^']|'')*')|(?:E+|y+|M+|L+|d+|H+|h+|m+|s+|a|Z|G+|w+))(.*)/,Ni=/^\-?\d+$/;ar.$inject=["$locale"];var Vi=b(zr),zi=b(Ir);ur.$inject=["$parse"];var Ii=b({restrict:"E",compile:function(t,e){if(!e.href&&!e.xlinkHref)return function(t,e){if("a"===e[0].nodeName.toLowerCase()){var n="[object SVGAnimatedString]"===Hr.call(e.prop("href"))?"xlink:href":"href";e.on("click",function(t){e.attr(n)||t.preventDefault()})}}}}),Pi={};r(jo,function(t,e){function n(t,n,o){t.$watch(o[r],function(t){o.$set(e,!!t)})}if("multiple"!=t){var r=me("ng-"+e),o=n;"checked"===t&&(o=function(t,e,o){o.ngModel!==o[r]&&n(t,e,o)}),Pi[r]=function(){return{restrict:"A",priority:100,link:o}}}}),r(Mo,function(t,e){Pi[e]=function(){return{priority:100,link:function(t,n,r){if("ngPattern"===e&&"/"==r.ngPattern.charAt(0)){var o=r.ngPattern.match(Tr);if(o)return void r.$set("ngPattern",new RegExp(o[1],o[2]))}t.$watch(r[e],function(t){r.$set(e,t)})}}}}),r(["src","srcset","href"],function(t){var e=me("ng-"+t);Pi[e]=function(){return{priority:99,link:function(n,r,o){var i=t,a=t;"href"===t&&"[object SVGAnimatedString]"===Hr.call(r.prop("href"))&&(a="xlinkHref",o.$attr[a]="xlink:href",i=null),o.$observe(e,function(e){return e?(o.$set(a,e),void(Dr&&i&&r.prop(i,o[a]))):void("href"===t&&o.$set(a,null))})}}}});var qi={$addControl:f,$$renameControl:pr,$removeControl:f,$setValidity:f,$setDirty:f,$setPristine:f,$setSubmitted:f},Di="ng-submitted";fr.$inject=["$element","$attrs","$scope","$animate","$interpolate"];var Ri=function(t){return["$timeout","$parse",function(e,n){function r(t){return""===t?n('this[""]').assign:n(t).assign||f}var o={name:"form",restrict:t?"EAC":"E",require:["form","^^?form"],controller:fr,compile:function(n,o){n.addClass(xa).addClass($a);var i=o.name?"name":!(!t||!o.ngForm)&&"ngForm";return{pre:function(t,n,o,a){var l=a[0];if(!("action"in o)){var s=function(e){t.$apply(function(){l.$commitViewValue(),l.$setSubmitted()}),e.preventDefault()};bo(n[0],"submit",s),n.on("$destroy",function(){e(function(){go(n[0],"submit",s)},0,!1)})}var u=a[1]||l.$$parentForm;u.$addControl(l);var d=i?r(l.$name):f;i&&(d(t,l),o.$observe(i,function(e){l.$name!==e&&(d(t,void 0),l.$$parentForm.$$renameControl(l,e),(d=r(l.$name))(t,l))})),n.on("$destroy",function(){l.$$parentForm.$removeControl(l),d(t,void 0),c(l,qi)})}}}};return o}]},_i=Ri(),Ui=Ri(!0),Fi=/^\d{4,}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+(?:[+-][0-2]\d:[0-5]\d|Z)$/,Li=/^[a-z][a-z\d.+-]*:\/*(?:[^:@]+(?::[^@]+)?@)?(?:[^\s:\/?#]+|\[[a-f\d:]+\])(?::\d+)?(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,Bi=/^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/,Hi=/^\s*(\-|\+)?(\d+|(\d*(\.\d*)))([eE][+-]?\d+)?\s*$/,Wi=/^(\d{4,})-(\d{2})-(\d{2})$/,Gi=/^(\d{4,})-(\d\d)-(\d\d)T(\d\d):(\d\d)(?::(\d\d)(\.\d{1,3})?)?$/,Zi=/^(\d{4,})-W(\d\d)$/,Ji=/^(\d{4,})-(\d\d)$/,Yi=/^(\d\d):(\d\d)(?::(\d\d)(\.\d{1,3})?)?$/,Ki="keydown wheel mousedown",Xi=bt();r("date,datetime-local,month,time,week".split(","),function(t){Xi[t]=!0});var Qi={text:br,date:$r("date",Wi,vr(Wi,["yyyy","MM","dd"]),"yyyy-MM-dd"),"datetime-local":$r("datetimelocal",Gi,vr(Gi,["yyyy","MM","dd","HH","mm","ss","sss"]),"yyyy-MM-ddTHH:mm:ss.sss"),time:$r("time",Yi,vr(Yi,["HH","mm","ss","sss"]),"HH:mm:ss.sss"),week:$r("week",Zi,mr,"yyyy-Www"),month:$r("month",Ji,vr(Ji,["yyyy","MM"]),"yyyy-MM"),number:xr,url:wr,email:kr,radio:Er,checkbox:Cr,hidden:f,button:f,submit:f,reset:f,file:f},ta=["$browser","$sniffer","$filter","$parse",function(t,e,n,r){return{restrict:"E",require:["?ngModel"],link:{pre:function(o,i,a,l){l[0]&&(Qi[zr(a.type)]||Qi.text)(o,i,a,l[0],e,t,n,r)}}}}],ea=/^(true|false|\d+)$/,na=function(){return{restrict:"A",priority:100,compile:function(t,e){return ea.test(e.ngValue)?function(t,e,n){n.$set("value",t.$eval(n.ngValue))}:function(t,e,n){t.$watch(n.ngValue,function(t){n.$set("value",t)})}}}},ra=["$compile",function(t){return{restrict:"AC",compile:function(e){return t.$$addBindingClass(e),function(e,n,r){t.$$addBindingInfo(n,r.ngBind),n=n[0],e.$watch(r.ngBind,function(t){n.textContent=m(t)?"":t})}}}}],oa=["$interpolate","$compile",function(t,e){return{compile:function(n){return e.$$addBindingClass(n),function(n,r,o){var i=t(r.attr(o.$attr.ngBindTemplate));e.$$addBindingInfo(r,i.expressions),r=r[0],o.$observe("ngBindTemplate",function(t){r.textContent=m(t)?"":t})}}}}],ia=["$sce","$parse","$compile",function(t,e,n){return{restrict:"A",compile:function(r,o){var i=e(o.ngBindHtml),a=e(o.ngBindHtml,function(e){return t.valueOf(e)});return n.$$addBindingClass(r),function(e,r,o){n.$$addBindingInfo(r,o.ngBindHtml),e.$watch(a,function(){var n=i(e);r.html(t.getTrustedHtml(n)||"")})}}}}],aa=b({restrict:"A",require:"ngModel",link:function(t,e,n,r){r.$viewChangeListeners.push(function(){t.$eval(n.ngChange)})}}),la=Ar("",!0),sa=Ar("Odd",0),ca=Ar("Even",1),ua=dr({compile:function(t,e){e.$set("ngCloak",void 0),t.removeClass("ng-cloak")}}),da=[function(){return{restrict:"A",scope:!0,controller:"@",priority:500}}],pa={},fa={blur:!0,focus:!0};r("click dblclick mousedown mouseup mouseover mouseout mousemove mouseenter mouseleave keydown keyup keypress submit focus blur copy cut paste".split(" "),function(t){var e=me("ng-"+t);pa[e]=["$parse","$rootScope",function(n,r){return{restrict:"A",compile:function(o,i){var a=n(i[e],null,!0);return function(e,n){n.on(t,function(n){var o=function(){a(e,{$event:n})};fa[t]&&r.$$phase?e.$evalAsync(o):e.$apply(o)})}}}}]});var ha=["$animate","$compile",function(t,e){return{multiElement:!0,transclude:"element",priority:600,terminal:!0,restrict:"A",$$tlb:!0,link:function(n,r,o,i,a){var l,s,c;n.$watch(o.ngIf,function(n){n?s||a(function(n,i){s=i,n[n.length++]=e.$$createComment("end ngIf",o.ngIf),l={clone:n},t.enter(n,r.parent(),r)}):(c&&(c.remove(),c=null),s&&(s.$destroy(),s=null),l&&(c=ht(l.clone),t.leave(c).then(function(){c=null}),l=null))})}}}],ba=["$templateRequest","$anchorScroll","$animate",function(t,e,n){return{restrict:"ECA",priority:400,terminal:!0,transclude:"element",controller:angular.noop,compile:function(r,o){var i=o.ngInclude||o.src,a=o.onload||"",l=o.autoscroll;return function(r,o,s,c,u){var d,p,f,h=0,b=function(){p&&(p.remove(),p=null),d&&(d.$destroy(),d=null),f&&(n.leave(f).then(function(){p=null}),p=f,f=null)};r.$watch(i,function(i){var s=function(){!v(l)||l&&!r.$eval(l)||e()},p=++h;i?(t(i,!0).then(function(t){if(!r.$$destroyed&&p===h){var e=r.$new();c.template=t;var l=u(e,function(t){b(),n.enter(t,null,o).then(s)});d=e,f=l,d.$emit("$includeContentLoaded",i),r.$eval(a)}},function(){r.$$destroyed||p===h&&(b(),r.$emit("$includeContentError",i))}),r.$emit("$includeContentRequested",i)):(b(),c.template=null)})}}}}],ga=["$compile",function(e){return{restrict:"ECA",priority:-400,require:"ngInclude",link:function(n,r,o,i){return Hr.call(r[0]).match(/SVG/)?(r.empty(),void e(At(i.template,t.document).childNodes)(n,function(t){r.append(t)},{futureParentElement:r})):(r.html(i.template),void e(r.contents())(n))}}}],ma=dr({priority:450,compile:function(){return{pre:function(t,e,n){t.$eval(n.ngInit)}}}}),va=function(){return{restrict:"A",priority:100,require:"ngModel",link:function(t,e,n,o){var i=e.attr(n.$attr.ngList)||", ",a="false"!==n.ngTrim,l=a?Kr(i):i,s=function(t){if(!m(t)){var e=[];return t&&r(t.split(l),function(t){t&&e.push(a?Kr(t):t)}),e}};o.$parsers.push(s),o.$formatters.push(function(t){if(Jr(t))return t.join(i)}),o.$isEmpty=function(t){return!t||!t.length}}}},$a="ng-valid",ya="ng-invalid",xa="ng-pristine",wa="ng-dirty",ka="ng-untouched",Ea="ng-touched",Sa="ng-pending",Ca="ng-empty",Aa="ng-not-empty",ja=e("ngModel"),Oa=["$scope","$exceptionHandler","$attrs","$element","$parse","$animate","$timeout","$rootScope","$q","$interpolate",function(t,e,n,o,i,a,l,s,c,u){this.$viewValue=Number.NaN,this.$modelValue=Number.NaN,this.$$rawModelValue=void 0,this.$validators={},this.$asyncValidators={},this.$parsers=[],this.$formatters=[],this.$viewChangeListeners=[],this.$untouched=!0,this.$touched=!1,this.$pristine=!0,this.$dirty=!1,this.$valid=!0,this.$invalid=!1,this.$error={},this.$$success={},this.$pending=void 0,this.$name=u(n.name||"",!1)(t),this.$$parentForm=qi;var d,p=i(n.ngModel),h=p.assign,b=p,g=h,y=null,x=this;this.$$setOptions=function(t){if(x.$options=t,t&&t.getterSetter){var e=i(n.ngModel+"()"),r=i(n.ngModel+"($$$p)");b=function(t){var n=p(t);return S(n)&&(n=e(t)),n},g=function(t,e){S(p(t))?r(t,{$$$p:e}):h(t,e)}}else if(!p.assign)throw ja("nonassign","Expression '{0}' is non-assignable. Element: {1}",n.ngModel,K(o))},this.$render=f,this.$isEmpty=function(t){return m(t)||""===t||null===t||t!==t},this.$$updateEmptyClasses=function(t){x.$isEmpty(t)?(a.removeClass(o,Aa),a.addClass(o,Ca)):(a.removeClass(o,Ca),a.addClass(o,Aa))};var w=0;jr({ctrl:this,$element:o,set:function(t,e){t[e]=!0},unset:function(t,e){delete t[e]},$animate:a}),this.$setPristine=function(){x.$dirty=!1,x.$pristine=!0,a.removeClass(o,wa),a.addClass(o,xa)},this.$setDirty=function(){x.$dirty=!0,x.$pristine=!1,a.removeClass(o,xa),a.addClass(o,wa),x.$$parentForm.$setDirty()},this.$setUntouched=function(){x.$touched=!1,x.$untouched=!0,a.setClass(o,ka,Ea)},this.$setTouched=function(){x.$touched=!0,x.$untouched=!1,a.setClass(o,Ea,ka)},this.$rollbackViewValue=function(){l.cancel(y),x.$viewValue=x.$$lastCommittedViewValue,x.$render()},this.$validate=function(){if(!k(x.$modelValue)||!isNaN(x.$modelValue)){var t=x.$$lastCommittedViewValue,e=x.$$rawModelValue,n=x.$valid,r=x.$modelValue,o=x.$options&&x.$options.allowInvalid;x.$$runValidators(e,t,function(t){o||n===t||(x.$modelValue=t?e:void 0,x.$modelValue!==r&&x.$$writeModelToScope())})}},this.$$runValidators=function(t,e,n){function o(){var t=x.$$parserName||"parse";return m(d)?(l(t,null),!0):(d||(r(x.$validators,function(t,e){l(e,null)}),r(x.$asyncValidators,function(t,e){l(e,null)})),l(t,d),d)}function i(){var n=!0;return r(x.$validators,function(r,o){var i=r(t,e);n=n&&i,l(o,i)}),!!n||(r(x.$asyncValidators,function(t,e){l(e,null)}),!1)}function a(){var n=[],o=!0;r(x.$asyncValidators,function(r,i){var a=r(t,e);if(!V(a))throw ja("nopromise","Expected asynchronous validator to return a promise but got '{0}' instead.",a);l(i,void 0),n.push(a.then(function(){l(i,!0)},function(){o=!1,l(i,!1)}))}),n.length?c.all(n).then(function(){s(o)},f):s(!0)}function l(t,e){u===w&&x.$setValidity(t,e)}function s(t){u===w&&n(t)}w++;var u=w;return o()&&i()?void a():void s(!1)},this.$commitViewValue=function(){var t=x.$viewValue;l.cancel(y),(x.$$lastCommittedViewValue!==t||""===t&&x.$$hasNativeValidators)&&(x.$$updateEmptyClasses(t),x.$$lastCommittedViewValue=t,x.$pristine&&this.$setDirty(),this.$$parseAndValidate())},this.$$parseAndValidate=function(){function e(){x.$modelValue!==i&&x.$$writeModelToScope()}var n=x.$$lastCommittedViewValue,r=n;if(d=!m(r)||void 0)for(var o=0;o<x.$parsers.length;o++)if(r=x.$parsers[o](r),m(r)){d=!1;break}k(x.$modelValue)&&isNaN(x.$modelValue)&&(x.$modelValue=b(t));var i=x.$modelValue,a=x.$options&&x.$options.allowInvalid;x.$$rawModelValue=r,a&&(x.$modelValue=r,e()),x.$$runValidators(r,x.$$lastCommittedViewValue,function(t){a||(x.$modelValue=t?r:void 0,e())})},this.$$writeModelToScope=function(){g(t,x.$modelValue),r(x.$viewChangeListeners,function(t){try{t()}catch(n){e(n)}})},this.$setViewValue=function(t,e){x.$viewValue=t,x.$options&&!x.$options.updateOnDefault||x.$$debounceViewValueCommit(e)},this.$$debounceViewValueCommit=function(e){var n,r=0,o=x.$options;o&&v(o.debounce)&&(n=o.debounce,k(n)?r=n:k(n[e])?r=n[e]:k(n["default"])&&(r=n["default"])),l.cancel(y),r?y=l(function(){x.$commitViewValue()},r):s.$$phase?x.$commitViewValue():t.$apply(function(){x.$commitViewValue()})},t.$watch(function(){var e=b(t);if(e!==x.$modelValue&&(x.$modelValue===x.$modelValue||e===e)){x.$modelValue=x.$$rawModelValue=e,d=void 0;for(var n=x.$formatters,r=n.length,o=e;r--;)o=n[r](o);x.$viewValue!==o&&(x.$$updateEmptyClasses(o),x.$viewValue=x.$$lastCommittedViewValue=o,x.$render(),x.$$runValidators(e,o,f))}return e})}],Ma=["$rootScope",function(t){return{restrict:"A",require:["ngModel","^?form","^?ngModelOptions"],controller:Oa,priority:1,compile:function(e){return e.addClass(xa).addClass(ka).addClass($a),{pre:function(t,e,n,r){var o=r[0],i=r[1]||o.$$parentForm;o.$$setOptions(r[2]&&r[2].$options),i.$addControl(o),n.$observe("name",function(t){o.$name!==t&&o.$$parentForm.$$renameControl(o,t)}),t.$on("$destroy",function(){o.$$parentForm.$removeControl(o)})},post:function(e,n,r,o){var i=o[0];i.$options&&i.$options.updateOn&&n.on(i.$options.updateOn,function(t){i.$$debounceViewValueCommit(t&&t.type)}),n.on("blur",function(){i.$touched||(t.$$phase?e.$evalAsync(i.$setTouched):e.$apply(i.$setTouched))})}}}}}],Ta=/(\s+|^)default(\s+|$)/,Na=function(){return{restrict:"A",controller:["$scope","$attrs",function(t,e){var n=this;this.$options=_(t.$eval(e.ngModelOptions)),v(this.$options.updateOn)?(this.$options.updateOnDefault=!1,this.$options.updateOn=Kr(this.$options.updateOn.replace(Ta,function(){return n.$options.updateOnDefault=!0," "}))):this.$options.updateOnDefault=!0}]}},Va=dr({terminal:!0,priority:1e3}),za=e("ngOptions"),Ia=/^\s*([\s\S]+?)(?:\s+as\s+([\s\S]+?))?(?:\s+group\s+by\s+([\s\S]+?))?(?:\s+disable\s+when\s+([\s\S]+?))?\s+for\s+(?:([\$\w][\$\w]*)|(?:\(\s*([\$\w][\$\w]*)\s*,\s*([\$\w][\$\w]*)\s*\)))\s+in\s+([\s\S]+?)(?:\s+track\s+by\s+([\s\S]+?))?$/,Pa=["$compile","$document","$parse",function(e,o,i){function a(t,e,r){function o(t,e,n,r,o){this.selectValue=t,this.viewValue=e,this.label=n,this.group=r,this.disabled=o}function a(t){var e;if(!c&&n(t))e=t;else{e=[];for(var r in t)t.hasOwnProperty(r)&&"$"!==r.charAt(0)&&e.push(r)}return e}var l=t.match(Ia);if(!l)throw za("iexp","Expected expression in form of '_select_ (as _label_)? for (_key_,)?_value_ in _collection_' but got '{0}'. Element: {1}",t,K(e));var s=l[5]||l[7],c=l[6],u=/ as /.test(l[0])&&l[1],d=l[9],p=i(l[2]?l[1]:s),f=u&&i(u),h=f||p,b=d&&i(d),g=d?function(t,e){return b(r,e)}:function(t){return Xt(t)},m=function(t,e){return g(t,E(t,e))},v=i(l[2]||l[1]),y=i(l[3]||""),x=i(l[4]||""),w=i(l[8]),k={},E=c?function(t,e){return k[c]=e,k[s]=t,k}:function(t){return k[s]=t,k};return{trackBy:d,getTrackByValue:m,getWatchables:i(w,function(t){var e=[];t=t||[];for(var n=a(t),o=n.length,i=0;i<o;i++){var s=t===n?i:n[i],c=t[s],u=E(c,s),d=g(c,u);if(e.push(d),l[2]||l[1]){var p=v(r,u);e.push(p)}if(l[4]){var f=x(r,u);e.push(f)}}return e}),getOptions:function(){for(var t=[],e={},n=w(r)||[],i=a(n),l=i.length,s=0;s<l;s++){var c=n===i?s:i[s],u=n[c],p=E(u,c),f=h(r,p),b=g(f,p),k=v(r,p),S=y(r,p),C=x(r,p),A=new o(b,f,k,S,C);t.push(A),e[b]=A}return{items:t,selectValueMap:e,getOptionFromViewValue:function(t){return e[m(t)]},getViewValueFromOption:function(t){return d?angular.copy(t.viewValue):t.viewValue}}}}}function l(t,n,i,l){function u(t,e){var n=s.cloneNode(!1);e.appendChild(n),d(t,n)}function d(t,e){t.element=e,e.disabled=t.disabled,t.label!==e.label&&(e.label=t.label,e.textContent=t.label),t.value!==e.value&&(e.value=t.selectValue)}function p(){var t=E&&h.readValue();if(E)for(var e=E.items.length-1;e>=0;e--){var r=E.items[e];Bt(v(r.group)?r.element.parentNode:r.element)}E=S.getOptions();var o={};if(w&&n.prepend(f),E.items.forEach(function(t){var e;v(t.group)?(e=o[t.group],e||(e=c.cloneNode(!1),C.appendChild(e),e.label=null===t.group?"null":t.group,o[t.group]=e),u(t,e)):u(t,C)}),n[0].appendChild(C),b.$render(),!b.$isEmpty(t)){var i=h.readValue(),a=S.trackBy||g;(a?U(t,i):t===i)||(b.$setViewValue(i),b.$render())}}for(var f,h=l[0],b=l[1],g=i.multiple,m=0,y=n.children(),x=y.length;m<x;m++)if(""===y[m].value){f=y.eq(m);break}var w=!!f,k=Rr(s.cloneNode(!1));k.val("?");var E,S=a(i.ngOptions,n,t),C=o[0].createDocumentFragment(),A=function(){w||n.prepend(f),n.val(""),f.prop("selected",!0),f.attr("selected",!0)},j=function(){w||f.remove()},O=function(){n.prepend(k),n.val("?"),k.prop("selected",!0),k.attr("selected",!0)},M=function(){k.remove()};g?(b.$isEmpty=function(t){return!t||0===t.length},h.writeValue=function(t){E.items.forEach(function(t){t.element.selected=!1}),t&&t.forEach(function(t){var e=E.getOptionFromViewValue(t);e&&(e.element.selected=!0)})},h.readValue=function(){var t=n.val()||[],e=[];return r(t,function(t){var n=E.selectValueMap[t];n&&!n.disabled&&e.push(E.getViewValueFromOption(n))}),e},S.trackBy&&t.$watchCollection(function(){if(Jr(b.$viewValue))return b.$viewValue.map(function(t){return S.getTrackByValue(t)})},function(){b.$render()})):(h.writeValue=function(t){var e=E.getOptionFromViewValue(t);e?(n[0].value!==e.selectValue&&(M(),j(),n[0].value=e.selectValue,e.element.selected=!0),e.element.setAttribute("selected","selected")):null===t||w?(M(),A()):(j(),O())},h.readValue=function(){var t=E.selectValueMap[n.val()];return t&&!t.disabled?(j(),M(),E.getViewValueFromOption(t)):null},S.trackBy&&t.$watch(function(){return S.getTrackByValue(b.$viewValue)},function(){b.$render()})),w?(f.remove(),e(f)(t),f.removeClass("ng-scope")):f=Rr(s.cloneNode(!1)),n.empty(),p(),t.$watchCollection(S.getWatchables,p)}var s=t.document.createElement("option"),c=t.document.createElement("optgroup");return{restrict:"A",terminal:!0,require:["select","ngModel"],link:{pre:function(t,e,n,r){r[0].registerOption=f},post:l}}}],qa=["$locale","$interpolate","$log",function(t,e,n){var o=/{}/g,i=/^when(Minus)?(.+)$/;return{link:function(a,l,s){function c(t){l.text(t||"")}var u,d=s.count,p=s.$attr.when&&l.attr(s.$attr.when),h=s.offset||0,b=a.$eval(p)||{},g={},v=e.startSymbol(),y=e.endSymbol(),x=v+d+"-"+h+y,w=angular.noop;r(s,function(t,e){var n=i.exec(e);if(n){var r=(n[1]?"-":"")+zr(n[2]);b[r]=l.attr(s.$attr[e])}}),r(b,function(t,n){g[n]=e(t.replace(o,x))}),a.$watch(d,function(e){var r=parseFloat(e),o=isNaN(r);if(o||r in b||(r=t.pluralCat(r-h)),r!==u&&!(o&&k(u)&&isNaN(u))){w();var i=g[r];m(i)?(null!=e&&n.debug("ngPluralize: no rule defined for '"+r+"' in "+p),w=f,c()):w=a.$watch(i,c),u=r}})}}}],Da=["$parse","$animate","$compile",function(t,o,i){var a="$$NG_REMOVED",l=e("ngRepeat"),s=function(t,e,n,r,o,i,a){t[n]=r,o&&(t[o]=i),t.$index=e,t.$first=0===e,t.$last=e===a-1,t.$middle=!(t.$first||t.$last),t.$odd=!(t.$even=0===(1&e))},c=function(t){return t.clone[0]},u=function(t){return t.clone[t.clone.length-1]};return{restrict:"A",multiElement:!0,transclude:"element",priority:1e3,terminal:!0,$$tlb:!0,compile:function(e,d){var p=d.ngRepeat,f=i.$$createComment("end ngRepeat",p),h=p.match(/^\s*([\s\S]+?)\s+in\s+([\s\S]+?)(?:\s+as\s+([\s\S]+?))?(?:\s+track\s+by\s+([\s\S]+?))?\s*$/);if(!h)throw l("iexp","Expected expression in form of '_item_ in _collection_[ track by _id_]' but got '{0}'.",p);var b=h[1],g=h[2],m=h[3],v=h[4];if(h=b.match(/^(?:(\s*[\$\w]+)|\(\s*([\$\w]+)\s*,\s*([\$\w]+)\s*\))$/),!h)throw l("iidexp","'_item_' in '_item_ in _collection_' should be an identifier or '(_key_, _value_)' expression, but got '{0}'.",b);var y=h[3]||h[1],x=h[2];if(m&&(!/^[$a-zA-Z_][$a-zA-Z0-9_]*$/.test(m)||/^(null|undefined|this|\$index|\$first|\$middle|\$last|\$even|\$odd|\$parent|\$root|\$id)$/.test(m)))throw l("badident","alias '{0}' is invalid --- must be a valid JS identifier which is not a reserved name.",m);var w,k,E,S,C={$id:Xt};return v?w=t(v):(E=function(t,e){return Xt(e)},S=function(t){return t}),function(t,e,i,d,h){w&&(k=function(e,n,r){return x&&(C[x]=e),C[y]=n,
-C.$index=r,w(t,C)});var b=bt();t.$watchCollection(g,function(i){var d,g,v,w,C,A,j,O,M,T,N,V,z=e[0],I=bt();if(m&&(t[m]=i),n(i))M=i,O=k||E;else{O=k||S,M=[];for(var P in i)Vr.call(i,P)&&"$"!==P.charAt(0)&&M.push(P)}for(w=M.length,N=new Array(w),d=0;d<w;d++)if(C=i===M?d:M[d],A=i[C],j=O(C,A,d),b[j])T=b[j],delete b[j],I[j]=T,N[d]=T;else{if(I[j])throw r(N,function(t){t&&t.scope&&(b[t.id]=t)}),l("dupes","Duplicates in a repeater are not allowed. Use 'track by' expression to specify unique keys. Repeater: {0}, Duplicate key: {1}, Duplicate value: {2}",p,j,A);N[d]={id:j,scope:void 0,clone:void 0},I[j]=!0}for(var q in b){if(T=b[q],V=ht(T.clone),o.leave(V),V[0].parentNode)for(d=0,g=V.length;d<g;d++)V[d][a]=!0;T.scope.$destroy()}for(d=0;d<w;d++)if(C=i===M?d:M[d],A=i[C],T=N[d],T.scope){v=z;do v=v.nextSibling;while(v&&v[a]);c(T)!=v&&o.move(ht(T.clone),null,z),z=u(T),s(T.scope,d,y,A,x,C,w)}else h(function(t,e){T.scope=e;var n=f.cloneNode(!1);t[t.length++]=n,o.enter(t,null,z),z=n,T.clone=t,I[T.id]=T,s(T.scope,d,y,A,x,C,w)});b=I})}}}}],Ra="ng-hide",_a="ng-hide-animate",Ua=["$animate",function(t){return{restrict:"A",multiElement:!0,link:function(e,n,r){e.$watch(r.ngShow,function(e){t[e?"removeClass":"addClass"](n,Ra,{tempClasses:_a})})}}}],Fa=["$animate",function(t){return{restrict:"A",multiElement:!0,link:function(e,n,r){e.$watch(r.ngHide,function(e){t[e?"addClass":"removeClass"](n,Ra,{tempClasses:_a})})}}}],La=dr(function(t,e,n){t.$watch(n.ngStyle,function(t,n){n&&t!==n&&r(n,function(t,n){e.css(n,"")}),t&&e.css(t)},!0)}),Ba=["$animate","$compile",function(t,e){return{require:"ngSwitch",controller:["$scope",function(){this.cases={}}],link:function(n,o,i,a){var l=i.ngSwitch||i.on,s=[],c=[],u=[],d=[],p=function(t,e){return function(){t.splice(e,1)}};n.$watch(l,function(n){var o,i;for(o=0,i=u.length;o<i;++o)t.cancel(u[o]);for(u.length=0,o=0,i=d.length;o<i;++o){var l=ht(c[o].clone);d[o].$destroy();var f=u[o]=t.leave(l);f.then(p(u,o))}c.length=0,d.length=0,(s=a.cases["!"+n]||a.cases["?"])&&r(s,function(n){n.transclude(function(r,o){d.push(o);var i=n.element;r[r.length++]=e.$$createComment("end ngSwitchWhen");var a={clone:r};c.push(a),t.enter(r,i.parent(),i)})})})}}}],Ha=dr({transclude:"element",priority:1200,require:"^ngSwitch",multiElement:!0,link:function(t,e,n,r,o){r.cases["!"+n.ngSwitchWhen]=r.cases["!"+n.ngSwitchWhen]||[],r.cases["!"+n.ngSwitchWhen].push({transclude:o,element:e})}}),Wa=dr({transclude:"element",priority:1200,require:"^ngSwitch",multiElement:!0,link:function(t,e,n,r,o){r.cases["?"]=r.cases["?"]||[],r.cases["?"].push({transclude:o,element:e})}}),Ga=e("ngTransclude"),Za=["$compile",function(t){return{restrict:"EAC",terminal:!0,compile:function(e){var n=t(e.contents());return e.empty(),function(t,e,r,o,i){function a(t,n){t.length?e.append(t):(l(),n.$destroy())}function l(){n(t,function(t){e.append(t)})}if(!i)throw Ga("orphan","Illegal use of ngTransclude directive in the template! No parent directive that requires a transclusion found. Element: {0}",K(e));r.ngTransclude===r.$attr.ngTransclude&&(r.ngTransclude="");var s=r.ngTransclude||r.ngTranscludeSlot;i(a,null,s),s&&!i.isSlotFilled(s)&&l()}}}}],Ja=["$templateCache",function(t){return{restrict:"E",terminal:!0,compile:function(e,n){if("text/ng-template"==n.type){var r=n.id,o=e[0].text;t.put(r,o)}}}}],Ya={$setViewValue:f,$render:f},Ka=["$element","$scope",function(e,n){var r=this,o=new Qt;r.ngModelCtrl=Ya,r.unknownOption=Rr(t.document.createElement("option")),r.renderUnknownOption=function(t){var n="? "+Xt(t)+" ?";r.unknownOption.val(n),e.prepend(r.unknownOption),e.val(n)},n.$on("$destroy",function(){r.renderUnknownOption=f}),r.removeUnknownOption=function(){r.unknownOption.parent()&&r.unknownOption.remove()},r.readValue=function(){return r.removeUnknownOption(),e.val()},r.writeValue=function(t){r.hasOption(t)?(r.removeUnknownOption(),e.val(t),""===t&&r.emptyOption.prop("selected",!0)):null==t&&r.emptyOption?(r.removeUnknownOption(),e.val("")):r.renderUnknownOption(t)},r.addOption=function(t,e){if(e[0].nodeType!==so){pt(t,'"option value"'),""===t&&(r.emptyOption=e);var n=o.get(t)||0;o.put(t,n+1),r.ngModelCtrl.$render(),Mr(e)}},r.removeOption=function(t){var e=o.get(t);e&&(1===e?(o.remove(t),""===t&&(r.emptyOption=void 0)):o.put(t,e-1))},r.hasOption=function(t){return!!o.get(t)},r.registerOption=function(t,e,n,o,i){if(o){var a;n.$observe("value",function(t){v(a)&&r.removeOption(a),a=t,r.addOption(t,e)})}else i?t.$watch(i,function(t,o){n.$set("value",t),o!==t&&r.removeOption(o),r.addOption(t,e)}):r.addOption(n.value,e);e.on("$destroy",function(){r.removeOption(n.value),r.ngModelCtrl.$render()})}}],Xa=function(){function t(t,e,n,o){var i=o[1];if(i){var a=o[0];if(a.ngModelCtrl=i,e.on("change",function(){t.$apply(function(){i.$setViewValue(a.readValue())})}),n.multiple){a.readValue=function(){var t=[];return r(e.find("option"),function(e){e.selected&&t.push(e.value)}),t},a.writeValue=function(t){var n=new Qt(t);r(e.find("option"),function(t){t.selected=v(n.get(t.value))})};var l,s=NaN;t.$watch(function(){s!==i.$viewValue||U(l,i.$viewValue)||(l=mt(i.$viewValue),i.$render()),s=i.$viewValue}),i.$isEmpty=function(t){return!t||0===t.length}}}}function e(t,e,n,r){var o=r[1];if(o){var i=r[0];o.$render=function(){i.writeValue(o.$viewValue)}}}return{restrict:"E",require:["select","?ngModel"],controller:Ka,priority:1,link:{pre:t,post:e}}},Qa=["$interpolate",function(t){return{restrict:"E",priority:100,compile:function(e,n){if(v(n.value))var r=t(n.value,!0);else{var o=t(e.text(),!0);o||n.$set("value",e.text())}return function(t,e,n){var i="$selectController",a=e.parent(),l=a.data(i)||a.parent().data(i);l&&l.registerOption(t,e,n,r,o)}}}}],tl=b({restrict:"E",terminal:!1}),el=function(){return{restrict:"A",require:"?ngModel",link:function(t,e,n,r){r&&(n.required=!0,r.$validators.required=function(t,e){return!n.required||!r.$isEmpty(e)},n.$observe("required",function(){r.$validate()}))}}},nl=function(){return{restrict:"A",require:"?ngModel",link:function(t,n,r,o){if(o){var i,a=r.ngPattern||r.pattern;r.$observe("pattern",function(t){if(w(t)&&t.length>0&&(t=new RegExp("^"+t+"$")),t&&!t.test)throw e("ngPattern")("noregexp","Expected {0} to be a RegExp but was {1}. Element: {2}",a,t,K(n));i=t||void 0,o.$validate()}),o.$validators.pattern=function(t,e){return o.$isEmpty(e)||m(i)||i.test(e)}}}}},rl=function(){return{restrict:"A",require:"?ngModel",link:function(t,e,n,r){if(r){var o=-1;n.$observe("maxlength",function(t){var e=d(t);o=isNaN(e)?-1:e,r.$validate()}),r.$validators.maxlength=function(t,e){return o<0||r.$isEmpty(e)||e.length<=o}}}}},ol=function(){return{restrict:"A",require:"?ngModel",link:function(t,e,n,r){if(r){var o=0;n.$observe("minlength",function(t){o=d(t)||0,r.$validate()}),r.$validators.minlength=function(t,e){return r.$isEmpty(e)||e.length>=o}}}}};return t.angular.bootstrap?void(t.console&&console.log("WARNING: Tried to load angular more than once.")):(ct(),yt(angular),angular.module("ngLocale",[],["$provide",function(t){function e(t){t+="";var e=t.indexOf(".");return e==-1?0:t.length-e-1}function n(t,n){var r=n;void 0===r&&(r=Math.min(e(t),3));var o=Math.pow(10,r),i=(t*o|0)%o;return{v:r,f:i}}var r={ZERO:"zero",ONE:"one",TWO:"two",FEW:"few",MANY:"many",OTHER:"other"};t.value("$locale",{DATETIME_FORMATS:{AMPMS:["AM","PM"],DAY:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],ERANAMES:["Before Christ","Anno Domini"],ERAS:["BC","AD"],FIRSTDAYOFWEEK:6,MONTH:["January","February","March","April","May","June","July","August","September","October","November","December"],SHORTDAY:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],SHORTMONTH:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],STANDALONEMONTH:["January","February","March","April","May","June","July","August","September","October","November","December"],WEEKENDRANGE:[5,6],fullDate:"EEEE, MMMM d, y",longDate:"MMMM d, y",medium:"MMM d, y h:mm:ss a",mediumDate:"MMM d, y",mediumTime:"h:mm:ss a","short":"M/d/yy h:mm a",shortDate:"M/d/yy",shortTime:"h:mm a"},NUMBER_FORMATS:{CURRENCY_SYM:"$",DECIMAL_SEP:".",GROUP_SEP:",",PATTERNS:[{gSize:3,lgSize:3,maxFrac:3,minFrac:0,minInt:1,negPre:"-",negSuf:"",posPre:"",posSuf:""},{gSize:3,lgSize:3,maxFrac:2,minFrac:2,minInt:1,negPre:"-¤",negSuf:"",posPre:"¤",posSuf:""}]},id:"en-us",localeID:"en_US",pluralCat:function(t,e){var o=0|t,i=n(t,e);return 1==o&&0==i.v?r.ONE:r.OTHER}})}]),void Rr(t.document).ready(function(){ot(t.document,it)}))}(window),!window.angular.$$csp().noInlineStyle&&window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>')},function(t,exports){/**
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	var parentJsonpFunction = window["webpackJsonp"];
+/******/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules) {
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, callbacks = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(installedChunks[chunkId])
+/******/ 				callbacks.push.apply(callbacks, installedChunks[chunkId]);
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			modules[moduleId] = moreModules[moduleId];
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(chunkIds, moreModules);
+/******/ 		while(callbacks.length)
+/******/ 			callbacks.shift().call(null, __webpack_require__);
+/******/ 		if(moreModules[0]) {
+/******/ 			installedModules[0] = 0;
+/******/ 			return __webpack_require__(0);
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// "0" means "already loaded"
+/******/ 	// Array means "loading", array contains callbacks
+/******/ 	var installedChunks = {
+/******/ 		2:0
+/******/ 	};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId, callback) {
+/******/ 		// "0" is the signal for "already loaded"
+/******/ 		if(installedChunks[chunkId] === 0)
+/******/ 			return callback.call(null, __webpack_require__);
+/******/
+/******/ 		// an array means "currently loading".
+/******/ 		if(installedChunks[chunkId] !== undefined) {
+/******/ 			installedChunks[chunkId].push(callback);
+/******/ 		} else {
+/******/ 			// start chunk loading
+/******/ 			installedChunks[chunkId] = [callback];
+/******/ 			var head = document.getElementsByTagName('head')[0];
+/******/ 			var script = document.createElement('script');
+/******/ 			script.type = 'text/javascript';
+/******/ 			script.charset = 'utf-8';
+/******/ 			script.async = true;
+/******/
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"0":"angular-ui-module","1":"app"}[chunkId]||chunkId) + ".bundle.js";
+/******/ 			head.appendChild(script);
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */,
+/* 1 */
+/***/ function(module, exports) {
+
+	/**
 	 * State-based routing for AngularJS
 	 * @version v0.2.18
 	 * @link http://angular-ui.github.com/
 	 * @license MIT License, http://www.opensource.org/licenses/MIT
 	 */
-"undefined"!=typeof t&&"undefined"!=typeof exports&&t.exports===exports&&(t.exports="ui.router"),function(t,angular,e){"use strict";function n(t,e){return L(new(L(function(){},{prototype:t})),e)}function r(t){return F(arguments,function(e){e!==t&&F(e,function(e,n){t.hasOwnProperty(n)||(t[n]=e)})}),t}function o(t,e){var n=[];for(var r in t.path){if(t.path[r]!==e.path[r])break;n.push(t.path[r])}return n}function i(t){if(Object.keys)return Object.keys(t);var e=[];return F(t,function(t,n){e.push(n)}),e}function a(t,e){if(Array.prototype.indexOf)return t.indexOf(e,Number(arguments[2])||0);var n=t.length>>>0,r=Number(arguments[2])||0;for(r=r<0?Math.ceil(r):Math.floor(r),r<0&&(r+=n);r<n;r++)if(r in t&&t[r]===e)return r;return-1}function l(t,e,n,r){var l,s=o(n,r),c={},u=[];for(var d in s)if(s[d]&&s[d].params&&(l=i(s[d].params),l.length))for(var p in l)a(u,l[p])>=0||(u.push(l[p]),c[l[p]]=t[l[p]]);return L({},c,e)}function s(t,e,n){if(!n){n=[];for(var r in t)n.push(r)}for(var o=0;o<n.length;o++){var i=n[o];if(t[i]!=e[i])return!1}return!0}function c(t,e){var n={};return F(t,function(t){n[t]=e[t]}),n}function u(t){var e={},n=Array.prototype.concat.apply(Array.prototype,Array.prototype.slice.call(arguments,1));return F(n,function(n){n in t&&(e[n]=t[n])}),e}function d(t){var e={},n=Array.prototype.concat.apply(Array.prototype,Array.prototype.slice.call(arguments,1));for(var r in t)a(n,r)==-1&&(e[r]=t[r]);return e}function p(t,e){var n=U(t),r=n?[]:{};return F(t,function(t,o){e(t,o)&&(r[n?r.length:o]=t)}),r}function f(t,e){var n=U(t)?[]:{};return F(t,function(t,r){n[r]=e(t,r)}),n}function h(t,n){var o=1,l=2,s={},c=[],u=s,p=L(t.when(s),{$$promises:s,$$values:s});this.study=function(s){function f(t,e){if(v[e]!==l){if(m.push(e),v[e]===o)throw m.splice(0,a(m,e)),new Error("Cyclic dependency: "+m.join(" -> "));if(v[e]=o,R(t))g.push(e,[function(){return n.get(t)}],c);else{var r=n.annotate(t);F(r,function(t){t!==e&&s.hasOwnProperty(t)&&f(s[t],t)}),g.push(e,t,r)}m.pop(),v[e]=l}}function h(t){return _(t)&&t.then&&t.$$promises}if(!_(s))throw new Error("'invocables' must be an object");var b=i(s||{}),g=[],m=[],v={};return F(s,f),s=m=v=null,function(o,i,a){function l(){--x||(w||r(y,i.$$values),m.$$values=y,m.$$promises=m.$$promises||!0,delete m.$$inheritedValues,f.resolve(y))}function s(t){m.$$failure=t,f.reject(t)}function c(e,r,i){function c(t){d.reject(t),s(t)}function u(){if(!q(m.$$failure))try{d.resolve(n.invoke(r,a,y)),d.promise.then(function(t){y[e]=t,l()},c)}catch(t){c(t)}}var d=t.defer(),p=0;F(i,function(t){v.hasOwnProperty(t)&&!o.hasOwnProperty(t)&&(p++,v[t].then(function(e){y[t]=e,--p||u()},c))}),p||u(),v[e]=d.promise}if(h(o)&&a===e&&(a=i,i=o,o=null),o){if(!_(o))throw new Error("'locals' must be an object")}else o=u;if(i){if(!h(i))throw new Error("'parent' must be a promise returned by $resolve.resolve()")}else i=p;var f=t.defer(),m=f.promise,v=m.$$promises={},y=L({},o),x=1+g.length/3,w=!1;if(q(i.$$failure))return s(i.$$failure),m;i.$$inheritedValues&&r(y,d(i.$$inheritedValues,b)),L(v,i.$$promises),i.$$values?(w=r(y,d(i.$$values,b)),m.$$inheritedValues=d(i.$$values,b),l()):(i.$$inheritedValues&&(m.$$inheritedValues=d(i.$$inheritedValues,b)),i.then(l,s));for(var k=0,E=g.length;k<E;k+=3)o.hasOwnProperty(g[k])?l():c(g[k],g[k+1],g[k+2]);return m}},this.resolve=function(t,e,n,r){return this.study(t)(e,n,r)}}function b(t,e,n){this.fromConfig=function(t,e,n){return q(t.template)?this.fromString(t.template,e):q(t.templateUrl)?this.fromUrl(t.templateUrl,e):q(t.templateProvider)?this.fromProvider(t.templateProvider,e,n):null},this.fromString=function(t,e){return D(t)?t(e):t},this.fromUrl=function(n,r){return D(n)&&(n=n(r)),null==n?null:t.get(n,{cache:e,headers:{Accept:"text/html"}}).then(function(t){return t.data})},this.fromProvider=function(t,e,r){return n.invoke(t,null,r||{params:e})}}function g(t,r,o){function i(e,n,r,o){if(g.push(e),h[e])return h[e];if(!/^\w+([-.]+\w+)*(?:\[\])?$/.test(e))throw new Error("Invalid parameter name '"+e+"' in pattern '"+t+"'");if(b[e])throw new Error("Duplicate parameter name '"+e+"' in pattern '"+t+"'");return b[e]=new W.Param(e,n,r,o),b[e]}function a(t,e,n,r){var o=["",""],i=t.replace(/[\\\[\]\^$*+?.()|{}]/g,"\\$&");if(!e)return i;switch(n){case!1:o=["(",")"+(r?"?":"")];break;case!0:i=i.replace(/\/$/,""),o=["(?:/(",")|/)?"];break;default:o=["("+n+"|",")?"]}return i+o[0]+e+o[1]}function l(o,i){var a,l,s,c,u;return a=o[2]||o[3],u=r.params[a],s=t.substring(p,o.index),l=i?o[4]:o[4]||("*"==o[1]?".*":null),l&&(c=W.type(l)||n(W.type("string"),{pattern:new RegExp(l,r.caseInsensitive?"i":e)})),{id:a,regexp:l,segment:s,type:c,cfg:u}}r=L({params:{}},_(r)?r:{});var s,c=/([:*])([\w\[\]]+)|\{([\w\[\]]+)(?:\:\s*((?:[^{}\\]+|\\.|\{(?:[^{}\\]+|\\.)*\})+))?\}/g,u=/([:]?)([\w\[\].-]+)|\{([\w\[\].-]+)(?:\:\s*((?:[^{}\\]+|\\.|\{(?:[^{}\\]+|\\.)*\})+))?\}/g,d="^",p=0,f=this.segments=[],h=o?o.params:{},b=this.params=o?o.params.$$new():new W.ParamSet,g=[];this.source=t;for(var m,v,y;(s=c.exec(t))&&(m=l(s,!1),!(m.segment.indexOf("?")>=0));)v=i(m.id,m.type,m.cfg,"path"),d+=a(m.segment,v.type.pattern.source,v.squash,v.isOptional),f.push(m.segment),p=c.lastIndex;y=t.substring(p);var x=y.indexOf("?");if(x>=0){var w=this.sourceSearch=y.substring(x);if(y=y.substring(0,x),this.sourcePath=t.substring(0,p+x),w.length>0)for(p=0;s=u.exec(w);)m=l(s,!0),v=i(m.id,m.type,m.cfg,"search"),p=c.lastIndex}else this.sourcePath=t,this.sourceSearch="";d+=a(y)+(r.strict===!1?"/?":"")+"$",f.push(y),this.regexp=new RegExp(d,r.caseInsensitive?"i":e),this.prefix=f[0],this.$$paramNames=g}function m(t){L(this,t)}function v(){function t(t){return null!=t?t.toString().replace(/~/g,"~~").replace(/\//g,"~2F"):t}function r(t){return null!=t?t.toString().replace(/~2F/g,"/").replace(/~~/g,"~"):t}function o(){return{strict:h,caseInsensitive:d}}function l(t){return D(t)||U(t)&&D(t[t.length-1])}function s(){for(;w.length;){var t=w.shift();if(t.pattern)throw new Error("You cannot override a type's .pattern at runtime.");angular.extend(y[t.name],u.invoke(t.def))}}function c(t){L(this,t||{})}W=this;var u,d=!1,h=!0,b=!1,y={},x=!0,w=[],k={string:{encode:t,decode:r,is:function(t){return null==t||!q(t)||"string"==typeof t},pattern:/[^\/]*/},"int":{encode:t,decode:function(t){return parseInt(t,10)},is:function(t){return q(t)&&this.decode(t.toString())===t},pattern:/\d+/},bool:{encode:function(t){return t?1:0},decode:function(t){return 0!==parseInt(t,10)},is:function(t){return t===!0||t===!1},pattern:/0|1/},date:{encode:function(t){return this.is(t)?[t.getFullYear(),("0"+(t.getMonth()+1)).slice(-2),("0"+t.getDate()).slice(-2)].join("-"):e},decode:function(t){if(this.is(t))return t;var n=this.capture.exec(t);return n?new Date(n[1],n[2]-1,n[3]):e},is:function(t){return t instanceof Date&&!isNaN(t.valueOf())},equals:function(t,e){return this.is(t)&&this.is(e)&&t.toISOString()===e.toISOString()},pattern:/[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[1-2][0-9]|3[0-1])/,capture:/([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])/},json:{encode:angular.toJson,decode:angular.fromJson,is:angular.isObject,equals:angular.equals,pattern:/[^\/]*/},any:{encode:angular.identity,decode:angular.identity,equals:angular.equals,pattern:/.*/}};v.$$getDefaultValue=function(t){if(!l(t.value))return t.value;if(!u)throw new Error("Injectable functions cannot be called at configuration time");return u.invoke(t.value)},this.caseInsensitive=function(t){return q(t)&&(d=t),d},this.strictMode=function(t){return q(t)&&(h=t),h},this.defaultSquashPolicy=function(t){if(!q(t))return b;if(t!==!0&&t!==!1&&!R(t))throw new Error("Invalid squash policy: "+t+". Valid policies: false, true, arbitrary-string");return b=t,t},this.compile=function(t,e){return new g(t,L(o(),e))},this.isMatcher=function(t){if(!_(t))return!1;var e=!0;return F(g.prototype,function(n,r){D(n)&&(e=e&&q(t[r])&&D(t[r]))}),e},this.type=function(t,e,n){if(!q(e))return y[t];if(y.hasOwnProperty(t))throw new Error("A type named '"+t+"' has already been defined.");return y[t]=new m(L({name:t},e)),n&&(w.push({name:t,def:n}),x||s()),this},F(k,function(t,e){y[e]=new m(L({name:e},t))}),y=n(y,{}),this.$get=["$injector",function(t){return u=t,x=!1,s(),F(k,function(t,e){y[e]||(y[e]=new m(t))}),this}],this.Param=function(t,n,r,o){function s(t){var e=_(t)?i(t):[],n=a(e,"value")===-1&&a(e,"type")===-1&&a(e,"squash")===-1&&a(e,"array")===-1;return n&&(t={value:t}),t.$$fn=l(t.value)?t.value:function(){return t.value},t}function c(e,n,r){if(e.type&&n)throw new Error("Param '"+t+"' has two type configurations.");return n?n:e.type?angular.isString(e.type)?y[e.type]:e.type instanceof m?e.type:new m(e.type):"config"===r?y.any:y.string}function d(){var e={array:"search"===o&&"auto"},n=t.match(/\[\]$/)?{array:!0}:{};return L(e,n,r).array}function h(t,e){var n=t.squash;if(!e||n===!1)return!1;if(!q(n)||null==n)return b;if(n===!0||R(n))return n;throw new Error("Invalid squash policy: '"+n+"'. Valid policies: false, true, or arbitrary string")}function g(t,n,r,o){var i,l,s=[{from:"",to:r||n?e:""},{from:null,to:r||n?e:""}];return i=U(t.replace)?t.replace:[],R(o)&&i.push({from:o,to:e}),l=f(i,function(t){return t.from}),p(s,function(t){return a(l,t.from)===-1}).concat(i)}function v(){if(!u)throw new Error("Injectable functions cannot be called at configuration time");var t=u.invoke(r.$$fn);if(null!==t&&t!==e&&!k.type.is(t))throw new Error("Default value ("+t+") for parameter '"+k.id+"' is not an instance of Type ("+k.type.name+")");return t}function x(t){function e(t){return function(e){return e.from===t}}function n(t){var n=f(p(k.replace,e(t)),function(t){return t.to});return n.length?n[0]:t}return t=n(t),q(t)?k.type.$normalize(t):v()}function w(){return"{Param:"+t+" "+n+" squash: '"+C+"' optional: "+S+"}"}var k=this;r=s(r),n=c(r,n,o);var E=d();n=E?n.$asArray(E,"search"===o):n,"string"!==n.name||E||"path"!==o||r.value!==e||(r.value="");var S=r.value!==e,C=h(r,S),A=g(r,E,S,C);L(this,{id:t,type:n,location:o,array:E,squash:C,replace:A,isOptional:S,value:x,dynamic:e,config:r,toString:w})},c.prototype={$$new:function(){return n(this,L(new c,{$$parent:this}))},$$keys:function(){for(var t=[],e=[],n=this,r=i(c.prototype);n;)e.push(n),n=n.$$parent;return e.reverse(),F(e,function(e){F(i(e),function(e){a(t,e)===-1&&a(r,e)===-1&&t.push(e)})}),t},$$values:function(t){var e={},n=this;return F(n.$$keys(),function(r){e[r]=n[r].value(t&&t[r])}),e},$$equals:function(t,e){var n=!0,r=this;return F(r.$$keys(),function(o){var i=t&&t[o],a=e&&e[o];r[o].type.equals(i,a)||(n=!1)}),n},$$validates:function(t){var n,r,o,i,a,l=this.$$keys();for(n=0;n<l.length&&(r=this[l[n]],o=t[l[n]],o!==e&&null!==o||!r.isOptional);n++){if(i=r.type.$normalize(o),!r.type.is(i))return!1;if(a=r.type.encode(i),angular.isString(a)&&!r.type.pattern.exec(a))return!1}return!0},$$parent:e},this.ParamSet=c}function y(t,n){function r(t){var e=/^\^((?:\\[^a-zA-Z0-9]|[^\\\[\]\^$*+?.()|{}]+)*)/.exec(t.source);return null!=e?e[1].replace(/\\(.)/g,"$1"):""}function o(t,e){return t.replace(/\$(\$|\d{1,2})/,function(t,n){return e["$"===n?0:Number(n)]})}function i(t,e,n){if(!n)return!1;var r=t.invoke(e,e,{$match:n});return!q(r)||r}function a(n,r,o,i,a){function d(t,e,n){return"/"===b?t:e?b.slice(0,-1)+t:n?b.slice(1)+t:t}function p(t){function r(t){var e=t(o,n);return!!e&&(R(e)&&n.replace().url(e),!0)}if(!t||!t.defaultPrevented){h&&n.url()===h;h=e;var i,a=s.length;for(i=0;i<a;i++)if(r(s[i]))return;c&&r(c)}}function f(){return l=l||r.$on("$locationChangeSuccess",p)}var h,b=i.baseHref(),g=n.url();return u||f(),{sync:function(){p()},listen:function(){return f()},update:function(t){return t?void(g=n.url()):void(n.url()!==g&&(n.url(g),n.replace()))},push:function(t,r,o){var i=t.format(r||{});null!==i&&r&&r["#"]&&(i+="#"+r["#"]),n.url(i),h=o&&o.$$avoidResync?n.url():e,o&&o.replace&&n.replace()},href:function(e,r,o){if(!e.validates(r))return null;var i=t.html5Mode();angular.isObject(i)&&(i=i.enabled),i=i&&a.history;var l=e.format(r);if(o=o||{},i||null===l||(l="#"+t.hashPrefix()+l),null!==l&&r&&r["#"]&&(l+="#"+r["#"]),l=d(l,i,o.absolute),!o.absolute||!l)return l;var s=!i&&l?"/":"",c=n.port();return c=80===c||443===c?"":":"+c,[n.protocol(),"://",n.host(),c,s,l].join("")}}}var l,s=[],c=null,u=!1;this.rule=function(t){if(!D(t))throw new Error("'rule' must be a function");return s.push(t),this},this.otherwise=function(t){if(R(t)){var e=t;t=function(){return e}}else if(!D(t))throw new Error("'rule' must be a function");return c=t,this},this.when=function(t,e){var a,l=R(e);if(R(t)&&(t=n.compile(t)),!l&&!D(e)&&!U(e))throw new Error("invalid 'handler' in when()");var s={matcher:function(t,e){return l&&(a=n.compile(e),e=["$match",function(t){return a.format(t)}]),L(function(n,r){return i(n,e,t.exec(r.path(),r.search()))},{prefix:R(t.prefix)?t.prefix:""})},regex:function(t,e){if(t.global||t.sticky)throw new Error("when() RegExp must not be global or sticky");return l&&(a=e,e=["$match",function(t){return o(a,t)}]),L(function(n,r){return i(n,e,t.exec(r.path()))},{prefix:r(t)})}},c={matcher:n.isMatcher(t),regex:t instanceof RegExp};for(var u in c)if(c[u])return this.rule(s[u](t,e));throw new Error("invalid 'what' in when()")},this.deferIntercept=function(t){t===e&&(t=!0),u=t},this.$get=a,a.$inject=["$location","$rootScope","$injector","$browser","$sniffer"]}function x(t,r){function o(t){return 0===t.indexOf(".")||0===t.indexOf("^")}function d(t,n){if(!t)return e;var r=R(t),i=r?t:t.name,a=o(i);if(a){if(!n)throw new Error("No reference point given for path '"+i+"'");n=d(n);for(var l=i.split("."),s=0,c=l.length,u=n;s<c;s++)if(""!==l[s]||0!==s){if("^"!==l[s])break;if(!u.parent)throw new Error("Path '"+i+"' not valid for state '"+n.name+"'");u=u.parent}else u=n;l=l.slice(s).join("."),i=u.name+(u.name&&l?".":"")+l}var p=S[i];return!p||!r&&(r||p!==t&&p.self!==t)?e:p}function p(t,e){C[t]||(C[t]=[]),C[t].push(e)}function h(t){for(var e=C[t]||[];e.length;)b(e.shift())}function b(e){e=n(e,{self:e,resolve:e.resolve||{},toString:function(){return this.name}});var r=e.name;if(!R(r)||r.indexOf("@")>=0)throw new Error("State must have a valid name");if(S.hasOwnProperty(r))throw new Error("State '"+r+"' is already defined");var o=r.indexOf(".")!==-1?r.substring(0,r.lastIndexOf(".")):R(e.parent)?e.parent:_(e.parent)&&R(e.parent.name)?e.parent.name:"";if(o&&!S[o])return p(o,e.self);for(var i in j)D(j[i])&&(e[i]=j[i](e,j.$delegates[i]));return S[r]=e,!e[A]&&e.url&&t.when(e.url,["$match","$stateParams",function(t,n){E.$current.navigable==e&&s(t,n)||E.transitionTo(e,t,{inherit:!0,location:!1})}]),h(r),e}function g(t){return t.indexOf("*")>-1}function m(t){for(var e=t.split("."),n=E.$current.name.split("."),r=0,o=e.length;r<o;r++)"*"===e[r]&&(n[r]="*");return"**"===e[0]&&(n=n.slice(a(n,e[1])),n.unshift("**")),"**"===e[e.length-1]&&(n.splice(a(n,e[e.length-2])+1,Number.MAX_VALUE),n.push("**")),e.length==n.length&&n.join("")===e.join("")}function v(t,e){return R(t)&&!q(e)?j[t]:D(e)&&R(t)?(j[t]&&!j.$delegates[t]&&(j.$delegates[t]=j[t]),j[t]=e,this):this}function y(t,e){return _(t)?e=t:e.name=t,b(e),this}function x(t,r,o,a,u,p,h,b,v){function y(e,n,o,i){var a=t.$broadcast("$stateNotFound",e,n,o);if(a.defaultPrevented)return h.update(),O;if(!a.retry)return null;if(i.$retry)return h.update(),M;var l=E.transition=r.when(a.retry);return l.then(function(){return l!==E.transition?C:(e.options.$retry=!0,E.transitionTo(e.to,e.toParams,e.options))},function(){return O}),h.update(),l}function x(t,e,n,i,l,s){function d(){var e=[];return F(t.views,function(n,r){var i=n.resolve&&n.resolve!==t.resolve?n.resolve:{};i.$template=[function(){return o.load(r,{view:n,locals:l.globals,params:p,notify:s.notify})||""}],e.push(u.resolve(i,l.globals,l.resolve,t).then(function(e){if(D(n.controllerProvider)||U(n.controllerProvider)){var o=angular.extend({},i,l.globals);e.$$controller=a.invoke(n.controllerProvider,null,o)}else e.$$controller=n.controller;e.$$state=t,e.$$controllerAs=n.controllerAs,l[r]=e}))}),r.all(e).then(function(){return l.globals})}var p=n?e:c(t.params.$$keys(),e),f={$stateParams:p};l.resolve=u.resolve(t.resolve,f,l.resolve,t);var h=[l.resolve.then(function(t){l.globals=t})];return i&&h.push(i),r.all(h).then(d).then(function(t){return l})}var C=r.reject(new Error("transition superseded")),j=r.reject(new Error("transition prevented")),O=r.reject(new Error("transition aborted")),M=r.reject(new Error("transition failed"));return k.locals={resolve:null,globals:{$stateParams:{}}},E={params:{},current:k.self,$current:k,transition:null},E.reload=function(t){return E.transitionTo(E.current,p,{reload:t||!0,inherit:!1,notify:!0})},E.go=function(t,e,n){return E.transitionTo(t,e,L({inherit:!0,relative:E.$current},n))},E.transitionTo=function(e,o,i){o=o||{},i=L({location:!0,inherit:!1,relative:null,notify:!0,reload:!1,$retry:!1},i||{});var s,u=E.$current,f=E.params,b=u.path,g=d(e,i.relative),m=o["#"];if(!q(g)){var v={to:e,toParams:o,options:i},S=y(v,u.self,f,i);if(S)return S;if(e=v.to,o=v.toParams,i=v.options,g=d(e,i.relative),!q(g)){if(!i.relative)throw new Error("No such state '"+e+"'");throw new Error("Could not resolve '"+e+"' from state '"+i.relative+"'")}}if(g[A])throw new Error("Cannot transition to abstract state '"+e+"'");if(i.inherit&&(o=l(p,o||{},E.$current,g)),!g.params.$$validates(o))return M;o=g.params.$$values(o),e=g;var O=e.path,T=0,N=O[T],V=k.locals,z=[];if(i.reload){if(R(i.reload)||_(i.reload)){if(_(i.reload)&&!i.reload.name)throw new Error("Invalid reload state object");var I=i.reload===!0?b[0]:d(i.reload);if(i.reload&&!I)throw new Error("No such reload state '"+(R(i.reload)?i.reload:i.reload.name)+"'");for(;N&&N===b[T]&&N!==I;)V=z[T]=N.locals,T++,N=O[T]}}else for(;N&&N===b[T]&&N.ownParams.$$equals(o,f);)V=z[T]=N.locals,T++,N=O[T];if(w(e,o,u,f,V,i))return m&&(o["#"]=m),E.params=o,B(E.params,p),B(c(e.params.$$keys(),p),e.locals.globals.$stateParams),i.location&&e.navigable&&e.navigable.url&&(h.push(e.navigable.url,o,{$$avoidResync:!0,replace:"replace"===i.location}),h.update(!0)),E.transition=null,r.when(E.current);if(o=c(e.params.$$keys(),o||{}),m&&(o["#"]=m),i.notify&&t.$broadcast("$stateChangeStart",e.self,o,u.self,f,i).defaultPrevented)return t.$broadcast("$stateChangeCancel",e.self,o,u.self,f),null==E.transition&&h.update(),j;for(var P=r.when(V),D=T;D<O.length;D++,N=O[D])V=z[D]=n(V),P=x(N,o,N===e,P,V,i);var U=E.transition=P.then(function(){var n,r,l;if(E.transition!==U)return C;for(n=b.length-1;n>=T;n--)l=b[n],l.self.onExit&&a.invoke(l.self.onExit,l.self,l.locals.globals),l.locals=null;for(n=T;n<O.length;n++)r=O[n],r.locals=z[n],r.self.onEnter&&a.invoke(r.self.onEnter,r.self,r.locals.globals);return E.transition!==U?C:(E.$current=e,E.current=e.self,E.params=o,B(E.params,p),E.transition=null,i.location&&e.navigable&&h.push(e.navigable.url,e.navigable.locals.globals.$stateParams,{$$avoidResync:!0,replace:"replace"===i.location}),i.notify&&t.$broadcast("$stateChangeSuccess",e.self,o,u.self,f),h.update(!0),E.current)},function(n){return E.transition!==U?C:(E.transition=null,s=t.$broadcast("$stateChangeError",e.self,o,u.self,f,n),s.defaultPrevented||h.update(),r.reject(n))});return U},E.is=function(t,n,r){r=L({relative:E.$current},r||{});var o=d(t,r.relative);return q(o)?E.$current===o&&(!n||s(o.params.$$values(n),p)):e},E.includes=function(t,n,r){if(r=L({relative:E.$current},r||{}),R(t)&&g(t)){if(!m(t))return!1;t=E.$current.name}var o=d(t,r.relative);return q(o)?!!q(E.$current.includes[o.name])&&(!n||s(o.params.$$values(n),p,i(n))):e},E.href=function(t,n,r){r=L({lossy:!0,inherit:!0,absolute:!1,relative:E.$current},r||{});var o=d(t,r.relative);if(!q(o))return null;r.inherit&&(n=l(p,n||{},E.$current,o));var i=o&&r.lossy?o.navigable:o;return i&&i.url!==e&&null!==i.url?h.href(i.url,c(o.params.$$keys().concat("#"),n||{}),{absolute:r.absolute}):null},E.get=function(t,e){if(0===arguments.length)return f(i(S),function(t){return S[t].self});var n=d(t,e||E.$current);return n&&n.self?n.self:null},E}function w(t,e,n,r,o,i){function a(t,e,n){function r(e){return"search"!=t.params[e].location}var o=t.params.$$keys().filter(r),i=u.apply({},[t.params].concat(o)),a=new W.ParamSet(i);return a.$$equals(e,n)}if(!i.reload&&t===n&&(o===n.locals||t.self.reloadOnSearch===!1&&a(n,r,e)))return!0}var k,E,S={},C={},A="abstract",j={parent:function(t){if(q(t.parent)&&t.parent)return d(t.parent);var e=/^(.+)\.[^.]+$/.exec(t.name);return e?d(e[1]):k},data:function(t){return t.parent&&t.parent.data&&(t.data=t.self.data=n(t.parent.data,t.data)),t.data},url:function(t){var e=t.url,n={params:t.params||{}};if(R(e))return"^"==e.charAt(0)?r.compile(e.substring(1),n):(t.parent.navigable||k).url.concat(e,n);if(!e||r.isMatcher(e))return e;throw new Error("Invalid url '"+e+"' in state '"+t+"'")},navigable:function(t){return t.url?t:t.parent?t.parent.navigable:null},ownParams:function(t){var e=t.url&&t.url.params||new W.ParamSet;return F(t.params||{},function(t,n){e[n]||(e[n]=new W.Param(n,null,t,"config"))}),e},params:function(t){var e=u(t.ownParams,t.ownParams.$$keys());return t.parent&&t.parent.params?L(t.parent.params.$$new(),e):new W.ParamSet},views:function(t){var e={};return F(q(t.views)?t.views:{"":t},function(n,r){r.indexOf("@")<0&&(r+="@"+t.parent.name),e[r]=n}),e},path:function(t){return t.parent?t.parent.path.concat(t):[]},includes:function(t){var e=t.parent?L({},t.parent.includes):{};return e[t.name]=!0,e},$delegates:{}};k=b({name:"",url:"^",views:null,"abstract":!0}),k.navigable=null,this.decorator=v,this.state=y,this.$get=x,x.$inject=["$rootScope","$q","$view","$injector","$resolve","$stateParams","$urlRouter","$location","$urlMatcherFactory"]}function w(){function t(t,e){return{load:function(t,n){var r,o={template:null,controller:null,view:null,locals:null,notify:!0,async:!0,params:{}};return n=L(o,n),n.view&&(r=e.fromConfig(n.view,n.params,n.locals)),r}}}this.$get=t,t.$inject=["$rootScope","$templateFactory"]}function k(){var t=!1;this.useAnchorScroll=function(){t=!0},this.$get=["$anchorScroll","$timeout",function(e,n){return t?e:function(t){return n(function(){t[0].scrollIntoView()},0,!1)}}]}function E(t,e,n,r){function o(){return e.has?function(t){return e.has(t)?e.get(t):null}:function(t){try{return e.get(t)}catch(n){return null}}}function i(t,e){function n(t){return 1===G&&Z>=4?!!s.enabled(t):1===G&&Z>=2?!!s.enabled():!!l}var r={enter:function(t,e,n){e.after(t),n()},leave:function(t,e){t.remove(),e()}};if(t.noanimation)return r;if(s)return{enter:function(t,e,o){n(t)?angular.version.minor>2?s.enter(t,null,e).then(o):s.enter(t,null,e,o):r.enter(t,e,o)},leave:function(t,e){n(t)?angular.version.minor>2?s.leave(t).then(e):s.leave(t,e):r.leave(t,e)}};if(l){var o=l&&l(e,t);return{enter:function(t,e,n){o.enter(t,null,e),n()},leave:function(t,e){o.leave(t),e()}}}return r}var a=o(),l=a("$animator"),s=a("$animate"),c={restrict:"ECA",terminal:!0,priority:400,transclude:"element",compile:function(e,o,a){return function(e,o,l){function s(){function t(){e&&e.remove(),n&&n.$destroy()}var e=u,n=p;n&&(n._willBeDestroyed=!0),d?(g.leave(d,function(){t(),u=null}),u=d):(t(),u=null),d=null,p=null}function c(i){var c,u=C(e,l,o,r),m=u&&t.$current&&t.$current.locals[u];if((i||m!==f)&&!e._willBeDestroyed){c=e.$new(),f=t.$current.locals[u],c.$emit("$viewContentLoading",u);var v=a(c,function(t){g.enter(t,o,function(){p&&p.$emit("$viewContentAnimationEnded"),(angular.isDefined(b)&&!b||e.$eval(b))&&n(t)}),s()});d=v,p=c,p.$emit("$viewContentLoaded",u),p.$eval(h)}}var u,d,p,f,h=l.onload||"",b=l.autoscroll,g=i(l,e);e.$on("$stateChangeSuccess",function(){c(!1)}),c(!0)}}};return c}function S(t,e,n,r){return{restrict:"ECA",priority:-400,compile:function(o){var i=o.html();return function(o,a,l){var s=n.$current,c=C(o,l,a,r),u=s&&s.locals[c];if(u){a.data("$uiView",{name:c,state:u.$$state}),a.html(u.$template?u.$template:i);var d=t(a.contents());if(u.$$controller){u.$scope=o,u.$element=a;var p=e(u.$$controller,u);u.$$controllerAs&&(o[u.$$controllerAs]=p),a.data("$ngControllerController",p),a.children().data("$ngControllerController",p)}d(o)}}}}}function C(t,e,n,r){var o=r(e.uiView||e.name||"")(t),i=n.inheritedData("$uiView");return o.indexOf("@")>=0?o:o+"@"+(i?i.state.name:"")}function A(t,e){var n,r=t.match(/^\s*({[^}]*})\s*$/);if(r&&(t=e+"("+r[1]+")"),n=t.replace(/\n/g," ").match(/^([^(]+?)\s*(\((.*)\))?$/),!n||4!==n.length)throw new Error("Invalid state ref '"+t+"'");return{state:n[1],paramExpr:n[3]||null}}function j(t){var e=t.parent().inheritedData("$uiView");if(e&&e.state&&e.state.name)return e.state}function O(t){var e="[object SVGAnimatedString]"===Object.prototype.toString.call(t.prop("href")),n="FORM"===t[0].nodeName;return{attr:n?"action":e?"xlink:href":"href",isAnchor:"A"===t.prop("tagName").toUpperCase(),clickable:!n}}function M(t,e,n,r,o){return function(i){var a=i.which||i.button,l=o();if(!(a>1||i.ctrlKey||i.metaKey||i.shiftKey||t.attr("target"))){var s=n(function(){e.go(l.state,l.params,l.options)});i.preventDefault();var c=r.isAnchor&&!l.href?1:0;i.preventDefault=function(){c--<=0&&n.cancel(s)}}}}function T(t,e){return{relative:j(t)||e.$current,inherit:!0}}function N(t,e){return{restrict:"A",require:["?^uiSrefActive","?^uiSrefActiveEq"],link:function(n,r,o,i){var a=A(o.uiSref,t.current.name),l={state:a.state,href:null,params:null},s=O(r),c=i[1]||i[0];l.options=L(T(r,t),o.uiSrefOpts?n.$eval(o.uiSrefOpts):{});var u=function(e){e&&(l.params=angular.copy(e)),l.href=t.href(a.state,l.params,l.options),c&&c.$$addStateInfo(a.state,l.params),null!==l.href&&o.$set(s.attr,l.href)};a.paramExpr&&(n.$watch(a.paramExpr,function(t){t!==l.params&&u(t)},!0),l.params=angular.copy(n.$eval(a.paramExpr))),u(),s.clickable&&r.bind("click",M(r,t,e,s,function(){return l}))}}}function V(t,e){return{restrict:"A",require:["?^uiSrefActive","?^uiSrefActiveEq"],link:function(n,r,o,i){function a(e){d.state=e[0],d.params=e[1],d.options=e[2],d.href=t.href(d.state,d.params,d.options),s&&s.$$addStateInfo(d.state,d.params),d.href&&o.$set(l.attr,d.href)}var l=O(r),s=i[1]||i[0],c=[o.uiState,o.uiStateParams||null,o.uiStateOpts||null],u="["+c.map(function(t){return t||"null"}).join(", ")+"]",d={state:null,params:null,options:null,href:null};n.$watch(u,a,!0),a(n.$eval(u)),l.clickable&&r.bind("click",M(r,t,e,l,function(){return d}))}}}function z(t,e,n){return{restrict:"A",controller:["$scope","$element","$attrs","$timeout",function(e,r,o,i){function a(e,n,o){var i=t.get(e,j(r)),a=l(e,n);b.push({state:i||{name:e},params:n,hash:a}),g[a]=o}function l(t,n){if(!R(t))throw new Error("state should be a string");return _(n)?t+H(n):(n=e.$eval(n),_(n)?t+H(n):t)}function s(){for(var t=0;t<b.length;t++)d(b[t].state,b[t].params)?c(r,g[b[t].hash]):u(r,g[b[t].hash]),p(b[t].state,b[t].params)?c(r,f):u(r,f)}function c(t,e){i(function(){t.addClass(e)})}function u(t,e){t.removeClass(e)}function d(e,n){return t.includes(e.name,n)}function p(e,n){return t.is(e.name,n)}var f,h,b=[],g={};f=n(o.uiSrefActiveEq||"",!1)(e);try{h=e.$eval(o.uiSrefActive)}catch(m){}h=h||n(o.uiSrefActive||"",!1)(e),_(h)&&F(h,function(n,r){if(R(n)){var o=A(n,t.current.name);a(o.state,e.$eval(o.paramExpr),r)}}),this.$$addStateInfo=function(t,e){_(h)&&b.length>0||(a(t,e,h),s())},e.$on("$stateChangeSuccess",s),s()}]}}function I(t){var e=function(e,n){return t.is(e,n)};return e.$stateful=!0,e}function P(t){var e=function(e,n,r){return t.includes(e,n,r)};return e.$stateful=!0,e}var q=angular.isDefined,D=angular.isFunction,R=angular.isString,_=angular.isObject,U=angular.isArray,F=angular.forEach,L=angular.extend,B=angular.copy,H=angular.toJson;angular.module("ui.router.util",["ng"]),angular.module("ui.router.router",["ui.router.util"]),angular.module("ui.router.state",["ui.router.router","ui.router.util"]),angular.module("ui.router",["ui.router.state"]),angular.module("ui.router.compat",["ui.router"]),h.$inject=["$q","$injector"],angular.module("ui.router.util").service("$resolve",h),b.$inject=["$http","$templateCache","$injector"],angular.module("ui.router.util").service("$templateFactory",b);var W;g.prototype.concat=function(t,e){var n={caseInsensitive:W.caseInsensitive(),strict:W.strictMode(),squash:W.defaultSquashPolicy()};return new g(this.sourcePath+t+this.sourceSearch,L(n,e),this)},g.prototype.toString=function(){return this.source},g.prototype.exec=function(t,e){function n(t){function e(t){return t.split("").reverse().join("")}function n(t){return t.replace(/\\-/g,"-")}var r=e(t).split(/-(?!\\)/),o=f(r,e);return f(o,n).reverse()}var r=this.regexp.exec(t);if(!r)return null;e=e||{};var o,i,a,l=this.parameters(),s=l.length,c=this.segments.length-1,u={};if(c!==r.length-1)throw new Error("Unbalanced capture group in route '"+this.source+"'");var d,p;for(o=0;o<c;o++){for(a=l[o],d=this.params[a],p=r[o+1],i=0;i<d.replace.length;i++)d.replace[i].from===p&&(p=d.replace[i].to);p&&d.array===!0&&(p=n(p)),q(p)&&(p=d.type.decode(p)),u[a]=d.value(p)}for(;o<s;o++){for(a=l[o],u[a]=this.params[a].value(e[a]),d=this.params[a],p=e[a],i=0;i<d.replace.length;i++)d.replace[i].from===p&&(p=d.replace[i].to);q(p)&&(p=d.type.decode(p)),u[a]=d.value(p)}return u},g.prototype.parameters=function(t){return q(t)?this.params[t]||null:this.$$paramNames},g.prototype.validates=function(t){return this.params.$$validates(t)},g.prototype.format=function(t){function e(t){return encodeURIComponent(t).replace(/-/g,function(t){return"%5C%"+t.charCodeAt(0).toString(16).toUpperCase()})}t=t||{};var n=this.segments,r=this.parameters(),o=this.params;if(!this.validates(t))return null;var i,a=!1,l=n.length-1,s=r.length,c=n[0];for(i=0;i<s;i++){var u=i<l,d=r[i],p=o[d],h=p.value(t[d]),b=p.isOptional&&p.type.equals(p.value(),h),g=!!b&&p.squash,m=p.type.encode(h);if(u){var v=n[i+1],y=i+1===l;if(g===!1)null!=m&&(c+=U(m)?f(m,e).join("-"):encodeURIComponent(m)),c+=v;else if(g===!0){var x=c.match(/\/$/)?/\/?(.*)/:/(.*)/;c+=v.match(x)[1]}else R(g)&&(c+=g+v);y&&p.squash===!0&&"/"===c.slice(-1)&&(c=c.slice(0,-1))}else{if(null==m||b&&g!==!1)continue;if(U(m)||(m=[m]),0===m.length)continue;m=f(m,encodeURIComponent).join("&"+d+"="),c+=(a?"&":"?")+(d+"="+m),a=!0}}return c},m.prototype.is=function(t,e){return!0},m.prototype.encode=function(t,e){return t},m.prototype.decode=function(t,e){return t},m.prototype.equals=function(t,e){return t==e},m.prototype.$subPattern=function(){var t=this.pattern.toString();return t.substr(1,t.length-2)},m.prototype.pattern=/.*/,m.prototype.toString=function(){return"{Type:"+this.name+"}"},m.prototype.$normalize=function(t){return this.is(t)?t:this.decode(t)},m.prototype.$asArray=function(t,n){function r(t,n){function r(t,e){return function(){return t[e].apply(t,arguments)}}function o(t){return U(t)?t:q(t)?[t]:[]}function i(t){switch(t.length){case 0:return e;case 1:return"auto"===n?t[0]:t;default:return t}}function a(t){return!t}function l(t,e){return function(n){if(U(n)&&0===n.length)return n;n=o(n);var r=f(n,t);return e===!0?0===p(r,a).length:i(r)}}function s(t){return function(e,n){var r=o(e),i=o(n);if(r.length!==i.length)return!1;for(var a=0;a<r.length;a++)if(!t(r[a],i[a]))return!1;return!0}}this.encode=l(r(t,"encode")),this.decode=l(r(t,"decode")),this.is=l(r(t,"is"),!0),this.equals=s(r(t,"equals")),this.pattern=t.pattern,this.$normalize=l(r(t,"$normalize")),this.name=t.name,this.$arrayMode=n}if(!t)return this;if("auto"===t&&!n)throw new Error("'auto' array mode is for query parameters only");return new r(this,t)},angular.module("ui.router.util").provider("$urlMatcherFactory",v),angular.module("ui.router.util").run(["$urlMatcherFactory",function(t){}]),y.$inject=["$locationProvider","$urlMatcherFactoryProvider"],angular.module("ui.router.router").provider("$urlRouter",y),x.$inject=["$urlRouterProvider","$urlMatcherFactoryProvider"],angular.module("ui.router.state").factory("$stateParams",function(){return{}}).provider("$state",x),w.$inject=[],angular.module("ui.router.state").provider("$view",w),angular.module("ui.router.state").provider("$uiViewScroll",k);var G=angular.version.major,Z=angular.version.minor;E.$inject=["$state","$injector","$uiViewScroll","$interpolate"],S.$inject=["$compile","$controller","$state","$interpolate"],
-angular.module("ui.router.state").directive("uiView",E),angular.module("ui.router.state").directive("uiView",S),N.$inject=["$state","$timeout"],V.$inject=["$state","$timeout"],z.$inject=["$state","$stateParams","$interpolate"],angular.module("ui.router.state").directive("uiSref",N).directive("uiSrefActive",z).directive("uiSrefActiveEq",z).directive("uiState",V),I.$inject=["$state"],P.$inject=["$state"],angular.module("ui.router.state").filter("isState",I).filter("includedByState",P)}(window,window.angular)},,,,,function(t,exports){t.exports=function(){var t=[];return t.toString=function(){for(var t=[],e=0;e<this.length;e++){var n=this[e];n[2]?t.push("@media "+n[2]+"{"+n[1]+"}"):t.push(n[1])}return t.join("")},t.i=function(e,n){"string"==typeof e&&(e=[[null,e,""]]);for(var r={},o=0;o<this.length;o++){var i=this[o][0];"number"==typeof i&&(r[i]=!0)}for(o=0;o<e.length;o++){var a=e[o];"number"==typeof a[0]&&r[a[0]]||(n&&!a[2]?a[2]=n:n&&(a[2]="("+a[2]+") and ("+n+")"),t.push(a))}},t}},function(t,exports,e){function n(t,e){for(var n=0;n<t.length;n++){var r=t[n],o=u[r.id];if(o){o.refs++;for(var i=0;i<o.parts.length;i++)o.parts[i](r.parts[i]);for(;i<r.parts.length;i++)o.parts.push(a(r.parts[i],e))}else{for(var l=[],i=0;i<r.parts.length;i++)l.push(a(r.parts[i],e));u[r.id]={id:r.id,refs:1,parts:l}}}}function r(t){for(var e=[],n={},r=0;r<t.length;r++){var o=t[r],i=o[0],a=o[1],l=o[2],s=o[3],c={css:a,media:l,sourceMap:s};n[i]?n[i].parts.push(c):e.push(n[i]={id:i,parts:[c]})}return e}function o(){var t=document.createElement("style"),e=f();return t.type="text/css",e.appendChild(t),t}function i(){var t=document.createElement("link"),e=f();return t.rel="stylesheet",e.appendChild(t),t}function a(t,e){var n,r,a;if(e.singleton){var u=b++;n=h||(h=o()),r=l.bind(null,n,u,!1),a=l.bind(null,n,u,!0)}else t.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(n=i(),r=c.bind(null,n),a=function(){n.parentNode.removeChild(n),n.href&&URL.revokeObjectURL(n.href)}):(n=o(),r=s.bind(null,n),a=function(){n.parentNode.removeChild(n)});return r(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;r(t=e)}else a()}}function l(t,e,n,r){var o=n?"":r.css;if(t.styleSheet)t.styleSheet.cssText=g(e,o);else{var i=document.createTextNode(o),a=t.childNodes;a[e]&&t.removeChild(a[e]),a.length?t.insertBefore(i,a[e]):t.appendChild(i)}}function s(t,e){var n=e.css,r=e.media;e.sourceMap;if(r&&t.setAttribute("media",r),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}function c(t,e){var n=e.css,r=(e.media,e.sourceMap);r&&(n+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(r))))+" */");var o=new Blob([n],{type:"text/css"}),i=t.href;t.href=URL.createObjectURL(o),i&&URL.revokeObjectURL(i)}var u={},d=function(t){var e;return function(){return"undefined"==typeof e&&(e=t.apply(this,arguments)),e}},p=d(function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())}),f=d(function(){return document.head||document.getElementsByTagName("head")[0]}),h=null,b=0;t.exports=function(t,e){e=e||{},"undefined"==typeof e.singleton&&(e.singleton=p());var o=r(t);return n(o,e),function(t){for(var i=[],a=0;a<o.length;a++){var l=o[a],s=u[l.id];s.refs--,i.push(s)}if(t){var c=r(t);n(c,e)}for(var a=0;a<i.length;a++){var s=i[a];if(0===s.refs){for(var d=0;d<s.parts.length;d++)s.parts[d]();delete u[s.id]}}}};var g=function(){var t=[];return function(e,n){return t[e]=n,t.filter(Boolean).join("\n")}}()},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,function(t,exports,e){var n=e(42);"string"==typeof n&&(n=[[t.id,n,""]]);e(9)(n,{});n.locals&&(t.exports=n.locals)},function(t,exports,e){exports=t.exports=e(8)(),exports.push([t.id,"/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}",""])},function(t,exports,e){var n=e(44);"string"==typeof n&&(n=[[t.id,n,""]]);e(9)(n,{});n.locals&&(t.exports=n.locals)},function(t,exports,e){exports=t.exports=e(8)(),exports.push([t.id,'/*!\n * Bootstrap v3.3.7 (http://getbootstrap.com)\n * Copyright 2011-2016 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0;font-size:2em}mark{color:#000;background:#ff0}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{height:0;box-sizing:content-box}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{box-sizing:content-box;-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver}legend{padding:0;border:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}\n/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */@media print{*,:after,:before{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.navbar{display:none}.btn>.caret,.dropup>.btn>.caret{border-top-color:#000!important}.label{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #ddd!important}}@font-face{font-family:Glyphicons Halflings;src:url('+e(45)+");src:url("+e(45)+"?#iefix) format('embedded-opentype'),url("+e(46)+") format('woff2'),url("+e(47)+") format('woff'),url("+e(48)+") format('truetype'),url("+e(49)+'#glyphicons_halflingsregular) format(\'svg\')}.glyphicon{position:relative;top:1px;display:inline-block;font-family:Glyphicons Halflings;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.glyphicon-asterisk:before{content:"*"}.glyphicon-plus:before{content:"+"}.glyphicon-eur:before,.glyphicon-euro:before{content:"\\20AC"}.glyphicon-minus:before{content:"\\2212"}.glyphicon-cloud:before{content:"\\2601"}.glyphicon-envelope:before{content:"\\2709"}.glyphicon-pencil:before{content:"\\270F"}.glyphicon-glass:before{content:"\\E001"}.glyphicon-music:before{content:"\\E002"}.glyphicon-search:before{content:"\\E003"}.glyphicon-heart:before{content:"\\E005"}.glyphicon-star:before{content:"\\E006"}.glyphicon-star-empty:before{content:"\\E007"}.glyphicon-user:before{content:"\\E008"}.glyphicon-film:before{content:"\\E009"}.glyphicon-th-large:before{content:"\\E010"}.glyphicon-th:before{content:"\\E011"}.glyphicon-th-list:before{content:"\\E012"}.glyphicon-ok:before{content:"\\E013"}.glyphicon-remove:before{content:"\\E014"}.glyphicon-zoom-in:before{content:"\\E015"}.glyphicon-zoom-out:before{content:"\\E016"}.glyphicon-off:before{content:"\\E017"}.glyphicon-signal:before{content:"\\E018"}.glyphicon-cog:before{content:"\\E019"}.glyphicon-trash:before{content:"\\E020"}.glyphicon-home:before{content:"\\E021"}.glyphicon-file:before{content:"\\E022"}.glyphicon-time:before{content:"\\E023"}.glyphicon-road:before{content:"\\E024"}.glyphicon-download-alt:before{content:"\\E025"}.glyphicon-download:before{content:"\\E026"}.glyphicon-upload:before{content:"\\E027"}.glyphicon-inbox:before{content:"\\E028"}.glyphicon-play-circle:before{content:"\\E029"}.glyphicon-repeat:before{content:"\\E030"}.glyphicon-refresh:before{content:"\\E031"}.glyphicon-list-alt:before{content:"\\E032"}.glyphicon-lock:before{content:"\\E033"}.glyphicon-flag:before{content:"\\E034"}.glyphicon-headphones:before{content:"\\E035"}.glyphicon-volume-off:before{content:"\\E036"}.glyphicon-volume-down:before{content:"\\E037"}.glyphicon-volume-up:before{content:"\\E038"}.glyphicon-qrcode:before{content:"\\E039"}.glyphicon-barcode:before{content:"\\E040"}.glyphicon-tag:before{content:"\\E041"}.glyphicon-tags:before{content:"\\E042"}.glyphicon-book:before{content:"\\E043"}.glyphicon-bookmark:before{content:"\\E044"}.glyphicon-print:before{content:"\\E045"}.glyphicon-camera:before{content:"\\E046"}.glyphicon-font:before{content:"\\E047"}.glyphicon-bold:before{content:"\\E048"}.glyphicon-italic:before{content:"\\E049"}.glyphicon-text-height:before{content:"\\E050"}.glyphicon-text-width:before{content:"\\E051"}.glyphicon-align-left:before{content:"\\E052"}.glyphicon-align-center:before{content:"\\E053"}.glyphicon-align-right:before{content:"\\E054"}.glyphicon-align-justify:before{content:"\\E055"}.glyphicon-list:before{content:"\\E056"}.glyphicon-indent-left:before{content:"\\E057"}.glyphicon-indent-right:before{content:"\\E058"}.glyphicon-facetime-video:before{content:"\\E059"}.glyphicon-picture:before{content:"\\E060"}.glyphicon-map-marker:before{content:"\\E062"}.glyphicon-adjust:before{content:"\\E063"}.glyphicon-tint:before{content:"\\E064"}.glyphicon-edit:before{content:"\\E065"}.glyphicon-share:before{content:"\\E066"}.glyphicon-check:before{content:"\\E067"}.glyphicon-move:before{content:"\\E068"}.glyphicon-step-backward:before{content:"\\E069"}.glyphicon-fast-backward:before{content:"\\E070"}.glyphicon-backward:before{content:"\\E071"}.glyphicon-play:before{content:"\\E072"}.glyphicon-pause:before{content:"\\E073"}.glyphicon-stop:before{content:"\\E074"}.glyphicon-forward:before{content:"\\E075"}.glyphicon-fast-forward:before{content:"\\E076"}.glyphicon-step-forward:before{content:"\\E077"}.glyphicon-eject:before{content:"\\E078"}.glyphicon-chevron-left:before{content:"\\E079"}.glyphicon-chevron-right:before{content:"\\E080"}.glyphicon-plus-sign:before{content:"\\E081"}.glyphicon-minus-sign:before{content:"\\E082"}.glyphicon-remove-sign:before{content:"\\E083"}.glyphicon-ok-sign:before{content:"\\E084"}.glyphicon-question-sign:before{content:"\\E085"}.glyphicon-info-sign:before{content:"\\E086"}.glyphicon-screenshot:before{content:"\\E087"}.glyphicon-remove-circle:before{content:"\\E088"}.glyphicon-ok-circle:before{content:"\\E089"}.glyphicon-ban-circle:before{content:"\\E090"}.glyphicon-arrow-left:before{content:"\\E091"}.glyphicon-arrow-right:before{content:"\\E092"}.glyphicon-arrow-up:before{content:"\\E093"}.glyphicon-arrow-down:before{content:"\\E094"}.glyphicon-share-alt:before{content:"\\E095"}.glyphicon-resize-full:before{content:"\\E096"}.glyphicon-resize-small:before{content:"\\E097"}.glyphicon-exclamation-sign:before{content:"\\E101"}.glyphicon-gift:before{content:"\\E102"}.glyphicon-leaf:before{content:"\\E103"}.glyphicon-fire:before{content:"\\E104"}.glyphicon-eye-open:before{content:"\\E105"}.glyphicon-eye-close:before{content:"\\E106"}.glyphicon-warning-sign:before{content:"\\E107"}.glyphicon-plane:before{content:"\\E108"}.glyphicon-calendar:before{content:"\\E109"}.glyphicon-random:before{content:"\\E110"}.glyphicon-comment:before{content:"\\E111"}.glyphicon-magnet:before{content:"\\E112"}.glyphicon-chevron-up:before{content:"\\E113"}.glyphicon-chevron-down:before{content:"\\E114"}.glyphicon-retweet:before{content:"\\E115"}.glyphicon-shopping-cart:before{content:"\\E116"}.glyphicon-folder-close:before{content:"\\E117"}.glyphicon-folder-open:before{content:"\\E118"}.glyphicon-resize-vertical:before{content:"\\E119"}.glyphicon-resize-horizontal:before{content:"\\E120"}.glyphicon-hdd:before{content:"\\E121"}.glyphicon-bullhorn:before{content:"\\E122"}.glyphicon-bell:before{content:"\\E123"}.glyphicon-certificate:before{content:"\\E124"}.glyphicon-thumbs-up:before{content:"\\E125"}.glyphicon-thumbs-down:before{content:"\\E126"}.glyphicon-hand-right:before{content:"\\E127"}.glyphicon-hand-left:before{content:"\\E128"}.glyphicon-hand-up:before{content:"\\E129"}.glyphicon-hand-down:before{content:"\\E130"}.glyphicon-circle-arrow-right:before{content:"\\E131"}.glyphicon-circle-arrow-left:before{content:"\\E132"}.glyphicon-circle-arrow-up:before{content:"\\E133"}.glyphicon-circle-arrow-down:before{content:"\\E134"}.glyphicon-globe:before{content:"\\E135"}.glyphicon-wrench:before{content:"\\E136"}.glyphicon-tasks:before{content:"\\E137"}.glyphicon-filter:before{content:"\\E138"}.glyphicon-briefcase:before{content:"\\E139"}.glyphicon-fullscreen:before{content:"\\E140"}.glyphicon-dashboard:before{content:"\\E141"}.glyphicon-paperclip:before{content:"\\E142"}.glyphicon-heart-empty:before{content:"\\E143"}.glyphicon-link:before{content:"\\E144"}.glyphicon-phone:before{content:"\\E145"}.glyphicon-pushpin:before{content:"\\E146"}.glyphicon-usd:before{content:"\\E148"}.glyphicon-gbp:before{content:"\\E149"}.glyphicon-sort:before{content:"\\E150"}.glyphicon-sort-by-alphabet:before{content:"\\E151"}.glyphicon-sort-by-alphabet-alt:before{content:"\\E152"}.glyphicon-sort-by-order:before{content:"\\E153"}.glyphicon-sort-by-order-alt:before{content:"\\E154"}.glyphicon-sort-by-attributes:before{content:"\\E155"}.glyphicon-sort-by-attributes-alt:before{content:"\\E156"}.glyphicon-unchecked:before{content:"\\E157"}.glyphicon-expand:before{content:"\\E158"}.glyphicon-collapse-down:before{content:"\\E159"}.glyphicon-collapse-up:before{content:"\\E160"}.glyphicon-log-in:before{content:"\\E161"}.glyphicon-flash:before{content:"\\E162"}.glyphicon-log-out:before{content:"\\E163"}.glyphicon-new-window:before{content:"\\E164"}.glyphicon-record:before{content:"\\E165"}.glyphicon-save:before{content:"\\E166"}.glyphicon-open:before{content:"\\E167"}.glyphicon-saved:before{content:"\\E168"}.glyphicon-import:before{content:"\\E169"}.glyphicon-export:before{content:"\\E170"}.glyphicon-send:before{content:"\\E171"}.glyphicon-floppy-disk:before{content:"\\E172"}.glyphicon-floppy-saved:before{content:"\\E173"}.glyphicon-floppy-remove:before{content:"\\E174"}.glyphicon-floppy-save:before{content:"\\E175"}.glyphicon-floppy-open:before{content:"\\E176"}.glyphicon-credit-card:before{content:"\\E177"}.glyphicon-transfer:before{content:"\\E178"}.glyphicon-cutlery:before{content:"\\E179"}.glyphicon-header:before{content:"\\E180"}.glyphicon-compressed:before{content:"\\E181"}.glyphicon-earphone:before{content:"\\E182"}.glyphicon-phone-alt:before{content:"\\E183"}.glyphicon-tower:before{content:"\\E184"}.glyphicon-stats:before{content:"\\E185"}.glyphicon-sd-video:before{content:"\\E186"}.glyphicon-hd-video:before{content:"\\E187"}.glyphicon-subtitles:before{content:"\\E188"}.glyphicon-sound-stereo:before{content:"\\E189"}.glyphicon-sound-dolby:before{content:"\\E190"}.glyphicon-sound-5-1:before{content:"\\E191"}.glyphicon-sound-6-1:before{content:"\\E192"}.glyphicon-sound-7-1:before{content:"\\E193"}.glyphicon-copyright-mark:before{content:"\\E194"}.glyphicon-registration-mark:before{content:"\\E195"}.glyphicon-cloud-download:before{content:"\\E197"}.glyphicon-cloud-upload:before{content:"\\E198"}.glyphicon-tree-conifer:before{content:"\\E199"}.glyphicon-tree-deciduous:before{content:"\\E200"}.glyphicon-cd:before{content:"\\E201"}.glyphicon-save-file:before{content:"\\E202"}.glyphicon-open-file:before{content:"\\E203"}.glyphicon-level-up:before{content:"\\E204"}.glyphicon-copy:before{content:"\\E205"}.glyphicon-paste:before{content:"\\E206"}.glyphicon-alert:before{content:"\\E209"}.glyphicon-equalizer:before{content:"\\E210"}.glyphicon-king:before{content:"\\E211"}.glyphicon-queen:before{content:"\\E212"}.glyphicon-pawn:before{content:"\\E213"}.glyphicon-bishop:before{content:"\\E214"}.glyphicon-knight:before{content:"\\E215"}.glyphicon-baby-formula:before{content:"\\E216"}.glyphicon-tent:before{content:"\\26FA"}.glyphicon-blackboard:before{content:"\\E218"}.glyphicon-bed:before{content:"\\E219"}.glyphicon-apple:before{content:"\\F8FF"}.glyphicon-erase:before{content:"\\E221"}.glyphicon-hourglass:before{content:"\\231B"}.glyphicon-lamp:before{content:"\\E223"}.glyphicon-duplicate:before{content:"\\E224"}.glyphicon-piggy-bank:before{content:"\\E225"}.glyphicon-scissors:before{content:"\\E226"}.glyphicon-bitcoin:before,.glyphicon-btc:before,.glyphicon-xbt:before{content:"\\E227"}.glyphicon-jpy:before,.glyphicon-yen:before{content:"\\A5"}.glyphicon-rub:before,.glyphicon-ruble:before{content:"\\20BD"}.glyphicon-scale:before{content:"\\E230"}.glyphicon-ice-lolly:before{content:"\\E231"}.glyphicon-ice-lolly-tasted:before{content:"\\E232"}.glyphicon-education:before{content:"\\E233"}.glyphicon-option-horizontal:before{content:"\\E234"}.glyphicon-option-vertical:before{content:"\\E235"}.glyphicon-menu-hamburger:before{content:"\\E236"}.glyphicon-modal-window:before{content:"\\E237"}.glyphicon-oil:before{content:"\\E238"}.glyphicon-grain:before{content:"\\E239"}.glyphicon-sunglasses:before{content:"\\E240"}.glyphicon-text-size:before{content:"\\E241"}.glyphicon-text-color:before{content:"\\E242"}.glyphicon-text-background:before{content:"\\E243"}.glyphicon-object-align-top:before{content:"\\E244"}.glyphicon-object-align-bottom:before{content:"\\E245"}.glyphicon-object-align-horizontal:before{content:"\\E246"}.glyphicon-object-align-left:before{content:"\\E247"}.glyphicon-object-align-vertical:before{content:"\\E248"}.glyphicon-object-align-right:before{content:"\\E249"}.glyphicon-triangle-right:before{content:"\\E250"}.glyphicon-triangle-left:before{content:"\\E251"}.glyphicon-triangle-bottom:before{content:"\\E252"}.glyphicon-triangle-top:before{content:"\\E253"}.glyphicon-console:before{content:"\\E254"}.glyphicon-superscript:before{content:"\\E255"}.glyphicon-subscript:before{content:"\\E256"}.glyphicon-menu-left:before{content:"\\E257"}.glyphicon-menu-right:before{content:"\\E258"}.glyphicon-menu-down:before{content:"\\E259"}.glyphicon-menu-up:before{content:"\\E260"}*,:after,:before{box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.carousel-inner>.item>a>img,.carousel-inner>.item>img,.img-responsive,.thumbnail>img,.thumbnail a>img{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{display:inline-block;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role=button]{cursor:pointer}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}.h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,.h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{font-weight:400;line-height:1;color:#777}.h1,.h2,.h3,h1,h2,h3{margin-top:20px;margin-bottom:10px}.h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small{font-size:65%}.h4,.h5,.h6,h4,h5,h6{margin-top:10px;margin-bottom:10px}.h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{font-size:75%}.h1,h1{font-size:36px}.h2,h2{font-size:30px}.h3,h3{font-size:24px}.h4,h4{font-size:18px}.h5,h5{font-size:14px}.h6,h6{font-size:12px}p{margin:0 0 10px}.lead{margin-bottom:20px;font-size:16px;font-weight:300;line-height:1.4}@media (min-width:768px){.lead{font-size:21px}}.small,small{font-size:85%}.mark,mark{padding:.2em;background-color:#fcf8e3}.text-left{text-align:left}.text-right{text-align:right}.text-center{text-align:center}.text-justify{text-align:justify}.text-nowrap{white-space:nowrap}.text-lowercase{text-transform:lowercase}.text-uppercase{text-transform:uppercase}.text-capitalize{text-transform:capitalize}.text-muted{color:#777}.text-primary{color:#337ab7}a.text-primary:focus,a.text-primary:hover{color:#286090}.text-success{color:#3c763d}a.text-success:focus,a.text-success:hover{color:#2b542c}.text-info{color:#31708f}a.text-info:focus,a.text-info:hover{color:#245269}.text-warning{color:#8a6d3b}a.text-warning:focus,a.text-warning:hover{color:#66512c}.text-danger{color:#a94442}a.text-danger:focus,a.text-danger:hover{color:#843534}.bg-primary{color:#fff;background-color:#337ab7}a.bg-primary:focus,a.bg-primary:hover{background-color:#286090}.bg-success{background-color:#dff0d8}a.bg-success:focus,a.bg-success:hover{background-color:#c1e2b3}.bg-info{background-color:#d9edf7}a.bg-info:focus,a.bg-info:hover{background-color:#afd9ee}.bg-warning{background-color:#fcf8e3}a.bg-warning:focus,a.bg-warning:hover{background-color:#f7ecb5}.bg-danger{background-color:#f2dede}a.bg-danger:focus,a.bg-danger:hover{background-color:#e4b9b9}.page-header{padding-bottom:9px;margin:40px 0 20px;border-bottom:1px solid #eee}ol,ul{margin-top:0;margin-bottom:10px}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}.list-inline,.list-unstyled{padding-left:0;list-style:none}.list-inline{margin-left:-5px}.list-inline>li{display:inline-block;padding-right:5px;padding-left:5px}dl{margin-top:0;margin-bottom:20px}dd,dt{line-height:1.42857143}dt{font-weight:700}dd{margin-left:0}@media (min-width:768px){.dl-horizontal dt{float:left;width:160px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}.dl-horizontal dd{margin-left:180px}}abbr[data-original-title],abbr[title]{cursor:help;border-bottom:1px dotted #777}.initialism{font-size:90%;text-transform:uppercase}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote ol:last-child,blockquote p:last-child,blockquote ul:last-child{margin-bottom:0}blockquote .small,blockquote footer,blockquote small{display:block;font-size:80%;line-height:1.42857143;color:#777}blockquote .small:before,blockquote footer:before,blockquote small:before{content:\'\\2014   \\A0\'}.blockquote-reverse,blockquote.pull-right{padding-right:15px;padding-left:0;text-align:right;border-right:5px solid #eee;border-left:0}.blockquote-reverse .small:before,.blockquote-reverse footer:before,.blockquote-reverse small:before,blockquote.pull-right .small:before,blockquote.pull-right footer:before,blockquote.pull-right small:before{content:\'\'}.blockquote-reverse .small:after,.blockquote-reverse footer:after,.blockquote-reverse small:after,blockquote.pull-right .small:after,blockquote.pull-right footer:after,blockquote.pull-right small:after{content:\'\\A0   \\2014\'}address{margin-bottom:20px;font-style:normal;line-height:1.42857143}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,Courier New,monospace}code{color:#c7254e;background-color:#f9f2f4;border-radius:4px}code,kbd{padding:2px 4px;font-size:90%}kbd{color:#fff;background-color:#333;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}kbd kbd{padding:0;font-size:100%;font-weight:700;box-shadow:none}pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}.pre-scrollable{max-height:340px;overflow-y:scroll}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}table{background-color:transparent}caption{padding-top:8px;padding-bottom:8px;color:#777}caption,th{text-align:left}.table{width:100%;max-width:100%;margin-bottom:20px}.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th{padding:8px;line-height:1.42857143;vertical-align:top;border-top:1px solid #ddd}.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}.table>caption+thead>tr:first-child>td,.table>caption+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>th,.table>thead:first-child>tr:first-child>td,.table>thead:first-child>tr:first-child>th{border-top:0}.table>tbody+tbody{border-top:2px solid #ddd}.table .table{background-color:#fff}.table-condensed>tbody>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tfoot>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>thead>tr>td,.table-condensed>thead>tr>th{padding:5px}.table-bordered,.table-bordered>tbody>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>thead>tr>th{border:1px solid #ddd}.table-bordered>thead>tr>td,.table-bordered>thead>tr>th{border-bottom-width:2px}.table-striped>tbody>tr:nth-of-type(odd){background-color:#f9f9f9}.table-hover>tbody>tr:hover{background-color:#f5f5f5}table col[class*=col-]{position:static;display:table-column;float:none}table td[class*=col-],table th[class*=col-]{position:static;display:table-cell;float:none}.table>tbody>tr.active>td,.table>tbody>tr.active>th,.table>tbody>tr>td.active,.table>tbody>tr>th.active,.table>tfoot>tr.active>td,.table>tfoot>tr.active>th,.table>tfoot>tr>td.active,.table>tfoot>tr>th.active,.table>thead>tr.active>td,.table>thead>tr.active>th,.table>thead>tr>td.active,.table>thead>tr>th.active{background-color:#f5f5f5}.table-hover>tbody>tr.active:hover>td,.table-hover>tbody>tr.active:hover>th,.table-hover>tbody>tr:hover>.active,.table-hover>tbody>tr>td.active:hover,.table-hover>tbody>tr>th.active:hover{background-color:#e8e8e8}.table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>thead>tr>td.success,.table>thead>tr>th.success{background-color:#dff0d8}.table-hover>tbody>tr.success:hover>td,.table-hover>tbody>tr.success:hover>th,.table-hover>tbody>tr:hover>.success,.table-hover>tbody>tr>td.success:hover,.table-hover>tbody>tr>th.success:hover{background-color:#d0e9c6}.table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>thead>tr>td.info,.table>thead>tr>th.info{background-color:#d9edf7}.table-hover>tbody>tr.info:hover>td,.table-hover>tbody>tr.info:hover>th,.table-hover>tbody>tr:hover>.info,.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover{background-color:#c4e3f3}.table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>thead>tr>td.warning,.table>thead>tr>th.warning{background-color:#fcf8e3}.table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr.warning:hover>th,.table-hover>tbody>tr:hover>.warning,.table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover{background-color:#faf2cc}.table>tbody>tr.danger>td,.table>tbody>tr.danger>th,.table>tbody>tr>td.danger,.table>tbody>tr>th.danger,.table>tfoot>tr.danger>td,.table>tfoot>tr.danger>th,.table>tfoot>tr>td.danger,.table>tfoot>tr>th.danger,.table>thead>tr.danger>td,.table>thead>tr.danger>th,.table>thead>tr>td.danger,.table>thead>tr>th.danger{background-color:#f2dede}.table-hover>tbody>tr.danger:hover>td,.table-hover>tbody>tr.danger:hover>th,.table-hover>tbody>tr:hover>.danger,.table-hover>tbody>tr>td.danger:hover,.table-hover>tbody>tr>th.danger:hover{background-color:#ebcccc}.table-responsive{min-height:.01%;overflow-x:auto}@media screen and (max-width:767px){.table-responsive{width:100%;margin-bottom:15px;overflow-y:hidden;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #ddd}.table-responsive>.table{margin-bottom:0}.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tfoot>tr>td,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>thead>tr>th{white-space:nowrap}.table-responsive>.table-bordered{border:0}.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>thead>tr>th:first-child{border-left:0}.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>thead>tr>th:last-child{border-right:0}.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th{border-bottom:0}}fieldset{min-width:0;margin:0}fieldset,legend{padding:0;border:0}legend{display:block;width:100%;margin-bottom:20px;font-size:21px;line-height:inherit;color:#333;border-bottom:1px solid #e5e5e5}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type=search]{box-sizing:border-box}input[type=checkbox],input[type=radio]{margin:4px 0 0;margin-top:1px\\9;line-height:normal}input[type=file]{display:block}input[type=range]{display:block;width:100%}select[multiple],select[size]{height:auto}input[type=checkbox]:focus,input[type=file]:focus,input[type=radio]:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}output{padding-top:7px}.form-control,output{display:block;font-size:14px;line-height:1.42857143;color:#555}.form-control{width:100%;height:34px;padding:6px 12px;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.form-control::-ms-expand{background-color:transparent;border:0}.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{background-color:#eee;opacity:1}.form-control[disabled],fieldset[disabled] .form-control{cursor:not-allowed}textarea.form-control{height:auto}input[type=search]{-webkit-appearance:none}@media screen and (-webkit-min-device-pixel-ratio:0){input[type=date].form-control,input[type=datetime-local].form-control,input[type=month].form-control,input[type=time].form-control{line-height:34px}.input-group-sm input[type=date],.input-group-sm input[type=datetime-local],.input-group-sm input[type=month],.input-group-sm input[type=time],input[type=date].input-sm,input[type=datetime-local].input-sm,input[type=month].input-sm,input[type=time].input-sm{line-height:30px}.input-group-lg input[type=date],.input-group-lg input[type=datetime-local],.input-group-lg input[type=month],.input-group-lg input[type=time],input[type=date].input-lg,input[type=datetime-local].input-lg,input[type=month].input-lg,input[type=time].input-lg{line-height:46px}}.form-group{margin-bottom:15px}.checkbox,.radio{position:relative;display:block;margin-top:10px;margin-bottom:10px}.checkbox label,.radio label{min-height:20px;padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer}.checkbox-inline input[type=checkbox],.checkbox input[type=checkbox],.radio-inline input[type=radio],.radio input[type=radio]{position:absolute;margin-top:4px\\9;margin-left:-20px}.checkbox+.checkbox,.radio+.radio{margin-top:-5px}.checkbox-inline,.radio-inline{position:relative;display:inline-block;padding-left:20px;margin-bottom:0;font-weight:400;vertical-align:middle;cursor:pointer}.checkbox-inline+.checkbox-inline,.radio-inline+.radio-inline{margin-top:0;margin-left:10px}.checkbox-inline.disabled,.checkbox.disabled label,.radio-inline.disabled,.radio.disabled label,fieldset[disabled] .checkbox-inline,fieldset[disabled] .checkbox label,fieldset[disabled] .radio-inline,fieldset[disabled] .radio label,fieldset[disabled] input[type=checkbox],fieldset[disabled] input[type=radio],input[type=checkbox].disabled,input[type=checkbox][disabled],input[type=radio].disabled,input[type=radio][disabled]{cursor:not-allowed}.form-control-static{min-height:34px;padding-top:7px;padding-bottom:7px;margin-bottom:0}.form-control-static.input-lg,.form-control-static.input-sm{padding-right:0;padding-left:0}.input-sm{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}select.input-sm{height:30px;line-height:30px}select[multiple].input-sm,textarea.input-sm{height:auto}.form-group-sm .form-control{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}.form-group-sm select.form-control{height:30px;line-height:30px}.form-group-sm select[multiple].form-control,.form-group-sm textarea.form-control{height:auto}.form-group-sm .form-control-static{height:30px;min-height:32px;padding:6px 10px;font-size:12px;line-height:1.5}.input-lg{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}select.input-lg{height:46px;line-height:46px}select[multiple].input-lg,textarea.input-lg{height:auto}.form-group-lg .form-control{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}.form-group-lg select.form-control{height:46px;line-height:46px}.form-group-lg select[multiple].form-control,.form-group-lg textarea.form-control{height:auto}.form-group-lg .form-control-static{height:46px;min-height:38px;padding:11px 16px;font-size:18px;line-height:1.3333333}.has-feedback{position:relative}.has-feedback .form-control{padding-right:42.5px}.form-control-feedback{position:absolute;top:0;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center;pointer-events:none}.form-group-lg .form-control+.form-control-feedback,.input-group-lg+.form-control-feedback,.input-lg+.form-control-feedback{width:46px;height:46px;line-height:46px}.form-group-sm .form-control+.form-control-feedback,.input-group-sm+.form-control-feedback,.input-sm+.form-control-feedback{width:30px;height:30px;line-height:30px}.has-success .checkbox,.has-success .checkbox-inline,.has-success.checkbox-inline label,.has-success.checkbox label,.has-success .control-label,.has-success .help-block,.has-success .radio,.has-success .radio-inline,.has-success.radio-inline label,.has-success.radio label{color:#3c763d}.has-success .form-control{border-color:#3c763d;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-success .form-control:focus{border-color:#2b542c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168}.has-success .input-group-addon{color:#3c763d;background-color:#dff0d8;border-color:#3c763d}.has-success .form-control-feedback{color:#3c763d}.has-warning .checkbox,.has-warning .checkbox-inline,.has-warning.checkbox-inline label,.has-warning.checkbox label,.has-warning .control-label,.has-warning .help-block,.has-warning .radio,.has-warning .radio-inline,.has-warning.radio-inline label,.has-warning.radio label{color:#8a6d3b}.has-warning .form-control{border-color:#8a6d3b;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-warning .form-control:focus{border-color:#66512c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b}.has-warning .input-group-addon{color:#8a6d3b;background-color:#fcf8e3;border-color:#8a6d3b}.has-warning .form-control-feedback{color:#8a6d3b}.has-error .checkbox,.has-error .checkbox-inline,.has-error.checkbox-inline label,.has-error.checkbox label,.has-error .control-label,.has-error .help-block,.has-error .radio,.has-error .radio-inline,.has-error.radio-inline label,.has-error.radio label{color:#a94442}.has-error .form-control{border-color:#a94442;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-error .form-control:focus{border-color:#843534;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483}.has-error .input-group-addon{color:#a94442;background-color:#f2dede;border-color:#a94442}.has-error .form-control-feedback{color:#a94442}.has-feedback label~.form-control-feedback{top:25px}.has-feedback label.sr-only~.form-control-feedback{top:0}.help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373}@media (min-width:768px){.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .form-control-static{display:inline-block}.form-inline .input-group{display:inline-table;vertical-align:middle}.form-inline .input-group .form-control,.form-inline .input-group .input-group-addon,.form-inline .input-group .input-group-btn{width:auto}.form-inline .input-group>.form-control{width:100%}.form-inline .control-label{margin-bottom:0;vertical-align:middle}.form-inline .checkbox,.form-inline .radio{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.form-inline .checkbox label,.form-inline .radio label{padding-left:0}.form-inline .checkbox input[type=checkbox],.form-inline .radio input[type=radio]{position:relative;margin-left:0}.form-inline .has-feedback .form-control-feedback{top:0}}.form-horizontal .checkbox,.form-horizontal .checkbox-inline,.form-horizontal .radio,.form-horizontal .radio-inline{padding-top:7px;margin-top:0;margin-bottom:0}.form-horizontal .checkbox,.form-horizontal .radio{min-height:27px}.form-horizontal .form-group{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.form-horizontal .control-label{padding-top:7px;margin-bottom:0;text-align:right}}.form-horizontal .has-feedback .form-control-feedback{right:15px}@media (min-width:768px){.form-horizontal .form-group-lg .control-label{padding-top:11px;font-size:18px}}@media (min-width:768px){.form-horizontal .form-group-sm .control-label{padding-top:6px;font-size:12px}}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}.btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn.focus,.btn:focus,.btn:hover{color:#333;text-decoration:none}.btn.active,.btn:active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{cursor:not-allowed;filter:alpha(opacity=65);box-shadow:none;opacity:.65}a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-default.focus,.btn-default:focus{color:#333;background-color:#e6e6e6;border-color:#8c8c8c}.btn-default.active,.btn-default:active,.btn-default:hover,.open>.dropdown-toggle.btn-default{color:#333;background-color:#e6e6e6;border-color:#adadad}.btn-default.active.focus,.btn-default.active:focus,.btn-default.active:hover,.btn-default:active.focus,.btn-default:active:focus,.btn-default:active:hover,.open>.dropdown-toggle.btn-default.focus,.open>.dropdown-toggle.btn-default:focus,.open>.dropdown-toggle.btn-default:hover{color:#333;background-color:#d4d4d4;border-color:#8c8c8c}.btn-default.active,.btn-default:active,.open>.dropdown-toggle.btn-default{background-image:none}.btn-default.disabled.focus,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled].focus,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#fff;border-color:#ccc}.btn-default .badge{color:#fff;background-color:#333}.btn-primary{color:#fff;background-color:#337ab7;border-color:#2e6da4}.btn-primary.focus,.btn-primary:focus{color:#fff;background-color:#286090;border-color:#122b40}.btn-primary.active,.btn-primary:active,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{color:#fff;background-color:#286090;border-color:#204d74}.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.dropdown-toggle.btn-primary.focus,.open>.dropdown-toggle.btn-primary:focus,.open>.dropdown-toggle.btn-primary:hover{color:#fff;background-color:#204d74;border-color:#122b40}.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{background-image:none}.btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#337ab7;border-color:#2e6da4}.btn-primary .badge{color:#337ab7;background-color:#fff}.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}.btn-success.focus,.btn-success:focus{color:#fff;background-color:#449d44;border-color:#255625}.btn-success.active,.btn-success:active,.btn-success:hover,.open>.dropdown-toggle.btn-success{color:#fff;background-color:#449d44;border-color:#398439}.btn-success.active.focus,.btn-success.active:focus,.btn-success.active:hover,.btn-success:active.focus,.btn-success:active:focus,.btn-success:active:hover,.open>.dropdown-toggle.btn-success.focus,.open>.dropdown-toggle.btn-success:focus,.open>.dropdown-toggle.btn-success:hover{color:#fff;background-color:#398439;border-color:#255625}.btn-success.active,.btn-success:active,.open>.dropdown-toggle.btn-success{background-image:none}.btn-success.disabled.focus,.btn-success.disabled:focus,.btn-success.disabled:hover,.btn-success[disabled].focus,.btn-success[disabled]:focus,.btn-success[disabled]:hover,fieldset[disabled] .btn-success.focus,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:hover{background-color:#5cb85c;border-color:#4cae4c}.btn-success .badge{color:#5cb85c;background-color:#fff}.btn-info{color:#fff;background-color:#5bc0de;border-color:#46b8da}.btn-info.focus,.btn-info:focus{color:#fff;background-color:#31b0d5;border-color:#1b6d85}.btn-info.active,.btn-info:active,.btn-info:hover,.open>.dropdown-toggle.btn-info{color:#fff;background-color:#31b0d5;border-color:#269abc}.btn-info.active.focus,.btn-info.active:focus,.btn-info.active:hover,.btn-info:active.focus,.btn-info:active:focus,.btn-info:active:hover,.open>.dropdown-toggle.btn-info.focus,.open>.dropdown-toggle.btn-info:focus,.open>.dropdown-toggle.btn-info:hover{color:#fff;background-color:#269abc;border-color:#1b6d85}.btn-info.active,.btn-info:active,.open>.dropdown-toggle.btn-info{background-image:none}.btn-info.disabled.focus,.btn-info.disabled:focus,.btn-info.disabled:hover,.btn-info[disabled].focus,.btn-info[disabled]:focus,.btn-info[disabled]:hover,fieldset[disabled] .btn-info.focus,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:hover{background-color:#5bc0de;border-color:#46b8da}.btn-info .badge{color:#5bc0de;background-color:#fff}.btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236}.btn-warning.focus,.btn-warning:focus{color:#fff;background-color:#ec971f;border-color:#985f0d}.btn-warning.active,.btn-warning:active,.btn-warning:hover,.open>.dropdown-toggle.btn-warning{color:#fff;background-color:#ec971f;border-color:#d58512}.btn-warning.active.focus,.btn-warning.active:focus,.btn-warning.active:hover,.btn-warning:active.focus,.btn-warning:active:focus,.btn-warning:active:hover,.open>.dropdown-toggle.btn-warning.focus,.open>.dropdown-toggle.btn-warning:focus,.open>.dropdown-toggle.btn-warning:hover{color:#fff;background-color:#d58512;border-color:#985f0d}.btn-warning.active,.btn-warning:active,.open>.dropdown-toggle.btn-warning{background-image:none}.btn-warning.disabled.focus,.btn-warning.disabled:focus,.btn-warning.disabled:hover,.btn-warning[disabled].focus,.btn-warning[disabled]:focus,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning.focus,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:hover{background-color:#f0ad4e;border-color:#eea236}.btn-warning .badge{color:#f0ad4e;background-color:#fff}.btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a}.btn-danger.focus,.btn-danger:focus{color:#fff;background-color:#c9302c;border-color:#761c19}.btn-danger.active,.btn-danger:active,.btn-danger:hover,.open>.dropdown-toggle.btn-danger{color:#fff;background-color:#c9302c;border-color:#ac2925}.btn-danger.active.focus,.btn-danger.active:focus,.btn-danger.active:hover,.btn-danger:active.focus,.btn-danger:active:focus,.btn-danger:active:hover,.open>.dropdown-toggle.btn-danger.focus,.open>.dropdown-toggle.btn-danger:focus,.open>.dropdown-toggle.btn-danger:hover{color:#fff;background-color:#ac2925;border-color:#761c19}.btn-danger.active,.btn-danger:active,.open>.dropdown-toggle.btn-danger{background-image:none}.btn-danger.disabled.focus,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled].focus,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger.focus,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#d9534f;border-color:#d43f3a}.btn-danger .badge{color:#d9534f;background-color:#fff}.btn-link{font-weight:400;color:#337ab7;border-radius:0}.btn-link,.btn-link.active,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link{background-color:transparent;box-shadow:none}.btn-link,.btn-link:active,.btn-link:focus,.btn-link:hover{border-color:transparent}.btn-link:focus,.btn-link:hover{color:#23527c;text-decoration:underline;background-color:transparent}.btn-link[disabled]:focus,.btn-link[disabled]:hover,fieldset[disabled] .btn-link:focus,fieldset[disabled] .btn-link:hover{color:#777;text-decoration:none}.btn-group-lg>.btn,.btn-lg{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}.btn-group-sm>.btn,.btn-sm{padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}.btn-group-xs>.btn,.btn-xs{padding:1px 5px;font-size:12px;line-height:1.5;border-radius:3px}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:5px}input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-block{width:100%}.fade{opacity:0;-webkit-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;-webkit-transition-timing-function:ease;transition-timing-function:ease;-webkit-transition-duration:.35s;transition-duration:.35s;-webkit-transition-property:height,visibility;transition-property:height,visibility}.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px dashed;border-top:4px solid\\9;border-right:4px solid transparent;border-left:4px solid transparent}.dropdown,.dropup{position:relative}.dropdown-toggle:focus{outline:0}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;box-shadow:0 6px 12px rgba(0,0,0,.175)}.dropdown-menu.pull-right{right:0;left:auto}.dropdown-menu .divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.dropdown-menu>li>a{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.42857143;color:#333;white-space:nowrap}.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{color:#262626;text-decoration:none;background-color:#f5f5f5}.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{color:#fff;text-decoration:none;background-color:#337ab7;outline:0}.dropdown-menu>.disabled>a,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{color:#777}.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{text-decoration:none;cursor:not-allowed;background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false)}.open>.dropdown-menu{display:block}.open>a{outline:0}.dropdown-menu-right{right:0;left:auto}.dropdown-menu-left{right:auto;left:0}.dropdown-header{display:block;padding:3px 20px;font-size:12px;line-height:1.42857143;color:#777;white-space:nowrap}.dropdown-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}.pull-right>.dropdown-menu{right:0;left:auto}.dropup .caret,.navbar-fixed-bottom .dropdown .caret{content:"";border-top:0;border-bottom:4px dashed;border-bottom:4px solid\\9}.dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:2px}@media (min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}.navbar-right .dropdown-menu-left{right:auto;left:0}}.btn-group,.btn-group-vertical{position:relative;display:inline-block;vertical-align:middle}.btn-group-vertical>.btn,.btn-group>.btn{position:relative;float:left}.btn-group-vertical>.btn.active,.btn-group-vertical>.btn:active,.btn-group-vertical>.btn:focus,.btn-group-vertical>.btn:hover,.btn-group>.btn.active,.btn-group>.btn:active,.btn-group>.btn:focus,.btn-group>.btn:hover{z-index:2}.btn-group .btn+.btn,.btn-group .btn+.btn-group,.btn-group .btn-group+.btn,.btn-group .btn-group+.btn-group{margin-left:-1px}.btn-toolbar{margin-left:-5px}.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group{float:left}.btn-toolbar>.btn,.btn-toolbar>.btn-group,.btn-toolbar>.input-group{margin-left:5px}.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle){border-radius:0}.btn-group>.btn:first-child{margin-left:0}.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn:last-child:not(:first-child),.btn-group>.dropdown-toggle:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.btn-group>.btn-group{float:left}.btn-group>.btn-group:not(:first-child):not(:last-child)>.btn{border-radius:0}.btn-group>.btn-group:first-child:not(:last-child)>.btn:last-child,.btn-group>.btn-group:first-child:not(:last-child)>.dropdown-toggle{border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn-group:last-child:not(:first-child)>.btn:first-child{border-top-left-radius:0;border-bottom-left-radius:0}.btn-group .dropdown-toggle:active,.btn-group.open .dropdown-toggle{outline:0}.btn-group>.btn+.dropdown-toggle{padding-right:8px;padding-left:8px}.btn-group>.btn-lg+.dropdown-toggle{padding-right:12px;padding-left:12px}.btn-group.open .dropdown-toggle{box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn-group.open .dropdown-toggle.btn-link{box-shadow:none}.btn .caret{margin-left:0}.btn-lg .caret{border-width:5px 5px 0;border-bottom-width:0}.dropup .btn-lg .caret{border-width:0 5px 5px}.btn-group-vertical>.btn,.btn-group-vertical>.btn-group,.btn-group-vertical>.btn-group>.btn{display:block;float:none;width:100%;max-width:100%}.btn-group-vertical>.btn-group>.btn{float:none}.btn-group-vertical>.btn+.btn,.btn-group-vertical>.btn+.btn-group,.btn-group-vertical>.btn-group+.btn,.btn-group-vertical>.btn-group+.btn-group{margin-top:-1px;margin-left:0}.btn-group-vertical>.btn:not(:first-child):not(:last-child){border-radius:0}.btn-group-vertical>.btn:first-child:not(:last-child){border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:4px;border-bottom-left-radius:4px}.btn-group-vertical>.btn-group:not(:first-child):not(:last-child)>.btn{border-radius:0}.btn-group-vertical>.btn-group:first-child:not(:last-child)>.btn:last-child,.btn-group-vertical>.btn-group:first-child:not(:last-child)>.dropdown-toggle{border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn-group:last-child:not(:first-child)>.btn:first-child{border-top-left-radius:0;border-top-right-radius:0}.btn-group-justified{display:table;width:100%;table-layout:fixed;border-collapse:separate}.btn-group-justified>.btn,.btn-group-justified>.btn-group{display:table-cell;float:none;width:1%}.btn-group-justified>.btn-group .btn{width:100%}.btn-group-justified>.btn-group .dropdown-menu{left:auto}[data-toggle=buttons]>.btn-group>.btn input[type=checkbox],[data-toggle=buttons]>.btn-group>.btn input[type=radio],[data-toggle=buttons]>.btn input[type=checkbox],[data-toggle=buttons]>.btn input[type=radio]{position:absolute;clip:rect(0,0,0,0);pointer-events:none}.input-group{position:relative;display:table;border-collapse:separate}.input-group[class*=col-]{float:none;padding-right:0;padding-left:0}.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.input-group .form-control:focus{z-index:3}.input-group-lg>.form-control,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.btn{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}select.input-group-lg>.form-control,select.input-group-lg>.input-group-addon,select.input-group-lg>.input-group-btn>.btn{height:46px;line-height:46px}select[multiple].input-group-lg>.form-control,select[multiple].input-group-lg>.input-group-addon,select[multiple].input-group-lg>.input-group-btn>.btn,textarea.input-group-lg>.form-control,textarea.input-group-lg>.input-group-addon,textarea.input-group-lg>.input-group-btn>.btn{height:auto}.input-group-sm>.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.btn{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}select.input-group-sm>.form-control,select.input-group-sm>.input-group-addon,select.input-group-sm>.input-group-btn>.btn{height:30px;line-height:30px}select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.input-group-addon,select[multiple].input-group-sm>.input-group-btn>.btn,textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon,textarea.input-group-sm>.input-group-btn>.btn{height:auto}.input-group-addon,.input-group-btn,.input-group .form-control{display:table-cell}.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child),.input-group .form-control:not(:first-child):not(:last-child){border-radius:0}.input-group-addon,.input-group-btn{width:1%;white-space:nowrap;vertical-align:middle}.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}.input-group-addon.input-sm{padding:5px 10px;font-size:12px;border-radius:3px}.input-group-addon.input-lg{padding:10px 16px;font-size:18px;border-radius:6px}.input-group-addon input[type=checkbox],.input-group-addon input[type=radio]{margin-top:0}.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn-group:not(:last-child)>.btn,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group .form-control:first-child{border-top-right-radius:0;border-bottom-right-radius:0}.input-group-addon:first-child{border-right:0}.input-group-addon:last-child,.input-group-btn:first-child>.btn-group:not(:first-child)>.btn,.input-group-btn:first-child>.btn:not(:first-child),.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn,.input-group-btn:last-child>.dropdown-toggle,.input-group .form-control:last-child{border-top-left-radius:0;border-bottom-left-radius:0}.input-group-addon:last-child{border-left:0}.input-group-btn{font-size:0;white-space:nowrap}.input-group-btn,.input-group-btn>.btn{position:relative}.input-group-btn>.btn+.btn{margin-left:-1px}.input-group-btn>.btn:active,.input-group-btn>.btn:focus,.input-group-btn>.btn:hover{z-index:2}.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group{margin-right:-1px}.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group{z-index:2;margin-left:-1px}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li,.nav>li>a{position:relative;display:block}.nav>li>a{padding:10px 15px}.nav>li>a:focus,.nav>li>a:hover{text-decoration:none;background-color:#eee}.nav>li.disabled>a{color:#777}.nav>li.disabled>a:focus,.nav>li.disabled>a:hover{color:#777;text-decoration:none;cursor:not-allowed;background-color:transparent}.nav .open>a,.nav .open>a:focus,.nav .open>a:hover{background-color:#eee;border-color:#337ab7}.nav .nav-divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.nav>li>a>img{max-width:none}.nav-tabs{border-bottom:1px solid #ddd}.nav-tabs>li{float:left;margin-bottom:-1px}.nav-tabs>li>a{margin-right:2px;line-height:1.42857143;border:1px solid transparent;border-radius:4px 4px 0 0}.nav-tabs>li>a:hover{border-color:#eee #eee #ddd}.nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover{color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent}.nav-tabs.nav-justified{width:100%;border-bottom:0}.nav-tabs.nav-justified>li{float:none}.nav-tabs.nav-justified>li>a{margin-bottom:5px;text-align:center}.nav-tabs.nav-justified>.dropdown .dropdown-menu{top:auto;left:auto}@media (min-width:768px){.nav-tabs.nav-justified>li{display:table-cell;width:1%}.nav-tabs.nav-justified>li>a{margin-bottom:0}}.nav-tabs.nav-justified>li>a{margin-right:0;border-radius:4px}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border:1px solid #ddd}@media (min-width:768px){.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border-bottom-color:#fff}}.nav-pills>li{float:left}.nav-pills>li>a{border-radius:4px}.nav-pills>li+li{margin-left:2px}.nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover{color:#fff;background-color:#337ab7}.nav-stacked>li{float:none}.nav-stacked>li+li{margin-top:2px;margin-left:0}.nav-justified{width:100%}.nav-justified>li{float:none}.nav-justified>li>a{margin-bottom:5px;text-align:center}.nav-justified>.dropdown .dropdown-menu{top:auto;left:auto}@media (min-width:768px){.nav-justified>li{display:table-cell;width:1%}.nav-justified>li>a{margin-bottom:0}}.nav-tabs-justified{border-bottom:0}.nav-tabs-justified>li>a{margin-right:0;border-radius:4px}.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover{border:1px solid #ddd}@media (min-width:768px){.nav-tabs-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover{border-bottom-color:#fff}}.tab-content>.tab-pane{display:none}.tab-content>.active{display:block}.nav-tabs .dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;box-shadow:inset 0 1px 0 hsla(0,0%,100%,.1)}.navbar-collapse.in{overflow-y:auto}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;box-shadow:none}.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}.navbar-collapse.in{overflow-y:visible}.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse{max-height:340px}@media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse{max-height:200px}}.container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-static-top{z-index:1000;border-width:0 0 1px}@media (min-width:768px){.navbar-static-top{border-radius:0}}.navbar-fixed-bottom,.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-bottom,.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.navbar-brand{float:left;height:50px;padding:15px;font-size:18px;line-height:20px}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}.navbar-brand>img{display:block}@media (min-width:768px){.navbar>.container-fluid .navbar-brand,.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle:focus{outline:0}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (max-width:767px){.navbar-nav .open .dropdown-menu{position:static;float:none;width:auto;margin-top:0;background-color:transparent;border:0;box-shadow:none}.navbar-nav .open .dropdown-menu .dropdown-header,.navbar-nav .open .dropdown-menu>li>a{padding:5px 15px 5px 25px}.navbar-nav .open .dropdown-menu>li>a{line-height:20px}.navbar-nav .open .dropdown-menu>li>a:focus,.navbar-nav .open .dropdown-menu>li>a:hover{background-image:none}}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.navbar-form{padding:10px 15px;margin:8px -15px;border-top:1px solid transparent;border-bottom:1px solid transparent;box-shadow:inset 0 1px 0 hsla(0,0%,100%,.1),0 1px 0 hsla(0,0%,100%,.1)}@media (min-width:768px){.navbar-form .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.navbar-form .form-control{display:inline-block;width:auto;vertical-align:middle}.navbar-form .form-control-static{display:inline-block}.navbar-form .input-group{display:inline-table;vertical-align:middle}.navbar-form .input-group .form-control,.navbar-form .input-group .input-group-addon,.navbar-form .input-group .input-group-btn{width:auto}.navbar-form .input-group>.form-control{width:100%}.navbar-form .control-label{margin-bottom:0;vertical-align:middle}.navbar-form .checkbox,.navbar-form .radio{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.navbar-form .checkbox label,.navbar-form .radio label{padding-left:0}.navbar-form .checkbox input[type=checkbox],.navbar-form .radio input[type=radio]{position:relative;margin-left:0}.navbar-form .has-feedback .form-control-feedback{top:0}}@media (max-width:767px){.navbar-form .form-group{margin-bottom:5px}.navbar-form .form-group:last-child{margin-bottom:0}}@media (min-width:768px){.navbar-form{width:auto;padding-top:0;padding-bottom:0;margin-right:0;margin-left:0;border:0;box-shadow:none}}.navbar-nav>li>.dropdown-menu{margin-top:0;border-top-left-radius:0;border-top-right-radius:0}.navbar-fixed-bottom .navbar-nav>li>.dropdown-menu{margin-bottom:0;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0}.navbar-btn{margin-top:8px;margin-bottom:8px}.navbar-btn.btn-sm{margin-top:10px;margin-bottom:10px}.navbar-btn.btn-xs{margin-top:14px;margin-bottom:14px}.navbar-text{margin-top:15px;margin-bottom:15px}@media (min-width:768px){.navbar-text{float:left;margin-right:15px;margin-left:15px}}@media (min-width:768px){.navbar-left{float:left!important}.navbar-right{float:right!important;margin-right:-15px}.navbar-right~.navbar-right{margin-right:0}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#5e5e5e;background-color:transparent}.navbar-default .navbar-nav>li>a,.navbar-default .navbar-text{color:#777}.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#333;background-color:transparent}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover{color:#555;background-color:#e7e7e7}.navbar-default .navbar-nav>.disabled>a,.navbar-default .navbar-nav>.disabled>a:focus,.navbar-default .navbar-nav>.disabled>a:hover{color:#ccc;background-color:transparent}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#e7e7e7}.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#555;background-color:#e7e7e7}@media (max-width:767px){.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#777}.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#333;background-color:transparent}.navbar-default .navbar-nav .open .dropdown-menu>.active>a,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover{color:#555;background-color:#e7e7e7}.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a,.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover{color:#ccc;background-color:transparent}}.navbar-default .navbar-link{color:#777}.navbar-default .navbar-link:hover{color:#333}.navbar-default .btn-link{color:#777}.navbar-default .btn-link:focus,.navbar-default .btn-link:hover{color:#333}.navbar-default .btn-link[disabled]:focus,.navbar-default .btn-link[disabled]:hover,fieldset[disabled] .navbar-default .btn-link:focus,fieldset[disabled] .navbar-default .btn-link:hover{color:#ccc}.navbar-inverse{background-color:#222;border-color:#080808}.navbar-inverse .navbar-brand{color:#9d9d9d}.navbar-inverse .navbar-brand:focus,.navbar-inverse .navbar-brand:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-text{color:#9d9d9d}.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover{color:#fff;background-color:#080808}.navbar-inverse .navbar-nav>.disabled>a,.navbar-inverse .navbar-nav>.disabled>a:focus,.navbar-inverse .navbar-nav>.disabled>a:hover{color:#444;background-color:transparent}.navbar-inverse .navbar-toggle{border-color:#333}.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover{background-color:#333}.navbar-inverse .navbar-toggle .icon-bar{background-color:#fff}.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form{border-color:#101010}.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover{color:#fff;background-color:#080808}@media (max-width:767px){.navbar-inverse .navbar-nav .open .dropdown-menu>.dropdown-header{border-color:#080808}.navbar-inverse .navbar-nav .open .dropdown-menu .divider{background-color:#080808}.navbar-inverse .navbar-nav .open .dropdown-menu>li>a{color:#9d9d9d}.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a,.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover{color:#fff;background-color:#080808}.navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a,.navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a:hover{color:#444;background-color:transparent}}.navbar-inverse .navbar-link{color:#9d9d9d}.navbar-inverse .navbar-link:hover{color:#fff}.navbar-inverse .btn-link{color:#9d9d9d}.navbar-inverse .btn-link:focus,.navbar-inverse .btn-link:hover{color:#fff}.navbar-inverse .btn-link[disabled]:focus,.navbar-inverse .btn-link[disabled]:hover,fieldset[disabled] .navbar-inverse .btn-link:focus,fieldset[disabled] .navbar-inverse .btn-link:hover{color:#444}.breadcrumb{padding:8px 15px;margin-bottom:20px;list-style:none;background-color:#f5f5f5;border-radius:4px}.breadcrumb>li{display:inline-block}.breadcrumb>li+li:before{padding:0 5px;color:#ccc;content:"/\\A0"}.breadcrumb>.active{color:#777}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;margin-left:-1px;line-height:1.42857143;color:#337ab7;text-decoration:none;background-color:#fff;border:1px solid #ddd}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-top-left-radius:4px;border-bottom-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-top-right-radius:4px;border-bottom-right-radius:4px}.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{z-index:2;color:#23527c;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:3;color:#fff;cursor:default;background-color:#337ab7;border-color:#337ab7}.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover{color:#777;cursor:not-allowed;background-color:#fff;border-color:#ddd}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px;line-height:1.3333333}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-top-left-radius:6px;border-bottom-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-top-right-radius:6px;border-bottom-right-radius:6px}.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px;line-height:1.5}.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-top-left-radius:3px;border-bottom-left-radius:3px}.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-top-right-radius:3px;border-bottom-right-radius:3px}.pager{padding-left:0;margin:20px 0;text-align:center;list-style:none}.pager li{display:inline}.pager li>a,.pager li>span{display:inline-block;padding:5px 14px;background-color:#fff;border:1px solid #ddd;border-radius:15px}.pager li>a:focus,.pager li>a:hover{text-decoration:none;background-color:#eee}.pager .next>a,.pager .next>span{float:right}.pager .previous>a,.pager .previous>span{float:left}.pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span{color:#777;cursor:not-allowed;background-color:#fff}.label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}.label:empty{display:none}.btn .label{position:relative;top:-1px}.label-default{background-color:#777}.label-default[href]:focus,.label-default[href]:hover{background-color:#5e5e5e}.label-primary{background-color:#337ab7}.label-primary[href]:focus,.label-primary[href]:hover{background-color:#286090}.label-success{background-color:#5cb85c}.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}.label-info{background-color:#5bc0de}.label-info[href]:focus,.label-info[href]:hover{background-color:#31b0d5}.label-warning{background-color:#f0ad4e}.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}.label-danger{background-color:#d9534f}.label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}.badge{display:inline-block;min-width:10px;padding:3px 7px;font-size:12px;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:middle;background-color:#777;border-radius:10px}.badge:empty{display:none}.btn .badge{position:relative;top:-1px}.btn-group-xs>.btn .badge,.btn-xs .badge{top:0;padding:1px 5px}a.badge:focus,a.badge:hover{color:#fff;text-decoration:none;cursor:pointer}.list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#337ab7;background-color:#fff}.list-group-item>.badge{float:right}.list-group-item>.badge+.badge{margin-right:5px}.nav-pills>li>a>.badge{margin-left:3px}.jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;background-color:#eee}.jumbotron,.jumbotron .h1,.jumbotron h1{color:inherit}.jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}.jumbotron>hr{border-top-color:#d5d5d5}.container-fluid .jumbotron,.container .jumbotron{padding-right:15px;padding-left:15px;border-radius:6px}.jumbotron .container{max-width:100%}@media screen and (min-width:768px){.jumbotron{padding-top:48px;padding-bottom:48px}.container-fluid .jumbotron,.container .jumbotron{padding-right:60px;padding-left:60px}.jumbotron .h1,.jumbotron h1{font-size:63px}}.thumbnail{display:block;padding:4px;margin-bottom:20px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:border .2s ease-in-out;transition:border .2s ease-in-out}.thumbnail>img,.thumbnail a>img{margin-right:auto;margin-left:auto}a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#337ab7}.thumbnail .caption{padding:9px;color:#333}.alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px}.alert h4{margin-top:0;color:inherit}.alert .alert-link{font-weight:700}.alert>p,.alert>ul{margin-bottom:0}.alert>p+p{margin-top:5px}.alert-dismissable,.alert-dismissible{padding-right:35px}.alert-dismissable .close,.alert-dismissible .close{position:relative;top:-2px;right:-21px;color:inherit}.alert-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}.alert-success hr{border-top-color:#c9e2b3}.alert-success .alert-link{color:#2b542c}.alert-info{color:#31708f;background-color:#d9edf7;border-color:#bce8f1}.alert-info hr{border-top-color:#a6e1ec}.alert-info .alert-link{color:#245269}.alert-warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}.alert-warning hr{border-top-color:#f7e1b5}.alert-warning .alert-link{color:#66512c}.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1}.alert-danger hr{border-top-color:#e4b9c0}.alert-danger .alert-link{color:#843534}@-webkit-keyframes progress-bar-stripes{0%{background-position:40px 0}to{background-position:0 0}}@keyframes progress-bar-stripes{0%{background-position:40px 0}to{background-position:0 0}}.progress{height:20px;margin-bottom:20px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}.progress-bar{float:left;width:0;height:100%;font-size:12px;line-height:20px;color:#fff;text-align:center;background-color:#337ab7;box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);-webkit-transition:width .6s ease;transition:width .6s ease}.progress-bar-striped,.progress-striped .progress-bar{background-image:-webkit-linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);background-image:linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);background-size:40px 40px}.progress-bar.active,.progress.active .progress-bar{-webkit-animation:progress-bar-stripes 2s linear infinite;animation:progress-bar-stripes 2s linear infinite}.progress-bar-success{background-color:#5cb85c}.progress-striped .progress-bar-success{background-image:-webkit-linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);background-image:linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent)}.progress-bar-info{background-color:#5bc0de}.progress-striped .progress-bar-info{background-image:-webkit-linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);background-image:linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent)}.progress-bar-warning{background-color:#f0ad4e}.progress-striped .progress-bar-warning{background-image:-webkit-linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);background-image:linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent)}.progress-bar-danger{background-color:#d9534f}.progress-striped .progress-bar-danger{background-image:-webkit-linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);background-image:linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent)}.media{margin-top:15px}.media:first-child{margin-top:0}.media,.media-body{overflow:hidden;zoom:1}.media-body{width:10000px}.media-object{display:block}.media-object.img-thumbnail{max-width:none}.media-right,.media>.pull-right{padding-left:10px}.media-left,.media>.pull-left{padding-right:10px}.media-body,.media-left,.media-right{display:table-cell;vertical-align:top}.media-middle{vertical-align:middle}.media-bottom{vertical-align:bottom}.media-heading{margin-top:0;margin-bottom:5px}.media-list{padding-left:0;list-style:none}.list-group{padding-left:0;margin-bottom:20px}.list-group-item{position:relative;display:block;padding:10px 15px;margin-bottom:-1px;background-color:#fff;border:1px solid #ddd}.list-group-item:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.list-group-item:last-child{margin-bottom:0;border-bottom-right-radius:4px;border-bottom-left-radius:4px}a.list-group-item,button.list-group-item{color:#555}a.list-group-item .list-group-item-heading,button.list-group-item .list-group-item-heading{color:#333}a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,button.list-group-item:hover{color:#555;text-decoration:none;background-color:#f5f5f5}button.list-group-item{width:100%;text-align:left}.list-group-item.disabled,.list-group-item.disabled:focus,.list-group-item.disabled:hover{color:#777;cursor:not-allowed;background-color:#eee}.list-group-item.disabled .list-group-item-heading,.list-group-item.disabled:focus .list-group-item-heading,.list-group-item.disabled:hover .list-group-item-heading{color:inherit}.list-group-item.disabled .list-group-item-text,.list-group-item.disabled:focus .list-group-item-text,.list-group-item.disabled:hover .list-group-item-text{color:#777}.list-group-item.active,.list-group-item.active:focus,.list-group-item.active:hover{z-index:2;color:#fff;background-color:#337ab7;border-color:#337ab7}.list-group-item.active .list-group-item-heading,.list-group-item.active .list-group-item-heading>.small,.list-group-item.active .list-group-item-heading>small,.list-group-item.active:focus .list-group-item-heading,.list-group-item.active:focus .list-group-item-heading>.small,.list-group-item.active:focus .list-group-item-heading>small,.list-group-item.active:hover .list-group-item-heading,.list-group-item.active:hover .list-group-item-heading>.small,.list-group-item.active:hover .list-group-item-heading>small{color:inherit}.list-group-item.active .list-group-item-text,.list-group-item.active:focus .list-group-item-text,.list-group-item.active:hover .list-group-item-text{color:#c7ddef}.list-group-item-success{color:#3c763d;background-color:#dff0d8}a.list-group-item-success,button.list-group-item-success{color:#3c763d}a.list-group-item-success .list-group-item-heading,button.list-group-item-success .list-group-item-heading{color:inherit}a.list-group-item-success:focus,a.list-group-item-success:hover,button.list-group-item-success:focus,button.list-group-item-success:hover{color:#3c763d;background-color:#d0e9c6}a.list-group-item-success.active,a.list-group-item-success.active:focus,a.list-group-item-success.active:hover,button.list-group-item-success.active,button.list-group-item-success.active:focus,button.list-group-item-success.active:hover{color:#fff;background-color:#3c763d;border-color:#3c763d}.list-group-item-info{color:#31708f;background-color:#d9edf7}a.list-group-item-info,button.list-group-item-info{color:#31708f}a.list-group-item-info .list-group-item-heading,button.list-group-item-info .list-group-item-heading{color:inherit}a.list-group-item-info:focus,a.list-group-item-info:hover,button.list-group-item-info:focus,button.list-group-item-info:hover{color:#31708f;background-color:#c4e3f3}a.list-group-item-info.active,a.list-group-item-info.active:focus,a.list-group-item-info.active:hover,button.list-group-item-info.active,button.list-group-item-info.active:focus,button.list-group-item-info.active:hover{color:#fff;background-color:#31708f;border-color:#31708f}.list-group-item-warning{color:#8a6d3b;background-color:#fcf8e3}a.list-group-item-warning,button.list-group-item-warning{color:#8a6d3b}a.list-group-item-warning .list-group-item-heading,button.list-group-item-warning .list-group-item-heading{color:inherit}a.list-group-item-warning:focus,a.list-group-item-warning:hover,button.list-group-item-warning:focus,button.list-group-item-warning:hover{color:#8a6d3b;background-color:#faf2cc}a.list-group-item-warning.active,a.list-group-item-warning.active:focus,a.list-group-item-warning.active:hover,button.list-group-item-warning.active,button.list-group-item-warning.active:focus,button.list-group-item-warning.active:hover{color:#fff;background-color:#8a6d3b;border-color:#8a6d3b}.list-group-item-danger{color:#a94442;background-color:#f2dede}a.list-group-item-danger,button.list-group-item-danger{color:#a94442}a.list-group-item-danger .list-group-item-heading,button.list-group-item-danger .list-group-item-heading{color:inherit}a.list-group-item-danger:focus,a.list-group-item-danger:hover,button.list-group-item-danger:focus,button.list-group-item-danger:hover{color:#a94442;background-color:#ebcccc}a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-group-item-danger.active:hover,button.list-group-item-danger.active,button.list-group-item-danger.active:focus,button.list-group-item-danger.active:hover{color:#fff;background-color:#a94442;border-color:#a94442}.list-group-item-heading{margin-top:0;margin-bottom:5px}.list-group-item-text{margin-bottom:0;line-height:1.3}.panel{margin-bottom:20px;background-color:#fff;border:1px solid transparent;border-radius:4px;box-shadow:0 1px 1px rgba(0,0,0,.05)}.panel-body{padding:15px}.panel-heading{padding:10px 15px;border-bottom:1px solid transparent;border-top-left-radius:3px;border-top-right-radius:3px}.panel-heading>.dropdown .dropdown-toggle,.panel-title{color:inherit}.panel-title{margin-top:0;margin-bottom:0;font-size:16px}.panel-title>.small,.panel-title>.small>a,.panel-title>a,.panel-title>small,.panel-title>small>a{color:inherit}.panel-footer{padding:10px 15px;background-color:#f5f5f5;border-top:1px solid #ddd;border-bottom-right-radius:3px;border-bottom-left-radius:3px}.panel>.list-group,.panel>.panel-collapse>.list-group{margin-bottom:0}.panel>.list-group .list-group-item,.panel>.panel-collapse>.list-group .list-group-item{border-width:1px 0;border-radius:0}.panel>.list-group:first-child .list-group-item:first-child,.panel>.panel-collapse>.list-group:first-child .list-group-item:first-child{border-top:0;border-top-left-radius:3px;border-top-right-radius:3px}.panel>.list-group:last-child .list-group-item:last-child,.panel>.panel-collapse>.list-group:last-child .list-group-item:last-child{border-bottom:0;border-bottom-right-radius:3px;border-bottom-left-radius:3px}.panel>.panel-heading+.panel-collapse>.list-group .list-group-item:first-child{border-top-left-radius:0;border-top-right-radius:0}.list-group+.panel-footer,.panel-heading+.list-group .list-group-item:first-child{border-top-width:0}.panel>.panel-collapse>.table,.panel>.table,.panel>.table-responsive>.table{margin-bottom:0}.panel>.panel-collapse>.table caption,.panel>.table-responsive>.table caption,.panel>.table caption{padding-right:15px;padding-left:15px}.panel>.table-responsive:first-child>.table:first-child,.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child,.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child,.panel>.table:first-child,.panel>.table:first-child>tbody:first-child>tr:first-child,.panel>.table:first-child>thead:first-child>tr:first-child{border-top-left-radius:3px;border-top-right-radius:3px}.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child td:first-child,.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child th:first-child,.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child td:first-child,.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child th:first-child,.panel>.table:first-child>tbody:first-child>tr:first-child td:first-child,.panel>.table:first-child>tbody:first-child>tr:first-child th:first-child,.panel>.table:first-child>thead:first-child>tr:first-child td:first-child,.panel>.table:first-child>thead:first-child>tr:first-child th:first-child{border-top-left-radius:3px}.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child td:last-child,.panel>.table-responsive:first-child>.table:first-child>tbody:first-child>tr:first-child th:last-child,.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child td:last-child,.panel>.table-responsive:first-child>.table:first-child>thead:first-child>tr:first-child th:last-child,.panel>.table:first-child>tbody:first-child>tr:first-child td:last-child,.panel>.table:first-child>tbody:first-child>tr:first-child th:last-child,.panel>.table:first-child>thead:first-child>tr:first-child td:last-child,.panel>.table:first-child>thead:first-child>tr:first-child th:last-child{border-top-right-radius:3px}.panel>.table-responsive:last-child>.table:last-child,.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child,.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child,.panel>.table:last-child,.panel>.table:last-child>tbody:last-child>tr:last-child,.panel>.table:last-child>tfoot:last-child>tr:last-child{border-bottom-right-radius:3px;border-bottom-left-radius:3px}.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child td:first-child,.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child th:first-child,.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child td:first-child,.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child th:first-child,.panel>.table:last-child>tbody:last-child>tr:last-child td:first-child,.panel>.table:last-child>tbody:last-child>tr:last-child th:first-child,.panel>.table:last-child>tfoot:last-child>tr:last-child td:first-child,.panel>.table:last-child>tfoot:last-child>tr:last-child th:first-child{border-bottom-left-radius:3px}.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child td:last-child,.panel>.table-responsive:last-child>.table:last-child>tbody:last-child>tr:last-child th:last-child,.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child td:last-child,.panel>.table-responsive:last-child>.table:last-child>tfoot:last-child>tr:last-child th:last-child,.panel>.table:last-child>tbody:last-child>tr:last-child td:last-child,.panel>.table:last-child>tbody:last-child>tr:last-child th:last-child,.panel>.table:last-child>tfoot:last-child>tr:last-child td:last-child,.panel>.table:last-child>tfoot:last-child>tr:last-child th:last-child{border-bottom-right-radius:3px}.panel>.panel-body+.table,.panel>.panel-body+.table-responsive,.panel>.table+.panel-body,.panel>.table-responsive+.panel-body{border-top:1px solid #ddd}.panel>.table>tbody:first-child>tr:first-child td,.panel>.table>tbody:first-child>tr:first-child th{border-top:0}.panel>.table-bordered,.panel>.table-responsive>.table-bordered{border:0}.panel>.table-bordered>tbody>tr>td:first-child,.panel>.table-bordered>tbody>tr>th:first-child,.panel>.table-bordered>tfoot>tr>td:first-child,.panel>.table-bordered>tfoot>tr>th:first-child,.panel>.table-bordered>thead>tr>td:first-child,.panel>.table-bordered>thead>tr>th:first-child,.panel>.table-responsive>.table-bordered>tbody>tr>td:first-child,.panel>.table-responsive>.table-bordered>tbody>tr>th:first-child,.panel>.table-responsive>.table-bordered>tfoot>tr>td:first-child,.panel>.table-responsive>.table-bordered>tfoot>tr>th:first-child,.panel>.table-responsive>.table-bordered>thead>tr>td:first-child,.panel>.table-responsive>.table-bordered>thead>tr>th:first-child{border-left:0}.panel>.table-bordered>tbody>tr>td:last-child,.panel>.table-bordered>tbody>tr>th:last-child,.panel>.table-bordered>tfoot>tr>td:last-child,.panel>.table-bordered>tfoot>tr>th:last-child,.panel>.table-bordered>thead>tr>td:last-child,.panel>.table-bordered>thead>tr>th:last-child,.panel>.table-responsive>.table-bordered>tbody>tr>td:last-child,.panel>.table-responsive>.table-bordered>tbody>tr>th:last-child,.panel>.table-responsive>.table-bordered>tfoot>tr>td:last-child,.panel>.table-responsive>.table-bordered>tfoot>tr>th:last-child,.panel>.table-responsive>.table-bordered>thead>tr>td:last-child,.panel>.table-responsive>.table-bordered>thead>tr>th:last-child{border-right:0}.panel>.table-bordered>tbody>tr:first-child>td,.panel>.table-bordered>tbody>tr:first-child>th,.panel>.table-bordered>tbody>tr:last-child>td,.panel>.table-bordered>tbody>tr:last-child>th,.panel>.table-bordered>tfoot>tr:last-child>td,.panel>.table-bordered>tfoot>tr:last-child>th,.panel>.table-bordered>thead>tr:first-child>td,.panel>.table-bordered>thead>tr:first-child>th,.panel>.table-responsive>.table-bordered>tbody>tr:first-child>td,.panel>.table-responsive>.table-bordered>tbody>tr:first-child>th,.panel>.table-responsive>.table-bordered>tbody>tr:last-child>td,.panel>.table-responsive>.table-bordered>tbody>tr:last-child>th,.panel>.table-responsive>.table-bordered>tfoot>tr:last-child>td,.panel>.table-responsive>.table-bordered>tfoot>tr:last-child>th,.panel>.table-responsive>.table-bordered>thead>tr:first-child>td,.panel>.table-responsive>.table-bordered>thead>tr:first-child>th{border-bottom:0}.panel>.table-responsive{margin-bottom:0;border:0}.panel-group{margin-bottom:20px}.panel-group .panel{margin-bottom:0;border-radius:4px}.panel-group .panel+.panel{margin-top:5px}.panel-group .panel-heading{border-bottom:0}.panel-group .panel-heading+.panel-collapse>.list-group,.panel-group .panel-heading+.panel-collapse>.panel-body{border-top:1px solid #ddd}.panel-group .panel-footer{border-top:0}.panel-group .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}.panel-default{border-color:#ddd}.panel-default>.panel-heading{color:#333;background-color:#f5f5f5;border-color:#ddd}.panel-default>.panel-heading+.panel-collapse>.panel-body{border-top-color:#ddd}.panel-default>.panel-heading .badge{color:#f5f5f5;background-color:#333}.panel-default>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#ddd}.panel-primary{border-color:#337ab7}.panel-primary>.panel-heading{color:#fff;background-color:#337ab7;border-color:#337ab7}.panel-primary>.panel-heading+.panel-collapse>.panel-body{border-top-color:#337ab7}.panel-primary>.panel-heading .badge{color:#337ab7;background-color:#fff}.panel-primary>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#337ab7}.panel-success{border-color:#d6e9c6}.panel-success>.panel-heading{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}.panel-success>.panel-heading+.panel-collapse>.panel-body{border-top-color:#d6e9c6}.panel-success>.panel-heading .badge{color:#dff0d8;background-color:#3c763d}.panel-success>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#d6e9c6}.panel-info{border-color:#bce8f1}.panel-info>.panel-heading{color:#31708f;background-color:#d9edf7;border-color:#bce8f1}.panel-info>.panel-heading+.panel-collapse>.panel-body{border-top-color:#bce8f1}.panel-info>.panel-heading .badge{color:#d9edf7;background-color:#31708f}.panel-info>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#bce8f1}.panel-warning{border-color:#faebcc}.panel-warning>.panel-heading{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc}.panel-warning>.panel-heading+.panel-collapse>.panel-body{border-top-color:#faebcc}.panel-warning>.panel-heading .badge{color:#fcf8e3;background-color:#8a6d3b}.panel-warning>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#faebcc}.panel-danger{border-color:#ebccd1}.panel-danger>.panel-heading{color:#a94442;background-color:#f2dede;border-color:#ebccd1}.panel-danger>.panel-heading+.panel-collapse>.panel-body{border-top-color:#ebccd1}.panel-danger>.panel-heading .badge{color:#f2dede;background-color:#a94442}.panel-danger>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#ebccd1}.embed-responsive{position:relative;display:block;height:0;padding:0;overflow:hidden}.embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}.embed-responsive-16by9{padding-bottom:56.25%}.embed-responsive-4by3{padding-bottom:75%}.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.05)}.well blockquote{border-color:#ddd;border-color:rgba(0,0,0,.15)}.well-lg{padding:24px;border-radius:6px}.well-sm{padding:9px;border-radius:3px}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}.close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;filter:alpha(opacity=50);opacity:.5}button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:transparent;border:0}.modal,.modal-open{overflow:hidden}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;-webkit-transform:translateY(-25%);transform:translateY(-25%)}.modal.in .modal-dialog{-webkit-transform:translate(0);transform:translate(0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;outline:0;box-shadow:0 3px 9px rgba(0,0,0,.5)}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0}.modal-backdrop.in{filter:alpha(opacity=50);opacity:.5}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer .btn+.btn{margin-bottom:0;margin-left:5px}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{box-shadow:0 5px 15px rgba(0,0,0,.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}.tooltip{position:absolute;z-index:1070;display:block;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:12px;font-style:normal;font-weight:400;line-height:1.42857143;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;filter:alpha(opacity=0);opacity:0;line-break:auto}.tooltip.in{filter:alpha(opacity=90);opacity:.9}.tooltip.top{padding:5px 0;margin-top:-3px}.tooltip.right{padding:0 5px;margin-left:3px}.tooltip.bottom{padding:5px 0;margin-top:3px}.tooltip.left{padding:0 5px;margin-left:-3px}.tooltip-inner{max-width:200px;padding:3px 8px;color:#fff;text-align:center;background-color:#000;border-radius:4px}.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid}.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000}.tooltip.top-left .tooltip-arrow{right:5px}.tooltip.top-left .tooltip-arrow,.tooltip.top-right .tooltip-arrow{bottom:0;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000}.tooltip.top-right .tooltip-arrow{left:5px}.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000}.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000}.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000}.tooltip.bottom-left .tooltip-arrow{top:0;right:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000}.tooltip.bottom-right .tooltip-arrow{top:0;left:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000}.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;font-style:normal;font-weight:400;line-height:1.42857143;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;background-color:#fff;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 5px 10px rgba(0,0,0,.2);line-break:auto}.popover.top{margin-top:-10px}.popover.right{margin-left:10px}.popover.bottom{margin-top:10px}.popover.left{margin-left:-10px}.popover-title{padding:8px 14px;margin:0;font-size:14px;background-color:#f7f7f7;border-bottom:1px solid #ebebeb;border-radius:5px 5px 0 0}.popover-content{padding:9px 14px}.popover>.arrow,.popover>.arrow:after{position:absolute;display:block;width:0;height:0;border-color:transparent;border-style:solid}.popover>.arrow{border-width:11px}.popover>.arrow:after{content:"";border-width:10px}.popover.top>.arrow{bottom:-11px;left:50%;margin-left:-11px;border-top-color:#999;border-top-color:rgba(0,0,0,.25);border-bottom-width:0}.popover.top>.arrow:after{bottom:1px;margin-left:-10px;content:" ";border-top-color:#fff;border-bottom-width:0}.popover.right>.arrow{top:50%;left:-11px;margin-top:-11px;border-right-color:#999;border-right-color:rgba(0,0,0,.25);border-left-width:0}.popover.right>.arrow:after{bottom:-10px;left:1px;content:" ";border-right-color:#fff;border-left-width:0}.popover.bottom>.arrow{top:-11px;left:50%;margin-left:-11px;border-top-width:0;border-bottom-color:#999;border-bottom-color:rgba(0,0,0,.25)}.popover.bottom>.arrow:after{top:1px;margin-left:-10px;content:" ";border-top-width:0;border-bottom-color:#fff}.popover.left>.arrow{top:50%;right:-11px;margin-top:-11px;border-right-width:0;border-left-color:#999;border-left-color:rgba(0,0,0,.25)}.popover.left>.arrow:after{right:1px;bottom:-10px;content:" ";border-right-width:0;border-left-color:#fff}.carousel,.carousel-inner{position:relative}.carousel-inner{width:100%;overflow:hidden}.carousel-inner>.item{position:relative;display:none;-webkit-transition:left .6s ease-in-out;transition:left .6s ease-in-out}.carousel-inner>.item>a>img,.carousel-inner>.item>img{line-height:1}@media (-webkit-transform-3d),all and (transform-3d){.carousel-inner>.item{-webkit-transition:-webkit-transform .6s ease-in-out;transition:transform .6s ease-in-out;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}.carousel-inner>.item.active.right,.carousel-inner>.item.next{left:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}.carousel-inner>.item.active.left,.carousel-inner>.item.prev{left:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}.carousel-inner>.item.active,.carousel-inner>.item.next.left,.carousel-inner>.item.prev.right{left:0;-webkit-transform:translateZ(0);transform:translateZ(0)}}.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{display:block}.carousel-inner>.active{left:0}.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}.carousel-inner>.next{left:100%}.carousel-inner>.prev{left:-100%}.carousel-inner>.next.left,.carousel-inner>.prev.right{left:0}.carousel-inner>.active.left{left:-100%}.carousel-inner>.active.right{left:100%}.carousel-control{position:absolute;top:0;bottom:0;left:0;width:15%;font-size:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6);background-color:transparent;filter:alpha(opacity=50);opacity:.5}.carousel-control.left{background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,.0001));background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));background-image:linear-gradient(90deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001));filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#80000000\',endColorstr=\'#00000000\',GradientType=1);background-repeat:repeat-x}.carousel-control.right{right:0;left:auto;background-image:-webkit-linear-gradient(left,rgba(0,0,0,.0001),rgba(0,0,0,.5));background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));background-image:linear-gradient(90deg,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5));filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\'#00000000\',endColorstr=\'#80000000\',GradientType=1);background-repeat:repeat-x}.carousel-control:focus,.carousel-control:hover{color:#fff;text-decoration:none;filter:alpha(opacity=90);outline:0;opacity:.9}.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{position:absolute;top:50%;z-index:5;display:inline-block;margin-top:-10px}.carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{left:50%;margin-left:-10px}.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{right:50%;margin-right:-10px}.carousel-control .icon-next,.carousel-control .icon-prev{width:20px;height:20px;font-family:serif;line-height:1}.carousel-control .icon-prev:before{content:\'\\2039\'}.carousel-control .icon-next:before{content:\'\\203A\'}.carousel-indicators{position:absolute;bottom:10px;left:50%;z-index:15;width:60%;padding-left:0;margin-left:-30%;text-align:center;list-style:none}.carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;cursor:pointer;background-color:#000\\9;background-color:transparent;border:1px solid #fff;border-radius:10px}.carousel-indicators .active{width:12px;height:12px;margin:0;background-color:#fff}.carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6)}.carousel-caption .btn{text-shadow:none}@media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-10px;font-size:30px}.carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{margin-left:-10px}.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-10px}.carousel-caption{right:20%;left:20%;padding-bottom:30px}.carousel-indicators{bottom:20px}}.btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.modal-header:after,.modal-header:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.row:after,.row:before{display:table;content:" "}.btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.modal-header:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}@media (max-width:767px){.visible-xs{display:block!important}table.visible-xs{display:table!important}tr.visible-xs{display:table-row!important}td.visible-xs,th.visible-xs{display:table-cell!important}}@media (max-width:767px){.visible-xs-block{display:block!important}}@media (max-width:767px){.visible-xs-inline{display:inline!important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}table.visible-sm{display:table!important}tr.visible-sm{display:table-row!important}td.visible-sm,th.visible-sm{display:table-cell!important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline!important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}table.visible-md{display:table!important}tr.visible-md{display:table-row!important}td.visible-md,th.visible-md{display:table-cell!important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline!important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block!important}}@media (min-width:1200px){.visible-lg{display:block!important}table.visible-lg{display:table!important}tr.visible-lg{display:table-row!important}td.visible-lg,th.visible-lg{display:table-cell!important}}@media (min-width:1200px){.visible-lg-block{display:block!important}}@media (min-width:1200px){.visible-lg-inline{display:inline!important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block!important}}@media (max-width:767px){.hidden-xs{display:none!important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}@media (min-width:1200px){.hidden-lg{display:none!important}}.visible-print{display:none!important}@media print{.visible-print{display:block!important}table.visible-print{display:table!important}tr.visible-print{display:table-row!important}td.visible-print,th.visible-print{display:table-cell!important}}.visible-print-block{display:none!important}@media print{.visible-print-block{display:block!important}}.visible-print-inline{display:none!important}@media print{.visible-print-inline{display:inline!important}}.visible-print-inline-block{display:none!important}@media print{.visible-print-inline-block{display:inline-block!important}}@media print{.hidden-print{display:none!important}}',""]);
-},function(t,exports,e){t.exports=e.p+"assets/f4769f9bdb7466be65088239c12046d1.eot"},function(t,exports,e){t.exports=e.p+"assets/448c34a56d699c29117adc64c43affeb.woff2"},function(t,exports,e){t.exports=e.p+"assets/fa2772327f55d8198301fdb8bcfc8158.woff"},function(t,exports,e){t.exports=e.p+"assets/e18bbf611f2a2e43afc071aa2f4e1512.ttf"},function(t,exports,e){t.exports=e.p+"assets/89889688147bd7575d6327160d64e760.svg"}]);
+	
+	/* commonjs package manager support (eg componentjs) */
+	if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports){
+	  module.exports = 'ui.router';
+	}
+	
+	(function (window, angular, undefined) {
+	/*jshint globalstrict:true*/
+	/*global angular:false*/
+	'use strict';
+	
+	var isDefined = angular.isDefined,
+	    isFunction = angular.isFunction,
+	    isString = angular.isString,
+	    isObject = angular.isObject,
+	    isArray = angular.isArray,
+	    forEach = angular.forEach,
+	    extend = angular.extend,
+	    copy = angular.copy,
+	    toJson = angular.toJson;
+	
+	function inherit(parent, extra) {
+	  return extend(new (extend(function() {}, { prototype: parent }))(), extra);
+	}
+	
+	function merge(dst) {
+	  forEach(arguments, function(obj) {
+	    if (obj !== dst) {
+	      forEach(obj, function(value, key) {
+	        if (!dst.hasOwnProperty(key)) dst[key] = value;
+	      });
+	    }
+	  });
+	  return dst;
+	}
+	
+	/**
+	 * Finds the common ancestor path between two states.
+	 *
+	 * @param {Object} first The first state.
+	 * @param {Object} second The second state.
+	 * @return {Array} Returns an array of state names in descending order, not including the root.
+	 */
+	function ancestors(first, second) {
+	  var path = [];
+	
+	  for (var n in first.path) {
+	    if (first.path[n] !== second.path[n]) break;
+	    path.push(first.path[n]);
+	  }
+	  return path;
+	}
+	
+	/**
+	 * IE8-safe wrapper for `Object.keys()`.
+	 *
+	 * @param {Object} object A JavaScript object.
+	 * @return {Array} Returns the keys of the object as an array.
+	 */
+	function objectKeys(object) {
+	  if (Object.keys) {
+	    return Object.keys(object);
+	  }
+	  var result = [];
+	
+	  forEach(object, function(val, key) {
+	    result.push(key);
+	  });
+	  return result;
+	}
+	
+	/**
+	 * IE8-safe wrapper for `Array.prototype.indexOf()`.
+	 *
+	 * @param {Array} array A JavaScript array.
+	 * @param {*} value A value to search the array for.
+	 * @return {Number} Returns the array index value of `value`, or `-1` if not present.
+	 */
+	function indexOf(array, value) {
+	  if (Array.prototype.indexOf) {
+	    return array.indexOf(value, Number(arguments[2]) || 0);
+	  }
+	  var len = array.length >>> 0, from = Number(arguments[2]) || 0;
+	  from = (from < 0) ? Math.ceil(from) : Math.floor(from);
+	
+	  if (from < 0) from += len;
+	
+	  for (; from < len; from++) {
+	    if (from in array && array[from] === value) return from;
+	  }
+	  return -1;
+	}
+	
+	/**
+	 * Merges a set of parameters with all parameters inherited between the common parents of the
+	 * current state and a given destination state.
+	 *
+	 * @param {Object} currentParams The value of the current state parameters ($stateParams).
+	 * @param {Object} newParams The set of parameters which will be composited with inherited params.
+	 * @param {Object} $current Internal definition of object representing the current state.
+	 * @param {Object} $to Internal definition of object representing state to transition to.
+	 */
+	function inheritParams(currentParams, newParams, $current, $to) {
+	  var parents = ancestors($current, $to), parentParams, inherited = {}, inheritList = [];
+	
+	  for (var i in parents) {
+	    if (!parents[i] || !parents[i].params) continue;
+	    parentParams = objectKeys(parents[i].params);
+	    if (!parentParams.length) continue;
+	
+	    for (var j in parentParams) {
+	      if (indexOf(inheritList, parentParams[j]) >= 0) continue;
+	      inheritList.push(parentParams[j]);
+	      inherited[parentParams[j]] = currentParams[parentParams[j]];
+	    }
+	  }
+	  return extend({}, inherited, newParams);
+	}
+	
+	/**
+	 * Performs a non-strict comparison of the subset of two objects, defined by a list of keys.
+	 *
+	 * @param {Object} a The first object.
+	 * @param {Object} b The second object.
+	 * @param {Array} keys The list of keys within each object to compare. If the list is empty or not specified,
+	 *                     it defaults to the list of keys in `a`.
+	 * @return {Boolean} Returns `true` if the keys match, otherwise `false`.
+	 */
+	function equalForKeys(a, b, keys) {
+	  if (!keys) {
+	    keys = [];
+	    for (var n in a) keys.push(n); // Used instead of Object.keys() for IE8 compatibility
+	  }
+	
+	  for (var i=0; i<keys.length; i++) {
+	    var k = keys[i];
+	    if (a[k] != b[k]) return false; // Not '===', values aren't necessarily normalized
+	  }
+	  return true;
+	}
+	
+	/**
+	 * Returns the subset of an object, based on a list of keys.
+	 *
+	 * @param {Array} keys
+	 * @param {Object} values
+	 * @return {Boolean} Returns a subset of `values`.
+	 */
+	function filterByKeys(keys, values) {
+	  var filtered = {};
+	
+	  forEach(keys, function (name) {
+	    filtered[name] = values[name];
+	  });
+	  return filtered;
+	}
+	
+	// like _.indexBy
+	// when you know that your index values will be unique, or you want last-one-in to win
+	function indexBy(array, propName) {
+	  var result = {};
+	  forEach(array, function(item) {
+	    result[item[propName]] = item;
+	  });
+	  return result;
+	}
+	
+	// extracted from underscore.js
+	// Return a copy of the object only containing the whitelisted properties.
+	function pick(obj) {
+	  var copy = {};
+	  var keys = Array.prototype.concat.apply(Array.prototype, Array.prototype.slice.call(arguments, 1));
+	  forEach(keys, function(key) {
+	    if (key in obj) copy[key] = obj[key];
+	  });
+	  return copy;
+	}
+	
+	// extracted from underscore.js
+	// Return a copy of the object omitting the blacklisted properties.
+	function omit(obj) {
+	  var copy = {};
+	  var keys = Array.prototype.concat.apply(Array.prototype, Array.prototype.slice.call(arguments, 1));
+	  for (var key in obj) {
+	    if (indexOf(keys, key) == -1) copy[key] = obj[key];
+	  }
+	  return copy;
+	}
+	
+	function pluck(collection, key) {
+	  var result = isArray(collection) ? [] : {};
+	
+	  forEach(collection, function(val, i) {
+	    result[i] = isFunction(key) ? key(val) : val[key];
+	  });
+	  return result;
+	}
+	
+	function filter(collection, callback) {
+	  var array = isArray(collection);
+	  var result = array ? [] : {};
+	  forEach(collection, function(val, i) {
+	    if (callback(val, i)) {
+	      result[array ? result.length : i] = val;
+	    }
+	  });
+	  return result;
+	}
+	
+	function map(collection, callback) {
+	  var result = isArray(collection) ? [] : {};
+	
+	  forEach(collection, function(val, i) {
+	    result[i] = callback(val, i);
+	  });
+	  return result;
+	}
+	
+	/**
+	 * @ngdoc overview
+	 * @name ui.router.util
+	 *
+	 * @description
+	 * # ui.router.util sub-module
+	 *
+	 * This module is a dependency of other sub-modules. Do not include this module as a dependency
+	 * in your angular app (use {@link ui.router} module instead).
+	 *
+	 */
+	angular.module('ui.router.util', ['ng']);
+	
+	/**
+	 * @ngdoc overview
+	 * @name ui.router.router
+	 * 
+	 * @requires ui.router.util
+	 *
+	 * @description
+	 * # ui.router.router sub-module
+	 *
+	 * This module is a dependency of other sub-modules. Do not include this module as a dependency
+	 * in your angular app (use {@link ui.router} module instead).
+	 */
+	angular.module('ui.router.router', ['ui.router.util']);
+	
+	/**
+	 * @ngdoc overview
+	 * @name ui.router.state
+	 * 
+	 * @requires ui.router.router
+	 * @requires ui.router.util
+	 *
+	 * @description
+	 * # ui.router.state sub-module
+	 *
+	 * This module is a dependency of the main ui.router module. Do not include this module as a dependency
+	 * in your angular app (use {@link ui.router} module instead).
+	 * 
+	 */
+	angular.module('ui.router.state', ['ui.router.router', 'ui.router.util']);
+	
+	/**
+	 * @ngdoc overview
+	 * @name ui.router
+	 *
+	 * @requires ui.router.state
+	 *
+	 * @description
+	 * # ui.router
+	 * 
+	 * ## The main module for ui.router 
+	 * There are several sub-modules included with the ui.router module, however only this module is needed
+	 * as a dependency within your angular app. The other modules are for organization purposes. 
+	 *
+	 * The modules are:
+	 * * ui.router - the main "umbrella" module
+	 * * ui.router.router - 
+	 * 
+	 * *You'll need to include **only** this module as the dependency within your angular app.*
+	 * 
+	 * <pre>
+	 * <!doctype html>
+	 * <html ng-app="myApp">
+	 * <head>
+	 *   <script src="js/angular.js"></script>
+	 *   <!-- Include the ui-router script -->
+	 *   <script src="js/angular-ui-router.min.js"></script>
+	 *   <script>
+	 *     // ...and add 'ui.router' as a dependency
+	 *     var myApp = angular.module('myApp', ['ui.router']);
+	 *   </script>
+	 * </head>
+	 * <body>
+	 * </body>
+	 * </html>
+	 * </pre>
+	 */
+	angular.module('ui.router', ['ui.router.state']);
+	
+	angular.module('ui.router.compat', ['ui.router']);
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.util.$resolve
+	 *
+	 * @requires $q
+	 * @requires $injector
+	 *
+	 * @description
+	 * Manages resolution of (acyclic) graphs of promises.
+	 */
+	$Resolve.$inject = ['$q', '$injector'];
+	function $Resolve(  $q,    $injector) {
+	  
+	  var VISIT_IN_PROGRESS = 1,
+	      VISIT_DONE = 2,
+	      NOTHING = {},
+	      NO_DEPENDENCIES = [],
+	      NO_LOCALS = NOTHING,
+	      NO_PARENT = extend($q.when(NOTHING), { $$promises: NOTHING, $$values: NOTHING });
+	  
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$resolve#study
+	   * @methodOf ui.router.util.$resolve
+	   *
+	   * @description
+	   * Studies a set of invocables that are likely to be used multiple times.
+	   * <pre>
+	   * $resolve.study(invocables)(locals, parent, self)
+	   * </pre>
+	   * is equivalent to
+	   * <pre>
+	   * $resolve.resolve(invocables, locals, parent, self)
+	   * </pre>
+	   * but the former is more efficient (in fact `resolve` just calls `study` 
+	   * internally).
+	   *
+	   * @param {object} invocables Invocable objects
+	   * @return {function} a function to pass in locals, parent and self
+	   */
+	  this.study = function (invocables) {
+	    if (!isObject(invocables)) throw new Error("'invocables' must be an object");
+	    var invocableKeys = objectKeys(invocables || {});
+	    
+	    // Perform a topological sort of invocables to build an ordered plan
+	    var plan = [], cycle = [], visited = {};
+	    function visit(value, key) {
+	      if (visited[key] === VISIT_DONE) return;
+	      
+	      cycle.push(key);
+	      if (visited[key] === VISIT_IN_PROGRESS) {
+	        cycle.splice(0, indexOf(cycle, key));
+	        throw new Error("Cyclic dependency: " + cycle.join(" -> "));
+	      }
+	      visited[key] = VISIT_IN_PROGRESS;
+	      
+	      if (isString(value)) {
+	        plan.push(key, [ function() { return $injector.get(value); }], NO_DEPENDENCIES);
+	      } else {
+	        var params = $injector.annotate(value);
+	        forEach(params, function (param) {
+	          if (param !== key && invocables.hasOwnProperty(param)) visit(invocables[param], param);
+	        });
+	        plan.push(key, value, params);
+	      }
+	      
+	      cycle.pop();
+	      visited[key] = VISIT_DONE;
+	    }
+	    forEach(invocables, visit);
+	    invocables = cycle = visited = null; // plan is all that's required
+	    
+	    function isResolve(value) {
+	      return isObject(value) && value.then && value.$$promises;
+	    }
+	    
+	    return function (locals, parent, self) {
+	      if (isResolve(locals) && self === undefined) {
+	        self = parent; parent = locals; locals = null;
+	      }
+	      if (!locals) locals = NO_LOCALS;
+	      else if (!isObject(locals)) {
+	        throw new Error("'locals' must be an object");
+	      }       
+	      if (!parent) parent = NO_PARENT;
+	      else if (!isResolve(parent)) {
+	        throw new Error("'parent' must be a promise returned by $resolve.resolve()");
+	      }
+	      
+	      // To complete the overall resolution, we have to wait for the parent
+	      // promise and for the promise for each invokable in our plan.
+	      var resolution = $q.defer(),
+	          result = resolution.promise,
+	          promises = result.$$promises = {},
+	          values = extend({}, locals),
+	          wait = 1 + plan.length/3,
+	          merged = false;
+	          
+	      function done() {
+	        // Merge parent values we haven't got yet and publish our own $$values
+	        if (!--wait) {
+	          if (!merged) merge(values, parent.$$values); 
+	          result.$$values = values;
+	          result.$$promises = result.$$promises || true; // keep for isResolve()
+	          delete result.$$inheritedValues;
+	          resolution.resolve(values);
+	        }
+	      }
+	      
+	      function fail(reason) {
+	        result.$$failure = reason;
+	        resolution.reject(reason);
+	      }
+	
+	      // Short-circuit if parent has already failed
+	      if (isDefined(parent.$$failure)) {
+	        fail(parent.$$failure);
+	        return result;
+	      }
+	      
+	      if (parent.$$inheritedValues) {
+	        merge(values, omit(parent.$$inheritedValues, invocableKeys));
+	      }
+	
+	      // Merge parent values if the parent has already resolved, or merge
+	      // parent promises and wait if the parent resolve is still in progress.
+	      extend(promises, parent.$$promises);
+	      if (parent.$$values) {
+	        merged = merge(values, omit(parent.$$values, invocableKeys));
+	        result.$$inheritedValues = omit(parent.$$values, invocableKeys);
+	        done();
+	      } else {
+	        if (parent.$$inheritedValues) {
+	          result.$$inheritedValues = omit(parent.$$inheritedValues, invocableKeys);
+	        }        
+	        parent.then(done, fail);
+	      }
+	      
+	      // Process each invocable in the plan, but ignore any where a local of the same name exists.
+	      for (var i=0, ii=plan.length; i<ii; i+=3) {
+	        if (locals.hasOwnProperty(plan[i])) done();
+	        else invoke(plan[i], plan[i+1], plan[i+2]);
+	      }
+	      
+	      function invoke(key, invocable, params) {
+	        // Create a deferred for this invocation. Failures will propagate to the resolution as well.
+	        var invocation = $q.defer(), waitParams = 0;
+	        function onfailure(reason) {
+	          invocation.reject(reason);
+	          fail(reason);
+	        }
+	        // Wait for any parameter that we have a promise for (either from parent or from this
+	        // resolve; in that case study() will have made sure it's ordered before us in the plan).
+	        forEach(params, function (dep) {
+	          if (promises.hasOwnProperty(dep) && !locals.hasOwnProperty(dep)) {
+	            waitParams++;
+	            promises[dep].then(function (result) {
+	              values[dep] = result;
+	              if (!(--waitParams)) proceed();
+	            }, onfailure);
+	          }
+	        });
+	        if (!waitParams) proceed();
+	        function proceed() {
+	          if (isDefined(result.$$failure)) return;
+	          try {
+	            invocation.resolve($injector.invoke(invocable, self, values));
+	            invocation.promise.then(function (result) {
+	              values[key] = result;
+	              done();
+	            }, onfailure);
+	          } catch (e) {
+	            onfailure(e);
+	          }
+	        }
+	        // Publish promise synchronously; invocations further down in the plan may depend on it.
+	        promises[key] = invocation.promise;
+	      }
+	      
+	      return result;
+	    };
+	  };
+	  
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$resolve#resolve
+	   * @methodOf ui.router.util.$resolve
+	   *
+	   * @description
+	   * Resolves a set of invocables. An invocable is a function to be invoked via 
+	   * `$injector.invoke()`, and can have an arbitrary number of dependencies. 
+	   * An invocable can either return a value directly,
+	   * or a `$q` promise. If a promise is returned it will be resolved and the 
+	   * resulting value will be used instead. Dependencies of invocables are resolved 
+	   * (in this order of precedence)
+	   *
+	   * - from the specified `locals`
+	   * - from another invocable that is part of this `$resolve` call
+	   * - from an invocable that is inherited from a `parent` call to `$resolve` 
+	   *   (or recursively
+	   * - from any ancestor `$resolve` of that parent).
+	   *
+	   * The return value of `$resolve` is a promise for an object that contains 
+	   * (in this order of precedence)
+	   *
+	   * - any `locals` (if specified)
+	   * - the resolved return values of all injectables
+	   * - any values inherited from a `parent` call to `$resolve` (if specified)
+	   *
+	   * The promise will resolve after the `parent` promise (if any) and all promises 
+	   * returned by injectables have been resolved. If any invocable 
+	   * (or `$injector.invoke`) throws an exception, or if a promise returned by an 
+	   * invocable is rejected, the `$resolve` promise is immediately rejected with the 
+	   * same error. A rejection of a `parent` promise (if specified) will likewise be 
+	   * propagated immediately. Once the `$resolve` promise has been rejected, no 
+	   * further invocables will be called.
+	   * 
+	   * Cyclic dependencies between invocables are not permitted and will cause `$resolve`
+	   * to throw an error. As a special case, an injectable can depend on a parameter 
+	   * with the same name as the injectable, which will be fulfilled from the `parent` 
+	   * injectable of the same name. This allows inherited values to be decorated. 
+	   * Note that in this case any other injectable in the same `$resolve` with the same
+	   * dependency would see the decorated value, not the inherited value.
+	   *
+	   * Note that missing dependencies -- unlike cyclic dependencies -- will cause an 
+	   * (asynchronous) rejection of the `$resolve` promise rather than a (synchronous) 
+	   * exception.
+	   *
+	   * Invocables are invoked eagerly as soon as all dependencies are available. 
+	   * This is true even for dependencies inherited from a `parent` call to `$resolve`.
+	   *
+	   * As a special case, an invocable can be a string, in which case it is taken to 
+	   * be a service name to be passed to `$injector.get()`. This is supported primarily 
+	   * for backwards-compatibility with the `resolve` property of `$routeProvider` 
+	   * routes.
+	   *
+	   * @param {object} invocables functions to invoke or 
+	   * `$injector` services to fetch.
+	   * @param {object} locals  values to make available to the injectables
+	   * @param {object} parent  a promise returned by another call to `$resolve`.
+	   * @param {object} self  the `this` for the invoked methods
+	   * @return {object} Promise for an object that contains the resolved return value
+	   * of all invocables, as well as any inherited and local values.
+	   */
+	  this.resolve = function (invocables, locals, parent, self) {
+	    return this.study(invocables)(locals, parent, self);
+	  };
+	}
+	
+	angular.module('ui.router.util').service('$resolve', $Resolve);
+	
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.util.$templateFactory
+	 *
+	 * @requires $http
+	 * @requires $templateCache
+	 * @requires $injector
+	 *
+	 * @description
+	 * Service. Manages loading of templates.
+	 */
+	$TemplateFactory.$inject = ['$http', '$templateCache', '$injector'];
+	function $TemplateFactory(  $http,   $templateCache,   $injector) {
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$templateFactory#fromConfig
+	   * @methodOf ui.router.util.$templateFactory
+	   *
+	   * @description
+	   * Creates a template from a configuration object. 
+	   *
+	   * @param {object} config Configuration object for which to load a template. 
+	   * The following properties are search in the specified order, and the first one 
+	   * that is defined is used to create the template:
+	   *
+	   * @param {string|object} config.template html string template or function to 
+	   * load via {@link ui.router.util.$templateFactory#fromString fromString}.
+	   * @param {string|object} config.templateUrl url to load or a function returning 
+	   * the url to load via {@link ui.router.util.$templateFactory#fromUrl fromUrl}.
+	   * @param {Function} config.templateProvider function to invoke via 
+	   * {@link ui.router.util.$templateFactory#fromProvider fromProvider}.
+	   * @param {object} params  Parameters to pass to the template function.
+	   * @param {object} locals Locals to pass to `invoke` if the template is loaded 
+	   * via a `templateProvider`. Defaults to `{ params: params }`.
+	   *
+	   * @return {string|object}  The template html as a string, or a promise for 
+	   * that string,or `null` if no template is configured.
+	   */
+	  this.fromConfig = function (config, params, locals) {
+	    return (
+	      isDefined(config.template) ? this.fromString(config.template, params) :
+	      isDefined(config.templateUrl) ? this.fromUrl(config.templateUrl, params) :
+	      isDefined(config.templateProvider) ? this.fromProvider(config.templateProvider, params, locals) :
+	      null
+	    );
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$templateFactory#fromString
+	   * @methodOf ui.router.util.$templateFactory
+	   *
+	   * @description
+	   * Creates a template from a string or a function returning a string.
+	   *
+	   * @param {string|object} template html template as a string or function that 
+	   * returns an html template as a string.
+	   * @param {object} params Parameters to pass to the template function.
+	   *
+	   * @return {string|object} The template html as a string, or a promise for that 
+	   * string.
+	   */
+	  this.fromString = function (template, params) {
+	    return isFunction(template) ? template(params) : template;
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$templateFactory#fromUrl
+	   * @methodOf ui.router.util.$templateFactory
+	   * 
+	   * @description
+	   * Loads a template from the a URL via `$http` and `$templateCache`.
+	   *
+	   * @param {string|Function} url url of the template to load, or a function 
+	   * that returns a url.
+	   * @param {Object} params Parameters to pass to the url function.
+	   * @return {string|Promise.<string>} The template html as a string, or a promise 
+	   * for that string.
+	   */
+	  this.fromUrl = function (url, params) {
+	    if (isFunction(url)) url = url(params);
+	    if (url == null) return null;
+	    else return $http
+	        .get(url, { cache: $templateCache, headers: { Accept: 'text/html' }})
+	        .then(function(response) { return response.data; });
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$templateFactory#fromProvider
+	   * @methodOf ui.router.util.$templateFactory
+	   *
+	   * @description
+	   * Creates a template by invoking an injectable provider function.
+	   *
+	   * @param {Function} provider Function to invoke via `$injector.invoke`
+	   * @param {Object} params Parameters for the template.
+	   * @param {Object} locals Locals to pass to `invoke`. Defaults to 
+	   * `{ params: params }`.
+	   * @return {string|Promise.<string>} The template html as a string, or a promise 
+	   * for that string.
+	   */
+	  this.fromProvider = function (provider, params, locals) {
+	    return $injector.invoke(provider, null, locals || { params: params });
+	  };
+	}
+	
+	angular.module('ui.router.util').service('$templateFactory', $TemplateFactory);
+	
+	var $$UMFP; // reference to $UrlMatcherFactoryProvider
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.util.type:UrlMatcher
+	 *
+	 * @description
+	 * Matches URLs against patterns and extracts named parameters from the path or the search
+	 * part of the URL. A URL pattern consists of a path pattern, optionally followed by '?' and a list
+	 * of search parameters. Multiple search parameter names are separated by '&'. Search parameters
+	 * do not influence whether or not a URL is matched, but their values are passed through into
+	 * the matched parameters returned by {@link ui.router.util.type:UrlMatcher#methods_exec exec}.
+	 *
+	 * Path parameter placeholders can be specified using simple colon/catch-all syntax or curly brace
+	 * syntax, which optionally allows a regular expression for the parameter to be specified:
+	 *
+	 * * `':'` name - colon placeholder
+	 * * `'*'` name - catch-all placeholder
+	 * * `'{' name '}'` - curly placeholder
+	 * * `'{' name ':' regexp|type '}'` - curly placeholder with regexp or type name. Should the
+	 *   regexp itself contain curly braces, they must be in matched pairs or escaped with a backslash.
+	 *
+	 * Parameter names may contain only word characters (latin letters, digits, and underscore) and
+	 * must be unique within the pattern (across both path and search parameters). For colon
+	 * placeholders or curly placeholders without an explicit regexp, a path parameter matches any
+	 * number of characters other than '/'. For catch-all placeholders the path parameter matches
+	 * any number of characters.
+	 *
+	 * Examples:
+	 *
+	 * * `'/hello/'` - Matches only if the path is exactly '/hello/'. There is no special treatment for
+	 *   trailing slashes, and patterns have to match the entire path, not just a prefix.
+	 * * `'/user/:id'` - Matches '/user/bob' or '/user/1234!!!' or even '/user/' but not '/user' or
+	 *   '/user/bob/details'. The second path segment will be captured as the parameter 'id'.
+	 * * `'/user/{id}'` - Same as the previous example, but using curly brace syntax.
+	 * * `'/user/{id:[^/]*}'` - Same as the previous example.
+	 * * `'/user/{id:[0-9a-fA-F]{1,8}}'` - Similar to the previous example, but only matches if the id
+	 *   parameter consists of 1 to 8 hex digits.
+	 * * `'/files/{path:.*}'` - Matches any URL starting with '/files/' and captures the rest of the
+	 *   path into the parameter 'path'.
+	 * * `'/files/*path'` - ditto.
+	 * * `'/calendar/{start:date}'` - Matches "/calendar/2014-11-12" (because the pattern defined
+	 *   in the built-in  `date` Type matches `2014-11-12`) and provides a Date object in $stateParams.start
+	 *
+	 * @param {string} pattern  The pattern to compile into a matcher.
+	 * @param {Object} config  A configuration object hash:
+	 * @param {Object=} parentMatcher Used to concatenate the pattern/config onto
+	 *   an existing UrlMatcher
+	 *
+	 * * `caseInsensitive` - `true` if URL matching should be case insensitive, otherwise `false`, the default value (for backward compatibility) is `false`.
+	 * * `strict` - `false` if matching against a URL with a trailing slash should be treated as equivalent to a URL without a trailing slash, the default value is `true`.
+	 *
+	 * @property {string} prefix  A static prefix of this pattern. The matcher guarantees that any
+	 *   URL matching this matcher (i.e. any string for which {@link ui.router.util.type:UrlMatcher#methods_exec exec()} returns
+	 *   non-null) will start with this prefix.
+	 *
+	 * @property {string} source  The pattern that was passed into the constructor
+	 *
+	 * @property {string} sourcePath  The path portion of the source property
+	 *
+	 * @property {string} sourceSearch  The search portion of the source property
+	 *
+	 * @property {string} regex  The constructed regex that will be used to match against the url when
+	 *   it is time to determine which url will match.
+	 *
+	 * @returns {Object}  New `UrlMatcher` object
+	 */
+	function UrlMatcher(pattern, config, parentMatcher) {
+	  config = extend({ params: {} }, isObject(config) ? config : {});
+	
+	  // Find all placeholders and create a compiled pattern, using either classic or curly syntax:
+	  //   '*' name
+	  //   ':' name
+	  //   '{' name '}'
+	  //   '{' name ':' regexp '}'
+	  // The regular expression is somewhat complicated due to the need to allow curly braces
+	  // inside the regular expression. The placeholder regexp breaks down as follows:
+	  //    ([:*])([\w\[\]]+)              - classic placeholder ($1 / $2) (search version has - for snake-case)
+	  //    \{([\w\[\]]+)(?:\:\s*( ... ))?\}  - curly brace placeholder ($3) with optional regexp/type ... ($4) (search version has - for snake-case
+	  //    (?: ... | ... | ... )+         - the regexp consists of any number of atoms, an atom being either
+	  //    [^{}\\]+                       - anything other than curly braces or backslash
+	  //    \\.                            - a backslash escape
+	  //    \{(?:[^{}\\]+|\\.)*\}          - a matched set of curly braces containing other atoms
+	  var placeholder       = /([:*])([\w\[\]]+)|\{([\w\[\]]+)(?:\:\s*((?:[^{}\\]+|\\.|\{(?:[^{}\\]+|\\.)*\})+))?\}/g,
+	      searchPlaceholder = /([:]?)([\w\[\].-]+)|\{([\w\[\].-]+)(?:\:\s*((?:[^{}\\]+|\\.|\{(?:[^{}\\]+|\\.)*\})+))?\}/g,
+	      compiled = '^', last = 0, m,
+	      segments = this.segments = [],
+	      parentParams = parentMatcher ? parentMatcher.params : {},
+	      params = this.params = parentMatcher ? parentMatcher.params.$$new() : new $$UMFP.ParamSet(),
+	      paramNames = [];
+	
+	  function addParameter(id, type, config, location) {
+	    paramNames.push(id);
+	    if (parentParams[id]) return parentParams[id];
+	    if (!/^\w+([-.]+\w+)*(?:\[\])?$/.test(id)) throw new Error("Invalid parameter name '" + id + "' in pattern '" + pattern + "'");
+	    if (params[id]) throw new Error("Duplicate parameter name '" + id + "' in pattern '" + pattern + "'");
+	    params[id] = new $$UMFP.Param(id, type, config, location);
+	    return params[id];
+	  }
+	
+	  function quoteRegExp(string, pattern, squash, optional) {
+	    var surroundPattern = ['',''], result = string.replace(/[\\\[\]\^$*+?.()|{}]/g, "\\$&");
+	    if (!pattern) return result;
+	    switch(squash) {
+	      case false: surroundPattern = ['(', ')' + (optional ? "?" : "")]; break;
+	      case true:
+	        result = result.replace(/\/$/, '');
+	        surroundPattern = ['(?:\/(', ')|\/)?'];
+	      break;
+	      default:    surroundPattern = ['(' + squash + "|", ')?']; break;
+	    }
+	    return result + surroundPattern[0] + pattern + surroundPattern[1];
+	  }
+	
+	  this.source = pattern;
+	
+	  // Split into static segments separated by path parameter placeholders.
+	  // The number of segments is always 1 more than the number of parameters.
+	  function matchDetails(m, isSearch) {
+	    var id, regexp, segment, type, cfg, arrayMode;
+	    id          = m[2] || m[3]; // IE[78] returns '' for unmatched groups instead of null
+	    cfg         = config.params[id];
+	    segment     = pattern.substring(last, m.index);
+	    regexp      = isSearch ? m[4] : m[4] || (m[1] == '*' ? '.*' : null);
+	
+	    if (regexp) {
+	      type      = $$UMFP.type(regexp) || inherit($$UMFP.type("string"), { pattern: new RegExp(regexp, config.caseInsensitive ? 'i' : undefined) });
+	    }
+	
+	    return {
+	      id: id, regexp: regexp, segment: segment, type: type, cfg: cfg
+	    };
+	  }
+	
+	  var p, param, segment;
+	  while ((m = placeholder.exec(pattern))) {
+	    p = matchDetails(m, false);
+	    if (p.segment.indexOf('?') >= 0) break; // we're into the search part
+	
+	    param = addParameter(p.id, p.type, p.cfg, "path");
+	    compiled += quoteRegExp(p.segment, param.type.pattern.source, param.squash, param.isOptional);
+	    segments.push(p.segment);
+	    last = placeholder.lastIndex;
+	  }
+	  segment = pattern.substring(last);
+	
+	  // Find any search parameter names and remove them from the last segment
+	  var i = segment.indexOf('?');
+	
+	  if (i >= 0) {
+	    var search = this.sourceSearch = segment.substring(i);
+	    segment = segment.substring(0, i);
+	    this.sourcePath = pattern.substring(0, last + i);
+	
+	    if (search.length > 0) {
+	      last = 0;
+	      while ((m = searchPlaceholder.exec(search))) {
+	        p = matchDetails(m, true);
+	        param = addParameter(p.id, p.type, p.cfg, "search");
+	        last = placeholder.lastIndex;
+	        // check if ?&
+	      }
+	    }
+	  } else {
+	    this.sourcePath = pattern;
+	    this.sourceSearch = '';
+	  }
+	
+	  compiled += quoteRegExp(segment) + (config.strict === false ? '\/?' : '') + '$';
+	  segments.push(segment);
+	
+	  this.regexp = new RegExp(compiled, config.caseInsensitive ? 'i' : undefined);
+	  this.prefix = segments[0];
+	  this.$$paramNames = paramNames;
+	}
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:UrlMatcher#concat
+	 * @methodOf ui.router.util.type:UrlMatcher
+	 *
+	 * @description
+	 * Returns a new matcher for a pattern constructed by appending the path part and adding the
+	 * search parameters of the specified pattern to this pattern. The current pattern is not
+	 * modified. This can be understood as creating a pattern for URLs that are relative to (or
+	 * suffixes of) the current pattern.
+	 *
+	 * @example
+	 * The following two matchers are equivalent:
+	 * <pre>
+	 * new UrlMatcher('/user/{id}?q').concat('/details?date');
+	 * new UrlMatcher('/user/{id}/details?q&date');
+	 * </pre>
+	 *
+	 * @param {string} pattern  The pattern to append.
+	 * @param {Object} config  An object hash of the configuration for the matcher.
+	 * @returns {UrlMatcher}  A matcher for the concatenated pattern.
+	 */
+	UrlMatcher.prototype.concat = function (pattern, config) {
+	  // Because order of search parameters is irrelevant, we can add our own search
+	  // parameters to the end of the new pattern. Parse the new pattern by itself
+	  // and then join the bits together, but it's much easier to do this on a string level.
+	  var defaultConfig = {
+	    caseInsensitive: $$UMFP.caseInsensitive(),
+	    strict: $$UMFP.strictMode(),
+	    squash: $$UMFP.defaultSquashPolicy()
+	  };
+	  return new UrlMatcher(this.sourcePath + pattern + this.sourceSearch, extend(defaultConfig, config), this);
+	};
+	
+	UrlMatcher.prototype.toString = function () {
+	  return this.source;
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:UrlMatcher#exec
+	 * @methodOf ui.router.util.type:UrlMatcher
+	 *
+	 * @description
+	 * Tests the specified path against this matcher, and returns an object containing the captured
+	 * parameter values, or null if the path does not match. The returned object contains the values
+	 * of any search parameters that are mentioned in the pattern, but their value may be null if
+	 * they are not present in `searchParams`. This means that search parameters are always treated
+	 * as optional.
+	 *
+	 * @example
+	 * <pre>
+	 * new UrlMatcher('/user/{id}?q&r').exec('/user/bob', {
+	 *   x: '1', q: 'hello'
+	 * });
+	 * // returns { id: 'bob', q: 'hello', r: null }
+	 * </pre>
+	 *
+	 * @param {string} path  The URL path to match, e.g. `$location.path()`.
+	 * @param {Object} searchParams  URL search parameters, e.g. `$location.search()`.
+	 * @returns {Object}  The captured parameter values.
+	 */
+	UrlMatcher.prototype.exec = function (path, searchParams) {
+	  var m = this.regexp.exec(path);
+	  if (!m) return null;
+	  searchParams = searchParams || {};
+	
+	  var paramNames = this.parameters(), nTotal = paramNames.length,
+	    nPath = this.segments.length - 1,
+	    values = {}, i, j, cfg, paramName;
+	
+	  if (nPath !== m.length - 1) throw new Error("Unbalanced capture group in route '" + this.source + "'");
+	
+	  function decodePathArray(string) {
+	    function reverseString(str) { return str.split("").reverse().join(""); }
+	    function unquoteDashes(str) { return str.replace(/\\-/g, "-"); }
+	
+	    var split = reverseString(string).split(/-(?!\\)/);
+	    var allReversed = map(split, reverseString);
+	    return map(allReversed, unquoteDashes).reverse();
+	  }
+	
+	  var param, paramVal;
+	  for (i = 0; i < nPath; i++) {
+	    paramName = paramNames[i];
+	    param = this.params[paramName];
+	    paramVal = m[i+1];
+	    // if the param value matches a pre-replace pair, replace the value before decoding.
+	    for (j = 0; j < param.replace.length; j++) {
+	      if (param.replace[j].from === paramVal) paramVal = param.replace[j].to;
+	    }
+	    if (paramVal && param.array === true) paramVal = decodePathArray(paramVal);
+	    if (isDefined(paramVal)) paramVal = param.type.decode(paramVal);
+	    values[paramName] = param.value(paramVal);
+	  }
+	  for (/**/; i < nTotal; i++) {
+	    paramName = paramNames[i];
+	    values[paramName] = this.params[paramName].value(searchParams[paramName]);
+	    param = this.params[paramName];
+	    paramVal = searchParams[paramName];
+	    for (j = 0; j < param.replace.length; j++) {
+	      if (param.replace[j].from === paramVal) paramVal = param.replace[j].to;
+	    }
+	    if (isDefined(paramVal)) paramVal = param.type.decode(paramVal);
+	    values[paramName] = param.value(paramVal);
+	  }
+	
+	  return values;
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:UrlMatcher#parameters
+	 * @methodOf ui.router.util.type:UrlMatcher
+	 *
+	 * @description
+	 * Returns the names of all path and search parameters of this pattern in an unspecified order.
+	 *
+	 * @returns {Array.<string>}  An array of parameter names. Must be treated as read-only. If the
+	 *    pattern has no parameters, an empty array is returned.
+	 */
+	UrlMatcher.prototype.parameters = function (param) {
+	  if (!isDefined(param)) return this.$$paramNames;
+	  return this.params[param] || null;
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:UrlMatcher#validates
+	 * @methodOf ui.router.util.type:UrlMatcher
+	 *
+	 * @description
+	 * Checks an object hash of parameters to validate their correctness according to the parameter
+	 * types of this `UrlMatcher`.
+	 *
+	 * @param {Object} params The object hash of parameters to validate.
+	 * @returns {boolean} Returns `true` if `params` validates, otherwise `false`.
+	 */
+	UrlMatcher.prototype.validates = function (params) {
+	  return this.params.$$validates(params);
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:UrlMatcher#format
+	 * @methodOf ui.router.util.type:UrlMatcher
+	 *
+	 * @description
+	 * Creates a URL that matches this pattern by substituting the specified values
+	 * for the path and search parameters. Null values for path parameters are
+	 * treated as empty strings.
+	 *
+	 * @example
+	 * <pre>
+	 * new UrlMatcher('/user/{id}?q').format({ id:'bob', q:'yes' });
+	 * // returns '/user/bob?q=yes'
+	 * </pre>
+	 *
+	 * @param {Object} values  the values to substitute for the parameters in this pattern.
+	 * @returns {string}  the formatted URL (path and optionally search part).
+	 */
+	UrlMatcher.prototype.format = function (values) {
+	  values = values || {};
+	  var segments = this.segments, params = this.parameters(), paramset = this.params;
+	  if (!this.validates(values)) return null;
+	
+	  var i, search = false, nPath = segments.length - 1, nTotal = params.length, result = segments[0];
+	
+	  function encodeDashes(str) { // Replace dashes with encoded "\-"
+	    return encodeURIComponent(str).replace(/-/g, function(c) { return '%5C%' + c.charCodeAt(0).toString(16).toUpperCase(); });
+	  }
+	
+	  for (i = 0; i < nTotal; i++) {
+	    var isPathParam = i < nPath;
+	    var name = params[i], param = paramset[name], value = param.value(values[name]);
+	    var isDefaultValue = param.isOptional && param.type.equals(param.value(), value);
+	    var squash = isDefaultValue ? param.squash : false;
+	    var encoded = param.type.encode(value);
+	
+	    if (isPathParam) {
+	      var nextSegment = segments[i + 1];
+	      var isFinalPathParam = i + 1 === nPath;
+	
+	      if (squash === false) {
+	        if (encoded != null) {
+	          if (isArray(encoded)) {
+	            result += map(encoded, encodeDashes).join("-");
+	          } else {
+	            result += encodeURIComponent(encoded);
+	          }
+	        }
+	        result += nextSegment;
+	      } else if (squash === true) {
+	        var capture = result.match(/\/$/) ? /\/?(.*)/ : /(.*)/;
+	        result += nextSegment.match(capture)[1];
+	      } else if (isString(squash)) {
+	        result += squash + nextSegment;
+	      }
+	
+	      if (isFinalPathParam && param.squash === true && result.slice(-1) === '/') result = result.slice(0, -1);
+	    } else {
+	      if (encoded == null || (isDefaultValue && squash !== false)) continue;
+	      if (!isArray(encoded)) encoded = [ encoded ];
+	      if (encoded.length === 0) continue;
+	      encoded = map(encoded, encodeURIComponent).join('&' + name + '=');
+	      result += (search ? '&' : '?') + (name + '=' + encoded);
+	      search = true;
+	    }
+	  }
+	
+	  return result;
+	};
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.util.type:Type
+	 *
+	 * @description
+	 * Implements an interface to define custom parameter types that can be decoded from and encoded to
+	 * string parameters matched in a URL. Used by {@link ui.router.util.type:UrlMatcher `UrlMatcher`}
+	 * objects when matching or formatting URLs, or comparing or validating parameter values.
+	 *
+	 * See {@link ui.router.util.$urlMatcherFactory#methods_type `$urlMatcherFactory#type()`} for more
+	 * information on registering custom types.
+	 *
+	 * @param {Object} config  A configuration object which contains the custom type definition.  The object's
+	 *        properties will override the default methods and/or pattern in `Type`'s public interface.
+	 * @example
+	 * <pre>
+	 * {
+	 *   decode: function(val) { return parseInt(val, 10); },
+	 *   encode: function(val) { return val && val.toString(); },
+	 *   equals: function(a, b) { return this.is(a) && a === b; },
+	 *   is: function(val) { return angular.isNumber(val) isFinite(val) && val % 1 === 0; },
+	 *   pattern: /\d+/
+	 * }
+	 * </pre>
+	 *
+	 * @property {RegExp} pattern The regular expression pattern used to match values of this type when
+	 *           coming from a substring of a URL.
+	 *
+	 * @returns {Object}  Returns a new `Type` object.
+	 */
+	function Type(config) {
+	  extend(this, config);
+	}
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:Type#is
+	 * @methodOf ui.router.util.type:Type
+	 *
+	 * @description
+	 * Detects whether a value is of a particular type. Accepts a native (decoded) value
+	 * and determines whether it matches the current `Type` object.
+	 *
+	 * @param {*} val  The value to check.
+	 * @param {string} key  Optional. If the type check is happening in the context of a specific
+	 *        {@link ui.router.util.type:UrlMatcher `UrlMatcher`} object, this is the name of the
+	 *        parameter in which `val` is stored. Can be used for meta-programming of `Type` objects.
+	 * @returns {Boolean}  Returns `true` if the value matches the type, otherwise `false`.
+	 */
+	Type.prototype.is = function(val, key) {
+	  return true;
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:Type#encode
+	 * @methodOf ui.router.util.type:Type
+	 *
+	 * @description
+	 * Encodes a custom/native type value to a string that can be embedded in a URL. Note that the
+	 * return value does *not* need to be URL-safe (i.e. passed through `encodeURIComponent()`), it
+	 * only needs to be a representation of `val` that has been coerced to a string.
+	 *
+	 * @param {*} val  The value to encode.
+	 * @param {string} key  The name of the parameter in which `val` is stored. Can be used for
+	 *        meta-programming of `Type` objects.
+	 * @returns {string}  Returns a string representation of `val` that can be encoded in a URL.
+	 */
+	Type.prototype.encode = function(val, key) {
+	  return val;
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:Type#decode
+	 * @methodOf ui.router.util.type:Type
+	 *
+	 * @description
+	 * Converts a parameter value (from URL string or transition param) to a custom/native value.
+	 *
+	 * @param {string} val  The URL parameter value to decode.
+	 * @param {string} key  The name of the parameter in which `val` is stored. Can be used for
+	 *        meta-programming of `Type` objects.
+	 * @returns {*}  Returns a custom representation of the URL parameter value.
+	 */
+	Type.prototype.decode = function(val, key) {
+	  return val;
+	};
+	
+	/**
+	 * @ngdoc function
+	 * @name ui.router.util.type:Type#equals
+	 * @methodOf ui.router.util.type:Type
+	 *
+	 * @description
+	 * Determines whether two decoded values are equivalent.
+	 *
+	 * @param {*} a  A value to compare against.
+	 * @param {*} b  A value to compare against.
+	 * @returns {Boolean}  Returns `true` if the values are equivalent/equal, otherwise `false`.
+	 */
+	Type.prototype.equals = function(a, b) {
+	  return a == b;
+	};
+	
+	Type.prototype.$subPattern = function() {
+	  var sub = this.pattern.toString();
+	  return sub.substr(1, sub.length - 2);
+	};
+	
+	Type.prototype.pattern = /.*/;
+	
+	Type.prototype.toString = function() { return "{Type:" + this.name + "}"; };
+	
+	/** Given an encoded string, or a decoded object, returns a decoded object */
+	Type.prototype.$normalize = function(val) {
+	  return this.is(val) ? val : this.decode(val);
+	};
+	
+	/*
+	 * Wraps an existing custom Type as an array of Type, depending on 'mode'.
+	 * e.g.:
+	 * - urlmatcher pattern "/path?{queryParam[]:int}"
+	 * - url: "/path?queryParam=1&queryParam=2
+	 * - $stateParams.queryParam will be [1, 2]
+	 * if `mode` is "auto", then
+	 * - url: "/path?queryParam=1 will create $stateParams.queryParam: 1
+	 * - url: "/path?queryParam=1&queryParam=2 will create $stateParams.queryParam: [1, 2]
+	 */
+	Type.prototype.$asArray = function(mode, isSearch) {
+	  if (!mode) return this;
+	  if (mode === "auto" && !isSearch) throw new Error("'auto' array mode is for query parameters only");
+	
+	  function ArrayType(type, mode) {
+	    function bindTo(type, callbackName) {
+	      return function() {
+	        return type[callbackName].apply(type, arguments);
+	      };
+	    }
+	
+	    // Wrap non-array value as array
+	    function arrayWrap(val) { return isArray(val) ? val : (isDefined(val) ? [ val ] : []); }
+	    // Unwrap array value for "auto" mode. Return undefined for empty array.
+	    function arrayUnwrap(val) {
+	      switch(val.length) {
+	        case 0: return undefined;
+	        case 1: return mode === "auto" ? val[0] : val;
+	        default: return val;
+	      }
+	    }
+	    function falsey(val) { return !val; }
+	
+	    // Wraps type (.is/.encode/.decode) functions to operate on each value of an array
+	    function arrayHandler(callback, allTruthyMode) {
+	      return function handleArray(val) {
+	        if (isArray(val) && val.length === 0) return val;
+	        val = arrayWrap(val);
+	        var result = map(val, callback);
+	        if (allTruthyMode === true)
+	          return filter(result, falsey).length === 0;
+	        return arrayUnwrap(result);
+	      };
+	    }
+	
+	    // Wraps type (.equals) functions to operate on each value of an array
+	    function arrayEqualsHandler(callback) {
+	      return function handleArray(val1, val2) {
+	        var left = arrayWrap(val1), right = arrayWrap(val2);
+	        if (left.length !== right.length) return false;
+	        for (var i = 0; i < left.length; i++) {
+	          if (!callback(left[i], right[i])) return false;
+	        }
+	        return true;
+	      };
+	    }
+	
+	    this.encode = arrayHandler(bindTo(type, 'encode'));
+	    this.decode = arrayHandler(bindTo(type, 'decode'));
+	    this.is     = arrayHandler(bindTo(type, 'is'), true);
+	    this.equals = arrayEqualsHandler(bindTo(type, 'equals'));
+	    this.pattern = type.pattern;
+	    this.$normalize = arrayHandler(bindTo(type, '$normalize'));
+	    this.name = type.name;
+	    this.$arrayMode = mode;
+	  }
+	
+	  return new ArrayType(this, mode);
+	};
+	
+	
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.util.$urlMatcherFactory
+	 *
+	 * @description
+	 * Factory for {@link ui.router.util.type:UrlMatcher `UrlMatcher`} instances. The factory
+	 * is also available to providers under the name `$urlMatcherFactoryProvider`.
+	 */
+	function $UrlMatcherFactory() {
+	  $$UMFP = this;
+	
+	  var isCaseInsensitive = false, isStrictMode = true, defaultSquashPolicy = false;
+	
+	  // Use tildes to pre-encode slashes.
+	  // If the slashes are simply URLEncoded, the browser can choose to pre-decode them,
+	  // and bidirectional encoding/decoding fails.
+	  // Tilde was chosen because it's not a RFC 3986 section 2.2 Reserved Character
+	  function valToString(val) { return val != null ? val.toString().replace(/~/g, "~~").replace(/\//g, "~2F") : val; }
+	  function valFromString(val) { return val != null ? val.toString().replace(/~2F/g, "/").replace(/~~/g, "~") : val; }
+	
+	  var $types = {}, enqueue = true, typeQueue = [], injector, defaultTypes = {
+	    "string": {
+	      encode: valToString,
+	      decode: valFromString,
+	      // TODO: in 1.0, make string .is() return false if value is undefined/null by default.
+	      // In 0.2.x, string params are optional by default for backwards compat
+	      is: function(val) { return val == null || !isDefined(val) || typeof val === "string"; },
+	      pattern: /[^/]*/
+	    },
+	    "int": {
+	      encode: valToString,
+	      decode: function(val) { return parseInt(val, 10); },
+	      is: function(val) { return isDefined(val) && this.decode(val.toString()) === val; },
+	      pattern: /\d+/
+	    },
+	    "bool": {
+	      encode: function(val) { return val ? 1 : 0; },
+	      decode: function(val) { return parseInt(val, 10) !== 0; },
+	      is: function(val) { return val === true || val === false; },
+	      pattern: /0|1/
+	    },
+	    "date": {
+	      encode: function (val) {
+	        if (!this.is(val))
+	          return undefined;
+	        return [ val.getFullYear(),
+	          ('0' + (val.getMonth() + 1)).slice(-2),
+	          ('0' + val.getDate()).slice(-2)
+	        ].join("-");
+	      },
+	      decode: function (val) {
+	        if (this.is(val)) return val;
+	        var match = this.capture.exec(val);
+	        return match ? new Date(match[1], match[2] - 1, match[3]) : undefined;
+	      },
+	      is: function(val) { return val instanceof Date && !isNaN(val.valueOf()); },
+	      equals: function (a, b) { return this.is(a) && this.is(b) && a.toISOString() === b.toISOString(); },
+	      pattern: /[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[1-2][0-9]|3[0-1])/,
+	      capture: /([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])/
+	    },
+	    "json": {
+	      encode: angular.toJson,
+	      decode: angular.fromJson,
+	      is: angular.isObject,
+	      equals: angular.equals,
+	      pattern: /[^/]*/
+	    },
+	    "any": { // does not encode/decode
+	      encode: angular.identity,
+	      decode: angular.identity,
+	      equals: angular.equals,
+	      pattern: /.*/
+	    }
+	  };
+	
+	  function getDefaultConfig() {
+	    return {
+	      strict: isStrictMode,
+	      caseInsensitive: isCaseInsensitive
+	    };
+	  }
+	
+	  function isInjectable(value) {
+	    return (isFunction(value) || (isArray(value) && isFunction(value[value.length - 1])));
+	  }
+	
+	  /**
+	   * [Internal] Get the default value of a parameter, which may be an injectable function.
+	   */
+	  $UrlMatcherFactory.$$getDefaultValue = function(config) {
+	    if (!isInjectable(config.value)) return config.value;
+	    if (!injector) throw new Error("Injectable functions cannot be called at configuration time");
+	    return injector.invoke(config.value);
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$urlMatcherFactory#caseInsensitive
+	   * @methodOf ui.router.util.$urlMatcherFactory
+	   *
+	   * @description
+	   * Defines whether URL matching should be case sensitive (the default behavior), or not.
+	   *
+	   * @param {boolean} value `false` to match URL in a case sensitive manner; otherwise `true`;
+	   * @returns {boolean} the current value of caseInsensitive
+	   */
+	  this.caseInsensitive = function(value) {
+	    if (isDefined(value))
+	      isCaseInsensitive = value;
+	    return isCaseInsensitive;
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$urlMatcherFactory#strictMode
+	   * @methodOf ui.router.util.$urlMatcherFactory
+	   *
+	   * @description
+	   * Defines whether URLs should match trailing slashes, or not (the default behavior).
+	   *
+	   * @param {boolean=} value `false` to match trailing slashes in URLs, otherwise `true`.
+	   * @returns {boolean} the current value of strictMode
+	   */
+	  this.strictMode = function(value) {
+	    if (isDefined(value))
+	      isStrictMode = value;
+	    return isStrictMode;
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$urlMatcherFactory#defaultSquashPolicy
+	   * @methodOf ui.router.util.$urlMatcherFactory
+	   *
+	   * @description
+	   * Sets the default behavior when generating or matching URLs with default parameter values.
+	   *
+	   * @param {string} value A string that defines the default parameter URL squashing behavior.
+	   *    `nosquash`: When generating an href with a default parameter value, do not squash the parameter value from the URL
+	   *    `slash`: When generating an href with a default parameter value, squash (remove) the parameter value, and, if the
+	   *             parameter is surrounded by slashes, squash (remove) one slash from the URL
+	   *    any other string, e.g. "~": When generating an href with a default parameter value, squash (remove)
+	   *             the parameter value from the URL and replace it with this string.
+	   */
+	  this.defaultSquashPolicy = function(value) {
+	    if (!isDefined(value)) return defaultSquashPolicy;
+	    if (value !== true && value !== false && !isString(value))
+	      throw new Error("Invalid squash policy: " + value + ". Valid policies: false, true, arbitrary-string");
+	    defaultSquashPolicy = value;
+	    return value;
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$urlMatcherFactory#compile
+	   * @methodOf ui.router.util.$urlMatcherFactory
+	   *
+	   * @description
+	   * Creates a {@link ui.router.util.type:UrlMatcher `UrlMatcher`} for the specified pattern.
+	   *
+	   * @param {string} pattern  The URL pattern.
+	   * @param {Object} config  The config object hash.
+	   * @returns {UrlMatcher}  The UrlMatcher.
+	   */
+	  this.compile = function (pattern, config) {
+	    return new UrlMatcher(pattern, extend(getDefaultConfig(), config));
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$urlMatcherFactory#isMatcher
+	   * @methodOf ui.router.util.$urlMatcherFactory
+	   *
+	   * @description
+	   * Returns true if the specified object is a `UrlMatcher`, or false otherwise.
+	   *
+	   * @param {Object} object  The object to perform the type check against.
+	   * @returns {Boolean}  Returns `true` if the object matches the `UrlMatcher` interface, by
+	   *          implementing all the same methods.
+	   */
+	  this.isMatcher = function (o) {
+	    if (!isObject(o)) return false;
+	    var result = true;
+	
+	    forEach(UrlMatcher.prototype, function(val, name) {
+	      if (isFunction(val)) {
+	        result = result && (isDefined(o[name]) && isFunction(o[name]));
+	      }
+	    });
+	    return result;
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.util.$urlMatcherFactory#type
+	   * @methodOf ui.router.util.$urlMatcherFactory
+	   *
+	   * @description
+	   * Registers a custom {@link ui.router.util.type:Type `Type`} object that can be used to
+	   * generate URLs with typed parameters.
+	   *
+	   * @param {string} name  The type name.
+	   * @param {Object|Function} definition   The type definition. See
+	   *        {@link ui.router.util.type:Type `Type`} for information on the values accepted.
+	   * @param {Object|Function} definitionFn (optional) A function that is injected before the app
+	   *        runtime starts.  The result of this function is merged into the existing `definition`.
+	   *        See {@link ui.router.util.type:Type `Type`} for information on the values accepted.
+	   *
+	   * @returns {Object}  Returns `$urlMatcherFactoryProvider`.
+	   *
+	   * @example
+	   * This is a simple example of a custom type that encodes and decodes items from an
+	   * array, using the array index as the URL-encoded value:
+	   *
+	   * <pre>
+	   * var list = ['John', 'Paul', 'George', 'Ringo'];
+	   *
+	   * $urlMatcherFactoryProvider.type('listItem', {
+	   *   encode: function(item) {
+	   *     // Represent the list item in the URL using its corresponding index
+	   *     return list.indexOf(item);
+	   *   },
+	   *   decode: function(item) {
+	   *     // Look up the list item by index
+	   *     return list[parseInt(item, 10)];
+	   *   },
+	   *   is: function(item) {
+	   *     // Ensure the item is valid by checking to see that it appears
+	   *     // in the list
+	   *     return list.indexOf(item) > -1;
+	   *   }
+	   * });
+	   *
+	   * $stateProvider.state('list', {
+	   *   url: "/list/{item:listItem}",
+	   *   controller: function($scope, $stateParams) {
+	   *     console.log($stateParams.item);
+	   *   }
+	   * });
+	   *
+	   * // ...
+	   *
+	   * // Changes URL to '/list/3', logs "Ringo" to the console
+	   * $state.go('list', { item: "Ringo" });
+	   * </pre>
+	   *
+	   * This is a more complex example of a type that relies on dependency injection to
+	   * interact with services, and uses the parameter name from the URL to infer how to
+	   * handle encoding and decoding parameter values:
+	   *
+	   * <pre>
+	   * // Defines a custom type that gets a value from a service,
+	   * // where each service gets different types of values from
+	   * // a backend API:
+	   * $urlMatcherFactoryProvider.type('dbObject', {}, function(Users, Posts) {
+	   *
+	   *   // Matches up services to URL parameter names
+	   *   var services = {
+	   *     user: Users,
+	   *     post: Posts
+	   *   };
+	   *
+	   *   return {
+	   *     encode: function(object) {
+	   *       // Represent the object in the URL using its unique ID
+	   *       return object.id;
+	   *     },
+	   *     decode: function(value, key) {
+	   *       // Look up the object by ID, using the parameter
+	   *       // name (key) to call the correct service
+	   *       return services[key].findById(value);
+	   *     },
+	   *     is: function(object, key) {
+	   *       // Check that object is a valid dbObject
+	   *       return angular.isObject(object) && object.id && services[key];
+	   *     }
+	   *     equals: function(a, b) {
+	   *       // Check the equality of decoded objects by comparing
+	   *       // their unique IDs
+	   *       return a.id === b.id;
+	   *     }
+	   *   };
+	   * });
+	   *
+	   * // In a config() block, you can then attach URLs with
+	   * // type-annotated parameters:
+	   * $stateProvider.state('users', {
+	   *   url: "/users",
+	   *   // ...
+	   * }).state('users.item', {
+	   *   url: "/{user:dbObject}",
+	   *   controller: function($scope, $stateParams) {
+	   *     // $stateParams.user will now be an object returned from
+	   *     // the Users service
+	   *   },
+	   *   // ...
+	   * });
+	   * </pre>
+	   */
+	  this.type = function (name, definition, definitionFn) {
+	    if (!isDefined(definition)) return $types[name];
+	    if ($types.hasOwnProperty(name)) throw new Error("A type named '" + name + "' has already been defined.");
+	
+	    $types[name] = new Type(extend({ name: name }, definition));
+	    if (definitionFn) {
+	      typeQueue.push({ name: name, def: definitionFn });
+	      if (!enqueue) flushTypeQueue();
+	    }
+	    return this;
+	  };
+	
+	  // `flushTypeQueue()` waits until `$urlMatcherFactory` is injected before invoking the queued `definitionFn`s
+	  function flushTypeQueue() {
+	    while(typeQueue.length) {
+	      var type = typeQueue.shift();
+	      if (type.pattern) throw new Error("You cannot override a type's .pattern at runtime.");
+	      angular.extend($types[type.name], injector.invoke(type.def));
+	    }
+	  }
+	
+	  // Register default types. Store them in the prototype of $types.
+	  forEach(defaultTypes, function(type, name) { $types[name] = new Type(extend({name: name}, type)); });
+	  $types = inherit($types, {});
+	
+	  /* No need to document $get, since it returns this */
+	  this.$get = ['$injector', function ($injector) {
+	    injector = $injector;
+	    enqueue = false;
+	    flushTypeQueue();
+	
+	    forEach(defaultTypes, function(type, name) {
+	      if (!$types[name]) $types[name] = new Type(type);
+	    });
+	    return this;
+	  }];
+	
+	  this.Param = function Param(id, type, config, location) {
+	    var self = this;
+	    config = unwrapShorthand(config);
+	    type = getType(config, type, location);
+	    var arrayMode = getArrayMode();
+	    type = arrayMode ? type.$asArray(arrayMode, location === "search") : type;
+	    if (type.name === "string" && !arrayMode && location === "path" && config.value === undefined)
+	      config.value = ""; // for 0.2.x; in 0.3.0+ do not automatically default to ""
+	    var isOptional = config.value !== undefined;
+	    var squash = getSquashPolicy(config, isOptional);
+	    var replace = getReplace(config, arrayMode, isOptional, squash);
+	
+	    function unwrapShorthand(config) {
+	      var keys = isObject(config) ? objectKeys(config) : [];
+	      var isShorthand = indexOf(keys, "value") === -1 && indexOf(keys, "type") === -1 &&
+	                        indexOf(keys, "squash") === -1 && indexOf(keys, "array") === -1;
+	      if (isShorthand) config = { value: config };
+	      config.$$fn = isInjectable(config.value) ? config.value : function () { return config.value; };
+	      return config;
+	    }
+	
+	    function getType(config, urlType, location) {
+	      if (config.type && urlType) throw new Error("Param '"+id+"' has two type configurations.");
+	      if (urlType) return urlType;
+	      if (!config.type) return (location === "config" ? $types.any : $types.string);
+	
+	      if (angular.isString(config.type))
+	        return $types[config.type];
+	      if (config.type instanceof Type)
+	        return config.type;
+	      return new Type(config.type);
+	    }
+	
+	    // array config: param name (param[]) overrides default settings.  explicit config overrides param name.
+	    function getArrayMode() {
+	      var arrayDefaults = { array: (location === "search" ? "auto" : false) };
+	      var arrayParamNomenclature = id.match(/\[\]$/) ? { array: true } : {};
+	      return extend(arrayDefaults, arrayParamNomenclature, config).array;
+	    }
+	
+	    /**
+	     * returns false, true, or the squash value to indicate the "default parameter url squash policy".
+	     */
+	    function getSquashPolicy(config, isOptional) {
+	      var squash = config.squash;
+	      if (!isOptional || squash === false) return false;
+	      if (!isDefined(squash) || squash == null) return defaultSquashPolicy;
+	      if (squash === true || isString(squash)) return squash;
+	      throw new Error("Invalid squash policy: '" + squash + "'. Valid policies: false, true, or arbitrary string");
+	    }
+	
+	    function getReplace(config, arrayMode, isOptional, squash) {
+	      var replace, configuredKeys, defaultPolicy = [
+	        { from: "",   to: (isOptional || arrayMode ? undefined : "") },
+	        { from: null, to: (isOptional || arrayMode ? undefined : "") }
+	      ];
+	      replace = isArray(config.replace) ? config.replace : [];
+	      if (isString(squash))
+	        replace.push({ from: squash, to: undefined });
+	      configuredKeys = map(replace, function(item) { return item.from; } );
+	      return filter(defaultPolicy, function(item) { return indexOf(configuredKeys, item.from) === -1; }).concat(replace);
+	    }
+	
+	    /**
+	     * [Internal] Get the default value of a parameter, which may be an injectable function.
+	     */
+	    function $$getDefaultValue() {
+	      if (!injector) throw new Error("Injectable functions cannot be called at configuration time");
+	      var defaultValue = injector.invoke(config.$$fn);
+	      if (defaultValue !== null && defaultValue !== undefined && !self.type.is(defaultValue))
+	        throw new Error("Default value (" + defaultValue + ") for parameter '" + self.id + "' is not an instance of Type (" + self.type.name + ")");
+	      return defaultValue;
+	    }
+	
+	    /**
+	     * [Internal] Gets the decoded representation of a value if the value is defined, otherwise, returns the
+	     * default value, which may be the result of an injectable function.
+	     */
+	    function $value(value) {
+	      function hasReplaceVal(val) { return function(obj) { return obj.from === val; }; }
+	      function $replace(value) {
+	        var replacement = map(filter(self.replace, hasReplaceVal(value)), function(obj) { return obj.to; });
+	        return replacement.length ? replacement[0] : value;
+	      }
+	      value = $replace(value);
+	      return !isDefined(value) ? $$getDefaultValue() : self.type.$normalize(value);
+	    }
+	
+	    function toString() { return "{Param:" + id + " " + type + " squash: '" + squash + "' optional: " + isOptional + "}"; }
+	
+	    extend(this, {
+	      id: id,
+	      type: type,
+	      location: location,
+	      array: arrayMode,
+	      squash: squash,
+	      replace: replace,
+	      isOptional: isOptional,
+	      value: $value,
+	      dynamic: undefined,
+	      config: config,
+	      toString: toString
+	    });
+	  };
+	
+	  function ParamSet(params) {
+	    extend(this, params || {});
+	  }
+	
+	  ParamSet.prototype = {
+	    $$new: function() {
+	      return inherit(this, extend(new ParamSet(), { $$parent: this}));
+	    },
+	    $$keys: function () {
+	      var keys = [], chain = [], parent = this,
+	        ignore = objectKeys(ParamSet.prototype);
+	      while (parent) { chain.push(parent); parent = parent.$$parent; }
+	      chain.reverse();
+	      forEach(chain, function(paramset) {
+	        forEach(objectKeys(paramset), function(key) {
+	            if (indexOf(keys, key) === -1 && indexOf(ignore, key) === -1) keys.push(key);
+	        });
+	      });
+	      return keys;
+	    },
+	    $$values: function(paramValues) {
+	      var values = {}, self = this;
+	      forEach(self.$$keys(), function(key) {
+	        values[key] = self[key].value(paramValues && paramValues[key]);
+	      });
+	      return values;
+	    },
+	    $$equals: function(paramValues1, paramValues2) {
+	      var equal = true, self = this;
+	      forEach(self.$$keys(), function(key) {
+	        var left = paramValues1 && paramValues1[key], right = paramValues2 && paramValues2[key];
+	        if (!self[key].type.equals(left, right)) equal = false;
+	      });
+	      return equal;
+	    },
+	    $$validates: function $$validate(paramValues) {
+	      var keys = this.$$keys(), i, param, rawVal, normalized, encoded;
+	      for (i = 0; i < keys.length; i++) {
+	        param = this[keys[i]];
+	        rawVal = paramValues[keys[i]];
+	        if ((rawVal === undefined || rawVal === null) && param.isOptional)
+	          break; // There was no parameter value, but the param is optional
+	        normalized = param.type.$normalize(rawVal);
+	        if (!param.type.is(normalized))
+	          return false; // The value was not of the correct Type, and could not be decoded to the correct Type
+	        encoded = param.type.encode(normalized);
+	        if (angular.isString(encoded) && !param.type.pattern.exec(encoded))
+	          return false; // The value was of the correct type, but when encoded, did not match the Type's regexp
+	      }
+	      return true;
+	    },
+	    $$parent: undefined
+	  };
+	
+	  this.ParamSet = ParamSet;
+	}
+	
+	// Register as a provider so it's available to other providers
+	angular.module('ui.router.util').provider('$urlMatcherFactory', $UrlMatcherFactory);
+	angular.module('ui.router.util').run(['$urlMatcherFactory', function($urlMatcherFactory) { }]);
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.router.$urlRouterProvider
+	 *
+	 * @requires ui.router.util.$urlMatcherFactoryProvider
+	 * @requires $locationProvider
+	 *
+	 * @description
+	 * `$urlRouterProvider` has the responsibility of watching `$location`. 
+	 * When `$location` changes it runs through a list of rules one by one until a 
+	 * match is found. `$urlRouterProvider` is used behind the scenes anytime you specify 
+	 * a url in a state configuration. All urls are compiled into a UrlMatcher object.
+	 *
+	 * There are several methods on `$urlRouterProvider` that make it useful to use directly
+	 * in your module config.
+	 */
+	$UrlRouterProvider.$inject = ['$locationProvider', '$urlMatcherFactoryProvider'];
+	function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
+	  var rules = [], otherwise = null, interceptDeferred = false, listener;
+	
+	  // Returns a string that is a prefix of all strings matching the RegExp
+	  function regExpPrefix(re) {
+	    var prefix = /^\^((?:\\[^a-zA-Z0-9]|[^\\\[\]\^$*+?.()|{}]+)*)/.exec(re.source);
+	    return (prefix != null) ? prefix[1].replace(/\\(.)/g, "$1") : '';
+	  }
+	
+	  // Interpolates matched values into a String.replace()-style pattern
+	  function interpolate(pattern, match) {
+	    return pattern.replace(/\$(\$|\d{1,2})/, function (m, what) {
+	      return match[what === '$' ? 0 : Number(what)];
+	    });
+	  }
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.router.$urlRouterProvider#rule
+	   * @methodOf ui.router.router.$urlRouterProvider
+	   *
+	   * @description
+	   * Defines rules that are used by `$urlRouterProvider` to find matches for
+	   * specific URLs.
+	   *
+	   * @example
+	   * <pre>
+	   * var app = angular.module('app', ['ui.router.router']);
+	   *
+	   * app.config(function ($urlRouterProvider) {
+	   *   // Here's an example of how you might allow case insensitive urls
+	   *   $urlRouterProvider.rule(function ($injector, $location) {
+	   *     var path = $location.path(),
+	   *         normalized = path.toLowerCase();
+	   *
+	   *     if (path !== normalized) {
+	   *       return normalized;
+	   *     }
+	   *   });
+	   * });
+	   * </pre>
+	   *
+	   * @param {function} rule Handler function that takes `$injector` and `$location`
+	   * services as arguments. You can use them to return a valid path as a string.
+	   *
+	   * @return {object} `$urlRouterProvider` - `$urlRouterProvider` instance
+	   */
+	  this.rule = function (rule) {
+	    if (!isFunction(rule)) throw new Error("'rule' must be a function");
+	    rules.push(rule);
+	    return this;
+	  };
+	
+	  /**
+	   * @ngdoc object
+	   * @name ui.router.router.$urlRouterProvider#otherwise
+	   * @methodOf ui.router.router.$urlRouterProvider
+	   *
+	   * @description
+	   * Defines a path that is used when an invalid route is requested.
+	   *
+	   * @example
+	   * <pre>
+	   * var app = angular.module('app', ['ui.router.router']);
+	   *
+	   * app.config(function ($urlRouterProvider) {
+	   *   // if the path doesn't match any of the urls you configured
+	   *   // otherwise will take care of routing the user to the
+	   *   // specified url
+	   *   $urlRouterProvider.otherwise('/index');
+	   *
+	   *   // Example of using function rule as param
+	   *   $urlRouterProvider.otherwise(function ($injector, $location) {
+	   *     return '/a/valid/url';
+	   *   });
+	   * });
+	   * </pre>
+	   *
+	   * @param {string|function} rule The url path you want to redirect to or a function 
+	   * rule that returns the url path. The function version is passed two params: 
+	   * `$injector` and `$location` services, and must return a url string.
+	   *
+	   * @return {object} `$urlRouterProvider` - `$urlRouterProvider` instance
+	   */
+	  this.otherwise = function (rule) {
+	    if (isString(rule)) {
+	      var redirect = rule;
+	      rule = function () { return redirect; };
+	    }
+	    else if (!isFunction(rule)) throw new Error("'rule' must be a function");
+	    otherwise = rule;
+	    return this;
+	  };
+	
+	
+	  function handleIfMatch($injector, handler, match) {
+	    if (!match) return false;
+	    var result = $injector.invoke(handler, handler, { $match: match });
+	    return isDefined(result) ? result : true;
+	  }
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.router.$urlRouterProvider#when
+	   * @methodOf ui.router.router.$urlRouterProvider
+	   *
+	   * @description
+	   * Registers a handler for a given url matching. 
+	   * 
+	   * If the handler is a string, it is
+	   * treated as a redirect, and is interpolated according to the syntax of match
+	   * (i.e. like `String.replace()` for `RegExp`, or like a `UrlMatcher` pattern otherwise).
+	   *
+	   * If the handler is a function, it is injectable. It gets invoked if `$location`
+	   * matches. You have the option of inject the match object as `$match`.
+	   *
+	   * The handler can return
+	   *
+	   * - **falsy** to indicate that the rule didn't match after all, then `$urlRouter`
+	   *   will continue trying to find another one that matches.
+	   * - **string** which is treated as a redirect and passed to `$location.url()`
+	   * - **void** or any **truthy** value tells `$urlRouter` that the url was handled.
+	   *
+	   * @example
+	   * <pre>
+	   * var app = angular.module('app', ['ui.router.router']);
+	   *
+	   * app.config(function ($urlRouterProvider) {
+	   *   $urlRouterProvider.when($state.url, function ($match, $stateParams) {
+	   *     if ($state.$current.navigable !== state ||
+	   *         !equalForKeys($match, $stateParams) {
+	   *      $state.transitionTo(state, $match, false);
+	   *     }
+	   *   });
+	   * });
+	   * </pre>
+	   *
+	   * @param {string|object} what The incoming path that you want to redirect.
+	   * @param {string|function} handler The path you want to redirect your user to.
+	   */
+	  this.when = function (what, handler) {
+	    var redirect, handlerIsString = isString(handler);
+	    if (isString(what)) what = $urlMatcherFactory.compile(what);
+	
+	    if (!handlerIsString && !isFunction(handler) && !isArray(handler))
+	      throw new Error("invalid 'handler' in when()");
+	
+	    var strategies = {
+	      matcher: function (what, handler) {
+	        if (handlerIsString) {
+	          redirect = $urlMatcherFactory.compile(handler);
+	          handler = ['$match', function ($match) { return redirect.format($match); }];
+	        }
+	        return extend(function ($injector, $location) {
+	          return handleIfMatch($injector, handler, what.exec($location.path(), $location.search()));
+	        }, {
+	          prefix: isString(what.prefix) ? what.prefix : ''
+	        });
+	      },
+	      regex: function (what, handler) {
+	        if (what.global || what.sticky) throw new Error("when() RegExp must not be global or sticky");
+	
+	        if (handlerIsString) {
+	          redirect = handler;
+	          handler = ['$match', function ($match) { return interpolate(redirect, $match); }];
+	        }
+	        return extend(function ($injector, $location) {
+	          return handleIfMatch($injector, handler, what.exec($location.path()));
+	        }, {
+	          prefix: regExpPrefix(what)
+	        });
+	      }
+	    };
+	
+	    var check = { matcher: $urlMatcherFactory.isMatcher(what), regex: what instanceof RegExp };
+	
+	    for (var n in check) {
+	      if (check[n]) return this.rule(strategies[n](what, handler));
+	    }
+	
+	    throw new Error("invalid 'what' in when()");
+	  };
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.router.$urlRouterProvider#deferIntercept
+	   * @methodOf ui.router.router.$urlRouterProvider
+	   *
+	   * @description
+	   * Disables (or enables) deferring location change interception.
+	   *
+	   * If you wish to customize the behavior of syncing the URL (for example, if you wish to
+	   * defer a transition but maintain the current URL), call this method at configuration time.
+	   * Then, at run time, call `$urlRouter.listen()` after you have configured your own
+	   * `$locationChangeSuccess` event handler.
+	   *
+	   * @example
+	   * <pre>
+	   * var app = angular.module('app', ['ui.router.router']);
+	   *
+	   * app.config(function ($urlRouterProvider) {
+	   *
+	   *   // Prevent $urlRouter from automatically intercepting URL changes;
+	   *   // this allows you to configure custom behavior in between
+	   *   // location changes and route synchronization:
+	   *   $urlRouterProvider.deferIntercept();
+	   *
+	   * }).run(function ($rootScope, $urlRouter, UserService) {
+	   *
+	   *   $rootScope.$on('$locationChangeSuccess', function(e) {
+	   *     // UserService is an example service for managing user state
+	   *     if (UserService.isLoggedIn()) return;
+	   *
+	   *     // Prevent $urlRouter's default handler from firing
+	   *     e.preventDefault();
+	   *
+	   *     UserService.handleLogin().then(function() {
+	   *       // Once the user has logged in, sync the current URL
+	   *       // to the router:
+	   *       $urlRouter.sync();
+	   *     });
+	   *   });
+	   *
+	   *   // Configures $urlRouter's listener *after* your custom listener
+	   *   $urlRouter.listen();
+	   * });
+	   * </pre>
+	   *
+	   * @param {boolean} defer Indicates whether to defer location change interception. Passing
+	            no parameter is equivalent to `true`.
+	   */
+	  this.deferIntercept = function (defer) {
+	    if (defer === undefined) defer = true;
+	    interceptDeferred = defer;
+	  };
+	
+	  /**
+	   * @ngdoc object
+	   * @name ui.router.router.$urlRouter
+	   *
+	   * @requires $location
+	   * @requires $rootScope
+	   * @requires $injector
+	   * @requires $browser
+	   *
+	   * @description
+	   *
+	   */
+	  this.$get = $get;
+	  $get.$inject = ['$location', '$rootScope', '$injector', '$browser', '$sniffer'];
+	  function $get(   $location,   $rootScope,   $injector,   $browser,   $sniffer) {
+	
+	    var baseHref = $browser.baseHref(), location = $location.url(), lastPushedUrl;
+	
+	    function appendBasePath(url, isHtml5, absolute) {
+	      if (baseHref === '/') return url;
+	      if (isHtml5) return baseHref.slice(0, -1) + url;
+	      if (absolute) return baseHref.slice(1) + url;
+	      return url;
+	    }
+	
+	    // TODO: Optimize groups of rules with non-empty prefix into some sort of decision tree
+	    function update(evt) {
+	      if (evt && evt.defaultPrevented) return;
+	      var ignoreUpdate = lastPushedUrl && $location.url() === lastPushedUrl;
+	      lastPushedUrl = undefined;
+	      // TODO: Re-implement this in 1.0 for https://github.com/angular-ui/ui-router/issues/1573
+	      //if (ignoreUpdate) return true;
+	
+	      function check(rule) {
+	        var handled = rule($injector, $location);
+	
+	        if (!handled) return false;
+	        if (isString(handled)) $location.replace().url(handled);
+	        return true;
+	      }
+	      var n = rules.length, i;
+	
+	      for (i = 0; i < n; i++) {
+	        if (check(rules[i])) return;
+	      }
+	      // always check otherwise last to allow dynamic updates to the set of rules
+	      if (otherwise) check(otherwise);
+	    }
+	
+	    function listen() {
+	      listener = listener || $rootScope.$on('$locationChangeSuccess', update);
+	      return listener;
+	    }
+	
+	    if (!interceptDeferred) listen();
+	
+	    return {
+	      /**
+	       * @ngdoc function
+	       * @name ui.router.router.$urlRouter#sync
+	       * @methodOf ui.router.router.$urlRouter
+	       *
+	       * @description
+	       * Triggers an update; the same update that happens when the address bar url changes, aka `$locationChangeSuccess`.
+	       * This method is useful when you need to use `preventDefault()` on the `$locationChangeSuccess` event,
+	       * perform some custom logic (route protection, auth, config, redirection, etc) and then finally proceed
+	       * with the transition by calling `$urlRouter.sync()`.
+	       *
+	       * @example
+	       * <pre>
+	       * angular.module('app', ['ui.router'])
+	       *   .run(function($rootScope, $urlRouter) {
+	       *     $rootScope.$on('$locationChangeSuccess', function(evt) {
+	       *       // Halt state change from even starting
+	       *       evt.preventDefault();
+	       *       // Perform custom logic
+	       *       var meetsRequirement = ...
+	       *       // Continue with the update and state transition if logic allows
+	       *       if (meetsRequirement) $urlRouter.sync();
+	       *     });
+	       * });
+	       * </pre>
+	       */
+	      sync: function() {
+	        update();
+	      },
+	
+	      listen: function() {
+	        return listen();
+	      },
+	
+	      update: function(read) {
+	        if (read) {
+	          location = $location.url();
+	          return;
+	        }
+	        if ($location.url() === location) return;
+	
+	        $location.url(location);
+	        $location.replace();
+	      },
+	
+	      push: function(urlMatcher, params, options) {
+	         var url = urlMatcher.format(params || {});
+	
+	        // Handle the special hash param, if needed
+	        if (url !== null && params && params['#']) {
+	            url += '#' + params['#'];
+	        }
+	
+	        $location.url(url);
+	        lastPushedUrl = options && options.$$avoidResync ? $location.url() : undefined;
+	        if (options && options.replace) $location.replace();
+	      },
+	
+	      /**
+	       * @ngdoc function
+	       * @name ui.router.router.$urlRouter#href
+	       * @methodOf ui.router.router.$urlRouter
+	       *
+	       * @description
+	       * A URL generation method that returns the compiled URL for a given
+	       * {@link ui.router.util.type:UrlMatcher `UrlMatcher`}, populated with the provided parameters.
+	       *
+	       * @example
+	       * <pre>
+	       * $bob = $urlRouter.href(new UrlMatcher("/about/:person"), {
+	       *   person: "bob"
+	       * });
+	       * // $bob == "/about/bob";
+	       * </pre>
+	       *
+	       * @param {UrlMatcher} urlMatcher The `UrlMatcher` object which is used as the template of the URL to generate.
+	       * @param {object=} params An object of parameter values to fill the matcher's required parameters.
+	       * @param {object=} options Options object. The options are:
+	       *
+	       * - **`absolute`** - {boolean=false},  If true will generate an absolute url, e.g. "http://www.example.com/fullurl".
+	       *
+	       * @returns {string} Returns the fully compiled URL, or `null` if `params` fail validation against `urlMatcher`
+	       */
+	      href: function(urlMatcher, params, options) {
+	        if (!urlMatcher.validates(params)) return null;
+	
+	        var isHtml5 = $locationProvider.html5Mode();
+	        if (angular.isObject(isHtml5)) {
+	          isHtml5 = isHtml5.enabled;
+	        }
+	
+	        isHtml5 = isHtml5 && $sniffer.history;
+	        
+	        var url = urlMatcher.format(params);
+	        options = options || {};
+	
+	        if (!isHtml5 && url !== null) {
+	          url = "#" + $locationProvider.hashPrefix() + url;
+	        }
+	
+	        // Handle special hash param, if needed
+	        if (url !== null && params && params['#']) {
+	          url += '#' + params['#'];
+	        }
+	
+	        url = appendBasePath(url, isHtml5, options.absolute);
+	
+	        if (!options.absolute || !url) {
+	          return url;
+	        }
+	
+	        var slash = (!isHtml5 && url ? '/' : ''), port = $location.port();
+	        port = (port === 80 || port === 443 ? '' : ':' + port);
+	
+	        return [$location.protocol(), '://', $location.host(), port, slash, url].join('');
+	      }
+	    };
+	  }
+	}
+	
+	angular.module('ui.router.router').provider('$urlRouter', $UrlRouterProvider);
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.state.$stateProvider
+	 *
+	 * @requires ui.router.router.$urlRouterProvider
+	 * @requires ui.router.util.$urlMatcherFactoryProvider
+	 *
+	 * @description
+	 * The new `$stateProvider` works similar to Angular's v1 router, but it focuses purely
+	 * on state.
+	 *
+	 * A state corresponds to a "place" in the application in terms of the overall UI and
+	 * navigation. A state describes (via the controller / template / view properties) what
+	 * the UI looks like and does at that place.
+	 *
+	 * States often have things in common, and the primary way of factoring out these
+	 * commonalities in this model is via the state hierarchy, i.e. parent/child states aka
+	 * nested states.
+	 *
+	 * The `$stateProvider` provides interfaces to declare these states for your app.
+	 */
+	$StateProvider.$inject = ['$urlRouterProvider', '$urlMatcherFactoryProvider'];
+	function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
+	
+	  var root, states = {}, $state, queue = {}, abstractKey = 'abstract';
+	
+	  // Builds state properties from definition passed to registerState()
+	  var stateBuilder = {
+	
+	    // Derive parent state from a hierarchical name only if 'parent' is not explicitly defined.
+	    // state.children = [];
+	    // if (parent) parent.children.push(state);
+	    parent: function(state) {
+	      if (isDefined(state.parent) && state.parent) return findState(state.parent);
+	      // regex matches any valid composite state name
+	      // would match "contact.list" but not "contacts"
+	      var compositeName = /^(.+)\.[^.]+$/.exec(state.name);
+	      return compositeName ? findState(compositeName[1]) : root;
+	    },
+	
+	    // inherit 'data' from parent and override by own values (if any)
+	    data: function(state) {
+	      if (state.parent && state.parent.data) {
+	        state.data = state.self.data = inherit(state.parent.data, state.data);
+	      }
+	      return state.data;
+	    },
+	
+	    // Build a URLMatcher if necessary, either via a relative or absolute URL
+	    url: function(state) {
+	      var url = state.url, config = { params: state.params || {} };
+	
+	      if (isString(url)) {
+	        if (url.charAt(0) == '^') return $urlMatcherFactory.compile(url.substring(1), config);
+	        return (state.parent.navigable || root).url.concat(url, config);
+	      }
+	
+	      if (!url || $urlMatcherFactory.isMatcher(url)) return url;
+	      throw new Error("Invalid url '" + url + "' in state '" + state + "'");
+	    },
+	
+	    // Keep track of the closest ancestor state that has a URL (i.e. is navigable)
+	    navigable: function(state) {
+	      return state.url ? state : (state.parent ? state.parent.navigable : null);
+	    },
+	
+	    // Own parameters for this state. state.url.params is already built at this point. Create and add non-url params
+	    ownParams: function(state) {
+	      var params = state.url && state.url.params || new $$UMFP.ParamSet();
+	      forEach(state.params || {}, function(config, id) {
+	        if (!params[id]) params[id] = new $$UMFP.Param(id, null, config, "config");
+	      });
+	      return params;
+	    },
+	
+	    // Derive parameters for this state and ensure they're a super-set of parent's parameters
+	    params: function(state) {
+	      var ownParams = pick(state.ownParams, state.ownParams.$$keys());
+	      return state.parent && state.parent.params ? extend(state.parent.params.$$new(), ownParams) : new $$UMFP.ParamSet();
+	    },
+	
+	    // If there is no explicit multi-view configuration, make one up so we don't have
+	    // to handle both cases in the view directive later. Note that having an explicit
+	    // 'views' property will mean the default unnamed view properties are ignored. This
+	    // is also a good time to resolve view names to absolute names, so everything is a
+	    // straight lookup at link time.
+	    views: function(state) {
+	      var views = {};
+	
+	      forEach(isDefined(state.views) ? state.views : { '': state }, function (view, name) {
+	        if (name.indexOf('@') < 0) name += '@' + state.parent.name;
+	        views[name] = view;
+	      });
+	      return views;
+	    },
+	
+	    // Keep a full path from the root down to this state as this is needed for state activation.
+	    path: function(state) {
+	      return state.parent ? state.parent.path.concat(state) : []; // exclude root from path
+	    },
+	
+	    // Speed up $state.contains() as it's used a lot
+	    includes: function(state) {
+	      var includes = state.parent ? extend({}, state.parent.includes) : {};
+	      includes[state.name] = true;
+	      return includes;
+	    },
+	
+	    $delegates: {}
+	  };
+	
+	  function isRelative(stateName) {
+	    return stateName.indexOf(".") === 0 || stateName.indexOf("^") === 0;
+	  }
+	
+	  function findState(stateOrName, base) {
+	    if (!stateOrName) return undefined;
+	
+	    var isStr = isString(stateOrName),
+	        name  = isStr ? stateOrName : stateOrName.name,
+	        path  = isRelative(name);
+	
+	    if (path) {
+	      if (!base) throw new Error("No reference point given for path '"  + name + "'");
+	      base = findState(base);
+	      
+	      var rel = name.split("."), i = 0, pathLength = rel.length, current = base;
+	
+	      for (; i < pathLength; i++) {
+	        if (rel[i] === "" && i === 0) {
+	          current = base;
+	          continue;
+	        }
+	        if (rel[i] === "^") {
+	          if (!current.parent) throw new Error("Path '" + name + "' not valid for state '" + base.name + "'");
+	          current = current.parent;
+	          continue;
+	        }
+	        break;
+	      }
+	      rel = rel.slice(i).join(".");
+	      name = current.name + (current.name && rel ? "." : "") + rel;
+	    }
+	    var state = states[name];
+	
+	    if (state && (isStr || (!isStr && (state === stateOrName || state.self === stateOrName)))) {
+	      return state;
+	    }
+	    return undefined;
+	  }
+	
+	  function queueState(parentName, state) {
+	    if (!queue[parentName]) {
+	      queue[parentName] = [];
+	    }
+	    queue[parentName].push(state);
+	  }
+	
+	  function flushQueuedChildren(parentName) {
+	    var queued = queue[parentName] || [];
+	    while(queued.length) {
+	      registerState(queued.shift());
+	    }
+	  }
+	
+	  function registerState(state) {
+	    // Wrap a new object around the state so we can store our private details easily.
+	    state = inherit(state, {
+	      self: state,
+	      resolve: state.resolve || {},
+	      toString: function() { return this.name; }
+	    });
+	
+	    var name = state.name;
+	    if (!isString(name) || name.indexOf('@') >= 0) throw new Error("State must have a valid name");
+	    if (states.hasOwnProperty(name)) throw new Error("State '" + name + "' is already defined");
+	
+	    // Get parent name
+	    var parentName = (name.indexOf('.') !== -1) ? name.substring(0, name.lastIndexOf('.'))
+	        : (isString(state.parent)) ? state.parent
+	        : (isObject(state.parent) && isString(state.parent.name)) ? state.parent.name
+	        : '';
+	
+	    // If parent is not registered yet, add state to queue and register later
+	    if (parentName && !states[parentName]) {
+	      return queueState(parentName, state.self);
+	    }
+	
+	    for (var key in stateBuilder) {
+	      if (isFunction(stateBuilder[key])) state[key] = stateBuilder[key](state, stateBuilder.$delegates[key]);
+	    }
+	    states[name] = state;
+	
+	    // Register the state in the global state list and with $urlRouter if necessary.
+	    if (!state[abstractKey] && state.url) {
+	      $urlRouterProvider.when(state.url, ['$match', '$stateParams', function ($match, $stateParams) {
+	        if ($state.$current.navigable != state || !equalForKeys($match, $stateParams)) {
+	          $state.transitionTo(state, $match, { inherit: true, location: false });
+	        }
+	      }]);
+	    }
+	
+	    // Register any queued children
+	    flushQueuedChildren(name);
+	
+	    return state;
+	  }
+	
+	  // Checks text to see if it looks like a glob.
+	  function isGlob (text) {
+	    return text.indexOf('*') > -1;
+	  }
+	
+	  // Returns true if glob matches current $state name.
+	  function doesStateMatchGlob (glob) {
+	    var globSegments = glob.split('.'),
+	        segments = $state.$current.name.split('.');
+	
+	    //match single stars
+	    for (var i = 0, l = globSegments.length; i < l; i++) {
+	      if (globSegments[i] === '*') {
+	        segments[i] = '*';
+	      }
+	    }
+	
+	    //match greedy starts
+	    if (globSegments[0] === '**') {
+	       segments = segments.slice(indexOf(segments, globSegments[1]));
+	       segments.unshift('**');
+	    }
+	    //match greedy ends
+	    if (globSegments[globSegments.length - 1] === '**') {
+	       segments.splice(indexOf(segments, globSegments[globSegments.length - 2]) + 1, Number.MAX_VALUE);
+	       segments.push('**');
+	    }
+	
+	    if (globSegments.length != segments.length) {
+	      return false;
+	    }
+	
+	    return segments.join('') === globSegments.join('');
+	  }
+	
+	
+	  // Implicit root state that is always active
+	  root = registerState({
+	    name: '',
+	    url: '^',
+	    views: null,
+	    'abstract': true
+	  });
+	  root.navigable = null;
+	
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.state.$stateProvider#decorator
+	   * @methodOf ui.router.state.$stateProvider
+	   *
+	   * @description
+	   * Allows you to extend (carefully) or override (at your own peril) the 
+	   * `stateBuilder` object used internally by `$stateProvider`. This can be used 
+	   * to add custom functionality to ui-router, for example inferring templateUrl 
+	   * based on the state name.
+	   *
+	   * When passing only a name, it returns the current (original or decorated) builder
+	   * function that matches `name`.
+	   *
+	   * The builder functions that can be decorated are listed below. Though not all
+	   * necessarily have a good use case for decoration, that is up to you to decide.
+	   *
+	   * In addition, users can attach custom decorators, which will generate new 
+	   * properties within the state's internal definition. There is currently no clear 
+	   * use-case for this beyond accessing internal states (i.e. $state.$current), 
+	   * however, expect this to become increasingly relevant as we introduce additional 
+	   * meta-programming features.
+	   *
+	   * **Warning**: Decorators should not be interdependent because the order of 
+	   * execution of the builder functions in non-deterministic. Builder functions 
+	   * should only be dependent on the state definition object and super function.
+	   *
+	   *
+	   * Existing builder functions and current return values:
+	   *
+	   * - **parent** `{object}` - returns the parent state object.
+	   * - **data** `{object}` - returns state data, including any inherited data that is not
+	   *   overridden by own values (if any).
+	   * - **url** `{object}` - returns a {@link ui.router.util.type:UrlMatcher UrlMatcher}
+	   *   or `null`.
+	   * - **navigable** `{object}` - returns closest ancestor state that has a URL (aka is 
+	   *   navigable).
+	   * - **params** `{object}` - returns an array of state params that are ensured to 
+	   *   be a super-set of parent's params.
+	   * - **views** `{object}` - returns a views object where each key is an absolute view 
+	   *   name (i.e. "viewName@stateName") and each value is the config object 
+	   *   (template, controller) for the view. Even when you don't use the views object 
+	   *   explicitly on a state config, one is still created for you internally.
+	   *   So by decorating this builder function you have access to decorating template 
+	   *   and controller properties.
+	   * - **ownParams** `{object}` - returns an array of params that belong to the state, 
+	   *   not including any params defined by ancestor states.
+	   * - **path** `{string}` - returns the full path from the root down to this state. 
+	   *   Needed for state activation.
+	   * - **includes** `{object}` - returns an object that includes every state that 
+	   *   would pass a `$state.includes()` test.
+	   *
+	   * @example
+	   * <pre>
+	   * // Override the internal 'views' builder with a function that takes the state
+	   * // definition, and a reference to the internal function being overridden:
+	   * $stateProvider.decorator('views', function (state, parent) {
+	   *   var result = {},
+	   *       views = parent(state);
+	   *
+	   *   angular.forEach(views, function (config, name) {
+	   *     var autoName = (state.name + '.' + name).replace('.', '/');
+	   *     config.templateUrl = config.templateUrl || '/partials/' + autoName + '.html';
+	   *     result[name] = config;
+	   *   });
+	   *   return result;
+	   * });
+	   *
+	   * $stateProvider.state('home', {
+	   *   views: {
+	   *     'contact.list': { controller: 'ListController' },
+	   *     'contact.item': { controller: 'ItemController' }
+	   *   }
+	   * });
+	   *
+	   * // ...
+	   *
+	   * $state.go('home');
+	   * // Auto-populates list and item views with /partials/home/contact/list.html,
+	   * // and /partials/home/contact/item.html, respectively.
+	   * </pre>
+	   *
+	   * @param {string} name The name of the builder function to decorate. 
+	   * @param {object} func A function that is responsible for decorating the original 
+	   * builder function. The function receives two parameters:
+	   *
+	   *   - `{object}` - state - The state config object.
+	   *   - `{object}` - super - The original builder function.
+	   *
+	   * @return {object} $stateProvider - $stateProvider instance
+	   */
+	  this.decorator = decorator;
+	  function decorator(name, func) {
+	    /*jshint validthis: true */
+	    if (isString(name) && !isDefined(func)) {
+	      return stateBuilder[name];
+	    }
+	    if (!isFunction(func) || !isString(name)) {
+	      return this;
+	    }
+	    if (stateBuilder[name] && !stateBuilder.$delegates[name]) {
+	      stateBuilder.$delegates[name] = stateBuilder[name];
+	    }
+	    stateBuilder[name] = func;
+	    return this;
+	  }
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.state.$stateProvider#state
+	   * @methodOf ui.router.state.$stateProvider
+	   *
+	   * @description
+	   * Registers a state configuration under a given state name. The stateConfig object
+	   * has the following acceptable properties.
+	   *
+	   * @param {string} name A unique state name, e.g. "home", "about", "contacts".
+	   * To create a parent/child state use a dot, e.g. "about.sales", "home.newest".
+	   * @param {object} stateConfig State configuration object.
+	   * @param {string|function=} stateConfig.template
+	   * <a id='template'></a>
+	   *   html template as a string or a function that returns
+	   *   an html template as a string which should be used by the uiView directives. This property 
+	   *   takes precedence over templateUrl.
+	   *   
+	   *   If `template` is a function, it will be called with the following parameters:
+	   *
+	   *   - {array.&lt;object&gt;} - state parameters extracted from the current $location.path() by
+	   *     applying the current state
+	   *
+	   * <pre>template:
+	   *   "<h1>inline template definition</h1>" +
+	   *   "<div ui-view></div>"</pre>
+	   * <pre>template: function(params) {
+	   *       return "<h1>generated template</h1>"; }</pre>
+	   * </div>
+	   *
+	   * @param {string|function=} stateConfig.templateUrl
+	   * <a id='templateUrl'></a>
+	   *
+	   *   path or function that returns a path to an html
+	   *   template that should be used by uiView.
+	   *   
+	   *   If `templateUrl` is a function, it will be called with the following parameters:
+	   *
+	   *   - {array.&lt;object&gt;} - state parameters extracted from the current $location.path() by 
+	   *     applying the current state
+	   *
+	   * <pre>templateUrl: "home.html"</pre>
+	   * <pre>templateUrl: function(params) {
+	   *     return myTemplates[params.pageId]; }</pre>
+	   *
+	   * @param {function=} stateConfig.templateProvider
+	   * <a id='templateProvider'></a>
+	   *    Provider function that returns HTML content string.
+	   * <pre> templateProvider:
+	   *       function(MyTemplateService, params) {
+	   *         return MyTemplateService.getTemplate(params.pageId);
+	   *       }</pre>
+	   *
+	   * @param {string|function=} stateConfig.controller
+	   * <a id='controller'></a>
+	   *
+	   *  Controller fn that should be associated with newly
+	   *   related scope or the name of a registered controller if passed as a string.
+	   *   Optionally, the ControllerAs may be declared here.
+	   * <pre>controller: "MyRegisteredController"</pre>
+	   * <pre>controller:
+	   *     "MyRegisteredController as fooCtrl"}</pre>
+	   * <pre>controller: function($scope, MyService) {
+	   *     $scope.data = MyService.getData(); }</pre>
+	   *
+	   * @param {function=} stateConfig.controllerProvider
+	   * <a id='controllerProvider'></a>
+	   *
+	   * Injectable provider function that returns the actual controller or string.
+	   * <pre>controllerProvider:
+	   *   function(MyResolveData) {
+	   *     if (MyResolveData.foo)
+	   *       return "FooCtrl"
+	   *     else if (MyResolveData.bar)
+	   *       return "BarCtrl";
+	   *     else return function($scope) {
+	   *       $scope.baz = "Qux";
+	   *     }
+	   *   }</pre>
+	   *
+	   * @param {string=} stateConfig.controllerAs
+	   * <a id='controllerAs'></a>
+	   * 
+	   * A controller alias name. If present the controller will be
+	   *   published to scope under the controllerAs name.
+	   * <pre>controllerAs: "myCtrl"</pre>
+	   *
+	   * @param {string|object=} stateConfig.parent
+	   * <a id='parent'></a>
+	   * Optionally specifies the parent state of this state.
+	   *
+	   * <pre>parent: 'parentState'</pre>
+	   * <pre>parent: parentState // JS variable</pre>
+	   *
+	   * @param {object=} stateConfig.resolve
+	   * <a id='resolve'></a>
+	   *
+	   * An optional map&lt;string, function&gt; of dependencies which
+	   *   should be injected into the controller. If any of these dependencies are promises, 
+	   *   the router will wait for them all to be resolved before the controller is instantiated.
+	   *   If all the promises are resolved successfully, the $stateChangeSuccess event is fired
+	   *   and the values of the resolved promises are injected into any controllers that reference them.
+	   *   If any  of the promises are rejected the $stateChangeError event is fired.
+	   *
+	   *   The map object is:
+	   *   
+	   *   - key - {string}: name of dependency to be injected into controller
+	   *   - factory - {string|function}: If string then it is alias for service. Otherwise if function, 
+	   *     it is injected and return value it treated as dependency. If result is a promise, it is 
+	   *     resolved before its value is injected into controller.
+	   *
+	   * <pre>resolve: {
+	   *     myResolve1:
+	   *       function($http, $stateParams) {
+	   *         return $http.get("/api/foos/"+stateParams.fooID);
+	   *       }
+	   *     }</pre>
+	   *
+	   * @param {string=} stateConfig.url
+	   * <a id='url'></a>
+	   *
+	   *   A url fragment with optional parameters. When a state is navigated or
+	   *   transitioned to, the `$stateParams` service will be populated with any 
+	   *   parameters that were passed.
+	   *
+	   *   (See {@link ui.router.util.type:UrlMatcher UrlMatcher} `UrlMatcher`} for
+	   *   more details on acceptable patterns )
+	   *
+	   * examples:
+	   * <pre>url: "/home"
+	   * url: "/users/:userid"
+	   * url: "/books/{bookid:[a-zA-Z_-]}"
+	   * url: "/books/{categoryid:int}"
+	   * url: "/books/{publishername:string}/{categoryid:int}"
+	   * url: "/messages?before&after"
+	   * url: "/messages?{before:date}&{after:date}"
+	   * url: "/messages/:mailboxid?{before:date}&{after:date}"
+	   * </pre>
+	   *
+	   * @param {object=} stateConfig.views
+	   * <a id='views'></a>
+	   * an optional map&lt;string, object&gt; which defined multiple views, or targets views
+	   * manually/explicitly.
+	   *
+	   * Examples:
+	   *
+	   * Targets three named `ui-view`s in the parent state's template
+	   * <pre>views: {
+	   *     header: {
+	   *       controller: "headerCtrl",
+	   *       templateUrl: "header.html"
+	   *     }, body: {
+	   *       controller: "bodyCtrl",
+	   *       templateUrl: "body.html"
+	   *     }, footer: {
+	   *       controller: "footCtrl",
+	   *       templateUrl: "footer.html"
+	   *     }
+	   *   }</pre>
+	   *
+	   * Targets named `ui-view="header"` from grandparent state 'top''s template, and named `ui-view="body" from parent state's template.
+	   * <pre>views: {
+	   *     'header@top': {
+	   *       controller: "msgHeaderCtrl",
+	   *       templateUrl: "msgHeader.html"
+	   *     }, 'body': {
+	   *       controller: "messagesCtrl",
+	   *       templateUrl: "messages.html"
+	   *     }
+	   *   }</pre>
+	   *
+	   * @param {boolean=} [stateConfig.abstract=false]
+	   * <a id='abstract'></a>
+	   * An abstract state will never be directly activated,
+	   *   but can provide inherited properties to its common children states.
+	   * <pre>abstract: true</pre>
+	   *
+	   * @param {function=} stateConfig.onEnter
+	   * <a id='onEnter'></a>
+	   *
+	   * Callback function for when a state is entered. Good way
+	   *   to trigger an action or dispatch an event, such as opening a dialog.
+	   * If minifying your scripts, make sure to explicitly annotate this function,
+	   * because it won't be automatically annotated by your build tools.
+	   *
+	   * <pre>onEnter: function(MyService, $stateParams) {
+	   *     MyService.foo($stateParams.myParam);
+	   * }</pre>
+	   *
+	   * @param {function=} stateConfig.onExit
+	   * <a id='onExit'></a>
+	   *
+	   * Callback function for when a state is exited. Good way to
+	   *   trigger an action or dispatch an event, such as opening a dialog.
+	   * If minifying your scripts, make sure to explicitly annotate this function,
+	   * because it won't be automatically annotated by your build tools.
+	   *
+	   * <pre>onExit: function(MyService, $stateParams) {
+	   *     MyService.cleanup($stateParams.myParam);
+	   * }</pre>
+	   *
+	   * @param {boolean=} [stateConfig.reloadOnSearch=true]
+	   * <a id='reloadOnSearch'></a>
+	   *
+	   * If `false`, will not retrigger the same state
+	   *   just because a search/query parameter has changed (via $location.search() or $location.hash()). 
+	   *   Useful for when you'd like to modify $location.search() without triggering a reload.
+	   * <pre>reloadOnSearch: false</pre>
+	   *
+	   * @param {object=} stateConfig.data
+	   * <a id='data'></a>
+	   *
+	   * Arbitrary data object, useful for custom configuration.  The parent state's `data` is
+	   *   prototypally inherited.  In other words, adding a data property to a state adds it to
+	   *   the entire subtree via prototypal inheritance.
+	   *
+	   * <pre>data: {
+	   *     requiredRole: 'foo'
+	   * } </pre>
+	   *
+	   * @param {object=} stateConfig.params
+	   * <a id='params'></a>
+	   *
+	   * A map which optionally configures parameters declared in the `url`, or
+	   *   defines additional non-url parameters.  For each parameter being
+	   *   configured, add a configuration object keyed to the name of the parameter.
+	   *
+	   *   Each parameter configuration object may contain the following properties:
+	   *
+	   *   - ** value ** - {object|function=}: specifies the default value for this
+	   *     parameter.  This implicitly sets this parameter as optional.
+	   *
+	   *     When UI-Router routes to a state and no value is
+	   *     specified for this parameter in the URL or transition, the
+	   *     default value will be used instead.  If `value` is a function,
+	   *     it will be injected and invoked, and the return value used.
+	   *
+	   *     *Note*: `undefined` is treated as "no default value" while `null`
+	   *     is treated as "the default value is `null`".
+	   *
+	   *     *Shorthand*: If you only need to configure the default value of the
+	   *     parameter, you may use a shorthand syntax.   In the **`params`**
+	   *     map, instead mapping the param name to a full parameter configuration
+	   *     object, simply set map it to the default parameter value, e.g.:
+	   *
+	   * <pre>// define a parameter's default value
+	   * params: {
+	   *     param1: { value: "defaultValue" }
+	   * }
+	   * // shorthand default values
+	   * params: {
+	   *     param1: "defaultValue",
+	   *     param2: "param2Default"
+	   * }</pre>
+	   *
+	   *   - ** array ** - {boolean=}: *(default: false)* If true, the param value will be
+	   *     treated as an array of values.  If you specified a Type, the value will be
+	   *     treated as an array of the specified Type.  Note: query parameter values
+	   *     default to a special `"auto"` mode.
+	   *
+	   *     For query parameters in `"auto"` mode, if multiple  values for a single parameter
+	   *     are present in the URL (e.g.: `/foo?bar=1&bar=2&bar=3`) then the values
+	   *     are mapped to an array (e.g.: `{ foo: [ '1', '2', '3' ] }`).  However, if
+	   *     only one value is present (e.g.: `/foo?bar=1`) then the value is treated as single
+	   *     value (e.g.: `{ foo: '1' }`).
+	   *
+	   * <pre>params: {
+	   *     param1: { array: true }
+	   * }</pre>
+	   *
+	   *   - ** squash ** - {bool|string=}: `squash` configures how a default parameter value is represented in the URL when
+	   *     the current parameter value is the same as the default value. If `squash` is not set, it uses the
+	   *     configured default squash policy.
+	   *     (See {@link ui.router.util.$urlMatcherFactory#methods_defaultSquashPolicy `defaultSquashPolicy()`})
+	   *
+	   *   There are three squash settings:
+	   *
+	   *     - false: The parameter's default value is not squashed.  It is encoded and included in the URL
+	   *     - true: The parameter's default value is omitted from the URL.  If the parameter is preceeded and followed
+	   *       by slashes in the state's `url` declaration, then one of those slashes are omitted.
+	   *       This can allow for cleaner looking URLs.
+	   *     - `"<arbitrary string>"`: The parameter's default value is replaced with an arbitrary placeholder of  your choice.
+	   *
+	   * <pre>params: {
+	   *     param1: {
+	   *       value: "defaultId",
+	   *       squash: true
+	   * } }
+	   * // squash "defaultValue" to "~"
+	   * params: {
+	   *     param1: {
+	   *       value: "defaultValue",
+	   *       squash: "~"
+	   * } }
+	   * </pre>
+	   *
+	   *
+	   * @example
+	   * <pre>
+	   * // Some state name examples
+	   *
+	   * // stateName can be a single top-level name (must be unique).
+	   * $stateProvider.state("home", {});
+	   *
+	   * // Or it can be a nested state name. This state is a child of the
+	   * // above "home" state.
+	   * $stateProvider.state("home.newest", {});
+	   *
+	   * // Nest states as deeply as needed.
+	   * $stateProvider.state("home.newest.abc.xyz.inception", {});
+	   *
+	   * // state() returns $stateProvider, so you can chain state declarations.
+	   * $stateProvider
+	   *   .state("home", {})
+	   *   .state("about", {})
+	   *   .state("contacts", {});
+	   * </pre>
+	   *
+	   */
+	  this.state = state;
+	  function state(name, definition) {
+	    /*jshint validthis: true */
+	    if (isObject(name)) definition = name;
+	    else definition.name = name;
+	    registerState(definition);
+	    return this;
+	  }
+	
+	  /**
+	   * @ngdoc object
+	   * @name ui.router.state.$state
+	   *
+	   * @requires $rootScope
+	   * @requires $q
+	   * @requires ui.router.state.$view
+	   * @requires $injector
+	   * @requires ui.router.util.$resolve
+	   * @requires ui.router.state.$stateParams
+	   * @requires ui.router.router.$urlRouter
+	   *
+	   * @property {object} params A param object, e.g. {sectionId: section.id)}, that 
+	   * you'd like to test against the current active state.
+	   * @property {object} current A reference to the state's config object. However 
+	   * you passed it in. Useful for accessing custom data.
+	   * @property {object} transition Currently pending transition. A promise that'll 
+	   * resolve or reject.
+	   *
+	   * @description
+	   * `$state` service is responsible for representing states as well as transitioning
+	   * between them. It also provides interfaces to ask for current state or even states
+	   * you're coming from.
+	   */
+	  this.$get = $get;
+	  $get.$inject = ['$rootScope', '$q', '$view', '$injector', '$resolve', '$stateParams', '$urlRouter', '$location', '$urlMatcherFactory'];
+	  function $get(   $rootScope,   $q,   $view,   $injector,   $resolve,   $stateParams,   $urlRouter,   $location,   $urlMatcherFactory) {
+	
+	    var TransitionSuperseded = $q.reject(new Error('transition superseded'));
+	    var TransitionPrevented = $q.reject(new Error('transition prevented'));
+	    var TransitionAborted = $q.reject(new Error('transition aborted'));
+	    var TransitionFailed = $q.reject(new Error('transition failed'));
+	
+	    // Handles the case where a state which is the target of a transition is not found, and the user
+	    // can optionally retry or defer the transition
+	    function handleRedirect(redirect, state, params, options) {
+	      /**
+	       * @ngdoc event
+	       * @name ui.router.state.$state#$stateNotFound
+	       * @eventOf ui.router.state.$state
+	       * @eventType broadcast on root scope
+	       * @description
+	       * Fired when a requested state **cannot be found** using the provided state name during transition.
+	       * The event is broadcast allowing any handlers a single chance to deal with the error (usually by
+	       * lazy-loading the unfound state). A special `unfoundState` object is passed to the listener handler,
+	       * you can see its three properties in the example. You can use `event.preventDefault()` to abort the
+	       * transition and the promise returned from `go` will be rejected with a `'transition aborted'` value.
+	       *
+	       * @param {Object} event Event object.
+	       * @param {Object} unfoundState Unfound State information. Contains: `to, toParams, options` properties.
+	       * @param {State} fromState Current state object.
+	       * @param {Object} fromParams Current state params.
+	       *
+	       * @example
+	       *
+	       * <pre>
+	       * // somewhere, assume lazy.state has not been defined
+	       * $state.go("lazy.state", {a:1, b:2}, {inherit:false});
+	       *
+	       * // somewhere else
+	       * $scope.$on('$stateNotFound',
+	       * function(event, unfoundState, fromState, fromParams){
+	       *     console.log(unfoundState.to); // "lazy.state"
+	       *     console.log(unfoundState.toParams); // {a:1, b:2}
+	       *     console.log(unfoundState.options); // {inherit:false} + default options
+	       * })
+	       * </pre>
+	       */
+	      var evt = $rootScope.$broadcast('$stateNotFound', redirect, state, params);
+	
+	      if (evt.defaultPrevented) {
+	        $urlRouter.update();
+	        return TransitionAborted;
+	      }
+	
+	      if (!evt.retry) {
+	        return null;
+	      }
+	
+	      // Allow the handler to return a promise to defer state lookup retry
+	      if (options.$retry) {
+	        $urlRouter.update();
+	        return TransitionFailed;
+	      }
+	      var retryTransition = $state.transition = $q.when(evt.retry);
+	
+	      retryTransition.then(function() {
+	        if (retryTransition !== $state.transition) return TransitionSuperseded;
+	        redirect.options.$retry = true;
+	        return $state.transitionTo(redirect.to, redirect.toParams, redirect.options);
+	      }, function() {
+	        return TransitionAborted;
+	      });
+	      $urlRouter.update();
+	
+	      return retryTransition;
+	    }
+	
+	    root.locals = { resolve: null, globals: { $stateParams: {} } };
+	
+	    $state = {
+	      params: {},
+	      current: root.self,
+	      $current: root,
+	      transition: null
+	    };
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#reload
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * A method that force reloads the current state. All resolves are re-resolved,
+	     * controllers reinstantiated, and events re-fired.
+	     *
+	     * @example
+	     * <pre>
+	     * var app angular.module('app', ['ui.router']);
+	     *
+	     * app.controller('ctrl', function ($scope, $state) {
+	     *   $scope.reload = function(){
+	     *     $state.reload();
+	     *   }
+	     * });
+	     * </pre>
+	     *
+	     * `reload()` is just an alias for:
+	     * <pre>
+	     * $state.transitionTo($state.current, $stateParams, { 
+	     *   reload: true, inherit: false, notify: true
+	     * });
+	     * </pre>
+	     *
+	     * @param {string=|object=} state - A state name or a state object, which is the root of the resolves to be re-resolved.
+	     * @example
+	     * <pre>
+	     * //assuming app application consists of 3 states: 'contacts', 'contacts.detail', 'contacts.detail.item' 
+	     * //and current state is 'contacts.detail.item'
+	     * var app angular.module('app', ['ui.router']);
+	     *
+	     * app.controller('ctrl', function ($scope, $state) {
+	     *   $scope.reload = function(){
+	     *     //will reload 'contact.detail' and 'contact.detail.item' states
+	     *     $state.reload('contact.detail');
+	     *   }
+	     * });
+	     * </pre>
+	     *
+	     * `reload()` is just an alias for:
+	     * <pre>
+	     * $state.transitionTo($state.current, $stateParams, { 
+	     *   reload: true, inherit: false, notify: true
+	     * });
+	     * </pre>
+	
+	     * @returns {promise} A promise representing the state of the new transition. See
+	     * {@link ui.router.state.$state#methods_go $state.go}.
+	     */
+	    $state.reload = function reload(state) {
+	      return $state.transitionTo($state.current, $stateParams, { reload: state || true, inherit: false, notify: true});
+	    };
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#go
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * Convenience method for transitioning to a new state. `$state.go` calls 
+	     * `$state.transitionTo` internally but automatically sets options to 
+	     * `{ location: true, inherit: true, relative: $state.$current, notify: true }`. 
+	     * This allows you to easily use an absolute or relative to path and specify 
+	     * only the parameters you'd like to update (while letting unspecified parameters 
+	     * inherit from the currently active ancestor states).
+	     *
+	     * @example
+	     * <pre>
+	     * var app = angular.module('app', ['ui.router']);
+	     *
+	     * app.controller('ctrl', function ($scope, $state) {
+	     *   $scope.changeState = function () {
+	     *     $state.go('contact.detail');
+	     *   };
+	     * });
+	     * </pre>
+	     * <img src='../ngdoc_assets/StateGoExamples.png'/>
+	     *
+	     * @param {string} to Absolute state name or relative state path. Some examples:
+	     *
+	     * - `$state.go('contact.detail')` - will go to the `contact.detail` state
+	     * - `$state.go('^')` - will go to a parent state
+	     * - `$state.go('^.sibling')` - will go to a sibling state
+	     * - `$state.go('.child.grandchild')` - will go to grandchild state
+	     *
+	     * @param {object=} params A map of the parameters that will be sent to the state, 
+	     * will populate $stateParams. Any parameters that are not specified will be inherited from currently 
+	     * defined parameters. Only parameters specified in the state definition can be overridden, new 
+	     * parameters will be ignored. This allows, for example, going to a sibling state that shares parameters
+	     * specified in a parent state. Parameter inheritance only works between common ancestor states, I.e.
+	     * transitioning to a sibling will get you the parameters for all parents, transitioning to a child
+	     * will get you all current parameters, etc.
+	     * @param {object=} options Options object. The options are:
+	     *
+	     * - **`location`** - {boolean=true|string=} - If `true` will update the url in the location bar, if `false`
+	     *    will not. If string, must be `"replace"`, which will update url and also replace last history record.
+	     * - **`inherit`** - {boolean=true}, If `true` will inherit url parameters from current url.
+	     * - **`relative`** - {object=$state.$current}, When transitioning with relative path (e.g '^'), 
+	     *    defines which state to be relative from.
+	     * - **`notify`** - {boolean=true}, If `true` will broadcast $stateChangeStart and $stateChangeSuccess events.
+	     * - **`reload`** (v0.2.5) - {boolean=false|string|object}, If `true` will force transition even if no state or params
+	     *    have changed.  It will reload the resolves and views of the current state and parent states.
+	     *    If `reload` is a string (or state object), the state object is fetched (by name, or object reference); and \
+	     *    the transition reloads the resolves and views for that matched state, and all its children states.
+	     *
+	     * @returns {promise} A promise representing the state of the new transition.
+	     *
+	     * Possible success values:
+	     *
+	     * - $state.current
+	     *
+	     * <br/>Possible rejection values:
+	     *
+	     * - 'transition superseded' - when a newer transition has been started after this one
+	     * - 'transition prevented' - when `event.preventDefault()` has been called in a `$stateChangeStart` listener
+	     * - 'transition aborted' - when `event.preventDefault()` has been called in a `$stateNotFound` listener or
+	     *   when a `$stateNotFound` `event.retry` promise errors.
+	     * - 'transition failed' - when a state has been unsuccessfully found after 2 tries.
+	     * - *resolve error* - when an error has occurred with a `resolve`
+	     *
+	     */
+	    $state.go = function go(to, params, options) {
+	      return $state.transitionTo(to, params, extend({ inherit: true, relative: $state.$current }, options));
+	    };
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#transitionTo
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * Low-level method for transitioning to a new state. {@link ui.router.state.$state#methods_go $state.go}
+	     * uses `transitionTo` internally. `$state.go` is recommended in most situations.
+	     *
+	     * @example
+	     * <pre>
+	     * var app = angular.module('app', ['ui.router']);
+	     *
+	     * app.controller('ctrl', function ($scope, $state) {
+	     *   $scope.changeState = function () {
+	     *     $state.transitionTo('contact.detail');
+	     *   };
+	     * });
+	     * </pre>
+	     *
+	     * @param {string} to State name.
+	     * @param {object=} toParams A map of the parameters that will be sent to the state,
+	     * will populate $stateParams.
+	     * @param {object=} options Options object. The options are:
+	     *
+	     * - **`location`** - {boolean=true|string=} - If `true` will update the url in the location bar, if `false`
+	     *    will not. If string, must be `"replace"`, which will update url and also replace last history record.
+	     * - **`inherit`** - {boolean=false}, If `true` will inherit url parameters from current url.
+	     * - **`relative`** - {object=}, When transitioning with relative path (e.g '^'), 
+	     *    defines which state to be relative from.
+	     * - **`notify`** - {boolean=true}, If `true` will broadcast $stateChangeStart and $stateChangeSuccess events.
+	     * - **`reload`** (v0.2.5) - {boolean=false|string=|object=}, If `true` will force transition even if the state or params 
+	     *    have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd
+	     *    use this when you want to force a reload when *everything* is the same, including search params.
+	     *    if String, then will reload the state with the name given in reload, and any children.
+	     *    if Object, then a stateObj is expected, will reload the state found in stateObj, and any children.
+	     *
+	     * @returns {promise} A promise representing the state of the new transition. See
+	     * {@link ui.router.state.$state#methods_go $state.go}.
+	     */
+	    $state.transitionTo = function transitionTo(to, toParams, options) {
+	      toParams = toParams || {};
+	      options = extend({
+	        location: true, inherit: false, relative: null, notify: true, reload: false, $retry: false
+	      }, options || {});
+	
+	      var from = $state.$current, fromParams = $state.params, fromPath = from.path;
+	      var evt, toState = findState(to, options.relative);
+	
+	      // Store the hash param for later (since it will be stripped out by various methods)
+	      var hash = toParams['#'];
+	
+	      if (!isDefined(toState)) {
+	        var redirect = { to: to, toParams: toParams, options: options };
+	        var redirectResult = handleRedirect(redirect, from.self, fromParams, options);
+	
+	        if (redirectResult) {
+	          return redirectResult;
+	        }
+	
+	        // Always retry once if the $stateNotFound was not prevented
+	        // (handles either redirect changed or state lazy-definition)
+	        to = redirect.to;
+	        toParams = redirect.toParams;
+	        options = redirect.options;
+	        toState = findState(to, options.relative);
+	
+	        if (!isDefined(toState)) {
+	          if (!options.relative) throw new Error("No such state '" + to + "'");
+	          throw new Error("Could not resolve '" + to + "' from state '" + options.relative + "'");
+	        }
+	      }
+	      if (toState[abstractKey]) throw new Error("Cannot transition to abstract state '" + to + "'");
+	      if (options.inherit) toParams = inheritParams($stateParams, toParams || {}, $state.$current, toState);
+	      if (!toState.params.$$validates(toParams)) return TransitionFailed;
+	
+	      toParams = toState.params.$$values(toParams);
+	      to = toState;
+	
+	      var toPath = to.path;
+	
+	      // Starting from the root of the path, keep all levels that haven't changed
+	      var keep = 0, state = toPath[keep], locals = root.locals, toLocals = [];
+	
+	      if (!options.reload) {
+	        while (state && state === fromPath[keep] && state.ownParams.$$equals(toParams, fromParams)) {
+	          locals = toLocals[keep] = state.locals;
+	          keep++;
+	          state = toPath[keep];
+	        }
+	      } else if (isString(options.reload) || isObject(options.reload)) {
+	        if (isObject(options.reload) && !options.reload.name) {
+	          throw new Error('Invalid reload state object');
+	        }
+	        
+	        var reloadState = options.reload === true ? fromPath[0] : findState(options.reload);
+	        if (options.reload && !reloadState) {
+	          throw new Error("No such reload state '" + (isString(options.reload) ? options.reload : options.reload.name) + "'");
+	        }
+	
+	        while (state && state === fromPath[keep] && state !== reloadState) {
+	          locals = toLocals[keep] = state.locals;
+	          keep++;
+	          state = toPath[keep];
+	        }
+	      }
+	
+	      // If we're going to the same state and all locals are kept, we've got nothing to do.
+	      // But clear 'transition', as we still want to cancel any other pending transitions.
+	      // TODO: We may not want to bump 'transition' if we're called from a location change
+	      // that we've initiated ourselves, because we might accidentally abort a legitimate
+	      // transition initiated from code?
+	      if (shouldSkipReload(to, toParams, from, fromParams, locals, options)) {
+	        if (hash) toParams['#'] = hash;
+	        $state.params = toParams;
+	        copy($state.params, $stateParams);
+	        copy(filterByKeys(to.params.$$keys(), $stateParams), to.locals.globals.$stateParams);
+	        if (options.location && to.navigable && to.navigable.url) {
+	          $urlRouter.push(to.navigable.url, toParams, {
+	            $$avoidResync: true, replace: options.location === 'replace'
+	          });
+	          $urlRouter.update(true);
+	        }
+	        $state.transition = null;
+	        return $q.when($state.current);
+	      }
+	
+	      // Filter parameters before we pass them to event handlers etc.
+	      toParams = filterByKeys(to.params.$$keys(), toParams || {});
+	      
+	      // Re-add the saved hash before we start returning things or broadcasting $stateChangeStart
+	      if (hash) toParams['#'] = hash;
+	      
+	      // Broadcast start event and cancel the transition if requested
+	      if (options.notify) {
+	        /**
+	         * @ngdoc event
+	         * @name ui.router.state.$state#$stateChangeStart
+	         * @eventOf ui.router.state.$state
+	         * @eventType broadcast on root scope
+	         * @description
+	         * Fired when the state transition **begins**. You can use `event.preventDefault()`
+	         * to prevent the transition from happening and then the transition promise will be
+	         * rejected with a `'transition prevented'` value.
+	         *
+	         * @param {Object} event Event object.
+	         * @param {State} toState The state being transitioned to.
+	         * @param {Object} toParams The params supplied to the `toState`.
+	         * @param {State} fromState The current state, pre-transition.
+	         * @param {Object} fromParams The params supplied to the `fromState`.
+	         *
+	         * @example
+	         *
+	         * <pre>
+	         * $rootScope.$on('$stateChangeStart',
+	         * function(event, toState, toParams, fromState, fromParams){
+	         *     event.preventDefault();
+	         *     // transitionTo() promise will be rejected with
+	         *     // a 'transition prevented' error
+	         * })
+	         * </pre>
+	         */
+	        if ($rootScope.$broadcast('$stateChangeStart', to.self, toParams, from.self, fromParams, options).defaultPrevented) {
+	          $rootScope.$broadcast('$stateChangeCancel', to.self, toParams, from.self, fromParams);
+	          //Don't update and resync url if there's been a new transition started. see issue #2238, #600
+	          if ($state.transition == null) $urlRouter.update();
+	          return TransitionPrevented;
+	        }
+	      }
+	
+	      // Resolve locals for the remaining states, but don't update any global state just
+	      // yet -- if anything fails to resolve the current state needs to remain untouched.
+	      // We also set up an inheritance chain for the locals here. This allows the view directive
+	      // to quickly look up the correct definition for each view in the current state. Even
+	      // though we create the locals object itself outside resolveState(), it is initially
+	      // empty and gets filled asynchronously. We need to keep track of the promise for the
+	      // (fully resolved) current locals, and pass this down the chain.
+	      var resolved = $q.when(locals);
+	
+	      for (var l = keep; l < toPath.length; l++, state = toPath[l]) {
+	        locals = toLocals[l] = inherit(locals);
+	        resolved = resolveState(state, toParams, state === to, resolved, locals, options);
+	      }
+	
+	      // Once everything is resolved, we are ready to perform the actual transition
+	      // and return a promise for the new state. We also keep track of what the
+	      // current promise is, so that we can detect overlapping transitions and
+	      // keep only the outcome of the last transition.
+	      var transition = $state.transition = resolved.then(function () {
+	        var l, entering, exiting;
+	
+	        if ($state.transition !== transition) return TransitionSuperseded;
+	
+	        // Exit 'from' states not kept
+	        for (l = fromPath.length - 1; l >= keep; l--) {
+	          exiting = fromPath[l];
+	          if (exiting.self.onExit) {
+	            $injector.invoke(exiting.self.onExit, exiting.self, exiting.locals.globals);
+	          }
+	          exiting.locals = null;
+	        }
+	
+	        // Enter 'to' states not kept
+	        for (l = keep; l < toPath.length; l++) {
+	          entering = toPath[l];
+	          entering.locals = toLocals[l];
+	          if (entering.self.onEnter) {
+	            $injector.invoke(entering.self.onEnter, entering.self, entering.locals.globals);
+	          }
+	        }
+	
+	        // Run it again, to catch any transitions in callbacks
+	        if ($state.transition !== transition) return TransitionSuperseded;
+	
+	        // Update globals in $state
+	        $state.$current = to;
+	        $state.current = to.self;
+	        $state.params = toParams;
+	        copy($state.params, $stateParams);
+	        $state.transition = null;
+	
+	        if (options.location && to.navigable) {
+	          $urlRouter.push(to.navigable.url, to.navigable.locals.globals.$stateParams, {
+	            $$avoidResync: true, replace: options.location === 'replace'
+	          });
+	        }
+	
+	        if (options.notify) {
+	        /**
+	         * @ngdoc event
+	         * @name ui.router.state.$state#$stateChangeSuccess
+	         * @eventOf ui.router.state.$state
+	         * @eventType broadcast on root scope
+	         * @description
+	         * Fired once the state transition is **complete**.
+	         *
+	         * @param {Object} event Event object.
+	         * @param {State} toState The state being transitioned to.
+	         * @param {Object} toParams The params supplied to the `toState`.
+	         * @param {State} fromState The current state, pre-transition.
+	         * @param {Object} fromParams The params supplied to the `fromState`.
+	         */
+	          $rootScope.$broadcast('$stateChangeSuccess', to.self, toParams, from.self, fromParams);
+	        }
+	        $urlRouter.update(true);
+	
+	        return $state.current;
+	      }, function (error) {
+	        if ($state.transition !== transition) return TransitionSuperseded;
+	
+	        $state.transition = null;
+	        /**
+	         * @ngdoc event
+	         * @name ui.router.state.$state#$stateChangeError
+	         * @eventOf ui.router.state.$state
+	         * @eventType broadcast on root scope
+	         * @description
+	         * Fired when an **error occurs** during transition. It's important to note that if you
+	         * have any errors in your resolve functions (javascript errors, non-existent services, etc)
+	         * they will not throw traditionally. You must listen for this $stateChangeError event to
+	         * catch **ALL** errors.
+	         *
+	         * @param {Object} event Event object.
+	         * @param {State} toState The state being transitioned to.
+	         * @param {Object} toParams The params supplied to the `toState`.
+	         * @param {State} fromState The current state, pre-transition.
+	         * @param {Object} fromParams The params supplied to the `fromState`.
+	         * @param {Error} error The resolve error object.
+	         */
+	        evt = $rootScope.$broadcast('$stateChangeError', to.self, toParams, from.self, fromParams, error);
+	
+	        if (!evt.defaultPrevented) {
+	            $urlRouter.update();
+	        }
+	
+	        return $q.reject(error);
+	      });
+	
+	      return transition;
+	    };
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#is
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * Similar to {@link ui.router.state.$state#methods_includes $state.includes},
+	     * but only checks for the full state name. If params is supplied then it will be
+	     * tested for strict equality against the current active params object, so all params
+	     * must match with none missing and no extras.
+	     *
+	     * @example
+	     * <pre>
+	     * $state.$current.name = 'contacts.details.item';
+	     *
+	     * // absolute name
+	     * $state.is('contact.details.item'); // returns true
+	     * $state.is(contactDetailItemStateObject); // returns true
+	     *
+	     * // relative name (. and ^), typically from a template
+	     * // E.g. from the 'contacts.details' template
+	     * <div ng-class="{highlighted: $state.is('.item')}">Item</div>
+	     * </pre>
+	     *
+	     * @param {string|object} stateOrName The state name (absolute or relative) or state object you'd like to check.
+	     * @param {object=} params A param object, e.g. `{sectionId: section.id}`, that you'd like
+	     * to test against the current active state.
+	     * @param {object=} options An options object.  The options are:
+	     *
+	     * - **`relative`** - {string|object} -  If `stateOrName` is a relative state name and `options.relative` is set, .is will
+	     * test relative to `options.relative` state (or name).
+	     *
+	     * @returns {boolean} Returns true if it is the state.
+	     */
+	    $state.is = function is(stateOrName, params, options) {
+	      options = extend({ relative: $state.$current }, options || {});
+	      var state = findState(stateOrName, options.relative);
+	
+	      if (!isDefined(state)) { return undefined; }
+	      if ($state.$current !== state) { return false; }
+	      return params ? equalForKeys(state.params.$$values(params), $stateParams) : true;
+	    };
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#includes
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * A method to determine if the current active state is equal to or is the child of the
+	     * state stateName. If any params are passed then they will be tested for a match as well.
+	     * Not all the parameters need to be passed, just the ones you'd like to test for equality.
+	     *
+	     * @example
+	     * Partial and relative names
+	     * <pre>
+	     * $state.$current.name = 'contacts.details.item';
+	     *
+	     * // Using partial names
+	     * $state.includes("contacts"); // returns true
+	     * $state.includes("contacts.details"); // returns true
+	     * $state.includes("contacts.details.item"); // returns true
+	     * $state.includes("contacts.list"); // returns false
+	     * $state.includes("about"); // returns false
+	     *
+	     * // Using relative names (. and ^), typically from a template
+	     * // E.g. from the 'contacts.details' template
+	     * <div ng-class="{highlighted: $state.includes('.item')}">Item</div>
+	     * </pre>
+	     *
+	     * Basic globbing patterns
+	     * <pre>
+	     * $state.$current.name = 'contacts.details.item.url';
+	     *
+	     * $state.includes("*.details.*.*"); // returns true
+	     * $state.includes("*.details.**"); // returns true
+	     * $state.includes("**.item.**"); // returns true
+	     * $state.includes("*.details.item.url"); // returns true
+	     * $state.includes("*.details.*.url"); // returns true
+	     * $state.includes("*.details.*"); // returns false
+	     * $state.includes("item.**"); // returns false
+	     * </pre>
+	     *
+	     * @param {string} stateOrName A partial name, relative name, or glob pattern
+	     * to be searched for within the current state name.
+	     * @param {object=} params A param object, e.g. `{sectionId: section.id}`,
+	     * that you'd like to test against the current active state.
+	     * @param {object=} options An options object.  The options are:
+	     *
+	     * - **`relative`** - {string|object=} -  If `stateOrName` is a relative state reference and `options.relative` is set,
+	     * .includes will test relative to `options.relative` state (or name).
+	     *
+	     * @returns {boolean} Returns true if it does include the state
+	     */
+	    $state.includes = function includes(stateOrName, params, options) {
+	      options = extend({ relative: $state.$current }, options || {});
+	      if (isString(stateOrName) && isGlob(stateOrName)) {
+	        if (!doesStateMatchGlob(stateOrName)) {
+	          return false;
+	        }
+	        stateOrName = $state.$current.name;
+	      }
+	
+	      var state = findState(stateOrName, options.relative);
+	      if (!isDefined(state)) { return undefined; }
+	      if (!isDefined($state.$current.includes[state.name])) { return false; }
+	      return params ? equalForKeys(state.params.$$values(params), $stateParams, objectKeys(params)) : true;
+	    };
+	
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#href
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * A url generation method that returns the compiled url for the given state populated with the given params.
+	     *
+	     * @example
+	     * <pre>
+	     * expect($state.href("about.person", { person: "bob" })).toEqual("/about/bob");
+	     * </pre>
+	     *
+	     * @param {string|object} stateOrName The state name or state object you'd like to generate a url from.
+	     * @param {object=} params An object of parameter values to fill the state's required parameters.
+	     * @param {object=} options Options object. The options are:
+	     *
+	     * - **`lossy`** - {boolean=true} -  If true, and if there is no url associated with the state provided in the
+	     *    first parameter, then the constructed href url will be built from the first navigable ancestor (aka
+	     *    ancestor with a valid url).
+	     * - **`inherit`** - {boolean=true}, If `true` will inherit url parameters from current url.
+	     * - **`relative`** - {object=$state.$current}, When transitioning with relative path (e.g '^'), 
+	     *    defines which state to be relative from.
+	     * - **`absolute`** - {boolean=false},  If true will generate an absolute url, e.g. "http://www.example.com/fullurl".
+	     * 
+	     * @returns {string} compiled state url
+	     */
+	    $state.href = function href(stateOrName, params, options) {
+	      options = extend({
+	        lossy:    true,
+	        inherit:  true,
+	        absolute: false,
+	        relative: $state.$current
+	      }, options || {});
+	
+	      var state = findState(stateOrName, options.relative);
+	
+	      if (!isDefined(state)) return null;
+	      if (options.inherit) params = inheritParams($stateParams, params || {}, $state.$current, state);
+	      
+	      var nav = (state && options.lossy) ? state.navigable : state;
+	
+	      if (!nav || nav.url === undefined || nav.url === null) {
+	        return null;
+	      }
+	      return $urlRouter.href(nav.url, filterByKeys(state.params.$$keys().concat('#'), params || {}), {
+	        absolute: options.absolute
+	      });
+	    };
+	
+	    /**
+	     * @ngdoc function
+	     * @name ui.router.state.$state#get
+	     * @methodOf ui.router.state.$state
+	     *
+	     * @description
+	     * Returns the state configuration object for any specific state or all states.
+	     *
+	     * @param {string|object=} stateOrName (absolute or relative) If provided, will only get the config for
+	     * the requested state. If not provided, returns an array of ALL state configs.
+	     * @param {string|object=} context When stateOrName is a relative state reference, the state will be retrieved relative to context.
+	     * @returns {Object|Array} State configuration object or array of all objects.
+	     */
+	    $state.get = function (stateOrName, context) {
+	      if (arguments.length === 0) return map(objectKeys(states), function(name) { return states[name].self; });
+	      var state = findState(stateOrName, context || $state.$current);
+	      return (state && state.self) ? state.self : null;
+	    };
+	
+	    function resolveState(state, params, paramsAreFiltered, inherited, dst, options) {
+	      // Make a restricted $stateParams with only the parameters that apply to this state if
+	      // necessary. In addition to being available to the controller and onEnter/onExit callbacks,
+	      // we also need $stateParams to be available for any $injector calls we make during the
+	      // dependency resolution process.
+	      var $stateParams = (paramsAreFiltered) ? params : filterByKeys(state.params.$$keys(), params);
+	      var locals = { $stateParams: $stateParams };
+	
+	      // Resolve 'global' dependencies for the state, i.e. those not specific to a view.
+	      // We're also including $stateParams in this; that way the parameters are restricted
+	      // to the set that should be visible to the state, and are independent of when we update
+	      // the global $state and $stateParams values.
+	      dst.resolve = $resolve.resolve(state.resolve, locals, dst.resolve, state);
+	      var promises = [dst.resolve.then(function (globals) {
+	        dst.globals = globals;
+	      })];
+	      if (inherited) promises.push(inherited);
+	
+	      function resolveViews() {
+	        var viewsPromises = [];
+	
+	        // Resolve template and dependencies for all views.
+	        forEach(state.views, function (view, name) {
+	          var injectables = (view.resolve && view.resolve !== state.resolve ? view.resolve : {});
+	          injectables.$template = [ function () {
+	            return $view.load(name, { view: view, locals: dst.globals, params: $stateParams, notify: options.notify }) || '';
+	          }];
+	
+	          viewsPromises.push($resolve.resolve(injectables, dst.globals, dst.resolve, state).then(function (result) {
+	            // References to the controller (only instantiated at link time)
+	            if (isFunction(view.controllerProvider) || isArray(view.controllerProvider)) {
+	              var injectLocals = angular.extend({}, injectables, dst.globals);
+	              result.$$controller = $injector.invoke(view.controllerProvider, null, injectLocals);
+	            } else {
+	              result.$$controller = view.controller;
+	            }
+	            // Provide access to the state itself for internal use
+	            result.$$state = state;
+	            result.$$controllerAs = view.controllerAs;
+	            dst[name] = result;
+	          }));
+	        });
+	
+	        return $q.all(viewsPromises).then(function(){
+	          return dst.globals;
+	        });
+	      }
+	
+	      // Wait for all the promises and then return the activation object
+	      return $q.all(promises).then(resolveViews).then(function (values) {
+	        return dst;
+	      });
+	    }
+	
+	    return $state;
+	  }
+	
+	  function shouldSkipReload(to, toParams, from, fromParams, locals, options) {
+	    // Return true if there are no differences in non-search (path/object) params, false if there are differences
+	    function nonSearchParamsEqual(fromAndToState, fromParams, toParams) {
+	      // Identify whether all the parameters that differ between `fromParams` and `toParams` were search params.
+	      function notSearchParam(key) {
+	        return fromAndToState.params[key].location != "search";
+	      }
+	      var nonQueryParamKeys = fromAndToState.params.$$keys().filter(notSearchParam);
+	      var nonQueryParams = pick.apply({}, [fromAndToState.params].concat(nonQueryParamKeys));
+	      var nonQueryParamSet = new $$UMFP.ParamSet(nonQueryParams);
+	      return nonQueryParamSet.$$equals(fromParams, toParams);
+	    }
+	
+	    // If reload was not explicitly requested
+	    // and we're transitioning to the same state we're already in
+	    // and    the locals didn't change
+	    //     or they changed in a way that doesn't merit reloading
+	    //        (reloadOnParams:false, or reloadOnSearch.false and only search params changed)
+	    // Then return true.
+	    if (!options.reload && to === from &&
+	      (locals === from.locals || (to.self.reloadOnSearch === false && nonSearchParamsEqual(from, fromParams, toParams)))) {
+	      return true;
+	    }
+	  }
+	}
+	
+	angular.module('ui.router.state')
+	  .factory('$stateParams', function () { return {}; })
+	  .provider('$state', $StateProvider);
+	
+	
+	$ViewProvider.$inject = [];
+	function $ViewProvider() {
+	
+	  this.$get = $get;
+	  /**
+	   * @ngdoc object
+	   * @name ui.router.state.$view
+	   *
+	   * @requires ui.router.util.$templateFactory
+	   * @requires $rootScope
+	   *
+	   * @description
+	   *
+	   */
+	  $get.$inject = ['$rootScope', '$templateFactory'];
+	  function $get(   $rootScope,   $templateFactory) {
+	    return {
+	      // $view.load('full.viewName', { template: ..., controller: ..., resolve: ..., async: false, params: ... })
+	      /**
+	       * @ngdoc function
+	       * @name ui.router.state.$view#load
+	       * @methodOf ui.router.state.$view
+	       *
+	       * @description
+	       *
+	       * @param {string} name name
+	       * @param {object} options option object.
+	       */
+	      load: function load(name, options) {
+	        var result, defaults = {
+	          template: null, controller: null, view: null, locals: null, notify: true, async: true, params: {}
+	        };
+	        options = extend(defaults, options);
+	
+	        if (options.view) {
+	          result = $templateFactory.fromConfig(options.view, options.params, options.locals);
+	        }
+	        return result;
+	      }
+	    };
+	  }
+	}
+	
+	angular.module('ui.router.state').provider('$view', $ViewProvider);
+	
+	/**
+	 * @ngdoc object
+	 * @name ui.router.state.$uiViewScrollProvider
+	 *
+	 * @description
+	 * Provider that returns the {@link ui.router.state.$uiViewScroll} service function.
+	 */
+	function $ViewScrollProvider() {
+	
+	  var useAnchorScroll = false;
+	
+	  /**
+	   * @ngdoc function
+	   * @name ui.router.state.$uiViewScrollProvider#useAnchorScroll
+	   * @methodOf ui.router.state.$uiViewScrollProvider
+	   *
+	   * @description
+	   * Reverts back to using the core [`$anchorScroll`](http://docs.angularjs.org/api/ng.$anchorScroll) service for
+	   * scrolling based on the url anchor.
+	   */
+	  this.useAnchorScroll = function () {
+	    useAnchorScroll = true;
+	  };
+	
+	  /**
+	   * @ngdoc object
+	   * @name ui.router.state.$uiViewScroll
+	   *
+	   * @requires $anchorScroll
+	   * @requires $timeout
+	   *
+	   * @description
+	   * When called with a jqLite element, it scrolls the element into view (after a
+	   * `$timeout` so the DOM has time to refresh).
+	   *
+	   * If you prefer to rely on `$anchorScroll` to scroll the view to the anchor,
+	   * this can be enabled by calling {@link ui.router.state.$uiViewScrollProvider#methods_useAnchorScroll `$uiViewScrollProvider.useAnchorScroll()`}.
+	   */
+	  this.$get = ['$anchorScroll', '$timeout', function ($anchorScroll, $timeout) {
+	    if (useAnchorScroll) {
+	      return $anchorScroll;
+	    }
+	
+	    return function ($element) {
+	      return $timeout(function () {
+	        $element[0].scrollIntoView();
+	      }, 0, false);
+	    };
+	  }];
+	}
+	
+	angular.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProvider);
+	
+	var ngMajorVer = angular.version.major;
+	var ngMinorVer = angular.version.minor;
+	/**
+	 * @ngdoc directive
+	 * @name ui.router.state.directive:ui-view
+	 *
+	 * @requires ui.router.state.$state
+	 * @requires $compile
+	 * @requires $controller
+	 * @requires $injector
+	 * @requires ui.router.state.$uiViewScroll
+	 * @requires $document
+	 *
+	 * @restrict ECA
+	 *
+	 * @description
+	 * The ui-view directive tells $state where to place your templates.
+	 *
+	 * @param {string=} name A view name. The name should be unique amongst the other views in the
+	 * same state. You can have views of the same name that live in different states.
+	 *
+	 * @param {string=} autoscroll It allows you to set the scroll behavior of the browser window
+	 * when a view is populated. By default, $anchorScroll is overridden by ui-router's custom scroll
+	 * service, {@link ui.router.state.$uiViewScroll}. This custom service let's you
+	 * scroll ui-view elements into view when they are populated during a state activation.
+	 *
+	 * @param {string=} noanimation If truthy, the non-animated renderer will be selected (no animations
+	 * will be applied to the ui-view)
+	 *
+	 * *Note: To revert back to old [`$anchorScroll`](http://docs.angularjs.org/api/ng.$anchorScroll)
+	 * functionality, call `$uiViewScrollProvider.useAnchorScroll()`.*
+	 *
+	 * @param {string=} onload Expression to evaluate whenever the view updates.
+	 * 
+	 * @example
+	 * A view can be unnamed or named. 
+	 * <pre>
+	 * <!-- Unnamed -->
+	 * <div ui-view></div> 
+	 * 
+	 * <!-- Named -->
+	 * <div ui-view="viewName"></div>
+	 * </pre>
+	 *
+	 * You can only have one unnamed view within any template (or root html). If you are only using a 
+	 * single view and it is unnamed then you can populate it like so:
+	 * <pre>
+	 * <div ui-view></div> 
+	 * $stateProvider.state("home", {
+	 *   template: "<h1>HELLO!</h1>"
+	 * })
+	 * </pre>
+	 * 
+	 * The above is a convenient shortcut equivalent to specifying your view explicitly with the {@link ui.router.state.$stateProvider#views `views`}
+	 * config property, by name, in this case an empty name:
+	 * <pre>
+	 * $stateProvider.state("home", {
+	 *   views: {
+	 *     "": {
+	 *       template: "<h1>HELLO!</h1>"
+	 *     }
+	 *   }    
+	 * })
+	 * </pre>
+	 * 
+	 * But typically you'll only use the views property if you name your view or have more than one view 
+	 * in the same template. There's not really a compelling reason to name a view if its the only one, 
+	 * but you could if you wanted, like so:
+	 * <pre>
+	 * <div ui-view="main"></div>
+	 * </pre> 
+	 * <pre>
+	 * $stateProvider.state("home", {
+	 *   views: {
+	 *     "main": {
+	 *       template: "<h1>HELLO!</h1>"
+	 *     }
+	 *   }    
+	 * })
+	 * </pre>
+	 * 
+	 * Really though, you'll use views to set up multiple views:
+	 * <pre>
+	 * <div ui-view></div>
+	 * <div ui-view="chart"></div> 
+	 * <div ui-view="data"></div> 
+	 * </pre>
+	 * 
+	 * <pre>
+	 * $stateProvider.state("home", {
+	 *   views: {
+	 *     "": {
+	 *       template: "<h1>HELLO!</h1>"
+	 *     },
+	 *     "chart": {
+	 *       template: "<chart_thing/>"
+	 *     },
+	 *     "data": {
+	 *       template: "<data_thing/>"
+	 *     }
+	 *   }    
+	 * })
+	 * </pre>
+	 *
+	 * Examples for `autoscroll`:
+	 *
+	 * <pre>
+	 * <!-- If autoscroll present with no expression,
+	 *      then scroll ui-view into view -->
+	 * <ui-view autoscroll/>
+	 *
+	 * <!-- If autoscroll present with valid expression,
+	 *      then scroll ui-view into view if expression evaluates to true -->
+	 * <ui-view autoscroll='true'/>
+	 * <ui-view autoscroll='false'/>
+	 * <ui-view autoscroll='scopeVariable'/>
+	 * </pre>
+	 */
+	$ViewDirective.$inject = ['$state', '$injector', '$uiViewScroll', '$interpolate'];
+	function $ViewDirective(   $state,   $injector,   $uiViewScroll,   $interpolate) {
+	
+	  function getService() {
+	    return ($injector.has) ? function(service) {
+	      return $injector.has(service) ? $injector.get(service) : null;
+	    } : function(service) {
+	      try {
+	        return $injector.get(service);
+	      } catch (e) {
+	        return null;
+	      }
+	    };
+	  }
+	
+	  var service = getService(),
+	      $animator = service('$animator'),
+	      $animate = service('$animate');
+	
+	  // Returns a set of DOM manipulation functions based on which Angular version
+	  // it should use
+	  function getRenderer(attrs, scope) {
+	    var statics = {
+	      enter: function (element, target, cb) { target.after(element); cb(); },
+	      leave: function (element, cb) { element.remove(); cb(); }
+	    };
+	
+	    if (!!attrs.noanimation) return statics;
+	
+	    function animEnabled(element) {
+	      if (ngMajorVer === 1 && ngMinorVer >= 4) return !!$animate.enabled(element);
+	      if (ngMajorVer === 1 && ngMinorVer >= 2) return !!$animate.enabled();
+	      return (!!$animator);
+	    }
+	
+	    // ng 1.2+
+	    if ($animate) {
+	      return {
+	        enter: function(element, target, cb) {
+	          if (!animEnabled(element)) {
+	            statics.enter(element, target, cb);
+	          } else if (angular.version.minor > 2) {
+	            $animate.enter(element, null, target).then(cb);
+	          } else {
+	            $animate.enter(element, null, target, cb);
+	          }
+	        },
+	        leave: function(element, cb) {
+	          if (!animEnabled(element)) {
+	            statics.leave(element, cb);
+	          } else if (angular.version.minor > 2) {
+	            $animate.leave(element).then(cb);
+	          } else {
+	            $animate.leave(element, cb);
+	          }
+	        }
+	      };
+	    }
+	
+	    // ng 1.1.5
+	    if ($animator) {
+	      var animate = $animator && $animator(scope, attrs);
+	
+	      return {
+	        enter: function(element, target, cb) {animate.enter(element, null, target); cb(); },
+	        leave: function(element, cb) { animate.leave(element); cb(); }
+	      };
+	    }
+	
+	    return statics;
+	  }
+	
+	  var directive = {
+	    restrict: 'ECA',
+	    terminal: true,
+	    priority: 400,
+	    transclude: 'element',
+	    compile: function (tElement, tAttrs, $transclude) {
+	      return function (scope, $element, attrs) {
+	        var previousEl, currentEl, currentScope, latestLocals,
+	            onloadExp     = attrs.onload || '',
+	            autoScrollExp = attrs.autoscroll,
+	            renderer      = getRenderer(attrs, scope);
+	
+	        scope.$on('$stateChangeSuccess', function() {
+	          updateView(false);
+	        });
+	
+	        updateView(true);
+	
+	        function cleanupLastView() {
+	          var _previousEl = previousEl;
+	          var _currentScope = currentScope;
+	
+	          if (_currentScope) {
+	            _currentScope._willBeDestroyed = true;
+	          }
+	
+	          function cleanOld() {
+	            if (_previousEl) {
+	              _previousEl.remove();
+	            }
+	
+	            if (_currentScope) {
+	              _currentScope.$destroy();
+	            }
+	          }
+	
+	          if (currentEl) {
+	            renderer.leave(currentEl, function() {
+	              cleanOld();
+	              previousEl = null;
+	            });
+	
+	            previousEl = currentEl;
+	          } else {
+	            cleanOld();
+	            previousEl = null;
+	          }
+	
+	          currentEl = null;
+	          currentScope = null;
+	        }
+	
+	        function updateView(firstTime) {
+	          var newScope,
+	              name            = getUiViewName(scope, attrs, $element, $interpolate),
+	              previousLocals  = name && $state.$current && $state.$current.locals[name];
+	
+	          if (!firstTime && previousLocals === latestLocals || scope._willBeDestroyed) return; // nothing to do
+	          newScope = scope.$new();
+	          latestLocals = $state.$current.locals[name];
+	
+	          /**
+	           * @ngdoc event
+	           * @name ui.router.state.directive:ui-view#$viewContentLoading
+	           * @eventOf ui.router.state.directive:ui-view
+	           * @eventType emits on ui-view directive scope
+	           * @description
+	           *
+	           * Fired once the view **begins loading**, *before* the DOM is rendered.
+	           *
+	           * @param {Object} event Event object.
+	           * @param {string} viewName Name of the view.
+	           */
+	          newScope.$emit('$viewContentLoading', name);
+	
+	          var clone = $transclude(newScope, function(clone) {
+	            renderer.enter(clone, $element, function onUiViewEnter() {
+	              if(currentScope) {
+	                currentScope.$emit('$viewContentAnimationEnded');
+	              }
+	
+	              if (angular.isDefined(autoScrollExp) && !autoScrollExp || scope.$eval(autoScrollExp)) {
+	                $uiViewScroll(clone);
+	              }
+	            });
+	            cleanupLastView();
+	          });
+	
+	          currentEl = clone;
+	          currentScope = newScope;
+	          /**
+	           * @ngdoc event
+	           * @name ui.router.state.directive:ui-view#$viewContentLoaded
+	           * @eventOf ui.router.state.directive:ui-view
+	           * @eventType emits on ui-view directive scope
+	           * @description
+	           * Fired once the view is **loaded**, *after* the DOM is rendered.
+	           *
+	           * @param {Object} event Event object.
+	           * @param {string} viewName Name of the view.
+	           */
+	          currentScope.$emit('$viewContentLoaded', name);
+	          currentScope.$eval(onloadExp);
+	        }
+	      };
+	    }
+	  };
+	
+	  return directive;
+	}
+	
+	$ViewDirectiveFill.$inject = ['$compile', '$controller', '$state', '$interpolate'];
+	function $ViewDirectiveFill (  $compile,   $controller,   $state,   $interpolate) {
+	  return {
+	    restrict: 'ECA',
+	    priority: -400,
+	    compile: function (tElement) {
+	      var initial = tElement.html();
+	      return function (scope, $element, attrs) {
+	        var current = $state.$current,
+	            name = getUiViewName(scope, attrs, $element, $interpolate),
+	            locals  = current && current.locals[name];
+	
+	        if (! locals) {
+	          return;
+	        }
+	
+	        $element.data('$uiView', { name: name, state: locals.$$state });
+	        $element.html(locals.$template ? locals.$template : initial);
+	
+	        var link = $compile($element.contents());
+	
+	        if (locals.$$controller) {
+	          locals.$scope = scope;
+	          locals.$element = $element;
+	          var controller = $controller(locals.$$controller, locals);
+	          if (locals.$$controllerAs) {
+	            scope[locals.$$controllerAs] = controller;
+	          }
+	          $element.data('$ngControllerController', controller);
+	          $element.children().data('$ngControllerController', controller);
+	        }
+	
+	        link(scope);
+	      };
+	    }
+	  };
+	}
+	
+	/**
+	 * Shared ui-view code for both directives:
+	 * Given scope, element, and its attributes, return the view's name
+	 */
+	function getUiViewName(scope, attrs, element, $interpolate) {
+	  var name = $interpolate(attrs.uiView || attrs.name || '')(scope);
+	  var inherited = element.inheritedData('$uiView');
+	  return name.indexOf('@') >= 0 ?  name :  (name + '@' + (inherited ? inherited.state.name : ''));
+	}
+	
+	angular.module('ui.router.state').directive('uiView', $ViewDirective);
+	angular.module('ui.router.state').directive('uiView', $ViewDirectiveFill);
+	
+	function parseStateRef(ref, current) {
+	  var preparsed = ref.match(/^\s*({[^}]*})\s*$/), parsed;
+	  if (preparsed) ref = current + '(' + preparsed[1] + ')';
+	  parsed = ref.replace(/\n/g, " ").match(/^([^(]+?)\s*(\((.*)\))?$/);
+	  if (!parsed || parsed.length !== 4) throw new Error("Invalid state ref '" + ref + "'");
+	  return { state: parsed[1], paramExpr: parsed[3] || null };
+	}
+	
+	function stateContext(el) {
+	  var stateData = el.parent().inheritedData('$uiView');
+	
+	  if (stateData && stateData.state && stateData.state.name) {
+	    return stateData.state;
+	  }
+	}
+	
+	function getTypeInfo(el) {
+	  // SVGAElement does not use the href attribute, but rather the 'xlinkHref' attribute.
+	  var isSvg = Object.prototype.toString.call(el.prop('href')) === '[object SVGAnimatedString]';
+	  var isForm = el[0].nodeName === "FORM";
+	
+	  return {
+	    attr: isForm ? "action" : (isSvg ? 'xlink:href' : 'href'),
+	    isAnchor: el.prop("tagName").toUpperCase() === "A",
+	    clickable: !isForm
+	  };
+	}
+	
+	function clickHook(el, $state, $timeout, type, current) {
+	  return function(e) {
+	    var button = e.which || e.button, target = current();
+	
+	    if (!(button > 1 || e.ctrlKey || e.metaKey || e.shiftKey || el.attr('target'))) {
+	      // HACK: This is to allow ng-clicks to be processed before the transition is initiated:
+	      var transition = $timeout(function() {
+	        $state.go(target.state, target.params, target.options);
+	      });
+	      e.preventDefault();
+	
+	      // if the state has no URL, ignore one preventDefault from the <a> directive.
+	      var ignorePreventDefaultCount = type.isAnchor && !target.href ? 1: 0;
+	
+	      e.preventDefault = function() {
+	        if (ignorePreventDefaultCount-- <= 0) $timeout.cancel(transition);
+	      };
+	    }
+	  };
+	}
+	
+	function defaultOpts(el, $state) {
+	  return { relative: stateContext(el) || $state.$current, inherit: true };
+	}
+	
+	/**
+	 * @ngdoc directive
+	 * @name ui.router.state.directive:ui-sref
+	 *
+	 * @requires ui.router.state.$state
+	 * @requires $timeout
+	 *
+	 * @restrict A
+	 *
+	 * @description
+	 * A directive that binds a link (`<a>` tag) to a state. If the state has an associated
+	 * URL, the directive will automatically generate & update the `href` attribute via
+	 * the {@link ui.router.state.$state#methods_href $state.href()} method. Clicking
+	 * the link will trigger a state transition with optional parameters.
+	 *
+	 * Also middle-clicking, right-clicking, and ctrl-clicking on the link will be
+	 * handled natively by the browser.
+	 *
+	 * You can also use relative state paths within ui-sref, just like the relative
+	 * paths passed to `$state.go()`. You just need to be aware that the path is relative
+	 * to the state that the link lives in, in other words the state that loaded the
+	 * template containing the link.
+	 *
+	 * You can specify options to pass to {@link ui.router.state.$state#go $state.go()}
+	 * using the `ui-sref-opts` attribute. Options are restricted to `location`, `inherit`,
+	 * and `reload`.
+	 *
+	 * @example
+	 * Here's an example of how you'd use ui-sref and how it would compile. If you have the
+	 * following template:
+	 * <pre>
+	 * <a ui-sref="home">Home</a> | <a ui-sref="about">About</a> | <a ui-sref="{page: 2}">Next page</a>
+	 *
+	 * <ul>
+	 *     <li ng-repeat="contact in contacts">
+	 *         <a ui-sref="contacts.detail({ id: contact.id })">{{ contact.name }}</a>
+	 *     </li>
+	 * </ul>
+	 * </pre>
+	 *
+	 * Then the compiled html would be (assuming Html5Mode is off and current state is contacts):
+	 * <pre>
+	 * <a href="#/home" ui-sref="home">Home</a> | <a href="#/about" ui-sref="about">About</a> | <a href="#/contacts?page=2" ui-sref="{page: 2}">Next page</a>
+	 *
+	 * <ul>
+	 *     <li ng-repeat="contact in contacts">
+	 *         <a href="#/contacts/1" ui-sref="contacts.detail({ id: contact.id })">Joe</a>
+	 *     </li>
+	 *     <li ng-repeat="contact in contacts">
+	 *         <a href="#/contacts/2" ui-sref="contacts.detail({ id: contact.id })">Alice</a>
+	 *     </li>
+	 *     <li ng-repeat="contact in contacts">
+	 *         <a href="#/contacts/3" ui-sref="contacts.detail({ id: contact.id })">Bob</a>
+	 *     </li>
+	 * </ul>
+	 *
+	 * <a ui-sref="home" ui-sref-opts="{reload: true}">Home</a>
+	 * </pre>
+	 *
+	 * @param {string} ui-sref 'stateName' can be any valid absolute or relative state
+	 * @param {Object} ui-sref-opts options to pass to {@link ui.router.state.$state#go $state.go()}
+	 */
+	$StateRefDirective.$inject = ['$state', '$timeout'];
+	function $StateRefDirective($state, $timeout) {
+	  return {
+	    restrict: 'A',
+	    require: ['?^uiSrefActive', '?^uiSrefActiveEq'],
+	    link: function(scope, element, attrs, uiSrefActive) {
+	      var ref    = parseStateRef(attrs.uiSref, $state.current.name);
+	      var def    = { state: ref.state, href: null, params: null };
+	      var type   = getTypeInfo(element);
+	      var active = uiSrefActive[1] || uiSrefActive[0];
+	
+	      def.options = extend(defaultOpts(element, $state), attrs.uiSrefOpts ? scope.$eval(attrs.uiSrefOpts) : {});
+	
+	      var update = function(val) {
+	        if (val) def.params = angular.copy(val);
+	        def.href = $state.href(ref.state, def.params, def.options);
+	
+	        if (active) active.$$addStateInfo(ref.state, def.params);
+	        if (def.href !== null) attrs.$set(type.attr, def.href);
+	      };
+	
+	      if (ref.paramExpr) {
+	        scope.$watch(ref.paramExpr, function(val) { if (val !== def.params) update(val); }, true);
+	        def.params = angular.copy(scope.$eval(ref.paramExpr));
+	      }
+	      update();
+	
+	      if (!type.clickable) return;
+	      element.bind("click", clickHook(element, $state, $timeout, type, function() { return def; }));
+	    }
+	  };
+	}
+	
+	/**
+	 * @ngdoc directive
+	 * @name ui.router.state.directive:ui-state
+	 *
+	 * @requires ui.router.state.uiSref
+	 *
+	 * @restrict A
+	 *
+	 * @description
+	 * Much like ui-sref, but will accept named $scope properties to evaluate for a state definition,
+	 * params and override options.
+	 *
+	 * @param {string} ui-state 'stateName' can be any valid absolute or relative state
+	 * @param {Object} ui-state-params params to pass to {@link ui.router.state.$state#href $state.href()}
+	 * @param {Object} ui-state-opts options to pass to {@link ui.router.state.$state#go $state.go()}
+	 */
+	$StateRefDynamicDirective.$inject = ['$state', '$timeout'];
+	function $StateRefDynamicDirective($state, $timeout) {
+	  return {
+	    restrict: 'A',
+	    require: ['?^uiSrefActive', '?^uiSrefActiveEq'],
+	    link: function(scope, element, attrs, uiSrefActive) {
+	      var type   = getTypeInfo(element);
+	      var active = uiSrefActive[1] || uiSrefActive[0];
+	      var group  = [attrs.uiState, attrs.uiStateParams || null, attrs.uiStateOpts || null];
+	      var watch  = '[' + group.map(function(val) { return val || 'null'; }).join(', ') + ']';
+	      var def    = { state: null, params: null, options: null, href: null };
+	
+	      function runStateRefLink (group) {
+	        def.state = group[0]; def.params = group[1]; def.options = group[2];
+	        def.href = $state.href(def.state, def.params, def.options);
+	
+	        if (active) active.$$addStateInfo(def.state, def.params);
+	        if (def.href) attrs.$set(type.attr, def.href);
+	      }
+	
+	      scope.$watch(watch, runStateRefLink, true);
+	      runStateRefLink(scope.$eval(watch));
+	
+	      if (!type.clickable) return;
+	      element.bind("click", clickHook(element, $state, $timeout, type, function() { return def; }));
+	    }
+	  };
+	}
+	
+	
+	/**
+	 * @ngdoc directive
+	 * @name ui.router.state.directive:ui-sref-active
+	 *
+	 * @requires ui.router.state.$state
+	 * @requires ui.router.state.$stateParams
+	 * @requires $interpolate
+	 *
+	 * @restrict A
+	 *
+	 * @description
+	 * A directive working alongside ui-sref to add classes to an element when the
+	 * related ui-sref directive's state is active, and removing them when it is inactive.
+	 * The primary use-case is to simplify the special appearance of navigation menus
+	 * relying on `ui-sref`, by having the "active" state's menu button appear different,
+	 * distinguishing it from the inactive menu items.
+	 *
+	 * ui-sref-active can live on the same element as ui-sref or on a parent element. The first
+	 * ui-sref-active found at the same level or above the ui-sref will be used.
+	 *
+	 * Will activate when the ui-sref's target state or any child state is active. If you
+	 * need to activate only when the ui-sref target state is active and *not* any of
+	 * it's children, then you will use
+	 * {@link ui.router.state.directive:ui-sref-active-eq ui-sref-active-eq}
+	 *
+	 * @example
+	 * Given the following template:
+	 * <pre>
+	 * <ul>
+	 *   <li ui-sref-active="active" class="item">
+	 *     <a href ui-sref="app.user({user: 'bilbobaggins'})">@bilbobaggins</a>
+	 *   </li>
+	 * </ul>
+	 * </pre>
+	 *
+	 *
+	 * When the app state is "app.user" (or any children states), and contains the state parameter "user" with value "bilbobaggins",
+	 * the resulting HTML will appear as (note the 'active' class):
+	 * <pre>
+	 * <ul>
+	 *   <li ui-sref-active="active" class="item active">
+	 *     <a ui-sref="app.user({user: 'bilbobaggins'})" href="/users/bilbobaggins">@bilbobaggins</a>
+	 *   </li>
+	 * </ul>
+	 * </pre>
+	 *
+	 * The class name is interpolated **once** during the directives link time (any further changes to the
+	 * interpolated value are ignored).
+	 *
+	 * Multiple classes may be specified in a space-separated format:
+	 * <pre>
+	 * <ul>
+	 *   <li ui-sref-active='class1 class2 class3'>
+	 *     <a ui-sref="app.user">link</a>
+	 *   </li>
+	 * </ul>
+	 * </pre>
+	 *
+	 * It is also possible to pass ui-sref-active an expression that evaluates
+	 * to an object hash, whose keys represent active class names and whose
+	 * values represent the respective state names/globs.
+	 * ui-sref-active will match if the current active state **includes** any of
+	 * the specified state names/globs, even the abstract ones.
+	 *
+	 * @Example
+	 * Given the following template, with "admin" being an abstract state:
+	 * <pre>
+	 * <div ui-sref-active="{'active': 'admin.*'}">
+	 *   <a ui-sref-active="active" ui-sref="admin.roles">Roles</a>
+	 * </div>
+	 * </pre>
+	 *
+	 * When the current state is "admin.roles" the "active" class will be applied
+	 * to both the <div> and <a> elements. It is important to note that the state
+	 * names/globs passed to ui-sref-active shadow the state provided by ui-sref.
+	 */
+	
+	/**
+	 * @ngdoc directive
+	 * @name ui.router.state.directive:ui-sref-active-eq
+	 *
+	 * @requires ui.router.state.$state
+	 * @requires ui.router.state.$stateParams
+	 * @requires $interpolate
+	 *
+	 * @restrict A
+	 *
+	 * @description
+	 * The same as {@link ui.router.state.directive:ui-sref-active ui-sref-active} but will only activate
+	 * when the exact target state used in the `ui-sref` is active; no child states.
+	 *
+	 */
+	$StateRefActiveDirective.$inject = ['$state', '$stateParams', '$interpolate'];
+	function $StateRefActiveDirective($state, $stateParams, $interpolate) {
+	  return  {
+	    restrict: "A",
+	    controller: ['$scope', '$element', '$attrs', '$timeout', function ($scope, $element, $attrs, $timeout) {
+	      var states = [], activeClasses = {}, activeEqClass, uiSrefActive;
+	
+	      // There probably isn't much point in $observing this
+	      // uiSrefActive and uiSrefActiveEq share the same directive object with some
+	      // slight difference in logic routing
+	      activeEqClass = $interpolate($attrs.uiSrefActiveEq || '', false)($scope);
+	
+	      try {
+	        uiSrefActive = $scope.$eval($attrs.uiSrefActive);
+	      } catch (e) {
+	        // Do nothing. uiSrefActive is not a valid expression.
+	        // Fall back to using $interpolate below
+	      }
+	      uiSrefActive = uiSrefActive || $interpolate($attrs.uiSrefActive || '', false)($scope);
+	      if (isObject(uiSrefActive)) {
+	        forEach(uiSrefActive, function(stateOrName, activeClass) {
+	          if (isString(stateOrName)) {
+	            var ref = parseStateRef(stateOrName, $state.current.name);
+	            addState(ref.state, $scope.$eval(ref.paramExpr), activeClass);
+	          }
+	        });
+	      }
+	
+	      // Allow uiSref to communicate with uiSrefActive[Equals]
+	      this.$$addStateInfo = function (newState, newParams) {
+	        // we already got an explicit state provided by ui-sref-active, so we
+	        // shadow the one that comes from ui-sref
+	        if (isObject(uiSrefActive) && states.length > 0) {
+	          return;
+	        }
+	        addState(newState, newParams, uiSrefActive);
+	        update();
+	      };
+	
+	      $scope.$on('$stateChangeSuccess', update);
+	
+	      function addState(stateName, stateParams, activeClass) {
+	        var state = $state.get(stateName, stateContext($element));
+	        var stateHash = createStateHash(stateName, stateParams);
+	
+	        states.push({
+	          state: state || { name: stateName },
+	          params: stateParams,
+	          hash: stateHash
+	        });
+	
+	        activeClasses[stateHash] = activeClass;
+	      }
+	
+	      /**
+	       * @param {string} state
+	       * @param {Object|string} [params]
+	       * @return {string}
+	       */
+	      function createStateHash(state, params) {
+	        if (!isString(state)) {
+	          throw new Error('state should be a string');
+	        }
+	        if (isObject(params)) {
+	          return state + toJson(params);
+	        }
+	        params = $scope.$eval(params);
+	        if (isObject(params)) {
+	          return state + toJson(params);
+	        }
+	        return state;
+	      }
+	
+	      // Update route state
+	      function update() {
+	        for (var i = 0; i < states.length; i++) {
+	          if (anyMatch(states[i].state, states[i].params)) {
+	            addClass($element, activeClasses[states[i].hash]);
+	          } else {
+	            removeClass($element, activeClasses[states[i].hash]);
+	          }
+	
+	          if (exactMatch(states[i].state, states[i].params)) {
+	            addClass($element, activeEqClass);
+	          } else {
+	            removeClass($element, activeEqClass);
+	          }
+	        }
+	      }
+	
+	      function addClass(el, className) { $timeout(function () { el.addClass(className); }); }
+	      function removeClass(el, className) { el.removeClass(className); }
+	      function anyMatch(state, params) { return $state.includes(state.name, params); }
+	      function exactMatch(state, params) { return $state.is(state.name, params); }
+	
+	      update();
+	    }]
+	  };
+	}
+	
+	angular.module('ui.router.state')
+	  .directive('uiSref', $StateRefDirective)
+	  .directive('uiSrefActive', $StateRefActiveDirective)
+	  .directive('uiSrefActiveEq', $StateRefActiveDirective)
+	  .directive('uiState', $StateRefDynamicDirective);
+	
+	/**
+	 * @ngdoc filter
+	 * @name ui.router.state.filter:isState
+	 *
+	 * @requires ui.router.state.$state
+	 *
+	 * @description
+	 * Translates to {@link ui.router.state.$state#methods_is $state.is("stateName")}.
+	 */
+	$IsStateFilter.$inject = ['$state'];
+	function $IsStateFilter($state) {
+	  var isFilter = function (state, params) {
+	    return $state.is(state, params);
+	  };
+	  isFilter.$stateful = true;
+	  return isFilter;
+	}
+	
+	/**
+	 * @ngdoc filter
+	 * @name ui.router.state.filter:includedByState
+	 *
+	 * @requires ui.router.state.$state
+	 *
+	 * @description
+	 * Translates to {@link ui.router.state.$state#methods_includes $state.includes('fullOrPartialStateName')}.
+	 */
+	$IncludedByStateFilter.$inject = ['$state'];
+	function $IncludedByStateFilter($state) {
+	  var includesFilter = function (state, params, options) {
+	    return $state.includes(state, params, options);
+	  };
+	  includesFilter.$stateful = true;
+	  return  includesFilter;
+	}
+	
+	angular.module('ui.router.state')
+	  .filter('isState', $IsStateFilter)
+	  .filter('includedByState', $IncludedByStateFilter);
+	})(window, window.angular);
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
+	__webpack_require__(3)
+	__webpack_require__(4)
+	__webpack_require__(5)
+	__webpack_require__(6)
+	__webpack_require__(7)
+	__webpack_require__(8)
+	__webpack_require__(9)
+	__webpack_require__(10)
+	__webpack_require__(11)
+	__webpack_require__(12)
+	__webpack_require__(13)
+	__webpack_require__(14)
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: transition.js v3.3.7
+	 * http://getbootstrap.com/javascript/#transitions
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+	  // ============================================================
+	
+	  function transitionEnd() {
+	    var el = document.createElement('bootstrap')
+	
+	    var transEndEventNames = {
+	      WebkitTransition : 'webkitTransitionEnd',
+	      MozTransition    : 'transitionend',
+	      OTransition      : 'oTransitionEnd otransitionend',
+	      transition       : 'transitionend'
+	    }
+	
+	    for (var name in transEndEventNames) {
+	      if (el.style[name] !== undefined) {
+	        return { end: transEndEventNames[name] }
+	      }
+	    }
+	
+	    return false // explicit for ie8 (  ._.)
+	  }
+	
+	  // http://blog.alexmaccaw.com/css-transitions
+	  $.fn.emulateTransitionEnd = function (duration) {
+	    var called = false
+	    var $el = this
+	    $(this).one('bsTransitionEnd', function () { called = true })
+	    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+	    setTimeout(callback, duration)
+	    return this
+	  }
+	
+	  $(function () {
+	    $.support.transition = transitionEnd()
+	
+	    if (!$.support.transition) return
+	
+	    $.event.special.bsTransitionEnd = {
+	      bindType: $.support.transition.end,
+	      delegateType: $.support.transition.end,
+	      handle: function (e) {
+	        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+	      }
+	    }
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: alert.js v3.3.7
+	 * http://getbootstrap.com/javascript/#alerts
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // ALERT CLASS DEFINITION
+	  // ======================
+	
+	  var dismiss = '[data-dismiss="alert"]'
+	  var Alert   = function (el) {
+	    $(el).on('click', dismiss, this.close)
+	  }
+	
+	  Alert.VERSION = '3.3.7'
+	
+	  Alert.TRANSITION_DURATION = 150
+	
+	  Alert.prototype.close = function (e) {
+	    var $this    = $(this)
+	    var selector = $this.attr('data-target')
+	
+	    if (!selector) {
+	      selector = $this.attr('href')
+	      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+	    }
+	
+	    var $parent = $(selector === '#' ? [] : selector)
+	
+	    if (e) e.preventDefault()
+	
+	    if (!$parent.length) {
+	      $parent = $this.closest('.alert')
+	    }
+	
+	    $parent.trigger(e = $.Event('close.bs.alert'))
+	
+	    if (e.isDefaultPrevented()) return
+	
+	    $parent.removeClass('in')
+	
+	    function removeElement() {
+	      // detach from parent, fire event then clean up data
+	      $parent.detach().trigger('closed.bs.alert').remove()
+	    }
+	
+	    $.support.transition && $parent.hasClass('fade') ?
+	      $parent
+	        .one('bsTransitionEnd', removeElement)
+	        .emulateTransitionEnd(Alert.TRANSITION_DURATION) :
+	      removeElement()
+	  }
+	
+	
+	  // ALERT PLUGIN DEFINITION
+	  // =======================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this)
+	      var data  = $this.data('bs.alert')
+	
+	      if (!data) $this.data('bs.alert', (data = new Alert(this)))
+	      if (typeof option == 'string') data[option].call($this)
+	    })
+	  }
+	
+	  var old = $.fn.alert
+	
+	  $.fn.alert             = Plugin
+	  $.fn.alert.Constructor = Alert
+	
+	
+	  // ALERT NO CONFLICT
+	  // =================
+	
+	  $.fn.alert.noConflict = function () {
+	    $.fn.alert = old
+	    return this
+	  }
+	
+	
+	  // ALERT DATA-API
+	  // ==============
+	
+	  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+	
+	}(jQuery);
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: button.js v3.3.7
+	 * http://getbootstrap.com/javascript/#buttons
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // BUTTON PUBLIC CLASS DEFINITION
+	  // ==============================
+	
+	  var Button = function (element, options) {
+	    this.$element  = $(element)
+	    this.options   = $.extend({}, Button.DEFAULTS, options)
+	    this.isLoading = false
+	  }
+	
+	  Button.VERSION  = '3.3.7'
+	
+	  Button.DEFAULTS = {
+	    loadingText: 'loading...'
+	  }
+	
+	  Button.prototype.setState = function (state) {
+	    var d    = 'disabled'
+	    var $el  = this.$element
+	    var val  = $el.is('input') ? 'val' : 'html'
+	    var data = $el.data()
+	
+	    state += 'Text'
+	
+	    if (data.resetText == null) $el.data('resetText', $el[val]())
+	
+	    // push to event loop to allow forms to submit
+	    setTimeout($.proxy(function () {
+	      $el[val](data[state] == null ? this.options[state] : data[state])
+	
+	      if (state == 'loadingText') {
+	        this.isLoading = true
+	        $el.addClass(d).attr(d, d).prop(d, true)
+	      } else if (this.isLoading) {
+	        this.isLoading = false
+	        $el.removeClass(d).removeAttr(d).prop(d, false)
+	      }
+	    }, this), 0)
+	  }
+	
+	  Button.prototype.toggle = function () {
+	    var changed = true
+	    var $parent = this.$element.closest('[data-toggle="buttons"]')
+	
+	    if ($parent.length) {
+	      var $input = this.$element.find('input')
+	      if ($input.prop('type') == 'radio') {
+	        if ($input.prop('checked')) changed = false
+	        $parent.find('.active').removeClass('active')
+	        this.$element.addClass('active')
+	      } else if ($input.prop('type') == 'checkbox') {
+	        if (($input.prop('checked')) !== this.$element.hasClass('active')) changed = false
+	        this.$element.toggleClass('active')
+	      }
+	      $input.prop('checked', this.$element.hasClass('active'))
+	      if (changed) $input.trigger('change')
+	    } else {
+	      this.$element.attr('aria-pressed', !this.$element.hasClass('active'))
+	      this.$element.toggleClass('active')
+	    }
+	  }
+	
+	
+	  // BUTTON PLUGIN DEFINITION
+	  // ========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.button')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data) $this.data('bs.button', (data = new Button(this, options)))
+	
+	      if (option == 'toggle') data.toggle()
+	      else if (option) data.setState(option)
+	    })
+	  }
+	
+	  var old = $.fn.button
+	
+	  $.fn.button             = Plugin
+	  $.fn.button.Constructor = Button
+	
+	
+	  // BUTTON NO CONFLICT
+	  // ==================
+	
+	  $.fn.button.noConflict = function () {
+	    $.fn.button = old
+	    return this
+	  }
+	
+	
+	  // BUTTON DATA-API
+	  // ===============
+	
+	  $(document)
+	    .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+	      var $btn = $(e.target).closest('.btn')
+	      Plugin.call($btn, 'toggle')
+	      if (!($(e.target).is('input[type="radio"], input[type="checkbox"]'))) {
+	        // Prevent double click on radios, and the double selections (so cancellation) on checkboxes
+	        e.preventDefault()
+	        // The target component still receive the focus
+	        if ($btn.is('input,button')) $btn.trigger('focus')
+	        else $btn.find('input:visible,button:visible').first().trigger('focus')
+	      }
+	    })
+	    .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+	      $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
+	    })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: carousel.js v3.3.7
+	 * http://getbootstrap.com/javascript/#carousel
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // CAROUSEL CLASS DEFINITION
+	  // =========================
+	
+	  var Carousel = function (element, options) {
+	    this.$element    = $(element)
+	    this.$indicators = this.$element.find('.carousel-indicators')
+	    this.options     = options
+	    this.paused      = null
+	    this.sliding     = null
+	    this.interval    = null
+	    this.$active     = null
+	    this.$items      = null
+	
+	    this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
+	
+	    this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
+	      .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
+	      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
+	  }
+	
+	  Carousel.VERSION  = '3.3.7'
+	
+	  Carousel.TRANSITION_DURATION = 600
+	
+	  Carousel.DEFAULTS = {
+	    interval: 5000,
+	    pause: 'hover',
+	    wrap: true,
+	    keyboard: true
+	  }
+	
+	  Carousel.prototype.keydown = function (e) {
+	    if (/input|textarea/i.test(e.target.tagName)) return
+	    switch (e.which) {
+	      case 37: this.prev(); break
+	      case 39: this.next(); break
+	      default: return
+	    }
+	
+	    e.preventDefault()
+	  }
+	
+	  Carousel.prototype.cycle = function (e) {
+	    e || (this.paused = false)
+	
+	    this.interval && clearInterval(this.interval)
+	
+	    this.options.interval
+	      && !this.paused
+	      && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
+	
+	    return this
+	  }
+	
+	  Carousel.prototype.getItemIndex = function (item) {
+	    this.$items = item.parent().children('.item')
+	    return this.$items.index(item || this.$active)
+	  }
+	
+	  Carousel.prototype.getItemForDirection = function (direction, active) {
+	    var activeIndex = this.getItemIndex(active)
+	    var willWrap = (direction == 'prev' && activeIndex === 0)
+	                || (direction == 'next' && activeIndex == (this.$items.length - 1))
+	    if (willWrap && !this.options.wrap) return active
+	    var delta = direction == 'prev' ? -1 : 1
+	    var itemIndex = (activeIndex + delta) % this.$items.length
+	    return this.$items.eq(itemIndex)
+	  }
+	
+	  Carousel.prototype.to = function (pos) {
+	    var that        = this
+	    var activeIndex = this.getItemIndex(this.$active = this.$element.find('.item.active'))
+	
+	    if (pos > (this.$items.length - 1) || pos < 0) return
+	
+	    if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) }) // yes, "slid"
+	    if (activeIndex == pos) return this.pause().cycle()
+	
+	    return this.slide(pos > activeIndex ? 'next' : 'prev', this.$items.eq(pos))
+	  }
+	
+	  Carousel.prototype.pause = function (e) {
+	    e || (this.paused = true)
+	
+	    if (this.$element.find('.next, .prev').length && $.support.transition) {
+	      this.$element.trigger($.support.transition.end)
+	      this.cycle(true)
+	    }
+	
+	    this.interval = clearInterval(this.interval)
+	
+	    return this
+	  }
+	
+	  Carousel.prototype.next = function () {
+	    if (this.sliding) return
+	    return this.slide('next')
+	  }
+	
+	  Carousel.prototype.prev = function () {
+	    if (this.sliding) return
+	    return this.slide('prev')
+	  }
+	
+	  Carousel.prototype.slide = function (type, next) {
+	    var $active   = this.$element.find('.item.active')
+	    var $next     = next || this.getItemForDirection(type, $active)
+	    var isCycling = this.interval
+	    var direction = type == 'next' ? 'left' : 'right'
+	    var that      = this
+	
+	    if ($next.hasClass('active')) return (this.sliding = false)
+	
+	    var relatedTarget = $next[0]
+	    var slideEvent = $.Event('slide.bs.carousel', {
+	      relatedTarget: relatedTarget,
+	      direction: direction
+	    })
+	    this.$element.trigger(slideEvent)
+	    if (slideEvent.isDefaultPrevented()) return
+	
+	    this.sliding = true
+	
+	    isCycling && this.pause()
+	
+	    if (this.$indicators.length) {
+	      this.$indicators.find('.active').removeClass('active')
+	      var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
+	      $nextIndicator && $nextIndicator.addClass('active')
+	    }
+	
+	    var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
+	    if ($.support.transition && this.$element.hasClass('slide')) {
+	      $next.addClass(type)
+	      $next[0].offsetWidth // force reflow
+	      $active.addClass(direction)
+	      $next.addClass(direction)
+	      $active
+	        .one('bsTransitionEnd', function () {
+	          $next.removeClass([type, direction].join(' ')).addClass('active')
+	          $active.removeClass(['active', direction].join(' '))
+	          that.sliding = false
+	          setTimeout(function () {
+	            that.$element.trigger(slidEvent)
+	          }, 0)
+	        })
+	        .emulateTransitionEnd(Carousel.TRANSITION_DURATION)
+	    } else {
+	      $active.removeClass('active')
+	      $next.addClass('active')
+	      this.sliding = false
+	      this.$element.trigger(slidEvent)
+	    }
+	
+	    isCycling && this.cycle()
+	
+	    return this
+	  }
+	
+	
+	  // CAROUSEL PLUGIN DEFINITION
+	  // ==========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.carousel')
+	      var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
+	      var action  = typeof option == 'string' ? option : options.slide
+	
+	      if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
+	      if (typeof option == 'number') data.to(option)
+	      else if (action) data[action]()
+	      else if (options.interval) data.pause().cycle()
+	    })
+	  }
+	
+	  var old = $.fn.carousel
+	
+	  $.fn.carousel             = Plugin
+	  $.fn.carousel.Constructor = Carousel
+	
+	
+	  // CAROUSEL NO CONFLICT
+	  // ====================
+	
+	  $.fn.carousel.noConflict = function () {
+	    $.fn.carousel = old
+	    return this
+	  }
+	
+	
+	  // CAROUSEL DATA-API
+	  // =================
+	
+	  var clickHandler = function (e) {
+	    var href
+	    var $this   = $(this)
+	    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+	    if (!$target.hasClass('carousel')) return
+	    var options = $.extend({}, $target.data(), $this.data())
+	    var slideIndex = $this.attr('data-slide-to')
+	    if (slideIndex) options.interval = false
+	
+	    Plugin.call($target, options)
+	
+	    if (slideIndex) {
+	      $target.data('bs.carousel').to(slideIndex)
+	    }
+	
+	    e.preventDefault()
+	  }
+	
+	  $(document)
+	    .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
+	    .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler)
+	
+	  $(window).on('load', function () {
+	    $('[data-ride="carousel"]').each(function () {
+	      var $carousel = $(this)
+	      Plugin.call($carousel, $carousel.data())
+	    })
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: collapse.js v3.3.7
+	 * http://getbootstrap.com/javascript/#collapse
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	/* jshint latedef: false */
+	
+	+function ($) {
+	  'use strict';
+	
+	  // COLLAPSE PUBLIC CLASS DEFINITION
+	  // ================================
+	
+	  var Collapse = function (element, options) {
+	    this.$element      = $(element)
+	    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+	    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+	                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+	    this.transitioning = null
+	
+	    if (this.options.parent) {
+	      this.$parent = this.getParent()
+	    } else {
+	      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
+	    }
+	
+	    if (this.options.toggle) this.toggle()
+	  }
+	
+	  Collapse.VERSION  = '3.3.7'
+	
+	  Collapse.TRANSITION_DURATION = 350
+	
+	  Collapse.DEFAULTS = {
+	    toggle: true
+	  }
+	
+	  Collapse.prototype.dimension = function () {
+	    var hasWidth = this.$element.hasClass('width')
+	    return hasWidth ? 'width' : 'height'
+	  }
+	
+	  Collapse.prototype.show = function () {
+	    if (this.transitioning || this.$element.hasClass('in')) return
+	
+	    var activesData
+	    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+	
+	    if (actives && actives.length) {
+	      activesData = actives.data('bs.collapse')
+	      if (activesData && activesData.transitioning) return
+	    }
+	
+	    var startEvent = $.Event('show.bs.collapse')
+	    this.$element.trigger(startEvent)
+	    if (startEvent.isDefaultPrevented()) return
+	
+	    if (actives && actives.length) {
+	      Plugin.call(actives, 'hide')
+	      activesData || actives.data('bs.collapse', null)
+	    }
+	
+	    var dimension = this.dimension()
+	
+	    this.$element
+	      .removeClass('collapse')
+	      .addClass('collapsing')[dimension](0)
+	      .attr('aria-expanded', true)
+	
+	    this.$trigger
+	      .removeClass('collapsed')
+	      .attr('aria-expanded', true)
+	
+	    this.transitioning = 1
+	
+	    var complete = function () {
+	      this.$element
+	        .removeClass('collapsing')
+	        .addClass('collapse in')[dimension]('')
+	      this.transitioning = 0
+	      this.$element
+	        .trigger('shown.bs.collapse')
+	    }
+	
+	    if (!$.support.transition) return complete.call(this)
+	
+	    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+	
+	    this.$element
+	      .one('bsTransitionEnd', $.proxy(complete, this))
+	      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+	  }
+	
+	  Collapse.prototype.hide = function () {
+	    if (this.transitioning || !this.$element.hasClass('in')) return
+	
+	    var startEvent = $.Event('hide.bs.collapse')
+	    this.$element.trigger(startEvent)
+	    if (startEvent.isDefaultPrevented()) return
+	
+	    var dimension = this.dimension()
+	
+	    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+	
+	    this.$element
+	      .addClass('collapsing')
+	      .removeClass('collapse in')
+	      .attr('aria-expanded', false)
+	
+	    this.$trigger
+	      .addClass('collapsed')
+	      .attr('aria-expanded', false)
+	
+	    this.transitioning = 1
+	
+	    var complete = function () {
+	      this.transitioning = 0
+	      this.$element
+	        .removeClass('collapsing')
+	        .addClass('collapse')
+	        .trigger('hidden.bs.collapse')
+	    }
+	
+	    if (!$.support.transition) return complete.call(this)
+	
+	    this.$element
+	      [dimension](0)
+	      .one('bsTransitionEnd', $.proxy(complete, this))
+	      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+	  }
+	
+	  Collapse.prototype.toggle = function () {
+	    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+	  }
+	
+	  Collapse.prototype.getParent = function () {
+	    return $(this.options.parent)
+	      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+	      .each($.proxy(function (i, element) {
+	        var $element = $(element)
+	        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+	      }, this))
+	      .end()
+	  }
+	
+	  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+	    var isOpen = $element.hasClass('in')
+	
+	    $element.attr('aria-expanded', isOpen)
+	    $trigger
+	      .toggleClass('collapsed', !isOpen)
+	      .attr('aria-expanded', isOpen)
+	  }
+	
+	  function getTargetFromTrigger($trigger) {
+	    var href
+	    var target = $trigger.attr('data-target')
+	      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+	
+	    return $(target)
+	  }
+	
+	
+	  // COLLAPSE PLUGIN DEFINITION
+	  // ==========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.collapse')
+	      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+	
+	      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+	      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.collapse
+	
+	  $.fn.collapse             = Plugin
+	  $.fn.collapse.Constructor = Collapse
+	
+	
+	  // COLLAPSE NO CONFLICT
+	  // ====================
+	
+	  $.fn.collapse.noConflict = function () {
+	    $.fn.collapse = old
+	    return this
+	  }
+	
+	
+	  // COLLAPSE DATA-API
+	  // =================
+	
+	  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+	    var $this   = $(this)
+	
+	    if (!$this.attr('data-target')) e.preventDefault()
+	
+	    var $target = getTargetFromTrigger($this)
+	    var data    = $target.data('bs.collapse')
+	    var option  = data ? 'toggle' : $this.data()
+	
+	    Plugin.call($target, option)
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: dropdown.js v3.3.7
+	 * http://getbootstrap.com/javascript/#dropdowns
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // DROPDOWN CLASS DEFINITION
+	  // =========================
+	
+	  var backdrop = '.dropdown-backdrop'
+	  var toggle   = '[data-toggle="dropdown"]'
+	  var Dropdown = function (element) {
+	    $(element).on('click.bs.dropdown', this.toggle)
+	  }
+	
+	  Dropdown.VERSION = '3.3.7'
+	
+	  function getParent($this) {
+	    var selector = $this.attr('data-target')
+	
+	    if (!selector) {
+	      selector = $this.attr('href')
+	      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+	    }
+	
+	    var $parent = selector && $(selector)
+	
+	    return $parent && $parent.length ? $parent : $this.parent()
+	  }
+	
+	  function clearMenus(e) {
+	    if (e && e.which === 3) return
+	    $(backdrop).remove()
+	    $(toggle).each(function () {
+	      var $this         = $(this)
+	      var $parent       = getParent($this)
+	      var relatedTarget = { relatedTarget: this }
+	
+	      if (!$parent.hasClass('open')) return
+	
+	      if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
+	
+	      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+	
+	      if (e.isDefaultPrevented()) return
+	
+	      $this.attr('aria-expanded', 'false')
+	      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+	    })
+	  }
+	
+	  Dropdown.prototype.toggle = function (e) {
+	    var $this = $(this)
+	
+	    if ($this.is('.disabled, :disabled')) return
+	
+	    var $parent  = getParent($this)
+	    var isActive = $parent.hasClass('open')
+	
+	    clearMenus()
+	
+	    if (!isActive) {
+	      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+	        // if mobile we use a backdrop because click events don't delegate
+	        $(document.createElement('div'))
+	          .addClass('dropdown-backdrop')
+	          .insertAfter($(this))
+	          .on('click', clearMenus)
+	      }
+	
+	      var relatedTarget = { relatedTarget: this }
+	      $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+	
+	      if (e.isDefaultPrevented()) return
+	
+	      $this
+	        .trigger('focus')
+	        .attr('aria-expanded', 'true')
+	
+	      $parent
+	        .toggleClass('open')
+	        .trigger($.Event('shown.bs.dropdown', relatedTarget))
+	    }
+	
+	    return false
+	  }
+	
+	  Dropdown.prototype.keydown = function (e) {
+	    if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+	
+	    var $this = $(this)
+	
+	    e.preventDefault()
+	    e.stopPropagation()
+	
+	    if ($this.is('.disabled, :disabled')) return
+	
+	    var $parent  = getParent($this)
+	    var isActive = $parent.hasClass('open')
+	
+	    if (!isActive && e.which != 27 || isActive && e.which == 27) {
+	      if (e.which == 27) $parent.find(toggle).trigger('focus')
+	      return $this.trigger('click')
+	    }
+	
+	    var desc = ' li:not(.disabled):visible a'
+	    var $items = $parent.find('.dropdown-menu' + desc)
+	
+	    if (!$items.length) return
+	
+	    var index = $items.index(e.target)
+	
+	    if (e.which == 38 && index > 0)                 index--         // up
+	    if (e.which == 40 && index < $items.length - 1) index++         // down
+	    if (!~index)                                    index = 0
+	
+	    $items.eq(index).trigger('focus')
+	  }
+	
+	
+	  // DROPDOWN PLUGIN DEFINITION
+	  // ==========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this)
+	      var data  = $this.data('bs.dropdown')
+	
+	      if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+	      if (typeof option == 'string') data[option].call($this)
+	    })
+	  }
+	
+	  var old = $.fn.dropdown
+	
+	  $.fn.dropdown             = Plugin
+	  $.fn.dropdown.Constructor = Dropdown
+	
+	
+	  // DROPDOWN NO CONFLICT
+	  // ====================
+	
+	  $.fn.dropdown.noConflict = function () {
+	    $.fn.dropdown = old
+	    return this
+	  }
+	
+	
+	  // APPLY TO STANDARD DROPDOWN ELEMENTS
+	  // ===================================
+	
+	  $(document)
+	    .on('click.bs.dropdown.data-api', clearMenus)
+	    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+	    .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+	    .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+	    .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+	
+	}(jQuery);
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: modal.js v3.3.7
+	 * http://getbootstrap.com/javascript/#modals
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // MODAL CLASS DEFINITION
+	  // ======================
+	
+	  var Modal = function (element, options) {
+	    this.options             = options
+	    this.$body               = $(document.body)
+	    this.$element            = $(element)
+	    this.$dialog             = this.$element.find('.modal-dialog')
+	    this.$backdrop           = null
+	    this.isShown             = null
+	    this.originalBodyPad     = null
+	    this.scrollbarWidth      = 0
+	    this.ignoreBackdropClick = false
+	
+	    if (this.options.remote) {
+	      this.$element
+	        .find('.modal-content')
+	        .load(this.options.remote, $.proxy(function () {
+	          this.$element.trigger('loaded.bs.modal')
+	        }, this))
+	    }
+	  }
+	
+	  Modal.VERSION  = '3.3.7'
+	
+	  Modal.TRANSITION_DURATION = 300
+	  Modal.BACKDROP_TRANSITION_DURATION = 150
+	
+	  Modal.DEFAULTS = {
+	    backdrop: true,
+	    keyboard: true,
+	    show: true
+	  }
+	
+	  Modal.prototype.toggle = function (_relatedTarget) {
+	    return this.isShown ? this.hide() : this.show(_relatedTarget)
+	  }
+	
+	  Modal.prototype.show = function (_relatedTarget) {
+	    var that = this
+	    var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
+	
+	    this.$element.trigger(e)
+	
+	    if (this.isShown || e.isDefaultPrevented()) return
+	
+	    this.isShown = true
+	
+	    this.checkScrollbar()
+	    this.setScrollbar()
+	    this.$body.addClass('modal-open')
+	
+	    this.escape()
+	    this.resize()
+	
+	    this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+	
+	    this.$dialog.on('mousedown.dismiss.bs.modal', function () {
+	      that.$element.one('mouseup.dismiss.bs.modal', function (e) {
+	        if ($(e.target).is(that.$element)) that.ignoreBackdropClick = true
+	      })
+	    })
+	
+	    this.backdrop(function () {
+	      var transition = $.support.transition && that.$element.hasClass('fade')
+	
+	      if (!that.$element.parent().length) {
+	        that.$element.appendTo(that.$body) // don't move modals dom position
+	      }
+	
+	      that.$element
+	        .show()
+	        .scrollTop(0)
+	
+	      that.adjustDialog()
+	
+	      if (transition) {
+	        that.$element[0].offsetWidth // force reflow
+	      }
+	
+	      that.$element.addClass('in')
+	
+	      that.enforceFocus()
+	
+	      var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
+	
+	      transition ?
+	        that.$dialog // wait for modal to slide in
+	          .one('bsTransitionEnd', function () {
+	            that.$element.trigger('focus').trigger(e)
+	          })
+	          .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
+	        that.$element.trigger('focus').trigger(e)
+	    })
+	  }
+	
+	  Modal.prototype.hide = function (e) {
+	    if (e) e.preventDefault()
+	
+	    e = $.Event('hide.bs.modal')
+	
+	    this.$element.trigger(e)
+	
+	    if (!this.isShown || e.isDefaultPrevented()) return
+	
+	    this.isShown = false
+	
+	    this.escape()
+	    this.resize()
+	
+	    $(document).off('focusin.bs.modal')
+	
+	    this.$element
+	      .removeClass('in')
+	      .off('click.dismiss.bs.modal')
+	      .off('mouseup.dismiss.bs.modal')
+	
+	    this.$dialog.off('mousedown.dismiss.bs.modal')
+	
+	    $.support.transition && this.$element.hasClass('fade') ?
+	      this.$element
+	        .one('bsTransitionEnd', $.proxy(this.hideModal, this))
+	        .emulateTransitionEnd(Modal.TRANSITION_DURATION) :
+	      this.hideModal()
+	  }
+	
+	  Modal.prototype.enforceFocus = function () {
+	    $(document)
+	      .off('focusin.bs.modal') // guard against infinite focus loop
+	      .on('focusin.bs.modal', $.proxy(function (e) {
+	        if (document !== e.target &&
+	            this.$element[0] !== e.target &&
+	            !this.$element.has(e.target).length) {
+	          this.$element.trigger('focus')
+	        }
+	      }, this))
+	  }
+	
+	  Modal.prototype.escape = function () {
+	    if (this.isShown && this.options.keyboard) {
+	      this.$element.on('keydown.dismiss.bs.modal', $.proxy(function (e) {
+	        e.which == 27 && this.hide()
+	      }, this))
+	    } else if (!this.isShown) {
+	      this.$element.off('keydown.dismiss.bs.modal')
+	    }
+	  }
+	
+	  Modal.prototype.resize = function () {
+	    if (this.isShown) {
+	      $(window).on('resize.bs.modal', $.proxy(this.handleUpdate, this))
+	    } else {
+	      $(window).off('resize.bs.modal')
+	    }
+	  }
+	
+	  Modal.prototype.hideModal = function () {
+	    var that = this
+	    this.$element.hide()
+	    this.backdrop(function () {
+	      that.$body.removeClass('modal-open')
+	      that.resetAdjustments()
+	      that.resetScrollbar()
+	      that.$element.trigger('hidden.bs.modal')
+	    })
+	  }
+	
+	  Modal.prototype.removeBackdrop = function () {
+	    this.$backdrop && this.$backdrop.remove()
+	    this.$backdrop = null
+	  }
+	
+	  Modal.prototype.backdrop = function (callback) {
+	    var that = this
+	    var animate = this.$element.hasClass('fade') ? 'fade' : ''
+	
+	    if (this.isShown && this.options.backdrop) {
+	      var doAnimate = $.support.transition && animate
+	
+	      this.$backdrop = $(document.createElement('div'))
+	        .addClass('modal-backdrop ' + animate)
+	        .appendTo(this.$body)
+	
+	      this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
+	        if (this.ignoreBackdropClick) {
+	          this.ignoreBackdropClick = false
+	          return
+	        }
+	        if (e.target !== e.currentTarget) return
+	        this.options.backdrop == 'static'
+	          ? this.$element[0].focus()
+	          : this.hide()
+	      }, this))
+	
+	      if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
+	
+	      this.$backdrop.addClass('in')
+	
+	      if (!callback) return
+	
+	      doAnimate ?
+	        this.$backdrop
+	          .one('bsTransitionEnd', callback)
+	          .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION) :
+	        callback()
+	
+	    } else if (!this.isShown && this.$backdrop) {
+	      this.$backdrop.removeClass('in')
+	
+	      var callbackRemove = function () {
+	        that.removeBackdrop()
+	        callback && callback()
+	      }
+	      $.support.transition && this.$element.hasClass('fade') ?
+	        this.$backdrop
+	          .one('bsTransitionEnd', callbackRemove)
+	          .emulateTransitionEnd(Modal.BACKDROP_TRANSITION_DURATION) :
+	        callbackRemove()
+	
+	    } else if (callback) {
+	      callback()
+	    }
+	  }
+	
+	  // these following methods are used to handle overflowing modals
+	
+	  Modal.prototype.handleUpdate = function () {
+	    this.adjustDialog()
+	  }
+	
+	  Modal.prototype.adjustDialog = function () {
+	    var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight
+	
+	    this.$element.css({
+	      paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
+	      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
+	    })
+	  }
+	
+	  Modal.prototype.resetAdjustments = function () {
+	    this.$element.css({
+	      paddingLeft: '',
+	      paddingRight: ''
+	    })
+	  }
+	
+	  Modal.prototype.checkScrollbar = function () {
+	    var fullWindowWidth = window.innerWidth
+	    if (!fullWindowWidth) { // workaround for missing window.innerWidth in IE8
+	      var documentElementRect = document.documentElement.getBoundingClientRect()
+	      fullWindowWidth = documentElementRect.right - Math.abs(documentElementRect.left)
+	    }
+	    this.bodyIsOverflowing = document.body.clientWidth < fullWindowWidth
+	    this.scrollbarWidth = this.measureScrollbar()
+	  }
+	
+	  Modal.prototype.setScrollbar = function () {
+	    var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
+	    this.originalBodyPad = document.body.style.paddingRight || ''
+	    if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+	  }
+	
+	  Modal.prototype.resetScrollbar = function () {
+	    this.$body.css('padding-right', this.originalBodyPad)
+	  }
+	
+	  Modal.prototype.measureScrollbar = function () { // thx walsh
+	    var scrollDiv = document.createElement('div')
+	    scrollDiv.className = 'modal-scrollbar-measure'
+	    this.$body.append(scrollDiv)
+	    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
+	    this.$body[0].removeChild(scrollDiv)
+	    return scrollbarWidth
+	  }
+	
+	
+	  // MODAL PLUGIN DEFINITION
+	  // =======================
+	
+	  function Plugin(option, _relatedTarget) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.modal')
+	      var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
+	
+	      if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
+	      if (typeof option == 'string') data[option](_relatedTarget)
+	      else if (options.show) data.show(_relatedTarget)
+	    })
+	  }
+	
+	  var old = $.fn.modal
+	
+	  $.fn.modal             = Plugin
+	  $.fn.modal.Constructor = Modal
+	
+	
+	  // MODAL NO CONFLICT
+	  // =================
+	
+	  $.fn.modal.noConflict = function () {
+	    $.fn.modal = old
+	    return this
+	  }
+	
+	
+	  // MODAL DATA-API
+	  // ==============
+	
+	  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
+	    var $this   = $(this)
+	    var href    = $this.attr('href')
+	    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+	    var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+	
+	    if ($this.is('a')) e.preventDefault()
+	
+	    $target.one('show.bs.modal', function (showEvent) {
+	      if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
+	      $target.one('hidden.bs.modal', function () {
+	        $this.is(':visible') && $this.trigger('focus')
+	      })
+	    })
+	    Plugin.call($target, option, this)
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: tooltip.js v3.3.7
+	 * http://getbootstrap.com/javascript/#tooltip
+	 * Inspired by the original jQuery.tipsy by Jason Frame
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // TOOLTIP PUBLIC CLASS DEFINITION
+	  // ===============================
+	
+	  var Tooltip = function (element, options) {
+	    this.type       = null
+	    this.options    = null
+	    this.enabled    = null
+	    this.timeout    = null
+	    this.hoverState = null
+	    this.$element   = null
+	    this.inState    = null
+	
+	    this.init('tooltip', element, options)
+	  }
+	
+	  Tooltip.VERSION  = '3.3.7'
+	
+	  Tooltip.TRANSITION_DURATION = 150
+	
+	  Tooltip.DEFAULTS = {
+	    animation: true,
+	    placement: 'top',
+	    selector: false,
+	    template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+	    trigger: 'hover focus',
+	    title: '',
+	    delay: 0,
+	    html: false,
+	    container: false,
+	    viewport: {
+	      selector: 'body',
+	      padding: 0
+	    }
+	  }
+	
+	  Tooltip.prototype.init = function (type, element, options) {
+	    this.enabled   = true
+	    this.type      = type
+	    this.$element  = $(element)
+	    this.options   = this.getOptions(options)
+	    this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
+	    this.inState   = { click: false, hover: false, focus: false }
+	
+	    if (this.$element[0] instanceof document.constructor && !this.options.selector) {
+	      throw new Error('`selector` option must be specified when initializing ' + this.type + ' on the window.document object!')
+	    }
+	
+	    var triggers = this.options.trigger.split(' ')
+	
+	    for (var i = triggers.length; i--;) {
+	      var trigger = triggers[i]
+	
+	      if (trigger == 'click') {
+	        this.$element.on('click.' + this.type, this.options.selector, $.proxy(this.toggle, this))
+	      } else if (trigger != 'manual') {
+	        var eventIn  = trigger == 'hover' ? 'mouseenter' : 'focusin'
+	        var eventOut = trigger == 'hover' ? 'mouseleave' : 'focusout'
+	
+	        this.$element.on(eventIn  + '.' + this.type, this.options.selector, $.proxy(this.enter, this))
+	        this.$element.on(eventOut + '.' + this.type, this.options.selector, $.proxy(this.leave, this))
+	      }
+	    }
+	
+	    this.options.selector ?
+	      (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
+	      this.fixTitle()
+	  }
+	
+	  Tooltip.prototype.getDefaults = function () {
+	    return Tooltip.DEFAULTS
+	  }
+	
+	  Tooltip.prototype.getOptions = function (options) {
+	    options = $.extend({}, this.getDefaults(), this.$element.data(), options)
+	
+	    if (options.delay && typeof options.delay == 'number') {
+	      options.delay = {
+	        show: options.delay,
+	        hide: options.delay
+	      }
+	    }
+	
+	    return options
+	  }
+	
+	  Tooltip.prototype.getDelegateOptions = function () {
+	    var options  = {}
+	    var defaults = this.getDefaults()
+	
+	    this._options && $.each(this._options, function (key, value) {
+	      if (defaults[key] != value) options[key] = value
+	    })
+	
+	    return options
+	  }
+	
+	  Tooltip.prototype.enter = function (obj) {
+	    var self = obj instanceof this.constructor ?
+	      obj : $(obj.currentTarget).data('bs.' + this.type)
+	
+	    if (!self) {
+	      self = new this.constructor(obj.currentTarget, this.getDelegateOptions())
+	      $(obj.currentTarget).data('bs.' + this.type, self)
+	    }
+	
+	    if (obj instanceof $.Event) {
+	      self.inState[obj.type == 'focusin' ? 'focus' : 'hover'] = true
+	    }
+	
+	    if (self.tip().hasClass('in') || self.hoverState == 'in') {
+	      self.hoverState = 'in'
+	      return
+	    }
+	
+	    clearTimeout(self.timeout)
+	
+	    self.hoverState = 'in'
+	
+	    if (!self.options.delay || !self.options.delay.show) return self.show()
+	
+	    self.timeout = setTimeout(function () {
+	      if (self.hoverState == 'in') self.show()
+	    }, self.options.delay.show)
+	  }
+	
+	  Tooltip.prototype.isInStateTrue = function () {
+	    for (var key in this.inState) {
+	      if (this.inState[key]) return true
+	    }
+	
+	    return false
+	  }
+	
+	  Tooltip.prototype.leave = function (obj) {
+	    var self = obj instanceof this.constructor ?
+	      obj : $(obj.currentTarget).data('bs.' + this.type)
+	
+	    if (!self) {
+	      self = new this.constructor(obj.currentTarget, this.getDelegateOptions())
+	      $(obj.currentTarget).data('bs.' + this.type, self)
+	    }
+	
+	    if (obj instanceof $.Event) {
+	      self.inState[obj.type == 'focusout' ? 'focus' : 'hover'] = false
+	    }
+	
+	    if (self.isInStateTrue()) return
+	
+	    clearTimeout(self.timeout)
+	
+	    self.hoverState = 'out'
+	
+	    if (!self.options.delay || !self.options.delay.hide) return self.hide()
+	
+	    self.timeout = setTimeout(function () {
+	      if (self.hoverState == 'out') self.hide()
+	    }, self.options.delay.hide)
+	  }
+	
+	  Tooltip.prototype.show = function () {
+	    var e = $.Event('show.bs.' + this.type)
+	
+	    if (this.hasContent() && this.enabled) {
+	      this.$element.trigger(e)
+	
+	      var inDom = $.contains(this.$element[0].ownerDocument.documentElement, this.$element[0])
+	      if (e.isDefaultPrevented() || !inDom) return
+	      var that = this
+	
+	      var $tip = this.tip()
+	
+	      var tipId = this.getUID(this.type)
+	
+	      this.setContent()
+	      $tip.attr('id', tipId)
+	      this.$element.attr('aria-describedby', tipId)
+	
+	      if (this.options.animation) $tip.addClass('fade')
+	
+	      var placement = typeof this.options.placement == 'function' ?
+	        this.options.placement.call(this, $tip[0], this.$element[0]) :
+	        this.options.placement
+	
+	      var autoToken = /\s?auto?\s?/i
+	      var autoPlace = autoToken.test(placement)
+	      if (autoPlace) placement = placement.replace(autoToken, '') || 'top'
+	
+	      $tip
+	        .detach()
+	        .css({ top: 0, left: 0, display: 'block' })
+	        .addClass(placement)
+	        .data('bs.' + this.type, this)
+	
+	      this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+	      this.$element.trigger('inserted.bs.' + this.type)
+	
+	      var pos          = this.getPosition()
+	      var actualWidth  = $tip[0].offsetWidth
+	      var actualHeight = $tip[0].offsetHeight
+	
+	      if (autoPlace) {
+	        var orgPlacement = placement
+	        var viewportDim = this.getPosition(this.$viewport)
+	
+	        placement = placement == 'bottom' && pos.bottom + actualHeight > viewportDim.bottom ? 'top'    :
+	                    placement == 'top'    && pos.top    - actualHeight < viewportDim.top    ? 'bottom' :
+	                    placement == 'right'  && pos.right  + actualWidth  > viewportDim.width  ? 'left'   :
+	                    placement == 'left'   && pos.left   - actualWidth  < viewportDim.left   ? 'right'  :
+	                    placement
+	
+	        $tip
+	          .removeClass(orgPlacement)
+	          .addClass(placement)
+	      }
+	
+	      var calculatedOffset = this.getCalculatedOffset(placement, pos, actualWidth, actualHeight)
+	
+	      this.applyPlacement(calculatedOffset, placement)
+	
+	      var complete = function () {
+	        var prevHoverState = that.hoverState
+	        that.$element.trigger('shown.bs.' + that.type)
+	        that.hoverState = null
+	
+	        if (prevHoverState == 'out') that.leave(that)
+	      }
+	
+	      $.support.transition && this.$tip.hasClass('fade') ?
+	        $tip
+	          .one('bsTransitionEnd', complete)
+	          .emulateTransitionEnd(Tooltip.TRANSITION_DURATION) :
+	        complete()
+	    }
+	  }
+	
+	  Tooltip.prototype.applyPlacement = function (offset, placement) {
+	    var $tip   = this.tip()
+	    var width  = $tip[0].offsetWidth
+	    var height = $tip[0].offsetHeight
+	
+	    // manually read margins because getBoundingClientRect includes difference
+	    var marginTop = parseInt($tip.css('margin-top'), 10)
+	    var marginLeft = parseInt($tip.css('margin-left'), 10)
+	
+	    // we must check for NaN for ie 8/9
+	    if (isNaN(marginTop))  marginTop  = 0
+	    if (isNaN(marginLeft)) marginLeft = 0
+	
+	    offset.top  += marginTop
+	    offset.left += marginLeft
+	
+	    // $.fn.offset doesn't round pixel values
+	    // so we use setOffset directly with our own function B-0
+	    $.offset.setOffset($tip[0], $.extend({
+	      using: function (props) {
+	        $tip.css({
+	          top: Math.round(props.top),
+	          left: Math.round(props.left)
+	        })
+	      }
+	    }, offset), 0)
+	
+	    $tip.addClass('in')
+	
+	    // check to see if placing tip in new offset caused the tip to resize itself
+	    var actualWidth  = $tip[0].offsetWidth
+	    var actualHeight = $tip[0].offsetHeight
+	
+	    if (placement == 'top' && actualHeight != height) {
+	      offset.top = offset.top + height - actualHeight
+	    }
+	
+	    var delta = this.getViewportAdjustedDelta(placement, offset, actualWidth, actualHeight)
+	
+	    if (delta.left) offset.left += delta.left
+	    else offset.top += delta.top
+	
+	    var isVertical          = /top|bottom/.test(placement)
+	    var arrowDelta          = isVertical ? delta.left * 2 - width + actualWidth : delta.top * 2 - height + actualHeight
+	    var arrowOffsetPosition = isVertical ? 'offsetWidth' : 'offsetHeight'
+	
+	    $tip.offset(offset)
+	    this.replaceArrow(arrowDelta, $tip[0][arrowOffsetPosition], isVertical)
+	  }
+	
+	  Tooltip.prototype.replaceArrow = function (delta, dimension, isVertical) {
+	    this.arrow()
+	      .css(isVertical ? 'left' : 'top', 50 * (1 - delta / dimension) + '%')
+	      .css(isVertical ? 'top' : 'left', '')
+	  }
+	
+	  Tooltip.prototype.setContent = function () {
+	    var $tip  = this.tip()
+	    var title = this.getTitle()
+	
+	    $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
+	    $tip.removeClass('fade in top bottom left right')
+	  }
+	
+	  Tooltip.prototype.hide = function (callback) {
+	    var that = this
+	    var $tip = $(this.$tip)
+	    var e    = $.Event('hide.bs.' + this.type)
+	
+	    function complete() {
+	      if (that.hoverState != 'in') $tip.detach()
+	      if (that.$element) { // TODO: Check whether guarding this code with this `if` is really necessary.
+	        that.$element
+	          .removeAttr('aria-describedby')
+	          .trigger('hidden.bs.' + that.type)
+	      }
+	      callback && callback()
+	    }
+	
+	    this.$element.trigger(e)
+	
+	    if (e.isDefaultPrevented()) return
+	
+	    $tip.removeClass('in')
+	
+	    $.support.transition && $tip.hasClass('fade') ?
+	      $tip
+	        .one('bsTransitionEnd', complete)
+	        .emulateTransitionEnd(Tooltip.TRANSITION_DURATION) :
+	      complete()
+	
+	    this.hoverState = null
+	
+	    return this
+	  }
+	
+	  Tooltip.prototype.fixTitle = function () {
+	    var $e = this.$element
+	    if ($e.attr('title') || typeof $e.attr('data-original-title') != 'string') {
+	      $e.attr('data-original-title', $e.attr('title') || '').attr('title', '')
+	    }
+	  }
+	
+	  Tooltip.prototype.hasContent = function () {
+	    return this.getTitle()
+	  }
+	
+	  Tooltip.prototype.getPosition = function ($element) {
+	    $element   = $element || this.$element
+	
+	    var el     = $element[0]
+	    var isBody = el.tagName == 'BODY'
+	
+	    var elRect    = el.getBoundingClientRect()
+	    if (elRect.width == null) {
+	      // width and height are missing in IE8, so compute them manually; see https://github.com/twbs/bootstrap/issues/14093
+	      elRect = $.extend({}, elRect, { width: elRect.right - elRect.left, height: elRect.bottom - elRect.top })
+	    }
+	    var isSvg = window.SVGElement && el instanceof window.SVGElement
+	    // Avoid using $.offset() on SVGs since it gives incorrect results in jQuery 3.
+	    // See https://github.com/twbs/bootstrap/issues/20280
+	    var elOffset  = isBody ? { top: 0, left: 0 } : (isSvg ? null : $element.offset())
+	    var scroll    = { scroll: isBody ? document.documentElement.scrollTop || document.body.scrollTop : $element.scrollTop() }
+	    var outerDims = isBody ? { width: $(window).width(), height: $(window).height() } : null
+	
+	    return $.extend({}, elRect, scroll, outerDims, elOffset)
+	  }
+	
+	  Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
+	    return placement == 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2 } :
+	           placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 } :
+	           placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
+	        /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width }
+	
+	  }
+	
+	  Tooltip.prototype.getViewportAdjustedDelta = function (placement, pos, actualWidth, actualHeight) {
+	    var delta = { top: 0, left: 0 }
+	    if (!this.$viewport) return delta
+	
+	    var viewportPadding = this.options.viewport && this.options.viewport.padding || 0
+	    var viewportDimensions = this.getPosition(this.$viewport)
+	
+	    if (/right|left/.test(placement)) {
+	      var topEdgeOffset    = pos.top - viewportPadding - viewportDimensions.scroll
+	      var bottomEdgeOffset = pos.top + viewportPadding - viewportDimensions.scroll + actualHeight
+	      if (topEdgeOffset < viewportDimensions.top) { // top overflow
+	        delta.top = viewportDimensions.top - topEdgeOffset
+	      } else if (bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height) { // bottom overflow
+	        delta.top = viewportDimensions.top + viewportDimensions.height - bottomEdgeOffset
+	      }
+	    } else {
+	      var leftEdgeOffset  = pos.left - viewportPadding
+	      var rightEdgeOffset = pos.left + viewportPadding + actualWidth
+	      if (leftEdgeOffset < viewportDimensions.left) { // left overflow
+	        delta.left = viewportDimensions.left - leftEdgeOffset
+	      } else if (rightEdgeOffset > viewportDimensions.right) { // right overflow
+	        delta.left = viewportDimensions.left + viewportDimensions.width - rightEdgeOffset
+	      }
+	    }
+	
+	    return delta
+	  }
+	
+	  Tooltip.prototype.getTitle = function () {
+	    var title
+	    var $e = this.$element
+	    var o  = this.options
+	
+	    title = $e.attr('data-original-title')
+	      || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
+	
+	    return title
+	  }
+	
+	  Tooltip.prototype.getUID = function (prefix) {
+	    do prefix += ~~(Math.random() * 1000000)
+	    while (document.getElementById(prefix))
+	    return prefix
+	  }
+	
+	  Tooltip.prototype.tip = function () {
+	    if (!this.$tip) {
+	      this.$tip = $(this.options.template)
+	      if (this.$tip.length != 1) {
+	        throw new Error(this.type + ' `template` option must consist of exactly 1 top-level element!')
+	      }
+	    }
+	    return this.$tip
+	  }
+	
+	  Tooltip.prototype.arrow = function () {
+	    return (this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow'))
+	  }
+	
+	  Tooltip.prototype.enable = function () {
+	    this.enabled = true
+	  }
+	
+	  Tooltip.prototype.disable = function () {
+	    this.enabled = false
+	  }
+	
+	  Tooltip.prototype.toggleEnabled = function () {
+	    this.enabled = !this.enabled
+	  }
+	
+	  Tooltip.prototype.toggle = function (e) {
+	    var self = this
+	    if (e) {
+	      self = $(e.currentTarget).data('bs.' + this.type)
+	      if (!self) {
+	        self = new this.constructor(e.currentTarget, this.getDelegateOptions())
+	        $(e.currentTarget).data('bs.' + this.type, self)
+	      }
+	    }
+	
+	    if (e) {
+	      self.inState.click = !self.inState.click
+	      if (self.isInStateTrue()) self.enter(self)
+	      else self.leave(self)
+	    } else {
+	      self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
+	    }
+	  }
+	
+	  Tooltip.prototype.destroy = function () {
+	    var that = this
+	    clearTimeout(this.timeout)
+	    this.hide(function () {
+	      that.$element.off('.' + that.type).removeData('bs.' + that.type)
+	      if (that.$tip) {
+	        that.$tip.detach()
+	      }
+	      that.$tip = null
+	      that.$arrow = null
+	      that.$viewport = null
+	      that.$element = null
+	    })
+	  }
+	
+	
+	  // TOOLTIP PLUGIN DEFINITION
+	  // =========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.tooltip')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data && /destroy|hide/.test(option)) return
+	      if (!data) $this.data('bs.tooltip', (data = new Tooltip(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.tooltip
+	
+	  $.fn.tooltip             = Plugin
+	  $.fn.tooltip.Constructor = Tooltip
+	
+	
+	  // TOOLTIP NO CONFLICT
+	  // ===================
+	
+	  $.fn.tooltip.noConflict = function () {
+	    $.fn.tooltip = old
+	    return this
+	  }
+	
+	}(jQuery);
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: popover.js v3.3.7
+	 * http://getbootstrap.com/javascript/#popovers
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // POPOVER PUBLIC CLASS DEFINITION
+	  // ===============================
+	
+	  var Popover = function (element, options) {
+	    this.init('popover', element, options)
+	  }
+	
+	  if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
+	
+	  Popover.VERSION  = '3.3.7'
+	
+	  Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
+	    placement: 'right',
+	    trigger: 'click',
+	    content: '',
+	    template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+	  })
+	
+	
+	  // NOTE: POPOVER EXTENDS tooltip.js
+	  // ================================
+	
+	  Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype)
+	
+	  Popover.prototype.constructor = Popover
+	
+	  Popover.prototype.getDefaults = function () {
+	    return Popover.DEFAULTS
+	  }
+	
+	  Popover.prototype.setContent = function () {
+	    var $tip    = this.tip()
+	    var title   = this.getTitle()
+	    var content = this.getContent()
+	
+	    $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
+	    $tip.find('.popover-content').children().detach().end()[ // we use append for html objects to maintain js events
+	      this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
+	    ](content)
+	
+	    $tip.removeClass('fade top bottom left right in')
+	
+	    // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
+	    // this manually by checking the contents.
+	    if (!$tip.find('.popover-title').html()) $tip.find('.popover-title').hide()
+	  }
+	
+	  Popover.prototype.hasContent = function () {
+	    return this.getTitle() || this.getContent()
+	  }
+	
+	  Popover.prototype.getContent = function () {
+	    var $e = this.$element
+	    var o  = this.options
+	
+	    return $e.attr('data-content')
+	      || (typeof o.content == 'function' ?
+	            o.content.call($e[0]) :
+	            o.content)
+	  }
+	
+	  Popover.prototype.arrow = function () {
+	    return (this.$arrow = this.$arrow || this.tip().find('.arrow'))
+	  }
+	
+	
+	  // POPOVER PLUGIN DEFINITION
+	  // =========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.popover')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data && /destroy|hide/.test(option)) return
+	      if (!data) $this.data('bs.popover', (data = new Popover(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.popover
+	
+	  $.fn.popover             = Plugin
+	  $.fn.popover.Constructor = Popover
+	
+	
+	  // POPOVER NO CONFLICT
+	  // ===================
+	
+	  $.fn.popover.noConflict = function () {
+	    $.fn.popover = old
+	    return this
+	  }
+	
+	}(jQuery);
+
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: scrollspy.js v3.3.7
+	 * http://getbootstrap.com/javascript/#scrollspy
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // SCROLLSPY CLASS DEFINITION
+	  // ==========================
+	
+	  function ScrollSpy(element, options) {
+	    this.$body          = $(document.body)
+	    this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
+	    this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
+	    this.selector       = (this.options.target || '') + ' .nav li > a'
+	    this.offsets        = []
+	    this.targets        = []
+	    this.activeTarget   = null
+	    this.scrollHeight   = 0
+	
+	    this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
+	    this.refresh()
+	    this.process()
+	  }
+	
+	  ScrollSpy.VERSION  = '3.3.7'
+	
+	  ScrollSpy.DEFAULTS = {
+	    offset: 10
+	  }
+	
+	  ScrollSpy.prototype.getScrollHeight = function () {
+	    return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+	  }
+	
+	  ScrollSpy.prototype.refresh = function () {
+	    var that          = this
+	    var offsetMethod  = 'offset'
+	    var offsetBase    = 0
+	
+	    this.offsets      = []
+	    this.targets      = []
+	    this.scrollHeight = this.getScrollHeight()
+	
+	    if (!$.isWindow(this.$scrollElement[0])) {
+	      offsetMethod = 'position'
+	      offsetBase   = this.$scrollElement.scrollTop()
+	    }
+	
+	    this.$body
+	      .find(this.selector)
+	      .map(function () {
+	        var $el   = $(this)
+	        var href  = $el.data('target') || $el.attr('href')
+	        var $href = /^#./.test(href) && $(href)
+	
+	        return ($href
+	          && $href.length
+	          && $href.is(':visible')
+	          && [[$href[offsetMethod]().top + offsetBase, href]]) || null
+	      })
+	      .sort(function (a, b) { return a[0] - b[0] })
+	      .each(function () {
+	        that.offsets.push(this[0])
+	        that.targets.push(this[1])
+	      })
+	  }
+	
+	  ScrollSpy.prototype.process = function () {
+	    var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+	    var scrollHeight = this.getScrollHeight()
+	    var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
+	    var offsets      = this.offsets
+	    var targets      = this.targets
+	    var activeTarget = this.activeTarget
+	    var i
+	
+	    if (this.scrollHeight != scrollHeight) {
+	      this.refresh()
+	    }
+	
+	    if (scrollTop >= maxScroll) {
+	      return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+	    }
+	
+	    if (activeTarget && scrollTop < offsets[0]) {
+	      this.activeTarget = null
+	      return this.clear()
+	    }
+	
+	    for (i = offsets.length; i--;) {
+	      activeTarget != targets[i]
+	        && scrollTop >= offsets[i]
+	        && (offsets[i + 1] === undefined || scrollTop < offsets[i + 1])
+	        && this.activate(targets[i])
+	    }
+	  }
+	
+	  ScrollSpy.prototype.activate = function (target) {
+	    this.activeTarget = target
+	
+	    this.clear()
+	
+	    var selector = this.selector +
+	      '[data-target="' + target + '"],' +
+	      this.selector + '[href="' + target + '"]'
+	
+	    var active = $(selector)
+	      .parents('li')
+	      .addClass('active')
+	
+	    if (active.parent('.dropdown-menu').length) {
+	      active = active
+	        .closest('li.dropdown')
+	        .addClass('active')
+	    }
+	
+	    active.trigger('activate.bs.scrollspy')
+	  }
+	
+	  ScrollSpy.prototype.clear = function () {
+	    $(this.selector)
+	      .parentsUntil(this.options.target, '.active')
+	      .removeClass('active')
+	  }
+	
+	
+	  // SCROLLSPY PLUGIN DEFINITION
+	  // ===========================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.scrollspy')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.scrollspy
+	
+	  $.fn.scrollspy             = Plugin
+	  $.fn.scrollspy.Constructor = ScrollSpy
+	
+	
+	  // SCROLLSPY NO CONFLICT
+	  // =====================
+	
+	  $.fn.scrollspy.noConflict = function () {
+	    $.fn.scrollspy = old
+	    return this
+	  }
+	
+	
+	  // SCROLLSPY DATA-API
+	  // ==================
+	
+	  $(window).on('load.bs.scrollspy.data-api', function () {
+	    $('[data-spy="scroll"]').each(function () {
+	      var $spy = $(this)
+	      Plugin.call($spy, $spy.data())
+	    })
+	  })
+	
+	}(jQuery);
+
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: tab.js v3.3.7
+	 * http://getbootstrap.com/javascript/#tabs
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // TAB CLASS DEFINITION
+	  // ====================
+	
+	  var Tab = function (element) {
+	    // jscs:disable requireDollarBeforejQueryAssignment
+	    this.element = $(element)
+	    // jscs:enable requireDollarBeforejQueryAssignment
+	  }
+	
+	  Tab.VERSION = '3.3.7'
+	
+	  Tab.TRANSITION_DURATION = 150
+	
+	  Tab.prototype.show = function () {
+	    var $this    = this.element
+	    var $ul      = $this.closest('ul:not(.dropdown-menu)')
+	    var selector = $this.data('target')
+	
+	    if (!selector) {
+	      selector = $this.attr('href')
+	      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+	    }
+	
+	    if ($this.parent('li').hasClass('active')) return
+	
+	    var $previous = $ul.find('.active:last a')
+	    var hideEvent = $.Event('hide.bs.tab', {
+	      relatedTarget: $this[0]
+	    })
+	    var showEvent = $.Event('show.bs.tab', {
+	      relatedTarget: $previous[0]
+	    })
+	
+	    $previous.trigger(hideEvent)
+	    $this.trigger(showEvent)
+	
+	    if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
+	
+	    var $target = $(selector)
+	
+	    this.activate($this.closest('li'), $ul)
+	    this.activate($target, $target.parent(), function () {
+	      $previous.trigger({
+	        type: 'hidden.bs.tab',
+	        relatedTarget: $this[0]
+	      })
+	      $this.trigger({
+	        type: 'shown.bs.tab',
+	        relatedTarget: $previous[0]
+	      })
+	    })
+	  }
+	
+	  Tab.prototype.activate = function (element, container, callback) {
+	    var $active    = container.find('> .active')
+	    var transition = callback
+	      && $.support.transition
+	      && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
+	
+	    function next() {
+	      $active
+	        .removeClass('active')
+	        .find('> .dropdown-menu > .active')
+	          .removeClass('active')
+	        .end()
+	        .find('[data-toggle="tab"]')
+	          .attr('aria-expanded', false)
+	
+	      element
+	        .addClass('active')
+	        .find('[data-toggle="tab"]')
+	          .attr('aria-expanded', true)
+	
+	      if (transition) {
+	        element[0].offsetWidth // reflow for transition
+	        element.addClass('in')
+	      } else {
+	        element.removeClass('fade')
+	      }
+	
+	      if (element.parent('.dropdown-menu').length) {
+	        element
+	          .closest('li.dropdown')
+	            .addClass('active')
+	          .end()
+	          .find('[data-toggle="tab"]')
+	            .attr('aria-expanded', true)
+	      }
+	
+	      callback && callback()
+	    }
+	
+	    $active.length && transition ?
+	      $active
+	        .one('bsTransitionEnd', next)
+	        .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
+	      next()
+	
+	    $active.removeClass('in')
+	  }
+	
+	
+	  // TAB PLUGIN DEFINITION
+	  // =====================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this = $(this)
+	      var data  = $this.data('bs.tab')
+	
+	      if (!data) $this.data('bs.tab', (data = new Tab(this)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.tab
+	
+	  $.fn.tab             = Plugin
+	  $.fn.tab.Constructor = Tab
+	
+	
+	  // TAB NO CONFLICT
+	  // ===============
+	
+	  $.fn.tab.noConflict = function () {
+	    $.fn.tab = old
+	    return this
+	  }
+	
+	
+	  // TAB DATA-API
+	  // ============
+	
+	  var clickHandler = function (e) {
+	    e.preventDefault()
+	    Plugin.call($(this), 'show')
+	  }
+	
+	  $(document)
+	    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
+	    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+	
+	}(jQuery);
+
+
+/***/ },
+/* 14 */
+/***/ function(module, exports) {
+
+	/* ========================================================================
+	 * Bootstrap: affix.js v3.3.7
+	 * http://getbootstrap.com/javascript/#affix
+	 * ========================================================================
+	 * Copyright 2011-2016 Twitter, Inc.
+	 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	 * ======================================================================== */
+	
+	
+	+function ($) {
+	  'use strict';
+	
+	  // AFFIX CLASS DEFINITION
+	  // ======================
+	
+	  var Affix = function (element, options) {
+	    this.options = $.extend({}, Affix.DEFAULTS, options)
+	
+	    this.$target = $(this.options.target)
+	      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
+	      .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+	
+	    this.$element     = $(element)
+	    this.affixed      = null
+	    this.unpin        = null
+	    this.pinnedOffset = null
+	
+	    this.checkPosition()
+	  }
+	
+	  Affix.VERSION  = '3.3.7'
+	
+	  Affix.RESET    = 'affix affix-top affix-bottom'
+	
+	  Affix.DEFAULTS = {
+	    offset: 0,
+	    target: window
+	  }
+	
+	  Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
+	    var scrollTop    = this.$target.scrollTop()
+	    var position     = this.$element.offset()
+	    var targetHeight = this.$target.height()
+	
+	    if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
+	
+	    if (this.affixed == 'bottom') {
+	      if (offsetTop != null) return (scrollTop + this.unpin <= position.top) ? false : 'bottom'
+	      return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
+	    }
+	
+	    var initializing   = this.affixed == null
+	    var colliderTop    = initializing ? scrollTop : position.top
+	    var colliderHeight = initializing ? targetHeight : height
+	
+	    if (offsetTop != null && scrollTop <= offsetTop) return 'top'
+	    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom'
+	
+	    return false
+	  }
+	
+	  Affix.prototype.getPinnedOffset = function () {
+	    if (this.pinnedOffset) return this.pinnedOffset
+	    this.$element.removeClass(Affix.RESET).addClass('affix')
+	    var scrollTop = this.$target.scrollTop()
+	    var position  = this.$element.offset()
+	    return (this.pinnedOffset = position.top - scrollTop)
+	  }
+	
+	  Affix.prototype.checkPositionWithEventLoop = function () {
+	    setTimeout($.proxy(this.checkPosition, this), 1)
+	  }
+	
+	  Affix.prototype.checkPosition = function () {
+	    if (!this.$element.is(':visible')) return
+	
+	    var height       = this.$element.height()
+	    var offset       = this.options.offset
+	    var offsetTop    = offset.top
+	    var offsetBottom = offset.bottom
+	    var scrollHeight = Math.max($(document).height(), $(document.body).height())
+	
+	    if (typeof offset != 'object')         offsetBottom = offsetTop = offset
+	    if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
+	    if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
+	
+	    var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
+	
+	    if (this.affixed != affix) {
+	      if (this.unpin != null) this.$element.css('top', '')
+	
+	      var affixType = 'affix' + (affix ? '-' + affix : '')
+	      var e         = $.Event(affixType + '.bs.affix')
+	
+	      this.$element.trigger(e)
+	
+	      if (e.isDefaultPrevented()) return
+	
+	      this.affixed = affix
+	      this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
+	
+	      this.$element
+	        .removeClass(Affix.RESET)
+	        .addClass(affixType)
+	        .trigger(affixType.replace('affix', 'affixed') + '.bs.affix')
+	    }
+	
+	    if (affix == 'bottom') {
+	      this.$element.offset({
+	        top: scrollHeight - height - offsetBottom
+	      })
+	    }
+	  }
+	
+	
+	  // AFFIX PLUGIN DEFINITION
+	  // =======================
+	
+	  function Plugin(option) {
+	    return this.each(function () {
+	      var $this   = $(this)
+	      var data    = $this.data('bs.affix')
+	      var options = typeof option == 'object' && option
+	
+	      if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
+	      if (typeof option == 'string') data[option]()
+	    })
+	  }
+	
+	  var old = $.fn.affix
+	
+	  $.fn.affix             = Plugin
+	  $.fn.affix.Constructor = Affix
+	
+	
+	  // AFFIX NO CONFLICT
+	  // =================
+	
+	  $.fn.affix.noConflict = function () {
+	    $.fn.affix = old
+	    return this
+	  }
+	
+	
+	  // AFFIX DATA-API
+	  // ==============
+	
+	  $(window).on('load', function () {
+	    $('[data-spy="affix"]').each(function () {
+	      var $spy = $(this)
+	      var data = $spy.data()
+	
+	      data.offset = data.offset || {}
+	
+	      if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
+	      if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+	
+	      Plugin.call($spy, data)
+	    })
+	  })
+	
+	}(jQuery);
+
+
+/***/ }
+/******/ ]);
 //# sourceMappingURL=vendor.bundle.js.map

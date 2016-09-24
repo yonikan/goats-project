@@ -7,9 +7,6 @@ describe('Home', () => {
   let $rootScope, makeController;
 
   beforeEach(window.module(HomeModule.name));
-
-
-
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
@@ -17,39 +14,28 @@ describe('Home', () => {
     };
   }));
 
-
-
-  // beforeEach(inject((_$rootScope_) => {
-  //   $rootScope = _$rootScope_;
-  //   makeController = () => {
-  //     return new HomeController();
-  //   };
-  // }));
-
-
-  // jasmin syntax
   describe('Template', () => {
-    it('renders goats listing component IN JASMIN',() => {
-      expect(HomeTemplate).toMatch(/<goats-listing>/g);
+    // template specs
+    // tip: use regex to ensure correct bindings are used e.g., {{  }}
+    it('renders goats listing component', () => {
+      expect(HomeTemplate).to.match(/<goats-listing>/g);
     });
   });
 
-
-  // jasmin syntax
   describe('Component', () => {
       // component/directive specs
       let component = HomeComponent;
 
-      it('includes the intended template IN JASMIN',() => {
-        expect(component.template).toEqual(HomeTemplate);
+      it('includes the intended template',() => {
+        expect(component.template).to.equal(HomeTemplate);
       });
 
-      // it('uses `controllerAs` syntax', () => {
-      //   expect(component).toHave.property('controllerAs');
-      // });
+      it('uses `controllerAs` syntax', () => {
+        expect(component).to.have.property('controllerAs');
+      });
 
       it('invokes the right controller', () => {
-        expect(component.controller).toEqual(HomeController);
+        expect(component.controller).to.equal(HomeController);
       });
   });
 });

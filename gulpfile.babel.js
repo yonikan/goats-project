@@ -8,7 +8,7 @@ import rename   from 'gulp-rename';
 import template from 'gulp-template';
 import fs       from 'fs';
 import yargs    from 'yargs';
-import lodash   from 'lodash';
+// import lodash   from 'lodash';
 import gutil    from 'gulp-util';
 import serve    from 'browser-sync';
 import webpackDevMiddelware from 'webpack-dev-middleware';

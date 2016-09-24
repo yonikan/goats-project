@@ -1,14 +1,13 @@
 {
-  "name": "ng6-starter",
+  "name": "NICE-dashboard",
   "version": "0.0.1",
-  "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
+  "description": "Angular + ES6 + Bootstrap + Webpack + Gulp + Karma + Jasmine + Protractor",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^0.2.15",
     "bootstrap": "^3.3.7",
-    "lodash": "^3.8.0",
-    "node-sass": "^3.8.0",
+    "glob": "^7.1.0",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
@@ -16,7 +15,6 @@
     "babel-core": "^5.4.2",
     "babel-loader": "^5.0.0",
     "browser-sync": "^2.11.1",
-    "chai": "^3.4.0",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.19.0",
     "file-loader": "^0.9.0",
@@ -26,22 +24,22 @@
     "gulp-template": "^3.0.0",
     "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^1.7.0",
+    "jasmine-core": "^2.5.2",
+    "jasmine-spec-reporter": "^2.7.0",
     "karma": "^0.13.9",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^0.2.0",
-    "karma-mocha": "^0.2.0",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^1.0.2",
     "karma-mocha-reporter": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.4",
     "karma-webpack": "^1.5.1",
-    "mocha": "^2.3.0",
     "ng-annotate-loader": "0.0.10",
     "node-libs-browser": "^0.5.0",
     "node-sass": "^3.10.0",
+    "protractor": "^4.0.9",
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.0",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.12.2",
-    "stylus-loader": "^1.1.1",
     "supports-color": "^3.1.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.9.5",
@@ -50,17 +48,7 @@
     "yargs": "^3.9.0"
   },
   "scripts": {
-    "test": "karma start"
-  },
-  "keywords": [
-    "angular",
-    "webpack",
-    "es6"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/angularclass/NG6-starter.git"
-  },
-  "author": "AngularClass",
-  "license": "Apache-2.0"
+    "test": "karma start",
+    "test:e2e": "protractor protractor.conf.js"
+  }
 }

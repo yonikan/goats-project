@@ -18,7 +18,7 @@ describe('Create', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('renders goats creator component', () => {
-      expect(CreateTemplate).to.match(/<goat-creator-form>/g);
+      expect(CreateTemplate).toMatch(/<goat-creator-form>/g);
     });
   });
 
@@ -27,15 +27,15 @@ describe('Create', () => {
       let component = CreateComponent;
 
       it('includes the intended template',() => {
-        expect(component.template).to.equal(CreateTemplate);
+        expect(component.template).toEqual(CreateTemplate);
       });
 
-      it('uses `controllerAs` syntax', () => {
-        expect(component).to.have.property('controllerAs');
-      });
+      // it('uses `controllerAs` syntax', () => {
+      //   expect(component).toHave.property('controllerAs');
+      // });
 
       it('invokes the right controller', () => {
-        expect(component.controller).to.equal(CreateController);
+        expect(component.controller).toEqual(CreateController);
       });
   });
 });

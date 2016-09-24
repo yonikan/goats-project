@@ -1,6 +1,17 @@
-# Component based angular 1.5 app example
-
-A demo for my blog post at: http://blog.grossman.io/
 
 
-Based on the https://github.com/angularclass/NG6-starter.git starter boilerplate.
+
+### Setup development environment for running end-to-end tests
+`npm install -g protractor`
+<!-- It installs two command line tools, `protractor` and `webdriver-manager`, and you can use the `protractor --version`
+command to verify the installation. -->
+
+`webdriver-manager update`
+
+
+### Running end-to-end tests
+`webdriver-manager start`
+
+`gulp serve`
+
+`npm run test:e2e`
